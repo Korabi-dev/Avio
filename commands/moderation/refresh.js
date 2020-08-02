@@ -10,11 +10,14 @@ module.exports = {
   category: "main",
   run: (client, message, args) => {
   
-  if(message.author.id !== '638476135457357849') return message.reply('no');
+  if(message.author.id !== '638476135457357849') return message.reply('Developer only!');
   
-  
+  message.channel.send('Refreshing....');
+    
   bot.destroy();
   bot.login(process.env.BOT_TOKEN);
+    
+    message.channel.send('Refreshed.');
       
   }
 }
