@@ -10,7 +10,7 @@ module.exports = {
   category: "main",
   run: (client, message, args) => {
   
-  if(message.author.id !== 'youramazingidhere') return message.reply('no');
+  if(message.author.id !== '638476135457357849') return message.reply('no');
   
   
   bot.destroy();
