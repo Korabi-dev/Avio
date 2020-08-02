@@ -1,6 +1,6 @@
   
 const { MessageEmbed } = require("discord.js")
-const token = require(`./token.json`);
+
 
 
 module.exports = {
