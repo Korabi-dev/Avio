@@ -11,7 +11,7 @@ module.exports = {
   run: (client, message, args) => {
   
   if(message.author.id !== '638476135457357849') return message.reply('Developer only!');
-  
+  else {
   message.channel.send('Refreshing....');
     
 setTimeout(() => {
@@ -20,6 +20,6 @@ bot.login(process.env.BOT_TOKEN);
 }, 5000)
     
     message.channel.send('Refreshed.');
-      
+  }
   }
 }
