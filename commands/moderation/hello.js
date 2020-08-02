@@ -21,7 +21,7 @@ module.exports = {
                                                     
     
     let embed = new MessageEmbed()
-    .setAuthor("NAMESUGGESTION: + message.author.tag, message.author.avatarURL()")
+    .setAuthor("NAME SUGGESTION:" + message.author.tag, message.author.avatarURL())
     .setThumbnail(message.author.avatarURL())
     .setColor("#ff2050")
     .setDescription(args.join(" "))
