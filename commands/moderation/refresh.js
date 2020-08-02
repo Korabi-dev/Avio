@@ -14,8 +14,10 @@ module.exports = {
   
   message.channel.send('Refreshing....');
     
-  bot.destroy();
-  bot.login(process.env.BOT_TOKEN);
+setTimeout(() => {
+bot.detroy()
+bot.login()
+}, 5000)
     
     message.channel.send('Refreshed.');
       
