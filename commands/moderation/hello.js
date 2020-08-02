@@ -21,11 +21,10 @@ module.exports = {
                                                     
     
     let embed = new MessageEmbed()
-    .setAuthor("NAMESUGGESTION:")
+    .setAuthor("NAMESUGGESTION: + message.author.tag, message.author.avatarURL()")
     .setThumbnail(message.author.avatarURL())
     .setColor("#ff2050")
     .setDescription(args.join(" "))
-    .setFooter(`${message.author.tag, message.author.avatarURL()}`)
     .setTimestamp()
     
     
