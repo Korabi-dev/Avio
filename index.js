@@ -47,4 +47,4 @@ bot.on("messageReactionRemove", (reaction, user) => {
 
 
 
-bot.login(token.Token);
+bot.login(process.env.BOT_TOKEN);
