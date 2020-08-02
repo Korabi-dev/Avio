@@ -16,7 +16,7 @@ module.exports = {
     
 setTimeout(() => {
 bot.detroy()
-bot.login()
+bot.login(process.env.BOT_TOKEN);
 }, 5000)
     
     message.channel.send('Refreshed.');
