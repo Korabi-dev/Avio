@@ -44,7 +44,4 @@ bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
 
-
-
-
 bot.login(process.env.BOT_TOKEN);
