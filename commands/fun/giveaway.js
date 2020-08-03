@@ -6,6 +6,10 @@ module.exports = {
   usage: "<time> <channel> <prize>",
   category: "fun",
   run: async (bot, message, args) => {
+    
+    if (!message.member.permissions.has("MANAGE_MESSAGES"))
+      return message.channel.send("You do not have enough permissions to use this command!");
+    
     if (!args[0]) return message.channel.send(`You did not specify your time!`);
     if (
       !args[0].endsWith("d") &&
