@@ -54,4 +54,5 @@ module.exports = {
       );
     }, ms(args[0]));
   },
+  console.log(`${message.author.username} just made a giveaway with the prize of: ${prize}!`)
 };
