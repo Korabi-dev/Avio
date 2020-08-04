@@ -33,15 +33,12 @@ module.exports = {
       Time: ms(args[0]),
     });
     message.channel.send(
-      `${message.author.tag} you have set a timer for ${args[0]} (${ms(
-        args[0]
-      )}MS)`
-    );
+      `${message.author.tag} you have set a timer for ${args[0]}`);
     setTimeout(() => {
       let Embed = new MessageEmbed()
         .setTitle(`Timer finished in guild ${message.guild.name}..`)
         .setDescription(
-          `Your timer for ${args[0]} (${ms(args[0])}MS) has finished!`
+          `Your timer for ${args[0]} has finished!`
         )
         .setColor(`GREEN`);
       message.author.send(Embed);
