@@ -7,7 +7,7 @@ module.exports = {
   usage: "ban <@user> <raeson>",
   run: (client, message, args) => {
 
-    if(!message.member.hasPermission("BAN_MEMBERS")) {
+    if(!message.member.hasPermission("KICK_MEMBERS")) {
         return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
       }
       
