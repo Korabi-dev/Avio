@@ -14,7 +14,7 @@ module.exports = {
       .setColor(`RANDOM`)
       .setFooter(`Date format: MM/DD/YYYY`)
       .setDescription(
-        `${mem.user.tag} is the youngest user in ${
+        `${mem.user} is the youngest user in ${
           message.guild.name
         }! Account creation date: ${formatDate(mem.user.createdAt)}`
       );
