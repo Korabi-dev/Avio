@@ -2,9 +2,6 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "nickname",
-  category: "moderation",
-  description: "Change the nickname of a user",
-  usage: "nickname <user> [Name]",
   run: (client, message, args) => {
   
   let target = message.mentions.members.first();
