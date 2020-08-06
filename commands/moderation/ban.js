@@ -46,7 +46,7 @@ module.exports = {
       .setTitle("Action: Ban")
       .setDescription(`Banned ${target} with reason of: ${reason}`)
       .setColor("#ff2050")
-      .setFooter(`banned by ${message.author.username}`);
+      .setFooter(`Banned by ${message.author.username}`);
       
       message.channel.send(embed)
       
@@ -55,5 +55,7 @@ module.exports = {
       target.ban(args[1]); 
 
       target.send(`You were banned in **${message.guild.name}** For: ${reason}`)
+    
+    console.log(`${message.author.username} just banned ${target} with reason : ${reason}`)
 }
  }
