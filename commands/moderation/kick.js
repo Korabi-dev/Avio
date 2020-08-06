@@ -52,5 +52,7 @@ module.exports = {
     
     target.send(`You were kicked in **${message.guild.name}** For: ${reason}`)
     
+    console.log(`${message.author.username} just kicked ${target} with reason : ${reason}`)
+    
   }
 }
