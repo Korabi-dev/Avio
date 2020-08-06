@@ -46,6 +46,8 @@ module.exports = {
           }
         );
       Channel.send(Embed);
+      
+      console.log(`${message.author.username} just reported ${User} with reason : ${Reason}`)
     }
   },
 };
