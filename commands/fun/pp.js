@@ -48,6 +48,15 @@ module.exports = {
         return message.channel.send(Embed3)
     }
     
+    if (message.author.id === '661676670482251796') {
+        let Embed3 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`${message.author.username}'s pp
+        No pp detected/microscopic!`)
+        
+        return message.channel.send(Embed3)
+    }
+    
     
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
