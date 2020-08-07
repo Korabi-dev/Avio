@@ -15,7 +15,7 @@ module.exports = {
       );
       
       message.channel.send('shutting down!')
-    bot.destroy();
+   
   
   }
   }
