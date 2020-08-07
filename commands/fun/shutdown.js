@@ -11,7 +11,7 @@ module.exports = {
         `You do not have premissions to use this command, ${message.author.username} you are not a dev!`
       );
       
-      messqage.channel.send('shutting down!')
+      message.channel.send('shutting down!')
   
   }
   }
