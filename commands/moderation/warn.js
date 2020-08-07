@@ -6,6 +6,11 @@ module.exports = {
   category: "moderation",
   usage: "<User mention> <Reason>",
   run: async (bot, message, args) => {
+    
+     if(!message.member.hasPermission("KICK_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+    }
+    
     let user = message.mentions.users.first();
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
