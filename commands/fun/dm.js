@@ -5,8 +5,9 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-    if (!message.member.permissions.has("KICK_MEMBERS"))
+    if (!message.member.permissions.has("KICK_MEMBERS")) {
       return message.channel.send("You do not have enough permissions!");
+    }
     
     let user =
       message.mentions.members.first() ||
