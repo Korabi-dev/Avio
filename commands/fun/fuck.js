@@ -1,6 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = {
-  name: "hug",
+  name: "fuck",
   description: "There is a big chance I insult you!",
   category: "fun",
   run: async (bot, message, args) => {
