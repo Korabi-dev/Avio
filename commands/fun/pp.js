@@ -5,7 +5,7 @@ module.exports = {
   description: "There is a big chance I insult you!",
   category: "fun",
   run: async (bot, message, args) => {
-    
+   //made by me 
      let responses = [
         "8D",
         "8=D",
