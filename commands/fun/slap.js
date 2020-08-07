@@ -23,7 +23,7 @@ module.exports = {
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed = new MessageEmbed()
-        .setTitle(`HUG`)
+        .setTitle(`SLAP`)
         .setDescription(` OOF **${message.author}** slaps **${target}**`)
         .setImage(`${response}`)
         .setColor(`RANDOM`);
