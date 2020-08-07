@@ -3,6 +3,13 @@ module.exports = {
   category: "utility",
   description: "Set the slowmode for the channel!",
   run: async (bot, message, args) => {
+    
+     if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+      return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+    }
+    
+    
+    
     if (!args[0])
       return message.channel.send(
         `You did not specify the time in seconds you wish to set this channel's slow mode too!`
