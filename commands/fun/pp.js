@@ -25,7 +25,7 @@ module.exports = {
             user = message.author;
         }
         const member = message.guild.member(user);
-    
+    );
     
     if (message.author.id !== '638476135457357849')
       return  
@@ -35,7 +35,7 @@ module.exports = {
         8================================D`)
       
       message.channel.send(Embed2)
-      );
+     
         
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
