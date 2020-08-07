@@ -9,14 +9,14 @@ module.exports = {
     
     
     if (message.author.id !== '638476135457357849')
-      return  
+      return  {
       let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**$Korabi20**'s pp
+        .setDescription(`**Korabi20**'s pp
         8================================D`)
       
       message.channel.send(Embed2)
-    
+      }
     
     
     
