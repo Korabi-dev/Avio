@@ -4,11 +4,6 @@ module.exports = {
   description: "DM a user in the guild",
   category: "fun",
   run: async (bot, message, args) => {
-    
-    if (!message.member.permissions.has("KICK_MEMBERS")) {
-      return message.channel.send("You do not have enough permissions!");
-    }
-    
     let user =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
@@ -24,6 +19,5 @@ module.exports = {
       .send(args.slice(1).join(" ") + user )
       .catch(() => message.channel.send("That user could not be DMed!"))
       .then(() => message.channel.send(`Sent a message to ${user.user.tag}`));
-    
-  },
+    },
 };
