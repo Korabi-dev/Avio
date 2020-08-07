@@ -25,7 +25,7 @@ module.exports = {
             user = message.author;
         }
         const member = message.guild.member(user);
-    ); 
+    
         
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
