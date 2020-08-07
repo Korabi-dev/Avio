@@ -27,13 +27,16 @@ module.exports = {
         }
         const member = message.guild.member(user);
     
-    let Embed2 = new MessageEmbed()
+        
+    if (message.author.id !== '638476135457357849') {
+        let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**Korabi20**'s pp
         8================================D`)
+        
+        return message.channel.send(Embed2)
+    }
     
-    if (message.author.id !== '638476135457357849')
-      return message.channel.send(Embed2)
     
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
