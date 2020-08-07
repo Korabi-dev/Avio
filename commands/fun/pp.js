@@ -5,6 +5,22 @@ module.exports = {
   description: "There is a big chance I insult you!",
   category: "fun",
   run: async (bot, message, args) => {
+    
+    
+    
+    if (message.author.id !== '638476135457357849')
+      return  
+      let Embed2 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`**$Korabi20**'s pp
+        8================================D`)
+      
+      message.channel.send(Embed2)
+    
+    
+    
+    
+    
     let responses = [
         "8D",
         "8=D",
