@@ -4,6 +4,11 @@ module.exports = {
   description: "Get the bot to say what ever you want in a specific channel.",
   usage: "<channel id> <msg>",
   run: async (bot, message, args) => {
+    
+     if(!message.member.hasPermission("KICK_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+    }
+    
     let rChannel = message.guild.channels.cache.get(args[0]);
     if (!rChannel)
       return message.channel.send(
