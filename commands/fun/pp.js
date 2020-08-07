@@ -52,7 +52,7 @@ module.exports = {
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`${message.author.username}'s pp
-        No pp detected/microscopic!`)
+        MAX PP POWER`)
         
         return message.channel.send(Embed3)
     }
