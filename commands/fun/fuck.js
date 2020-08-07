@@ -6,7 +6,7 @@ module.exports = {
   run: async (bot, message, args) => {
     let target = message.mentions.members.first();
     if (!target){
-        return message.channel.send('NO NSWF N00B WILL NOT BE ADDING THAT')
+        return message.channel.send('NO NSFW N00B WILL NOT BE ADDING THAT')
      }
 
      console.log(`${message.author.username} just used the fuck command`)
