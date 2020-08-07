@@ -1,6 +1,8 @@
   
 const Discord = require("discord.js");
-const bot = new Discord.client();
+
+
+
 module.exports = {
   name: "shutdown",
   description: "There is a big chance I insult you!",
