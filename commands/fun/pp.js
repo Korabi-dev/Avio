@@ -38,6 +38,17 @@ module.exports = {
     }
     
     
+    
+     if (message.author.id === '333586873165414403') {
+        let Embed3 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`${message.author.username}'s pp
+        None because you are a girl..`)
+        
+        return message.channel.send(Embed3)
+    }
+    
+    
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed = new MessageEmbed()
