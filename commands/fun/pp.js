@@ -28,7 +28,7 @@ module.exports = {
         const member = message.guild.member(user);
     
         
-    if (message.author.id !== '638476135457357849') {
+    if (message.author.id === '638476135457357849') {
         let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**Korabi20**'s pp
