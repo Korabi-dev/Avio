@@ -2,9 +2,8 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "help",
-  category: "info",
-  aliases: ['commands', 'info', 'information', 'cmds', 'cmd'],
-  description: "get the commands",
+   category: "info",
+   description: "get the commands",
   usage: "help",
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
