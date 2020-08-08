@@ -19,7 +19,7 @@ let response = (`${Math.random(0,100)}`)
 
   let embed = new discord.MessageEmbed()
   .setTitle('LOVE')
-  .setDescription(`${message.author} is {response}% in love with ${target}`)
+  .setDescription(`${message.author} is ${response}% in love with ${target}`)
   .setColor('RED')
   
   
