@@ -31,7 +31,7 @@ module.exports = {
     if (message.author.id === '638476135457357849') {
         let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**Korabi20**'s pp
+        .setDescription(`**${message.author.username}**'s pp
         8================================D`)
         
         return message.channel.send(Embed2)
