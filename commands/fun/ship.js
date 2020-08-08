@@ -14,6 +14,11 @@ if(!target) {
 return message.channel.send('Please mention someone!')
 
 }
+ 
+   if(target.id === message.author.id) {
+     return message.channel.send(`**${message.author.username}**, I know you love yourself but please mention someone else!`)
+    }
+    
     
 let response = Math.floor(`${Math.random() * 100}`) + 1;
 
