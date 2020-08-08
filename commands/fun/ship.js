@@ -20,6 +20,7 @@ let response = Math.floor(`${Math.random() * 100}`) + 1;
   let embed = new discord.MessageEmbed()
   .setTitle('LOVE')
   .setDescription(`${message.author} is ${response}% in love with ${target}`)
+  .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
   .setColor('RED')
   
   
