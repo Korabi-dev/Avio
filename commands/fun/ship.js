@@ -23,6 +23,8 @@ let response = (`${Math.random(0,100)}`)
   .setColor('RED')
   
   
+  message.channel.send(embed)
+  
 
 
 
