@@ -15,7 +15,7 @@ return message.channel.send('Please mention someone!')
 
 }
     
-let response = (`${math.random(0,100)}`)
+let response = (`${Math.random(0,100)}`)
 
   let embed = new discord.MessageEmbed()
   .setTitle('LOVE')
