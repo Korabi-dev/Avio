@@ -15,6 +15,22 @@ return message.channel.send('Please mention someone!')
 
 }
     
+    
+    
+    if(message.author.id === '333586873165414403') {
+     if(target.id !== '638476135457357849') {
+      
+
+  let embed1 = new discord.MessageEmbed()
+  .setTitle('LOVE')
+  .setDescription(`${message.author} is 0% in love with ${target}`)
+  .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
+  .setColor('RED')
+  
+ return message.channel.send(embed1)
+}
+}
+    
     if(message.author.id === '638476135457357849') {
      if(target.id === '333586873165414403') {
       
