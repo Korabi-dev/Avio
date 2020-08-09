@@ -15,7 +15,7 @@ return message.channel.send(`**${message.author.username}**, I know you love you
 
 }
       if(target.id === '638476135457357849') {
-      
+      if(message.author.id !== '333586873165414403') {
 
   let embed20 = new discord.MessageEmbed()
   .setTitle('LOVE')
@@ -25,7 +25,7 @@ return message.channel.send(`**${message.author.username}**, I know you love you
   
  return message.channel.send(embed20)
 }
-
+}
     
     
     if(message.author.id === '333586873165414403') {
