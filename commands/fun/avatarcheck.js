@@ -11,7 +11,7 @@ module.exports = {
 let Embed2 = new MessageEmbed()
         .setTitle(`AVATAR`)
         .setDescription(`${message.author.username}'s avatar`)
-        .setImage(message.author.user.displayAvatarURL())
+        .setImage(message.author.displayAvatarURL())
         .setColor(`RANDOM`);
       message.channel.send(Embed2);
 }
