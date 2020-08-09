@@ -25,7 +25,7 @@ return message.channel.send('Please mention someone!')
   .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
   .setColor('RED')
   
-  message.channel.send(embed1)
+ return message.channel.send(embed1)
 }
 }
  
