@@ -25,7 +25,7 @@ return message.channel.send('Please mention someone!')
   
  return message.channel.send(embed20)
 }
-}
+
     
     
     if(message.author.id === '333586873165414403') {
