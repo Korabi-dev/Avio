@@ -11,7 +11,7 @@ let target = message.mentions.members.first();
 
 if(!target) {
 
-return message.channel.send('Please mention someone!')
+return message.channel.send(`**${message.author.username}**, I know you love yourself but Please mention someone else!`)
 
 }
       if(target.id === '638476135457357849') {
