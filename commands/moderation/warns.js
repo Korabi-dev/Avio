@@ -1,7 +1,7 @@
 const warns = require("../../models/warns");
 const { MessageEmbed } = require("discord.js");
 module.exports = {
-  name: "warnings",
+  name: "warns",
   description: "Get a user's warns in the guild!",
   category: "moderation",
   usage: "<User mention>",
