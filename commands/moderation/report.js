@@ -28,7 +28,7 @@ module.exports = {
       let Embed = new MessageEmbed()
         .setTitle(`New report!`)
         .setDescription(
-          `The moderator \`${message.author.tag}\` has reported the user \`${User.tag}\`! `
+          `The Member \`${message.author.tag}\` has reported the user \`${User.tag}\`! `
         )
         .setColor(`RED`)
         .setThumbnail(Avatar)
