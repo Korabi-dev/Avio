@@ -5,8 +5,7 @@ module.exports = {
   description: "Report a user of your choice!",
   usage: "<User mention>",
   run: async (bot, message, args) => {
-    if (!message.member.permissions.has("MANAGE_MESSAGES"))
-      return message.channel.send(`No.`);
+    
     let User = message.mentions.users.first() || null;
 
     if (User == null) {
