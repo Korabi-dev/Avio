@@ -6,8 +6,10 @@ module.exports = {
   timeout: 5000,
   aliases: ["custom"],
   run: async (bot, message, args) => {
-    if (!message.member.permissions.has("KICK_MEMBERS"))
-      return message.channel.send(`You do not have enough permissions!`);
+     if (message.author.id !== '638476135457357849')
+      return message.channel.send(
+        `You do not have premissions to use this command, ${message.author.username} you are not a dev!`
+      );
     if (!args[0])
       return message.channel.send(`You did not specify a custom command name!`);
     if (!args.slice(1).join(" "))
