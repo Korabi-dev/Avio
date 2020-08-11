@@ -33,8 +33,8 @@ module.exports = {
         .setColor(`RED`)
         .setThumbnail(Avatar)
         .addFields(
-          { name: "Mod ID", value: `${message.author.id}`, inline: true },
-          { name: "Mod Tag", value: `${message.author.tag}`, inline: true },
+          { name: "Member ID", value: `${message.author.id}`, inline: true },
+          { name: "Member Tag", value: `${message.author.tag}`, inline: true },
           { name: "Reported ID", value: `${User.id}`, inline: true },
           { name: "Reported Tag", value: `${User.tag}`, inline: true },
           { name: "Reason", value: `\`${Reason.slice(1)}\``, inline: true },
@@ -47,6 +47,8 @@ module.exports = {
       Channel.send(Embed);
       
       console.log(`${message.author.username} just reported ${User} with reason : ${Reason}`)
+      
+      message.channel.send('Report recorded!')
     }
   },
 };
