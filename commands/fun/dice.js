@@ -20,6 +20,5 @@ module.exports = {
         .setDescription(`You rolled a number : ${response}`)
         .setColor(`RANDOM`);
       message.channel.send(Embed);
-    }
-  },
+   },
 };
