@@ -17,7 +17,7 @@ module.exports = {
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed = new MessageEmbed()
         .setTitle(`Dice`)
-        .setDescription(`You rolled a number : ${response}`)
+        .setDescription(`You rolled the number : ${response}`)
         .setColor(`RANDOM`);
       message.channel.send(Embed);
    },
