@@ -37,6 +37,14 @@ module.exports = {
         return message.channel.send(Embed2)
     }
     
+        if (message.author.id === '362332196016750592') {
+        let Embed245 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`**${message.author.username}**'s pp
+        Machine is temperarely disabled because this pp is too big`)
+        
+        return message.channel.send(Embed245)
+    }
     
     
      if (message.author.id === '333586873165414403') {
