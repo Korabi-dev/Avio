@@ -12,5 +12,7 @@ module.exports = {
     .setColor("#ff2050")
     .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
     
-    message.channel.send(embed)
+   
+    
+    message.author.send(embed)
 }}
