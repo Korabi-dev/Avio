@@ -51,7 +51,7 @@ module.exports = {
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`${message.author.username}'s pp
-        Error(-1) Message too big.`)
+        UwU looks like your pp is too big!`)
         
         return message.channel.send(Embed3)
     }
