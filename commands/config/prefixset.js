@@ -8,7 +8,7 @@ module.exports = {
 return message.channel.send(`${message.author.username} you need administrator premissions to use this command.`)
 }
     
-   if(message.author.id === ''){
+   if(message.author.id === '638476135457357849'){
 if (!args[0])
       return message.channel.send(
         `The prefix for ${message.guild.name} is \`${
@@ -21,9 +21,10 @@ if (!args[0])
     message.channel.send(`Set the prefix to \`${args[0]}\`!`);
      
      return console.log(`${message.author.username} just changed the prefix!`)
+  },
+};
+  return console.log(`${message.author.username} just changed the prefix!`)
   }
-}
-}
     
     if (!args[0])
       return message.channel.send(
