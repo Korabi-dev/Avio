@@ -49,7 +49,7 @@ module.exports = {
 
       let winner = m.reactions.cache
         .get("🎉")
-        .users.cache.filter((u) => !u.bot)
+        .users.cache.filter((u) => !u.user.bot)
         .random();
       channel.send(
         `The winner of the giveaway for **${prize}** is... ${winner}`
