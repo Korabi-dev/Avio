@@ -6,5 +6,11 @@ module.exports = {
   description: "invite link",
   usage: "invite",
   run: (client, message, args) => {
-  message.channel.send('Here Is my invite link :wink:  https://discordapp.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847') 
+let embed9 = new discord.MessageEmbed()
+      .setTitle("Invite Me")
+      .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
+      .setColor("RANDOM")
+      .setFooter(`Thank you for inviting!`);
+      message.channel.send(embed9)
+       }
 }}
