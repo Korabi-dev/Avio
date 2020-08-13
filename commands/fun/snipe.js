@@ -7,7 +7,7 @@ module.exports = {
   run: async (bot, message, args) => {
     const snipes = bot.snipes.get(message.channel.id) || [];
     const msg = snipes[args[0] - 1 || 0];
-    if (!msg) return message.channel.send(`That is not a valid snipe...`);
+    if (!msg) return message.channel.send(`There is nothing to snipe here!`);
     const Embed = new MessageEmbed()
       .setAuthor(
         msg.author.tag,
