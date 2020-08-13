@@ -29,7 +29,7 @@ module.exports = {
     
         
     if (message.author.id === '638476135457357849') {
-      if(!user){
+      if(!member){
         let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**${message.author.username}**'s pp
