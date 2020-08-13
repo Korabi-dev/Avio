@@ -12,5 +12,5 @@ let embed9 = new discord.MessageEmbed()
       .setColor("RANDOM")
       .setFooter(`Thank you for inviting!`);
       message.channel.send(embed9)
-       }
+       
 }}
