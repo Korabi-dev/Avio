@@ -13,6 +13,9 @@ if (message.author.id !== "638476135457357849") {
  let embed9 = new discord.MessageEmbed()
       .setTitle("This command is owner only!")
       .setColor("RED")
+ 
+ 
+ return message.channel.send(embed9)
 }
       const clean = text => {
   if (typeof(text) === "string")
