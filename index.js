@@ -7,6 +7,7 @@ const bot = new Discord.Client({
   partials: ["REACTION"],
 });
 
+const Commands = new Discord.Collection()
 const mongoose = require("mongoose");
 bot.prefix = prefix;
 bot.commands = new Discord.Collection();
