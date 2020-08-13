@@ -22,7 +22,7 @@ let Embed2 = new MessageEmbed()
       let Embed = new MessageEmbed()
         .setTitle(`AVATAR`)
         .setDescription(`${target}'s avatar`)
-        .setImage(target.user.displayAvatarURL())
+        .setImage(target.user.displayAvatarURL({ dynamic: true, size: 256 }))
         .setColor(`RANDOM`);
       message.channel.send(Embed);
   
