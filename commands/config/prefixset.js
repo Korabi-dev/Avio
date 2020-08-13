@@ -19,7 +19,7 @@ if (!args[0])
       );
     await db.set(`Prefix_${message.guild.id}`, args[0]);
     message.channel.send(`Set the prefix to \`${args[0]}\`!`);
-  },
+  }
 };
 
   return console.log(`${message.author.username} just changed the prefix!`)
