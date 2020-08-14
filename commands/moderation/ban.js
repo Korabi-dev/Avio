@@ -47,6 +47,7 @@ module.exports = {
       .setTitle("Action: Ban")
       .setDescription(`Banned ${target} with reason of: ${reason}`)
       .setColor("#ff2050")
+      .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
       .setFooter(`Banned by ${message.author.username}`);
       
       message.channel.send(embed)
