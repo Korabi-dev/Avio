@@ -16,7 +16,7 @@ module.exports = {
     }
     
     let target =   message.mentions.members.first() ||
-      message.guild.members.cache.get(args[0]);.get(args[0]);
+      message.guild.members.cache.get(args[0]);
     
     if(!target) {
       let embed9 = new discord.MessageEmbed()
