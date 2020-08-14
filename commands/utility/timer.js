@@ -7,13 +7,6 @@ module.exports = {
   usage: "<#d/h/m>",
   category: "utility",
   run: async (bot, message, args) => {
-    
-   
-    
-    if(!args[1]){
-  return message.channel.send(`You did not give a reason!`)
-}
-    
     if (!args[0]) {
       return message.channel.send(
         `You did not specify the amount of time you wish to set a timer for!`
@@ -32,7 +25,9 @@ module.exports = {
       return message.channel.send(`That is not a number!`);
     }
     
-  
+  if(!args[1]){
+  return message.channel.send(`You did not give a reason!`)
+}
     
     Timers.set(message.author.id + " G " + message.guild.name, {
       Guild: message.guild.name,
