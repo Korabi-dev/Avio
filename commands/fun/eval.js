@@ -25,7 +25,7 @@ return message.channel.send(`Hey dear owner you have forgotten to give me some c
         .setDescription(`Code:
         args[0]
 `)
-        .setImage(target.user.displayAvatarURL({ dynamic: true, size: 256 }))
+        .setImage(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .setColor(`RED`);
       message.channel.send(Embed);
   }
