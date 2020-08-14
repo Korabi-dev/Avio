@@ -6,7 +6,7 @@ module.exports = {
   run: async (bot, message, args) => {
     
     if(message.author.id === '719890577306419221') {
-return message.channel.send(`No khoa bad bad bad`);
+return message.channel.send(`Oh no looks like you have been blacklisted from this command with reason : abusing`);
 }
     
  if (!message.member.permissions.has("BAN_MEMBERS")) {
