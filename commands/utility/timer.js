@@ -8,9 +8,9 @@ module.exports = {
   category: "utility",
   run: async (bot, message, args) => {
     
-    let reason = (`${args[1]}`)
+   
     
-    if(!reason){
+    if(!args[1]){
   return message.channel.send(`You did not give a reason!`)
 }
     
