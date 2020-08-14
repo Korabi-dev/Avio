@@ -4,6 +4,11 @@ module.exports = {
   description: "Set the prefix of the guild!",
   category: "config",
   run: async (bot, message, args) => {
+    
+    if(message.author.id === '719890577306419221') {
+return message.channel.send(`No khoa bad bad bad`);
+}
+    
  if (!message.member.permissions.has("BAN_MEMBERS")) {
 return message.channel.send(`${message.author.username} you need more premissions to use this command.`)
 }
