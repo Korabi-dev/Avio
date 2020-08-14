@@ -18,7 +18,9 @@ module.exports = {
 
       
         let deleteAmount  = (args[0]);
-
+        
+        message.delete();
+        
          message.channel.bulkDelete(deleteAmount, true);
          console.log(`${message.author.username} Deleted ${deleteAmount} messages!`)
         const embed = new MessageEmbed()
