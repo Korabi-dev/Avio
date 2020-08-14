@@ -43,7 +43,7 @@ module.exports = {
       let Embed = new MessageEmbed()
         .setTitle(`Timer finished in guild ${message.guild.name}..`)
         .setDescription(
-          `Your timer for ${args[0]} and reason: "**${args[1]}**" has finished!`
+          `Your timer for ${args} has finished!`
         )
         .setColor(`GREEN`);
       message.author.send(Embed);
