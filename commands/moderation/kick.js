@@ -45,7 +45,7 @@ module.exports = {
   .setTitle("Action: Kick")
   .setDescription(`Kicked ${target} with reason of: ${reason}`)
   .setColor("#ff2050")
-  .setThumbnail(message.author.user.displayAvatarURL({ dynamic: true, size: 256 }))
+  .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
   .setFooter(`Kicked by ${message.author.username}`);
   
   message.channel.send(embed)
