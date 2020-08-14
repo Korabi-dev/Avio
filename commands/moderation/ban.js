@@ -15,7 +15,8 @@ module.exports = {
         return message.channel.send(`**${message.author.username}**, I do not have enough permission to use this command`)
       }
 
-      let target = message.mentions.members.first();
+        let target =   message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]);
     
      
       if(!target) {
@@ -52,9 +53,7 @@ module.exports = {
       
       target.ban(args[1]);
 
-      target.ban(args[1]); 
-
-      target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
+     target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
     
     console.log(`${message.author.username} just banned ${target} with reason : ${reason}`)
 }
