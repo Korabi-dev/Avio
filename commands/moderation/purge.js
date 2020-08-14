@@ -29,7 +29,7 @@ module.exports = {
             .setDescription(`Successfully Deleted ${deleteAmount} Messages!`)
             .setFooter(message.author.username, message.author.displayAvatarURL())
             .setColor('RANDOM')
-         message.channel.send(embed)
+         message.channel.send(embed).then(m => m.delete({timeout: 5000}))
     }
   
 }
