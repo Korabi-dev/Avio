@@ -23,7 +23,7 @@ return message.channel.send(`Hey dear owner you have forgotten to give me some c
     let Embed = new MessageEmbed()
         .setTitle(`EVAL`)
         .setDescription(`Code:
-        ${args[0]}
+        ${args[0]}${args[1]}${args[2]}${args[3]}${args[4]}${args[5]}${args[6]}${args[7]}${args[8]}${args[9]}
 `)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .setColor(`RED`);
