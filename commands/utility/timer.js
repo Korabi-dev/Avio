@@ -7,6 +7,9 @@ module.exports = {
   usage: "<#d/h/m>",
   category: "utility",
   run: async (bot, message, args) => {
+    
+    let reason = (`${args[1]}`)
+    
     if (!args[0]) {
       return message.channel.send(
         `You did not specify the amount of time you wish to set a timer for!`
@@ -24,6 +27,11 @@ module.exports = {
     if (isNaN(args[0][0])) {
       return message.channel.send(`That is not a number!`);
     }
+    
+    if(!reason){
+  return message.channel.send(`You did not give a reason!`)
+}
+    
     Timers.set(message.author.id + " G " + message.guild.name, {
       Guild: message.guild.name,
       Author: {
@@ -38,7 +46,7 @@ module.exports = {
       let Embed = new MessageEmbed()
         .setTitle(`Timer finished in guild ${message.guild.name}..`)
         .setDescription(
-          `Your timer for ${args[0]} has finished!`
+          `Your timer for ${args[0]} and reason: ${args[1]} has finished!`
         )
         .setColor(`GREEN`);
       message.author.send(Embed);
