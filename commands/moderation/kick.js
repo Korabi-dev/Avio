@@ -15,7 +15,8 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, I do not have enough permission to use this command`)
     }
     
-    let target = message.mentions.members.first();
+    let target =   message.mentions.members.first() ||
+      message.guild.members.cache.get(args[0]);.get(args[0]);
     
     if(!target) {
       let embed9 = new discord.MessageEmbed()
