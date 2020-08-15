@@ -35,6 +35,21 @@ module.exports = {
       
       let muterole = message.guild.roles.cache.find(x => x.name === `${reason}`)
       
+            if(!muterole){
+let embedo = new Discord.MessageEmbed()
+      .setTitle("Command: r!role-add")
+      .setDescription(
+      `Description: Remove a role from a user
+      Usage: r!role-remove [user] [Role]
+      Example: r!roleadd @SaladHenry#7267 Admin`
+      )
+      .setColor("RANDOM")
+      .setFooter(`Made by Korabi20`);
+     return  message.channel.send(embedo)
+
+
+
+}
       
    if(user.roles.cache.has(muterole)) {
         return message.channel.send(`Given User does not have the role "**${reason}**" `)
