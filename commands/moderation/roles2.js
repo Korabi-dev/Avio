@@ -63,7 +63,7 @@ return  message.channel.send(embedo)
       
       user.send(`The role "**${reason}**" was given to you in **${message.guild.name}**`)
         
-        user.roles.remove(muterole)
+        
       
   
     }
