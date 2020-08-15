@@ -8,7 +8,7 @@ module.exports = {
    description: "get the commands",
   usage: "help",
   run: (client, message, args) => {
- let Embed = discord.MessageEmbed()
+ let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
         .setDescription(
           `Hey \`${message.author.tag}\` Here are the help commands `
