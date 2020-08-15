@@ -1,5 +1,5 @@
   
-const [MessageEmbed, Discord] = require("discord.js");
+const discord = require("discord.js");
 
 module.exports = {
   name: "help",
@@ -8,7 +8,7 @@ module.exports = {
    description: "get the commands",
   usage: "help",
   run: (client, message, args) => {
- let Embed = new MessageEmbed()
+ let Embed = discord.MessageEmbed()
         .setTitle(`Help`)
         .setDescription(
           `Hey \`${message.author.tag}\` Here are the help commands `
