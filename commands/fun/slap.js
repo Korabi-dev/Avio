@@ -28,7 +28,7 @@ module.exports = {
       let Embed = new MessageEmbed()
         .setTitle(`SLAP`)
         .setDescription(`OOF ${message.author} just slapped ${target} ouch that looks like it hurts...`)
-        .setImage(response { dynamic: true, size: 256 })
+        .setImage(`${response}`)
         .setColor(`RANDOM`);
       message.channel.send(Embed);
     }
