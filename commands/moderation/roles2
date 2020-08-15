@@ -60,7 +60,7 @@ module.exports = {
 
 await message.channel.send(`You  gave ${user} the role ${reason}`)
     
-    user.send(`Congrats you got the ${reason} role in **${message.guild.name}**``)
+    user.send(`Congrats you got the ${reason} role in ${message.guild.name}`)
     
     
  
