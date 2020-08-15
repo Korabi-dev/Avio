@@ -7,65 +7,23 @@ module.exports = {
   category: "moderation",
   usage: "mute <@mention> <reason>",
   run: async (client, message, args) => {
-    if (!message.member.hasPermission("BAN_MEMBERS")) {
-      return message.channel.send(
-        "Sorry but you do not have permission to use this!"
-      );
-    }
 
-    if (!message.guild.me.hasPermission("BAN_MEMBERS")) {
-      return message.channel.send("I do not have permission to manage roles.");
-    }
-
-    const user = message.mentions.members.first();
-    
-    if(!user) {
-      let embed8 = new Discord.MessageEmbed()
-      .setTitle("Command: r!roleadd")
-      .setDescription(
-      `Description: Add a role to a user
-      Usage: r!roleadd [user] 
-      Example: r!roleadd @SaladHenry#7267 Admin`
-      )
-      .setColor("RANDOM")
-      .setFooter(`Made by Korabi20`);
-     return  message.channel.send(embed8)
-       }
-    
-    
-    
-    
-    let reason = args.slice(1).join(" ")
-    
-    
-     if(!reason) {
-return message.channel.send(`Please say the role you want to add!`)
-}  
-   
-    
-  
-    
-    let muterole = message.guild.roles.cache.find(x => x.name === `${reason}`)
-    
-    if(!muterole) {
-return message.channel.send(`I could not find a role with the name "**${reason}**" make sure your spelling and capital letters are right please.`)
+   if (!message.member.hasPermission("BAN_MEMBERS")) {
+  return message.channel.send(
+    "Sorry but you do not have permission to take roles!"
+  );
 }
-     
-    
-    
-   if(user.roles.cache.has(muterole)) {
-   
-      return message.channel.send("Given user already has the role: ${reason}!")
-    }
-    
-    console.log('r')
-    user.roles.add(muterole);
-  
 
-await message.channel.send(`You  gave ${user} the role ${reason}`)
-    
-    user.send(`Congrats you got the ${reason} role in ${message.guild.name}`)
-    
+if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
+  return message.channel.send("I do not have permission to manage roles.");
+}
+
+const user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+const role = message.guild.roles.find(r => r.name == args[1]) || message.guild.roles.find(r => r.id == args[1]) || message.mentions.roles.first()
+
+user.addRole(role)
+
+message.channel.send(`I have added the role ${role} to ${user}`) 
     
  
     
