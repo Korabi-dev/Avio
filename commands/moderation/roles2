@@ -37,14 +37,18 @@ module.exports = {
     let reason = args.slice(1).join(" ")
     
     
-       
+     if(!reason) {
+return message.channel.send(`Please say the role you want to add!`)
+}  
    
     
   
     
     let muterole = message.guild.roles.cache.find(x => x.name === `${reason}`)
     
-    
+    if(!muterole) {
+return message.channel.send(`I could not find a role with the name ${reason} make sure your spelling and capital letters are right please.`)
+}
      
     
     
