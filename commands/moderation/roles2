@@ -58,9 +58,9 @@ module.exports = {
     user.roles.add(muterole);
   
 
-await message.channel.send(`You muted **${you gave \`{user}`\ the role \`${reason}\``)
+await message.channel.send(`You  gave \`${user}`\ the role \`${reason}\``)
     
-    user.send(`Congrats you got the \`${reason`\ role in **${message.guild.name}**``)
+    user.send(`Congrats you got the \`${reason}`\ role in **${message.guild.name}**``)
     
     
  
