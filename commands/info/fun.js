@@ -14,6 +14,6 @@ module.exports = {
     .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
     
    
-    message.channel.send(`Help sent! :white_check_mark:`)
+    message.channel.send(`Fun Commands Sent! :white_check_mark:`)
     message.author.send(embed)
 }}
