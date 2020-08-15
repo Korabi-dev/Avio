@@ -10,7 +10,7 @@ module.exports = {
   
   if(message.author.id !== '638476135457357849'){
   let Embed = new MessageEmbed()
-        .setTitle(`This Command Is Developer Only!`)
+        .setDescription(`This Command Is Developer Only!`)
         .setColor(`RED`);
    return message.channel.send(Embed);
 }
@@ -23,7 +23,7 @@ return message.channel.send(`Hey dear owner you have forgotten to give me some c
     let Embed = new MessageEmbed()
         .setTitle(`EVAL`)
         .setDescription(`Code:
-        ${args}
+        ${args.join(" ")}
 `)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .setColor(`RED`);
