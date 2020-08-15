@@ -53,7 +53,8 @@ return message.channel.send(`I could not find a role with the name ${reason} mak
     
     
    if(user.roles.cache.has(muterole)) {
-      return message.channel.send("Given User already has that role!")
+    user.roles.remove(muterole)
+      return message.channel.send("Removed the role ${reason}!")
     }
     
     console.log('r')
