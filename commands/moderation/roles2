@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports = {
-  name: "roleadd",
+  name: "role-add",
   description: "Mute anyone who break rules",
   category: "moderation",
   usage: "mute <@mention> <reason>",
