@@ -1,4 +1,4 @@
-const { MessageEmbed, Discord } = require("discord.js");
+const Discord  = require("discord.js");
 
 module.exports = {
     name: "role-remove",
