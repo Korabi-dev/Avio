@@ -31,7 +31,7 @@ module.exports = {
       
      let reason = args.slice(1).join(" ")
       
-      let muterole = message.guild.roles.cache.find(x => x.name === `${reason})
+      let muterole = message.guild.roles.cache.find(x => x.name === `${reason}`)
       
       
    if(user.roles.cache.has(muterole)) {
