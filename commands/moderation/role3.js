@@ -26,7 +26,9 @@ module.exports = {
       Example: r!rolremove @SaladHenry#7267 Admin`
       )
       .setColor("RANDOM")
-      .setFooter(`Made by Korabi20`);
+      .setFooter(`Made by Korabi20
+    note : you have to put the exact role name with all caps the same as the role name.
+`);
      return  message.channel.send(embed8)
        }
       
