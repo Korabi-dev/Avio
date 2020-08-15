@@ -3,7 +3,6 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "help",
-  
    category: "info",
    description: "get the commands",
   usage: "help",
@@ -14,7 +13,7 @@ module.exports = {
           `Hey \`${message.author.tag}\` Here are the help commands `
         )
         .setColor(`RED`)
-        .setThumbnail(Avatar)
+        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .addFields(
           { name: "r!help-moderation", value: `Sends you the moderation commands!`, inline: true },
           { name: "r!help-info", value: `Sends you the information commands!`, inline: true },
