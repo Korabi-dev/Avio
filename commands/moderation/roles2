@@ -45,9 +45,7 @@ module.exports = {
     let muterole = message.guild.roles.cache.find(x => x.name === `${reason}`)
     
     
-      if(!muterole) {
-      return message.channel.send("Could not find the role ${reason}")
-    }
+     
     
     
    if(user.roles.cache.has(muterole)) {
