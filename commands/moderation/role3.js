@@ -1,6 +1,6 @@
 module.exports = {
     name: "role-remove",
-    aliases: ["roleremove"]
+    aliases: ["roleremove"],
     category: "moderation",
     run: async (client, message, args) => {
       if (!message.member.hasPermission("BAN_MEMBERS")) {
