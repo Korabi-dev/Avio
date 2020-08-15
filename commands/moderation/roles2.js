@@ -26,7 +26,8 @@ module.exports = {
       Example: r!roleadd @SaladHenry#7267 Admin`
       )
       .setColor("RANDOM")
-      .setFooter(`Made by Korabi20`);
+      .setFooter(`Made by Korabi20
+    note : you have to put the exact role name with all caps the same as the role name.`);
      return  message.channel.send(embed8)
        }
       
@@ -44,11 +45,9 @@ let embedo = new Discord.MessageEmbed()
       Example: r!roleadd @SaladHenry#7267 Admin`
       )
       .setColor("RANDOM")
-      .setFooter(`Made by Korabi20`);
-     return  message.channel.send(embedo)
-
-
-
+       .setFooter(`Made by Korabi20
+    note : you have to put the exact role name with all caps the same as the role name.`);     
+return  message.channel.send(embedo)
 }
         
    if(user.roles.cache.has(muterole)) {
