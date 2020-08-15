@@ -28,7 +28,7 @@ module.exports = {
       )
       .setColor("RANDOM")
       .setFooter(`Made by Korabi20`);
-      message.channel.send(embed8)
+     return  message.channel.send(embed8)
        }
     
     
