@@ -7,7 +7,7 @@ module.exports = (bot) => {
       console.log(`Loaded command ${pull.name}`);
       bot.commands.set(pull.name, pull);
       if (pull.aliases) {
-        pull.aliases.map((p) => bot.aliases.set(p, pull));
+        if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
       }
     });
   });
