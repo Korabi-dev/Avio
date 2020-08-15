@@ -2,7 +2,7 @@
 const discord = require("discord.js");
 
 module.exports = {
-  name: "cmds",
+  name: "help-moderation",
    category: "info",
    description: "get the commands",
   usage: "help",
