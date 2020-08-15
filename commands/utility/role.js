@@ -4,7 +4,7 @@ module.exports = {
   description: "A role utility command",
   category: "utility",
   run: async (bot, message, args) => {
-message.channel.send(`Please say r!roles-remove or add!`)
+message.channel.send(`Please say r!roles-remove or r!roles-add!`)
 
   }
 };
