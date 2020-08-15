@@ -2,6 +2,7 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "ship",
+  aliases: ["lovemeter", "howmuchdoilove"],
   category: "fun",
   description: "measure your love!",
   usage: "ship <@user>",
