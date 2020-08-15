@@ -21,5 +21,5 @@ module.exports = {
           { name: "r!help-utility", value: `Sends you the utility commands!`, inline: true },
        );
       
-      channel.send(Embed);
+      message.channel.send(Embed);
 }}
