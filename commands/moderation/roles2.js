@@ -7,7 +7,7 @@ module.exports = {
     run: async (client, message, args) => {
       if (!message.member.hasPermission("BAN_MEMBERS")) {
         return message.channel.send(
-          "Sorry but you do not have permission to take roles!"
+          "Sorry but you do not have permission to give roles!"
         );
       }
   
