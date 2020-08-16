@@ -19,7 +19,7 @@ module.exports = {
   
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
-      .setTitle("Command: r!role-remove")
+      .setTitle("Command: a!role-remove")
       .setDescription(
       `Description: Remove a role from a user
       Usage: r!role-remove [user] [Role]
@@ -38,7 +38,7 @@ module.exports = {
       
             if(!muterole){
 let embedo = new Discord.MessageEmbed()
-      .setTitle("Command: r!role-add")
+      .setTitle("Command: a!role-remove")
       .setDescription(
       `Description: Remove a role from a user
       Usage: r!role-remove [user] [Role]
