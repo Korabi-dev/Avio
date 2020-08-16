@@ -21,7 +21,7 @@ module.exports = {
      
       if(!target) {
         let embed9 = new discord.MessageEmbed()
-        .setTitle("Command: r!ban")
+        .setTitle("Command: a!ban")
         .setDescription(
         `Description: Ban a member
         Usage: a!ban [user] [reason]
