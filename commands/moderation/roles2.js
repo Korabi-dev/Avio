@@ -38,7 +38,7 @@ module.exports = {
       
       if(!muterole){
 let embedo = new Discord.MessageEmbed()
-      .setTitle("Command: r!role-add")
+      .setTitle("Command: a!role-add")
       .setDescription(
       `Description: Add a role to a user
       Usage: a!role-remove [user] [Role]
