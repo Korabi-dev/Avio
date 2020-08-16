@@ -24,7 +24,7 @@ module.exports = {
         .setTitle("Command: r!ban")
         .setDescription(
         `Description: Ban a member
-        Usage: r!ban [user] [reason]
+        Usage: a!ban [user] [reason]
         Example: r!ban @Korabi20 Alt!`
         )
         .setColor("RANDOM")
