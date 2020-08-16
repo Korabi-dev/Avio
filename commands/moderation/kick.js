@@ -23,8 +23,8 @@ module.exports = {
       .setTitle("Command: r!kick")
       .setDescription(
       `Description: Kick a member
-      Usage: r!kick [user] [reason]
-      Example: r!kick @Korabi20 Alt!`
+      Usage: a!kick [user] [reason]
+      Example: a!kick @Korabi20 Alt!`
       )
       .setColor("RANDOM")
       .setFooter(`Made by Korabi20#0001`);
