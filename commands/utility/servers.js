@@ -9,7 +9,7 @@ module.exports = {
   run: (client, message, args) => {
     
      let embed9 = new discord.MessageEmbed()
-      .setTitle("INVITE ME")
+      .setTitle("Invite Me")
       .setDescription(`i am in **${client.guilds.cache.size}** servers thank you for the support!`)
       .setColor("RANDOM")
       .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
