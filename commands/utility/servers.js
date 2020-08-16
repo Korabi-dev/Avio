@@ -8,7 +8,8 @@ module.exports = {
   usage: "serversjoined",
   run: (client, message, args) => {
 
-return message.channel.send(`${client.guilds.cache.size}`)
+return message.channel.send(`${client.guilds.cache.size}`);
 
 
+}
 }
