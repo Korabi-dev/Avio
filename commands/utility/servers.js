@@ -12,7 +12,7 @@ module.exports = {
       .setTitle("INVITE ME")
       .setDescription(`i am in **${client.guilds.cache.size}** servers thank you for the support!`)
       .setColor("RANDOM")
-      .setUrl(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
+      .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
       .setFooter(`Made by Korabi20`);
       return message.channel.send(embed9)
 
