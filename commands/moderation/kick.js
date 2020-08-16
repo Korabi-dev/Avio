@@ -20,7 +20,7 @@ module.exports = {
     
     if(!target) {
       let embed9 = new discord.MessageEmbed()
-      .setTitle("Command: r!kick")
+      .setTitle("Command: a!kick")
       .setDescription(
       `Description: Kick a member
       Usage: a!kick [user] [reason]
