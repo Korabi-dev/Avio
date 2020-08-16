@@ -6,12 +6,6 @@ module.exports = {
   usage: "<time> <channel> <prize>",
   category: "fun",
   run: async (bot, message, args) => {
-    
-        if(!message.member.hasPermission("MANAGE_MESSAGES")) {
-      return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
-    }
-    
-    
     if (!args[0]) return message.channel.send(`You did not specify your time!`);
     if (
       !args[0].endsWith("d") &&
@@ -49,10 +43,10 @@ module.exports = {
 
       let winner = m.reactions.cache
         .get("🎉")
-        .users.cache.filter((u) => !u.user.bot)
+        .users.cache.filter((u) => !u.bot)
         .random();
       channel.send(
-        `The winner of the giveaway for **${prize}** is... ${winner.user.username}`
+        `The winner of the giveaway for **${prize}** is... ${winner}`
       );
     }, ms(args[0]));
   },
