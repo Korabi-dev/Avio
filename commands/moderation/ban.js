@@ -28,7 +28,7 @@ module.exports = {
         Example: a!ban @Korabi20 Alt!`
         )
         .setColor("RANDOM")
-        .setFooter(`Made by Korabi20#0001`);
+        .setFooter(`Made by Korabi20 an owned by glitch!`);
         message.channel.send(embed9)
          }
 
