@@ -3,6 +3,7 @@ const client = new discord.Client();
 
 module.exports = {
   name: "serversjoined",
+  aliases: ["servers", "servernumber, "guildjoined", "guilds"],
   category: "moderation",
   description: "Kick anyone with one shot xD",
   usage: "serversjoined",
