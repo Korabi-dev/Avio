@@ -20,11 +20,11 @@ module.exports = {
     
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
-      .setTitle("Command: r!mute")
+      .setTitle("Command: a!mute")
       .setDescription(
       `Description: Mute a member
-      Usage: r!mute [user] [reason]
-      Example: r!mute @SaladHenry#7267 Spamming!`
+      Usage: a!mute [user] [reason]
+      Example: a!mute @SaladHenry#7267 Spamming!`
       )
       .setColor("RANDOM")
       .setFooter(`Made by Korabi20#0001`);
