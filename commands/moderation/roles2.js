@@ -19,11 +19,11 @@ module.exports = {
   
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
-      .setTitle("Command: r!role-add")
+      .setTitle("Command: a!role-add")
       .setDescription(
-      `Description: Remove a role from a user
-      Usage: r!role-remove [user] [Role]
-      Example: r!roleadd @SaladHenry#7267 Admin`
+      `Description: Add a role to a user
+      Usage: a!role-remove [user] [Role]
+      Example: a!roleadd @SaladHenry#7267 Admin`
       )
       .setColor("RANDOM")
       .setFooter(`Made by Korabi20
@@ -40,9 +40,9 @@ module.exports = {
 let embedo = new Discord.MessageEmbed()
       .setTitle("Command: r!role-add")
       .setDescription(
-      `Description: Remove a role from a user
-      Usage: r!role-remove [user] [Role]
-      Example: r!roleadd @SaladHenry#7267 Admin`
+      `Description: Add a role to a user
+      Usage: a!role-remove [user] [Role]
+      Example: a!roleadd @SaladHenry#7267 Admin`
       )
       .setColor("RANDOM")
        .setFooter(`Made by Korabi20
