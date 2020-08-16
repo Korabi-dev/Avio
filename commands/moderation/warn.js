@@ -17,11 +17,11 @@ module.exports = {
       .setTitle("Command: r!warn")
       .setDescription(
       `Description: Warn a member
-      Usage: r!warn [user] [reason]
-      Example: r!warn @Water#6224 Being rude to staff!`
+      Usage: a!warn [user] [reason]
+      Example: a!warn @Water#6224 Being rude to staff!`
       )
       .setColor("RANDOM")
-      .setFooter(`Made by Korabi20#0001`);
+      .setFooter(`Made by Korabi20`);
       message.channel.send(embed8)
        }
       warns.findOne(
