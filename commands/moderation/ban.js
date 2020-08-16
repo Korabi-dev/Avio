@@ -25,7 +25,7 @@ module.exports = {
         .setDescription(
         `Description: Ban a member
         Usage: a!ban [user] [reason]
-        Example: r!ban @Korabi20 Alt!`
+        Example: a!ban @Korabi20 Alt!`
         )
         .setColor("RANDOM")
         .setFooter(`Made by Korabi20#0001`);
