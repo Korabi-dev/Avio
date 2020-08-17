@@ -13,6 +13,6 @@ let embed9 = new discord.MessageEmbed()
       .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
       .setColor("RANDOM")
       .setFooter(`Thank you for inviting!`);
-      message.channel.send(eembed9)
+      message.channel.send(embed9)
        
 }}
