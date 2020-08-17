@@ -5,7 +5,7 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-      if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+      if (!message.member.hasPermission("KICK_MEMBERS")) {
         return message.channel.send(
           "Sorry but you do not have permission to use this you must have the \`MANAGE_MESSAGES`\ premission to use it!"
         );
