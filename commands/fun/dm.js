@@ -29,9 +29,11 @@ module.exports = {
       );
     if (!args.slice(1).join(" "))
       return message.channel.send("You did not specify your message");
+    console.log(`${message.author.username} just dmed {user.user.username} dm content: \"${args.slice(1).join(" ")}\ `)
     user.user
       .send(args.slice(1).join(" ") + user )
       .catch(() => message.channel.send("That user could not be DMed!"))
       .then(() => message.channel.send(`Sent a message to ${user.user.tag}`));
+      
     },
 };
