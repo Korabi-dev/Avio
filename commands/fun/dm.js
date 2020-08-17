@@ -23,7 +23,7 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
     }
      
-   console.log(`${sender.username} just dmed ${user.username}`)  
+   
      
     if (!user)
       return message.channel.send(
@@ -35,6 +35,6 @@ module.exports = {
       .send(args.slice(1).join(" ") + user )
       .catch(() => message.channel.send("That user could not be DMed!"))
       .then(() => message.channel.send(`Sent a message to ${user.user.tag}`));
-      
+      .then(() =>  console.log(`${sender.username} just dmed ${user.username}`)); 
     },
 };
