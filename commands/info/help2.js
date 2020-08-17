@@ -16,10 +16,10 @@ module.exports = {
         .setColor(`RED`)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .addFields(
-          { name: "r!help-moderation", value: `Sends you the moderation commands!`, inline: true },
-          { name: "r!help-info", value: `Sends you the information commands!`, inline: true },
-          { name: "r!help-fun", value: `Sends you the fun commands!`, inline: true },
-          { name: "r!help-utility", value: `Sends you the utility commands!`, inline: true },
+          { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
+          { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
+          { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
+          { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
        );
       
       message.channel.send(Embed);
