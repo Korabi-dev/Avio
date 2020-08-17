@@ -5,11 +5,7 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-      if (!message.member.hasPermission("KICK_MEMBERS")) {
-        return message.channel.send(
-          "Sorry but you do not have permission to use this you must have the \`MANAGE_MESSAGES`\ premission to use it!"
-        );
-      }
+     
     
     
     let user =
@@ -17,6 +13,13 @@ module.exports = {
       message.guild.members.cache.get(args[0]);
 
      let sender = `${message.author.username}`
+     
+       if(!message.member.hasPermission("KICK_MEMBERS")) {
+      return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+    }
+     
+     
+     
     if (!user)
       return message.channel.send(
         `You did not mention a user, or you gave an invalid id`
