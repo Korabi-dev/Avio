@@ -5,7 +5,7 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-    console.log(`${message.author.username} just dmed {user.user.username} dm content: \"${args.slice(1).join(" ")}\ `)
+    
     
           if(!message.member.hasPermission("MANAGE_MESSAGES")) {
       return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
@@ -23,7 +23,7 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
     }
      
-     
+   console.log(`${sender.username} just dmed ${user.username}`)  
      
     if (!user)
       return message.channel.send(
