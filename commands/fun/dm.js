@@ -4,6 +4,14 @@ module.exports = {
   description: "DM a user in the guild",
   category: "fun",
   run: async (bot, message, args) => {
+    
+      if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+        return message.channel.send(
+          "Sorry but you do not have permission to use this you must have the \`MANAGE_MESSAGES`\ premission to use it!"
+        );
+      }
+    
+    
     let user =
       message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
