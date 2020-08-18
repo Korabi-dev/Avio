@@ -20,7 +20,7 @@ if(!target) {
 
   let embed2 = new discord.MessageEmbed()
   .setTitle('Gay Rate Machine')
-  .setDescription(`${`You are ${response}% gay :gay_pride_flag: `)
+  .setDescription(`You are ${response}% gay :gay_pride_flag: `)
   .setColor('RANDOM')
   
   
