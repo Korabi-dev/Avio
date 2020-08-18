@@ -1,6 +1,7 @@
 const discord = require('discord.js')
 module.exports = {
   name: "serverinfo",
+  aliases: ["info"],
   description: "DM a user in the guild",
   category: "fun",
   run: async (bot, message, args) => {
