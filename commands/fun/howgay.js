@@ -23,7 +23,7 @@ module.exports = {
 }
 
 }
-    if(target.user.id === '638476135457357849'){
+    if(target.id === '638476135457357849'){
 
    let embed = new discord.MessageEmbed()
   .setTitle('Gay Rate Machine')
