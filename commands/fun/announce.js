@@ -9,7 +9,7 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
     }
     
-    let rChannel = message.guild.channels.cache.get(args[0]);
+    let rChannel = message.guild.channels.cache.get(args[1]);
     if (!rChannel)
       return message.channel.send(
         `You did not specify your channel to send the announcement too!`
