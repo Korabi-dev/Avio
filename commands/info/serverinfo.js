@@ -2,13 +2,11 @@ const discord = require('discord.js')
 module.exports = {
   name: "serverinfo",
   aliases: ["info"],
-  description: "DM a user in the guild",
-  category: "fun",
+  description: "Get the info for the guild",
+  category: "info",
   run: async (bot, message, args) => {
     
-    if(message.guild.rulesChannel === null){
-  message.guild.rulesChannel = 'none/not setup'
-}
+if (message.guild.rules.channel == null) message.guild.rules.channel = “none/not setup”
 
     let embed9 = new discord.MessageEmbed()
       .setTitle("Server Info")
