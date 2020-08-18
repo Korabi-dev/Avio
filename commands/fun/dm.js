@@ -19,17 +19,19 @@ module.exports = {
 
      let sender = `${message.author.username}`
    
-     
+     console.log(`${sender} just DMed ${user} Dm content: ${args.slice(1).join(" ")} `)
+    
     if (!user)
       return message.channel.send(
         `You did not mention a user, or you gave an invalid id`
       );
     if (!args.slice(1).join(" "))
       return message.channel.send("You did not specify your message");
-      console.log(`${sender} just DMed ${user} Dm content: ${args.slice(1).join(" ")} `)
+      
      user.user
-      .send(`by ${message.author.username}` + args.slice(1).join(" ") + user )
+      .send(`by ${message.author.username}: ` + args.slice(1).join(" ") + user )
       .catch(() => message.channel.send("That user could not be DMed!"))
       .then(() => message.channel.send(`Sent a message to ${user.user.tag}`));
       },
+  
 };
