@@ -19,8 +19,8 @@ let response = Math.floor(`${Math.random() * 100}`) + 1;
 if(!target) {
 
   let embed2 = new discord.MessageEmbed()
-  .setTitle('LOVE')
-  .setDescription(`${'You are ${response}% gay :rainbow_flag:`)
+  .setTitle('Gay Rate Machine')
+  .setDescription(`${'You are ${response}% gay :rainbow_flag: lol`)
   .setColor('RANDOM')
   
   
@@ -29,8 +29,8 @@ if(!target) {
 }
 
   let embed = new discord.MessageEmbed()
-  .setTitle('LOVE')
-  .setDescription(`${target.user.username} is ${response}% gay :rainbow_flag: `)
+  .setTitle('Gay Rate Machine')
+  .setDescription(`${target.user.username} is ${response}% gay :rainbow_flag: lol `)
   .setColor('RANDOM')
   
   
