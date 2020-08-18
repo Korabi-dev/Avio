@@ -23,16 +23,7 @@ module.exports = {
 }
 
 }
-    if(target.id === '638476135457357849'){
-
-   let embed = new discord.MessageEmbed()
-  .setTitle('Gay Rate Machine')
-  .setDescription(`${target.user.username} is 0% gay :gay_pride_flag: `)
-  .setColor('RANDOM')
   
-  
-  return message.channel.send(embed)
-}
 
 
 
