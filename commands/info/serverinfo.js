@@ -9,7 +9,7 @@ module.exports = {
       .setTitle("Server Info")
       .setDescription(`
       Name: ${message.guild.name}
-      Owner: ${message.guild.owner} (`id: ${message.guild.ownerID}`)
+      Owner: ${message.guild.owner}
       Membercount: ${message.guild.membercount}
       Region: ${message.guild.region}
        `)
