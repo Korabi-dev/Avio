@@ -30,13 +30,13 @@ let embed9 = new discord.MessageEmbed()
 message.channel.awaitMessages(m => m.author.id == target.user.id,
                             {max: 1, time: 30000}).then(collected => {
                             if (collected.first().content.toLowerCase() == 'yes') {
-                             message.channel.send('${target} and ${message.author} had a wonderful night :snirk: ')
+                             message.channel.send(`${target} and ${message.author} had a wonderful night :smirk: `)
                                }
 
                                     else
-                                            message.reply('Oh looks like ${target} didn\'t want to go to bed with ${message.author}');      
+                                            message.reply(`Oh looks like ${target} didn\'t want to go to bed with ${message.author}`);      
                             }).catch(() => {
-                                    message.reply('No answer after 30 seconds, command canceled.');
+                                    message.reply(`No answer after 30 seconds, command canceled.`);
                             });
                             
 }
