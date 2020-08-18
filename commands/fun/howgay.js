@@ -38,4 +38,6 @@ if(!target) {
   
   message.channel.send(embed)
   
+  }
+}
 
