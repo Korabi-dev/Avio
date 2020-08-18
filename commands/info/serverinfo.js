@@ -14,7 +14,7 @@ module.exports = {
       Membercount: ${message.guild.memberCount}
       Region: ${message.guild.region}
       Rules channel: ${message.guild.rulesChannel}
-      Created: ${message.guild.createdTimestamp}
+      Created: ${message.guild.createdAt}
        `)
        .setThumbnail(message.guild.iconURL)
       .setColor("RANDOM")
