@@ -5,6 +5,10 @@ module.exports = {
   description: "DM a user in the guild",
   category: "fun",
   run: async (bot, message, args) => {
+    
+    if(!message.guild.rulesChannel){
+  message.guild.rulesChannel = 'none/not setup'
+}
 
     let embed9 = new discord.MessageEmbed()
       .setTitle("Server Info")
