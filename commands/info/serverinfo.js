@@ -6,7 +6,7 @@ module.exports = {
   category: "info",
   run: async (bot, message, args) => {
     
-if (message.guild.rules.channel == null) {
+if (message.guild.rulesChannel == null) {
   message.guild.rulesChannel = ('none or not setup')
 }
     let embed9 = new discord.MessageEmbed()
