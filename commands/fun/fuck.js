@@ -25,6 +25,7 @@ return message.channel.send(`Hey ${message.author.username}  How would you do th
 let embed9 = new discord.MessageEmbed()
       .setTitle("FUCK")
       .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please reply yes or no`)
+      .setColor('RANDOM')
       message.channel.send(embed9)
 
 
