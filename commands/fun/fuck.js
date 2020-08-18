@@ -42,7 +42,8 @@ message.channel.awaitMessages(m => m.author.id == target.user.id,
                             {max: 1, time: 30000}).then(collected => {
                             if (collected.first().content.toLowerCase() == 'no') {
                              message.channel.send(`Oh looks like ${target} didn\'t want to go to bed with ${message.author}`);   
-                               })
+                               }
+                                        });
                                                
                             }).catch(() => {
                                     message.channel.send(`No answer after 30 seconds, command canceled.`);
