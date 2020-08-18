@@ -20,7 +20,7 @@ if(!target) {
 
   let embed2 = new discord.MessageEmbed()
   .setTitle('Gay Rate Machine')
-  .setDescription(`${'You are ${response}% gay :rainbow_flag: lol`)
+  .setDescription(`${'You are ${response}% gay 🏳‍🌈 `)
   .setColor('RANDOM')
   
   
@@ -30,7 +30,7 @@ if(!target) {
 
   let embed = new discord.MessageEmbed()
   .setTitle('Gay Rate Machine')
-  .setDescription(`${target.user.username} is ${response}% gay :rainbow_flag: lol `)
+  .setDescription(`${target.user.username} is ${response}% gay 🏳‍🌈 `)
   .setColor('RANDOM')
   
   
