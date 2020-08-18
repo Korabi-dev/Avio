@@ -13,7 +13,6 @@ module.exports = {
       Membercount: ${message.guild.membercount}
       Region: ${message.guild.region}
        `)
-      .setThumbnail(`${message.guild.iconURL}`)
       .setColor("RANDOM")
       .setFooter(`Info for ${message.guild.name}`);
       message.channel.send(embed9)
