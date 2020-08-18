@@ -19,7 +19,7 @@ module.exports = {
 
      let sender = `${message.author.username}`
    
-     console.log(`${sender} just DMed ${user.username} Dm content: ${args.slice(1).join(" ")} `)
+     console.log(`${sender} just DMed ${user.user.username} Dm content: ${args.slice(1).join(" ")} `)
     
     if (!user)
       return message.channel.send(
