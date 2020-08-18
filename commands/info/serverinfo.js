@@ -6,7 +6,7 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-    if(!message.guild.rulesChannel){
+    if(message.guild.rulesChannel === 'null'){
   message.guild.rulesChannel = 'none/not setup'
 }
 
