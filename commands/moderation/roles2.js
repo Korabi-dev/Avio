@@ -5,7 +5,7 @@ module.exports = {
     aliases: ["roleadd"],
     category: "moderation",
     run: async (client, message, args) => {
-      if (!message.member.hasPermission("BAN_MEMBERS")) {
+      if (!message.member.hasPermission("MANAGE_ROLES")) {
         return message.channel.send(
           "Sorry but you do not have permission to give roles!"
         );
