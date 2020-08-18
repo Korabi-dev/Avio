@@ -7,7 +7,7 @@ module.exports = {
   run: async (bot, message, args) => {
     
 if (message.guild.rules.channel == null) {
-  message.guild.rules.channel = ('none or not setup')
+  message.guild.rulesChannel = ('none or not setup')
 }
     let embed9 = new discord.MessageEmbed()
       .setTitle("Server Info")
