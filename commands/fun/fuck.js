@@ -38,9 +38,9 @@ message.channel.awaitMessages(m => m.author.id == target.user.id,
                                }
 
                                     else
-                                            message.reply(`Oh looks like ${target} didn\'t want to go to bed with ${message.author}`);      
+                                            message.channel.send(`Oh looks like ${target} didn\'t want to go to bed with ${message.author}`);      
                             }).catch(() => {
-                                    message.reply(`No answer after 30 seconds, command canceled.`);
+                                    message.channel.send(`No answer after 30 seconds, command canceled.`);
                             });
                             
 }
