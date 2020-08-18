@@ -20,8 +20,7 @@ if(!target) {
 
   let embed2 = new discord.MessageEmbed()
   .setTitle('LOVE')
-  .setDescription(`${message.author} is ${response}% gay 🏳‍🌈`)
-  .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
+  .setDescription(`${'You are ${response}% gay :rainbow_flag:`)
   .setColor('RANDOM')
   
   
@@ -31,8 +30,7 @@ if(!target) {
 
   let embed = new discord.MessageEmbed()
   .setTitle('LOVE')
-  .setDescription(`${target.user.username} is ${response}% gay 🏳‍🌈`)
-  .setThumbnail(target.user.displayAvatarURL({ dynamic: true, size: 256 }))
+  .setDescription(`${target.user.username} is ${response}% gay :rainbow_flag: `)
   .setColor('RANDOM')
   
   
