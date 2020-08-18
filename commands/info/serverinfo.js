@@ -10,7 +10,7 @@ module.exports = {
       .setDescription(`
       Name: ${message.guild.name}
       Owner: ${message.guild.owner}
-      Membercount: ${message.guild.membercount}
+      Membercount: ${message.guild.memberCount}
       Region: ${message.guild.region}
        `)
       .setColor("RANDOM")
