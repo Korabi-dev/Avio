@@ -11,7 +11,7 @@ module.exports = {
     .setTitle("Commands: Utility")
     .setDescription(` Prefix,announce,whois,giveaway,poll,suggest,snipe,oldest,ping,findalt,report,emoji,timer,invite,slowmode,embedify,membercount.`)
     .setColor("ORANGE")
-    .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
+    
     
    
     message.channel.send(`Utility Commands Sent! :white_check_mark:`)
