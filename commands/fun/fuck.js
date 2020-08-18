@@ -18,6 +18,9 @@ return message.channel.send(`This channel is not a nsfw channel!`)
     return message.channel.send(`Please mention someone to well uh...... Fuck`)
 }
 
+        if(target.user.id == message.author.id){
+return message.channel.send(`Hey ${message.author.username}  How would you do that please elaborate!`)
+}
 
 let embed9 = new discord.MessageEmbed()
       .setTitle("FUCK")
