@@ -13,6 +13,6 @@ module.exports = {
   
     
    
-    message.channel.send(`Fun Commands Sent! :white_check_mark:`)
+    message.channel.send(`NSFW Commands Sent! :white_check_mark:`)
     message.author.send(embed)
 }}
