@@ -22,11 +22,11 @@ module.exports = {
                     message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
                             { max: 1, time: 30000 }).then(collected => {
                                     if (collected.first().emoji.name == '👍') {
-                                            message.reply('Shutting down...');
+                                            message.channel.send('Shutting down...');
                                             client.destroy();
                                     }
                                     else
-                                            message.reply('Operation canceled.');
+                                            message.channel.send('Operation canceled.');
                             }).catch(() => {
                                     message.reply('No reaction after 30 seconds, operation canceled');
                             });
