@@ -1,6 +1,6 @@
   
 const Discord = require("discord.js");
-
+const client = new Discord.Client();
 
 
 module.exports = {
@@ -14,7 +14,22 @@ module.exports = {
         `You do not have premissions to use this command, ${message.author.username} you are not a dev!`
       );
       
-      message.channel.send('shutting down!')
+      message.react('👍').then(r => {
+                            message.react('👎');
+                    });
+
+                
+                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
+                            { max: 1, time: 30000 }).then(collected => {
+                                    if (collected.first().emoji.name == '👍') {
+                                            message.reply('Shutting down...');
+                                            client.destroy();
+                                    }
+                                    else
+                                            message.reply('Operation canceled.');
+                            }).catch(() => {
+                                    message.reply('No reaction after 30 seconds, operation canceled');
+                            });
    
   
   }
