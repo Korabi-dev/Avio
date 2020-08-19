@@ -13,3 +13,4 @@ return;
 bot.user.setActivity(args.join(" "))
 
 }
+}
