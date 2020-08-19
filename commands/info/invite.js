@@ -10,7 +10,7 @@ module.exports = {
 let embed9 = new discord.MessageEmbed()
       .setTitle("Invite Me")
       .setDescription(` Joined Servers: **${client.guilds.cache.size}** 
-      Online Members: **${client.users.cache.size}**
+      Online Users: **${client.users.cache.size}**
 `)
       .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
       .setColor("RANDOM")
