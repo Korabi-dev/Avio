@@ -15,7 +15,7 @@ module.exports = {
         return message.channel.send("I do not have permission to manage roles.");
       }
   
-      const user = message.mentions.members.first();
+      const user = message.mentions.members.first(); || message.mentions.roles();
   
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
