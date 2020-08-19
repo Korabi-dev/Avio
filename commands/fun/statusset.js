@@ -10,6 +10,6 @@ if(message.author.id !== '638476135457357849') {
 return;
 }
         
-bot.user.setActivity({args.join(" "))
+bot.user.setActivity(args.join(" "))
 
 }
