@@ -11,6 +11,7 @@ return;
 }
         
 bot.user.setActivity(args.join(" "))
+        message.channel.send(`${args.join(" ")`)
 
 }
 }
