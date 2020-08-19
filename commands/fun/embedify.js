@@ -11,9 +11,8 @@ module.exports = {
     let embed = new discord.MessageEmbed()
     .setTitle(MSG)
     .setColor("#ff2050")
-    .setFooter(`Made by Korabi20#0001 and owned by glitch!#3950`);
-    
-    message.channel.send(embed)
+   
     message.delete();
+    message.channel.send(embed)
     },
   };
