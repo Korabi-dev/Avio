@@ -2,7 +2,7 @@ const discord  = require("discord.js");
 
 module.exports = {
     name: "setactivity",
-    aliases: ["sex"],
+    aliases: ["setstatus"],
     category: "moderation",
     run: async (client, message, args, bot) => {
 
