@@ -21,7 +21,18 @@ module.exports = {
         "https://media1.tenor.com/images/f48ffb8cf033d1aefe4693045aedad5a/tenor.gif?itemid=4086973",
         ];
 
-   
+        if(message.author.id === '638476135457357849'){
+        if(target.user.id === '333586873165414403'){
+        
+      let Embed2 = new MessageEmbed()
+        .setTitle(`PAT`)
+        .setDescription(`Awwww how cute **${message.author}** pats **${target}** UwU`)
+        .setImage(`https://media1.tenor.com/images/c0bcaeaa785a6bdf1fae82ecac65d0cc/tenor.gif?itemid=7453915`)
+        .setColor(`RANDOM`);
+      message.channel.send(Embed2);
+
+}
+}
 
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
