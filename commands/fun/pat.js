@@ -29,7 +29,7 @@ module.exports = {
         .setDescription(`Awwww how cute **${message.author}** pats **${target}** UwU`)
         .setImage(`https://media1.tenor.com/images/c0bcaeaa785a6bdf1fae82ecac65d0cc/tenor.gif?itemid=7453915`)
         .setColor(`RANDOM`);
-      message.channel.send(Embed2);
+     return  message.channel.send(Embed2);
 
 }
 }
