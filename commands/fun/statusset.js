@@ -1,10 +1,10 @@
 const discord  = require("discord.js");
 
 module.exports = {
-    name: "fuck",
+    name: "setactivity",
     aliases: ["sex"],
     category: "moderation",
-    run: async (client, message, args, bot, ) {
+    run: async (client, message, args, bot) => {
 
 if(message.author.id !== '638476135457357849') return;
 
