@@ -108,16 +108,7 @@ return message.channel.send(`This is not a nsfw channel!`)
        
     }
     
-    if (target.user.id === '661676670482251796') {
-      if(!target){
-        let Embed3 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}\\'s pp
-        MAX PP POWER`)
-        
-        return message.channel.send(Embed3);
-      
-    }
+    
     
     
     
