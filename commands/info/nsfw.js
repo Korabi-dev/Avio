@@ -8,7 +8,7 @@ module.exports = {
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: NSFW")
-    .setDescription(`Fuck.`)
+    .setDescription(`Fuck,pp.`)
     .setColor("GREEN")
   
     
