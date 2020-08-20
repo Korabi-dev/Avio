@@ -33,7 +33,7 @@ return message.channel.send(`This is not a nsfw channel!`)
       if(!target){
         let Embed23 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**\\'s pp
+        .setDescription(`**${message.author.username}**'s pp
         8================================D`)
         
         return message.channel.send(Embed23);
@@ -45,7 +45,7 @@ return message.channel.send(`This is not a nsfw channel!`)
      
         let Embed230 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**\\'s pp
+        .setDescription(`**${message.author.username}**'s pp
         MAX PP POWER!`)
         
         return message.channel.send(Embed230);
@@ -56,7 +56,7 @@ return message.channel.send(`This is not a nsfw channel!`)
           if(!target){
         let Embed245 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**\\'s pp
+        .setDescription(`**${message.author.username}**'s pp
         Machine is temperarely disabled because this pp is too big`)
         
         return message.channel.send(Embed245);
@@ -68,7 +68,7 @@ return message.channel.send(`This is not a nsfw channel!`)
        if(!target){
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}\\'s pp
+        .setDescription(`${message.author.username}'s pp
         UwU looks like your pp is too big!`)
         
         return message.channel.send(Embed3);
@@ -79,7 +79,7 @@ return message.channel.send(`This is not a nsfw channel!`)
       if(!target){
         let Embed30 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}\\'s pp
+        .setDescription(`${message.author.username}'s pp
         MAX PP POWER`)
         
         return message.channel.send(Embed30);
@@ -91,7 +91,7 @@ return message.channel.send(`This is not a nsfw channel!`)
      
         let Embed23 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**\\'s pp
+        .setDescription(`**${target.user.username}**'s pp
         8================================D`)
         
         return message.channel.send(Embed23);
@@ -102,7 +102,7 @@ return message.channel.send(`This is not a nsfw channel!`)
           
         let Embed245 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**\\'s pp
+        .setDescription(`**${target.user.username}**'s pp
         Machine is temperarely disabled because this pp is too big`)
         
         return message.channel.send(Embed245);
@@ -114,7 +114,7 @@ return message.channel.send(`This is not a nsfw channel!`)
        
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}\\'s pp
+        .setDescription(`${target.user.username}'s pp
         UwU looks like your pp is too big!`)
         
         return message.channel.send(Embed3);
@@ -131,7 +131,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**\\'s pp
+        .setDescription(`**${message.author.username}**'s pp
         ${response} 
         `)
         
@@ -148,7 +148,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${target.username}**//'s pp
+        .setDescription(`**${target.user.username}**//'s pp
         ${response} 
         `)
         
