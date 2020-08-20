@@ -6,12 +6,7 @@ module.exports = {
   description: "There is a big chance I insult you!",
   category: "fun",
   run: async (bot, message, args) => {
-    
-    if(!message.channel.nsfw){
-return message.channel.send(`This is not a nsfw channel!`)
-}
-    
-     let responses = [
+      let responses = [
         "8D",
         "8=D",
         "8==D",
