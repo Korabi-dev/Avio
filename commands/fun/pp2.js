@@ -2,6 +2,7 @@ const { MessageEmbed, message } = require("discord.js");
 
 module.exports = {
   name: "ppmeter",
+  aliases: ["pp"],
   description: "There is a big chance I insult you!",
   category: "fun",
   run: async (bot, message, args) => {
