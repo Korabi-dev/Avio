@@ -5,6 +5,11 @@ module.exports = {
   description: "There is a big chance I insult you!",
   category: "fun",
   run: async (bot, message, args) => {
+    
+    if(!message.channel.nsfw){
+return message.channel.send(`This is not a nsfw channel!`)
+}
+    
      let responses = [
         "8D",
         "8=D",
@@ -27,7 +32,7 @@ module.exports = {
       if(!target){
         let Embed23 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
+        .setDescription(`**${message.author.username}**\\'s pp
         8================================D`)
         
         return message.channel.send(Embed23)
@@ -38,7 +43,7 @@ module.exports = {
           if(!target){
         let Embed245 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
+        .setDescription(`**${message.author.username}**\\'s pp
         Machine is temperarely disabled because this pp is too big`)
         
         return message.channel.send(Embed245)
@@ -50,7 +55,7 @@ module.exports = {
        if(!target){
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}'s pp
+        .setDescription(`${message.author.username}\\'s pp
         UwU looks like your pp is too big!`)
         
         return message.channel.send(Embed3)
@@ -61,7 +66,7 @@ module.exports = {
       if(!target){
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}'s pp
+        .setDescription(`${message.author.username}\\'s pp
         MAX PP POWER`)
         
         return message.channel.send(Embed3)
@@ -73,7 +78,7 @@ module.exports = {
      
         let Embed23 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
+        .setDescription(`**${message.author.username}**\\'s pp
         8================================D`)
         
         return message.channel.send(Embed23)
@@ -84,7 +89,7 @@ module.exports = {
           
         let Embed245 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
+        .setDescription(`**${message.author.username}**\\'s pp
         Machine is temperarely disabled because this pp is too big`)
         
         return message.channel.send(Embed245)
@@ -96,7 +101,7 @@ module.exports = {
        
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}'s pp
+        .setDescription(`${message.author.username}\\'s pp
         UwU looks like your pp is too big!`)
         
         return message.channel.send(Embed3)
@@ -107,7 +112,7 @@ module.exports = {
       if(!target){
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}'s pp
+        .setDescription(`${message.author.username}\\'s pp
         MAX PP POWER`)
         
         return message.channel.send(Embed3)
@@ -122,7 +127,7 @@ module.exports = {
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
+        .setDescription(`**${message.author.username}**\\'s pp
         ${response} 
         `)
         
@@ -139,7 +144,7 @@ module.exports = {
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${target.username}**'s pp
+        .setDescription(`**${target.username}**//'s pp
         ${response} 
         `)
         
