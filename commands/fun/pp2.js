@@ -39,6 +39,18 @@ return message.channel.send(`This is not a nsfw channel!`)
       }
     }
     
+        
+    if (target.user.id === '661676670482251796') {
+     
+        let Embed230 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`**${message.author.username}**\\'s pp
+        MAX PP POWER!`)
+        
+        return message.channel.send(Embed230);
+      
+    }
+    
         if (message.author.id === '362332196016750592') {
           if(!target){
         let Embed245 = new MessageEmbed()
