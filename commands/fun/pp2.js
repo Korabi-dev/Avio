@@ -69,7 +69,7 @@ module.exports = {
     }
     
     
-    if (target.id === '638476135457357849') {
+    if (target.user.id === '638476135457357849') {
      
         let Embed23 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
@@ -80,7 +80,7 @@ module.exports = {
       
     }
     
-        if (target.id === '362332196016750592') {
+        if (target.user.id === '362332196016750592') {
           
         let Embed245 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
@@ -92,7 +92,7 @@ module.exports = {
     }
     
     
-     if (target.id === '333586873165414403') {
+     if (target.user.id === '333586873165414403') {
        
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
@@ -103,7 +103,7 @@ module.exports = {
        
     }
     
-    if (target.id === '661676670482251796') {
+    if (target.user.id === '661676670482251796') {
       if(!target){
         let Embed3 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
@@ -145,4 +145,5 @@ module.exports = {
         
         .setColor(`RANDOM`);
       message.channel.send(Embed);
-}}
+}
+  }
