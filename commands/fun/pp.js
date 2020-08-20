@@ -29,14 +29,14 @@ module.exports = {
     
         
     if (message.author.id === '638476135457357849') {
-      if(!message.mentions.users.first){
+      
         let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**${message.author.username}**'s pp
         8================================D`)
         
         return message.channel.send(Embed2)
-      }
+      
     }
     
         if (message.author.id === '362332196016750592') {
