@@ -148,7 +148,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         responses[Math.floor(Math.random() * responses.length - 1)];
       let Embed = new MessageEmbed()
         .setTitle(`PP MACHINE`)
-        .setDescription(`**${target.user.username}**//'s pp
+        .setDescription(`**${target.user.username}**'s pp
         ${response} 
         `)
         
