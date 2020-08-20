@@ -35,7 +35,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`**${message.author.username}**\\'s pp
         8================================D`)
         
-        return message.channel.send(Embed23)
+        return message.channel.send(Embed23);
       }
     }
     
@@ -46,7 +46,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`**${message.author.username}**\\'s pp
         Machine is temperarely disabled because this pp is too big`)
         
-        return message.channel.send(Embed245)
+        return message.channel.send(Embed245);
           }
     }
     
@@ -58,18 +58,18 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`${message.author.username}\\'s pp
         UwU looks like your pp is too big!`)
         
-        return message.channel.send(Embed3)
+        return message.channel.send(Embed3);
        }
     }
     
     if (message.author.id === '661676670482251796') {
       if(!target){
-        let Embed3 = new MessageEmbed()
+        let Embed30 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`${message.author.username}\\'s pp
         MAX PP POWER`)
         
-        return message.channel.send(Embed3)
+        return message.channel.send(Embed30);
       }
     }
     
@@ -81,7 +81,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`**${message.author.username}**\\'s pp
         8================================D`)
         
-        return message.channel.send(Embed23)
+        return message.channel.send(Embed23);
       
     }
     
@@ -92,7 +92,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`**${message.author.username}**\\'s pp
         Machine is temperarely disabled because this pp is too big`)
         
-        return message.channel.send(Embed245)
+        return message.channel.send(Embed245);
           
     }
     
@@ -104,7 +104,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`${message.author.username}\\'s pp
         UwU looks like your pp is too big!`)
         
-        return message.channel.send(Embed3)
+        return message.channel.send(Embed3);
        
     }
     
@@ -115,7 +115,7 @@ return message.channel.send(`This is not a nsfw channel!`)
         .setDescription(`${message.author.username}\\'s pp
         MAX PP POWER`)
         
-        return message.channel.send(Embed3)
+        return message.channel.send(Embed3);
       
     }
     
