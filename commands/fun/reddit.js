@@ -54,7 +54,12 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
      if(subreddit === 'anal'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
 }
-   
+         if(subreddit === 'bitch'){
+return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
+}
+          if(subreddit === 'hentai'){
+return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
+}
    
    
     let img = await api(subreddit, true);
