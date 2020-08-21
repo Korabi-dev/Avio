@@ -9,6 +9,13 @@ module.exports = {
     if(!subreddit){
 return message.channel.send(`No subreddit found!`)
 }
+
+      if(subreddit === 'sex'){
+return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
+}
+   
+    
+    
     
       if(subreddit === 'simp'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
@@ -41,6 +48,9 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
 }
    
+     if(subreddit === 'anal'){
+return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
+}
    
    
    
