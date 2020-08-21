@@ -22,4 +22,4 @@ module.exports = {
     }
   },
 };
-© 2020 GitHub, Inc.
+
