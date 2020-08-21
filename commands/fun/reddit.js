@@ -7,12 +7,8 @@ module.exports = {
   run: async (bot, message, args) => {
     let subreddit = args.slice(0).join(" ")
     if(!subreddit){
-return message.channel.send(`No subreddit found!`)
-} else{
-console.log('oof there was nothing found')
-}.catch(() => {
-                                    message.channel.send(`invalid subreddit!`)
-                            });
+return message.channel.send(`No subreddit found/invalid subreddit!`)
+}
 
       if(subreddit === 'sex'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
