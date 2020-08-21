@@ -22,13 +22,13 @@ return message.channel.send(`Hey ${message.author.username}  How would you do th
 
 let embed9 = new discord.MessageEmbed()
       .setTitle("FUCK")
-      .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please reply yes or no`)
+      .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please react with  👍 or 👎`)
       .setColor('RANDOM')
       message.channel.send(embed9)
 
 
 
-  embed9.message.react('👍').then(r => {
+  message.react('👍').then(r => {
                             message.react('👎');
                     });
 
@@ -45,5 +45,10 @@ let embed9 = new discord.MessageEmbed()
                                     message.channel.send(`No Reaction after 30 seconds, command canceled!`)
                             });
                             
+        
+        
+        
+        
+        
 }
 }
