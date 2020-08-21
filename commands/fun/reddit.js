@@ -10,6 +10,8 @@ module.exports = {
 return message.channel.send(`No subreddit found/invalid subreddit!`)
 }
 
+    if(!message.channel.nsfw) {
+    
       if(subreddit === 'sex'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
 }
@@ -65,7 +67,8 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
 }
    
-   
+    }
+    
     let img = await api(subreddit, true);
     const Embed = new MessageEmbed()
       .setTitle(`An image from r/${subreddit}`)
