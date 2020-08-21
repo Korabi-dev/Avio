@@ -11,7 +11,7 @@ module.exports = {
  let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
         .setDescription(
-          `Hey \`${message.author.username}\` Here are the help commands `
+          `Hey **${message.author.username}** Here are the help commands `
         )
         .setColor(`RED`)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
