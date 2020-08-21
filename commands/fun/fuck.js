@@ -42,7 +42,7 @@ let embed9 = new discord.MessageEmbed()
                                     else
                                             message.channel.send(`Oh no looks like there is no action tonight Because ${target} didn\'t wanna go to bed with ${message.author.username}`);
                             }).catch(() => {
-                                    message.channel.send(`No Reaction after 30 seconds, command canceled!')
+                                    message.channel.send(`No Reaction after 30 seconds, command canceled!`)
                             });
                             
 }
