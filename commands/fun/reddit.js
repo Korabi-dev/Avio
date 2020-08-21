@@ -69,6 +69,4 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
     
     
        },
-}.catch(() => {
-                                    message.channel.send(`invalid subreddit!`)
-                            });
+};
