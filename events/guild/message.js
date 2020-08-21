@@ -23,7 +23,22 @@ module.exports = async (bot, message) => {
   const cmd = args.shift().toLowerCase();
 
   if (cmd.length === 0) {
-return message.channel.send(`Please do a!help for commands!`)
+    let Embed = new discord.MessageEmbed()
+        .setTitle(`Help`)
+        .setDescription(
+          `Hey \`${message.author.username}\` Here are the help commands `
+        )
+        .setColor(`RED`)
+        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
+        .addFields(
+          { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
+          { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
+          { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
+          { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
+          { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+       );
+      
+     return message.channel.send(Embed);
   }
 
   let command = bot.commands.get(cmd);
