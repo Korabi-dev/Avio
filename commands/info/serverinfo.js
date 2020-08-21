@@ -18,7 +18,7 @@ if (message.guild.rulesChannel === null) message.guild.rulesChannel = ("none or 
       Rules channel: ${message.guild.rulesChannel}
       Created: ${message.guild.createdAt}
        `)
-       .setThumbnail(message.guild.iconURL)
+       .setImage(message.guild.iconURL)
       .setColor("RANDOM")
       .setFooter(`Info for ${message.guild.name}`);
       message.channel.send(embed9)
