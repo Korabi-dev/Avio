@@ -1,5 +1,5 @@
 const Timeout = new Set();
-const { MessageEmbed, Message, Client } = require("discord.js");
+const { MessageEmbed, Message, Client, discord } = require("discord.js");
 const { prefix } = require("../../config.json");
 const ms = require("ms");
 const db = require("../../db");
