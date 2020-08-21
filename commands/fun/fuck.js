@@ -28,23 +28,21 @@ let embed9 = new discord.MessageEmbed()
 
 
 
+  message.react('👍').then(r => {
+                            message.react('👎');
+                    });
 
-message.channel.awaitMessages(m => m.author.id == target.user.id,
-                            {max: 1, time: 30000}).then(collected => {
-                            if (collected.first().content.toLowerCase() == 'yes') {
-                             message.channel.send(`${target} and ${message.author} had a wonderful night :smirk: `)
-                               }
-
+                
+                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
+                            { max: 1, time: 30000 }).then(collected => {
+                                    if (collected.first().emoji.name == '👍') {
+                                            message.channel.send(`${message.author.username} and ${target} had a wonderful night :smirk:`)
+                                            client.destroy();
+                                    }
                                     else
-                                        message.channel.awaitMessages(m => m.author.id == target.user.id,
-                            {max: 1, time: 30000}).then(collected => {
-                            if (collected.first().content.toLowerCase() == 'no') {
-                             message.channel.send(`Oh looks like ${target} didn\'t want to go to bed with ${message.author}`);   
-                               }
-                                        });
-                                               
+                                            message.channel.send(`Oh no looks like there is no action tonight Because ${target} didn\'t wanna go to bed with ${message.author.username`);
                             }).catch(() => {
-                                    message.channel.send(`No answer after 30 seconds, command canceled.`);
+                                    message.channel.send(`No Reaction after 30 seconds, command canceled!')
                             });
                             
 }
