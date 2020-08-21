@@ -6,9 +6,7 @@ module.exports = {
     category: "moderation",
     run: async (client, message, args) => {
     
-    if(!message.channel.nsfw){
-return message.channel.send(`This channel is not a nsfw channel!`)
-}
+
 
     
     let target =   message.mentions.members.first() ||
