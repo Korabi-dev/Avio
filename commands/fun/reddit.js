@@ -8,7 +8,11 @@ module.exports = {
     let subreddit = args.slice(0).join(" ")
     if(!subreddit){
 return message.channel.send(`No subreddit found!`)
-}
+} else{
+console.log('oof there was nothing found')
+}.catch(() => {
+                                    message.channel.send(`invalid subreddit!`)
+                            });
 
       if(subreddit === 'sex'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
@@ -68,7 +72,5 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
     
     
     
-       }.catch(() => {
-                                    message.channel.send(`invalid subreddit!`)
-                            });
+       },
 };
