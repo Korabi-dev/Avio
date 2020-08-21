@@ -63,12 +63,12 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
       .setURL(`https://reddit.com/r/${subreddit}`)
       .setColor("RANDOM")
       .setImage(img);
-    message.channel.send(Embed).catch(() => {
-                                    message.channel.send(`invalid subreddit!`)
-                            });
+    message.channel.send(Embed)
     
     
     
     
        },
-};
+}.catch(() => {
+                                    message.channel.send(`invalid subreddit!`)
+                            });
