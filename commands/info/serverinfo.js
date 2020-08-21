@@ -21,7 +21,7 @@ if (message.guild.rulesChannel === null) message.guild.rulesChannel = ("none or 
        .setColor("RANDOM")
       .setFooter(`Info for ${message.guild.name}`);
       message.channel.send(embed9)
-    message.channel.send(`${message.guild.iconURL}`)
+    message.channel.send(message.guild.iconURL{ dynamic: true, size: 256 })
        
        }
        }
