@@ -64,5 +64,10 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
       .setColor("RANDOM")
       .setImage(img);
     message.channel.send(Embed);
+    
+    .catch(() => {
+                                    message.channel.send(`invalid subreddit!`)
+                            });
+                            
   },
 };
