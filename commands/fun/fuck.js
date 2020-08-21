@@ -28,7 +28,7 @@ let embed9 = new discord.MessageEmbed()
 
 
 
-  embed9.react('👍').then(r => {
+  message.embed9.react('👍').then(r => {
                             message.react('👎');
                     });
 
