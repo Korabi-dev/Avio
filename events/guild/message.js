@@ -1,5 +1,5 @@
 const Timeout = new Set();
-const { MessageEmbed, Message, Client, discord } = require("discord.js");
+const { MessageEmbed, Message, Client } = require("discord.js");
 const { prefix } = require("../../config.json");
 const ms = require("ms");
 const db = require("../../db");
@@ -23,7 +23,7 @@ module.exports = async (bot, message) => {
   const cmd = args.shift().toLowerCase();
 
   if (cmd.length === 0) {
-    let Embed = new discord.MessageEmbed()
+    const Embed = new MessageEmbed()
         .setTitle(`Help`)
         .setDescription(
           `Hey \`${message.author.username}\` Here are the help commands `
