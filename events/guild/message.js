@@ -22,7 +22,9 @@ module.exports = async (bot, message) => {
   const args = message.content.slice(newPrefix.length).trim().split(/ +/g);
   const cmd = args.shift().toLowerCase();
 
-  if (cmd.length === 0) return;
+  if (cmd.length === 0) {
+return message.channel.send(`Please do a!help for commands!`)
+  }
 
   let command = bot.commands.get(cmd);
   if (!command) command = bot.commands.get(bot.aliases.get(cmd));
