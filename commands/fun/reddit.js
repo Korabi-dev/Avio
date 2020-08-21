@@ -18,12 +18,16 @@ return message.channel.send('This subreddit is blacklisted due to it being nsfw!
       if(subreddit === 'virgin'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
 }
-   
+         if(subreddit === 'cock'){
+return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
+}
     
       if(subreddit === 'simp'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
 }
-   
+         if(subreddit === 'fuck'){
+return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
+}
     
     if(subreddit === 'dick'){
 return message.channel.send('This subreddit is blacklisted due to it being nsfw!')
