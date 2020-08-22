@@ -15,7 +15,7 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, I do not have enough permission to use this command`)
     }
 
-   
+   message.channel.send(`${message.author.username} are you sure you want to nuke ${message.channel.name} this cannot be undone!`)
     
     
      message.channel.awaitMessages(m => m.author.id == message.author.id,
@@ -28,7 +28,7 @@ module.exports = {
                                             .setColor("RANDOM")
                                              .setImage("https://media.tenor.com/images/758fc78b8f17c82e8aeb2aa7ef4ca592/tenor.gif")
      
-                                          const newchannel = await message.channel.clone()
+                                          const newchannel = message.channel.clone()
                                           message.channel.delete()
                                           newchannel.send(embed9)
                                     }
