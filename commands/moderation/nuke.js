@@ -36,7 +36,7 @@ module.exports = {
                                     else
                                              message.channel.awaitMessages(m => m.author.id == message.author.id,
                             {max: 1, time: 30000}).then(collected => {
-                                   if (collected.first().content.toLowerCase() == 'no'{
+                                   if (collected.first().content.toLowerCase() == 'no' {
                                        message.channel.send('Command Caneled')
                                     }
                                   
