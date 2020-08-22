@@ -21,7 +21,7 @@ module.exports = {
    .setColor("RANDOM")
                                              
      
-    const newchannel = message.channel.clone()
+    const newchannel = await message.channel.clone()
     message.channel.delete()
     newchannel.send(embed9)
 
