@@ -19,7 +19,7 @@ module.exports = {
       .setTitle("NUKE")
       .setDescription(`This channel was nuked nuked by **${message.author.username}**`)
       .setColor("RANDOM")
-     message.channel.send(embed9)
+     .setImage("https://media.tenor.com/images/758fc78b8f17c82e8aeb2aa7ef4ca592/tenor.gif")
      
      const newchannel = await message.channel.clone()
       message.channel.delete()
