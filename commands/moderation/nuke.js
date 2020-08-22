@@ -28,7 +28,7 @@ module.exports = {
                                             .setColor("RANDOM")
                                              .setImage("https://media.tenor.com/images/758fc78b8f17c82e8aeb2aa7ef4ca592/tenor.gif")
      
-                                          const newchannel = message.channel.clone()
+                                          const newchannel = await message.channel.clone()
                                           message.channel.delete()
                                           newchannel.send(embed9)
                                     }
