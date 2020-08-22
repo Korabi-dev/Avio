@@ -18,7 +18,7 @@ module.exports = {
    message.channel.send(`${message.author.username} are you sure you want to nuke ${message.channel.name} this cannot be undone!`)
     
     
-     message.channel.awaitMessages(m => m.author.id == message.author.id,
+     message.channel.awaitMessages(async => m.author.id == message.author.id,
                             {max: 1, time: 30000}).then(collected => {
                                    if (collected.first().content.toLowerCase() == 'yes') {
                                             message.reply("Nuking!")
