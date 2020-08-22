@@ -17,14 +17,12 @@ module.exports = {
 
    let embed9 = new discord.MessageEmbed()
       .setTitle("NUKE")
-      .setDescription('This channel was nuked nuked by ${message.author.username}')
+      .setDescription(`This channel was nuked nuked by ${message.author.username}`)
       .setColor("RANDOM")
      message.channel.send(embed9)
      
      const newchannel = await message.channel.clone()
-     newchannel.clone()
-      
-     message.channel.delete()
+      message.channel.delete()
     newchannel.send(embed9)
 
 
