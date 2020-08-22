@@ -3,6 +3,7 @@ module.exports = {
   name: "dm",
   description: "DM a user in the guild",
   category: "fun",
+  timeout: 10000,
   run: async (bot, message, args) => {
     
     
