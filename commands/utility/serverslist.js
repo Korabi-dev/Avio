@@ -12,7 +12,7 @@ module.exports = {
   if(message.author.id !== '638476135457357849') return;
   
   
-  const servers = bot.guilds.cache.map(m => ` ${m.name} - ${m.id} ${m.owner.user.username}`)
+  const servers = bot.guilds.cache.map(m => ` ${m.name} - ${m.id} - ${m.owner.user.username}`)
   
   
   
