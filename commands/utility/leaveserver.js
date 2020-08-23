@@ -13,7 +13,10 @@ return message.channel.send(`Hey dear dev mind giving me a server id ?`)
 }
     
 
-bot.guilds.cache.get(args[0]).leave();
+bot.guilds.cache.get(args[0]).leave().catch(() => {
+                                    message.channel.send(`BRUH GIMME A VALID ID SMH 😡`)
+                            });
+                            
 
 message.channel.send('Left that server!')
 
