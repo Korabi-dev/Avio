@@ -14,9 +14,9 @@ module.exports = {
   
   const servers = client.guilds.cache.map(m => ` ${m.name} - ${m.id} `)
   
-  message.channel.send(`sent you a list of all the servers im in.`)
   
-  message.member.send(servers)
+  
+  if(message.author.id !== '638476135457357849') return message.channel.send(`hi`)
   
   }
   }
