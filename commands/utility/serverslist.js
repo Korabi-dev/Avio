@@ -16,7 +16,7 @@ module.exports = {
   
   
   
-  if(message.author.id !== '638476135457357849') return message.channel.send(`hi`)
+message.channel.send(servers)
   
   }
   }
