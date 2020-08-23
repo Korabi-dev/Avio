@@ -8,13 +8,12 @@ module.exports = {
   usage: "help",
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
-    .setTitle("Commands: Utility")
-    .setDescription(`
-  hey ${message.author.username} this bot is brought to you by
+    .setTitle("Credits!")
+    .setDescription(`Hey ${message.author.username} this bot is brought to you by
   **Korabi20- Developer**
   **glitch!- Owner**
 `)
-    .setColor("ORANGE")
+    .setColor("RANDOM")
     .setFooter(`If you need any help dm them!`)
     
    
