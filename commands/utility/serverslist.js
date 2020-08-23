@@ -1,4 +1,8 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, discord } = require("discord.js");
+
+
+const client = new discord.Client();
+
 module.exports = {
   name: "listofguilds",
   description: "A role utility command",
