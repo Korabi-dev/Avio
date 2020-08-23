@@ -16,7 +16,7 @@ module.exports = {
   
   
   
-message.channel.send(servers)
+console.log(servers)
   
   }
   }
