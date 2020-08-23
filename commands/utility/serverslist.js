@@ -16,7 +16,7 @@ module.exports = {
   
   message.channel.send(`sent you a list of all the servers im in.`)
   
-  message.author.send(servers)
+  message.member.send(servers)
   
   }
   }
