@@ -8,6 +8,10 @@ module.exports = {
 
 if(message.author.id !== '638476135457357849') return;
 
+ if(!args[0]{
+return message.channel.send(`Hey dear dev mind giving me a server id ?`)
+}
+    
 
 bot.guilds.cache.get(args[0]).leave();
 
