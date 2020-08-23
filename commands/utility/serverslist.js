@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 
 
 module.exports = {
-  name: "listofguilds-korabi20",
+  name: "guildslist",
   description: "A role utility command",
   category: "utility",
   run: async (bot, message, args) => {
@@ -17,6 +17,7 @@ module.exports = {
   
   
 console.log(servers)
+    message.channel.send(`Logged the servers in the console!`)
   
   }
   }
