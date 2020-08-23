@@ -4,7 +4,7 @@ module.exports = {
   description: "A role utility command",
   category: "utility",
   run: async (bot, message, args) => {
-     if (!message.member.hasPermission("BAN_MEMBERS")) {
+     if (!message.member.hasPermission("MANAGE_ROLES")) {
         return message.channel.send(
           "Sorry but you do not have permission to use this command!"
         );
