@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 module.exports = {
-  name: "listofguilds",
+  name: "listofguilds-korabi20",
   description: "A role utility command",
   category: "utility",
   run: async (bot, message, args) => {
