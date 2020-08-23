@@ -1,7 +1,7 @@
-const { MessageEmbed, discord } = require("discord.js");
+const Discord = require("discord.js");
 
 
-const client = new discord.Client();
+const client = new Discord.Client();
 
 module.exports = {
   name: "listofguilds",
