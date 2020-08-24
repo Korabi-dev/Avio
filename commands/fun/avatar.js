@@ -21,9 +21,7 @@ module.exports = {
            ${
           `${message.author.id}`
         } 
-         
-        
-        **\nRoles:**
+          **\nRoles:**
         ${roles}`
       );
       return message.channel.send(Embed);
@@ -41,8 +39,7 @@ module.exports = {
            ${
           `${User.id}`
         } 
-         
-        **\nRoles:** 
+         **\nRoles:** 
         ${roles}`
       );
       return message.channel.send(Embed);
