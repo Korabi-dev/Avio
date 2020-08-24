@@ -40,6 +40,7 @@ module.exports = {
       Embed.setDescription(
         `**Joined:**
         ${formatDate(User.joinedAt)}
+
          **Created Date**
          ${User.user.createdAt}
         **\nID:** ${
