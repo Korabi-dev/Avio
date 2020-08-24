@@ -18,7 +18,10 @@ module.exports = {
       Embed.setDescription(
         `**JoinDate:**
         ${formatDate(message.member.joinedAt)} 
-         **\nID:**
+
+          **Created Date**
+          ${message.author.createdAt}
+        **\nID:**
            ${
           `${message.author.id}`
         } 
@@ -37,6 +40,8 @@ module.exports = {
       Embed.setDescription(
         `**Joined:**
         ${formatDate(User.joinedAt)}
+         *Created Date**
+         ${User.createdAt}
         **\nID:** ${
           User.id
         
