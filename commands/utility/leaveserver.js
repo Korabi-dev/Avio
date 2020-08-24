@@ -6,7 +6,9 @@ module.exports = {
   category: "utility",
   run: async (bot, message, args) => {
 
-if(message.author.id !== '638476135457357849') return;
+if(message.author.id !== '638476135457357849') {
+return message.channel.send(`this can only be used by my developer!`)
+}
 
  if(!args[0]){
 return message.channel.send(`Hey dear dev mind giving me a server id ?`)
