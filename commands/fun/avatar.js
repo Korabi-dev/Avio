@@ -36,7 +36,7 @@ module.exports = {
       Embed.setThumbnail(bot.users.cache.get(User.id).displayAvatarURL());
       Embed.setColor(`RANDOM`);
       Embed.setDescription(
-        `**Joined:** ${formatDate(User.joinedAt) **Created Date:**  ${User.user.createdAt}
+        `**Joined:** ${formatDate(User.joinedAt)} **Created Date:**  ${User.user.createdAt}
          **\nID:**
            ${
           `${User.id}`
