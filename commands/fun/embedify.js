@@ -5,7 +5,10 @@ module.exports = {
     usage: "<msg>",
     run: async (bot, message, args) => {
       
-      if(!args[0]){
+        let text = `${args.join(" ")}`
+        
+        
+      if(!text){
 return message.channel.send(`Oops,You forgot to mention some text  for the embed!`)
 }
         
@@ -13,7 +16,7 @@ return message.channel.send(`Oops,You forgot to mention some text  for the embed
         
         
     let embed = new discord.MessageEmbed()
-    .setTitle(`${args.join(" ")}`)
+    .setTitle(`text`)
     .setColor("RANDOM")
    
     message.delete();
