@@ -8,7 +8,7 @@ module.exports = {
     
     let User = message.mentions.users.first() || null;
 
-    if(User.user.id === message.author.id){
+    if(User.id === message.author.id){
 return message.channel.send(`You cannot report yourself!`)
 }
     
