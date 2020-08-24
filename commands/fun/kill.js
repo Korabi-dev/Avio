@@ -14,10 +14,10 @@ let target = message.mentions.users.first();
     }
     
     let responses = [
-        `oops you missed and got killed by ${target.user.username}`,
-        `${target.user.username} is now dead you stabbed them in the heart!`,
+        `oops you missed and got killed by ${target.username}`,
+        `${target.username} is now dead you stabbed them in the heart!`,
         `you forgot who your target was -_-`,
-        `damn you missed, it was close though but you died as ${target.user.username} shot you!`,
+        `damn you missed, it was close though but you died as ${target.username} shot you!`,
          ];
 
     if(target.id === message.author.id) {
@@ -28,7 +28,7 @@ let target = message.mentions.users.first();
         responses[Math.floor(Math.random() * responses.length - 1)];
     
     if(response == undefined) {
-let response = `oops you missed and got killed by ${target.user.username}`
+let response = `oops you missed and got killed by ${target.username}`
 }
     
     
