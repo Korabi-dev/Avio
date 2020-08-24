@@ -12,10 +12,20 @@ let target = message.mentions.users.first();
         return message.channel.send(`**${message.author.username}**, Please mention the person who you want to kill`)
 
     }
+    
+    let responses = [
+        "oops you missed and got killed by ${target.user.username}",
+        "${target.user.username} is now dead you stabbed them in the heart!",
+        "you forgot who your target was -_-",
+        "damn you missed, it was close though but you died as ${target.user.username} shot you!",
+         ];
 
-    if(target === message.author.id) {
+    if(target.user.id === message.author.id) {
         return message.channel.send(`suicide is never the answer ${message.author.username}`);
       }
 
-  message.channel.send(`${message.author.username} kills ${target} with 120 knives to the heart and ${target} did not have a chance of surviving `) 
+     let response =
+        responses[Math.floor(Math.random() * responses.length - 1)];
+    
+  message.channel.send(`${response}`) 
 }}
