@@ -8,6 +8,10 @@ module.exports = {
     
     let User = message.mentions.users.first() || null;
 
+    if(User.user.id === message.author.id){
+return message.channel.send(`You cannot report yourself!`)
+}
+    
     if (User == null) {
       return message.channel.send(`You did not mention a user!`);
     } else {
