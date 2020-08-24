@@ -32,7 +32,7 @@ module.exports = {
     } else {
       let User = message.mentions.members.first();
       User.roles.cache.forEach((role) => {
-        roles.push(role.name);
+        roles.push(role);
       });
       Embed.setTitle(`${bot.users.cache.get(User.id).tag}'s info!`);
       Embed.setThumbnail(bot.users.cache.get(User.id).displayAvatarURL());
@@ -40,8 +40,8 @@ module.exports = {
       Embed.setDescription(
         `**Joined:**
         ${formatDate(User.joinedAt)}
-         *Created Date**
-         ${User.createdAt}
+         **Created Date**
+         ${User.user.createdAt}
         **\nID:** ${
           User.id
         
