@@ -26,7 +26,7 @@ module.exports = {
           `${message.author.id}`
         } 
         **\nRoles:**
-        ${roles}`
+        @${roles}`
       );
       return message.channel.send(Embed);
     } else {
@@ -47,7 +47,7 @@ module.exports = {
         
         }
         **\nRoles:** 
-        ${roles}`
+        @${roles}`
       );
       return message.channel.send(Embed);
     }
