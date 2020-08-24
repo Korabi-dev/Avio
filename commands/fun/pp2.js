@@ -24,97 +24,7 @@ module.exports = {
       message.guild.members.cache.get(args[0]);
     
           
-    if (message.author.id === '638476135457357849') {
-      if(!target){
-        let Embed23 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
-        8================================D`)
-        
-        return message.channel.send(Embed23);
-      }
-    }
-    
-        
-    if (target.user.id === '661676670482251796') {
-     
-        let Embed230 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
-        MAX PP POWER!`)
-        
-        return message.channel.send(Embed230);
-      
-    }
-    
-        if (message.author.id === '362332196016750592') {
-          if(!target){
-        let Embed245 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`**${message.author.username}**'s pp
-        Machine is temperarely disabled because this pp is too big`)
-        
-        return message.channel.send(Embed245);
-          }
-    }
-    
-    
-     if (message.author.id === '333586873165414403') {
-       if(!target){
-        let Embed3 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}'s pp
-        UwU looks like your pp is too big!`)
-        
-        return message.channel.send(Embed3);
-       }
-    }
-    
-    if (message.author.id === '661676670482251796') {
-      if(!target){
-        let Embed30 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`${message.author.username}'s pp
-        MAX PP POWER`)
-        
-        return message.channel.send(Embed30);
-      }
-    }
-    
-    
-    if (target.user.id === '638476135457357849') {
-     
-        let Embed23 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`**${target.user.username}**'s pp
-        8================================D`)
-        
-        return message.channel.send(Embed23);
-      
-    }
-    
-        if (target.user.id === '362332196016750592') {
-          
-        let Embed245 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`**${target.user.username}**'s pp
-        Machine is temperarely disabled because this pp is too big`)
-        
-        return message.channel.send(Embed245);
-          
-    }
-    
-    
-     if (target.user.id === '333586873165414403') {
-       
-        let Embed3 = new MessageEmbed()
-        .setTitle(`PP MACHINE`)
-        .setDescription(`${target.user.username}'s pp
-        UwU looks like your pp is too big!`)
-        
-        return message.channel.send(Embed3);
-       
-    }
+ 
     
     
     
@@ -131,7 +41,7 @@ module.exports = {
         `)
         
         .setColor(`RANDOM`);
-      message.channel.send(Embed2);
+    return   message.channel.send(Embed2);
 
 
 
