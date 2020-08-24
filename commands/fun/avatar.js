@@ -16,15 +16,13 @@ module.exports = {
       Embed.setThumbnail(message.author.displayAvatarURL());
       Embed.setColor(`RANDOM`);
       Embed.setDescription(
-        `**JoinDate:**
-        ${formatDate(message.member.joinedAt)} 
-
-          **Created Date**
-          ${message.author.createdAt}
-        **\nID:**
+        `**JoinDate:** ${formatDate(message.member.joinedAt)}  **Created Date:**   ${message.author.createdAt}
+          **\nID:**
            ${
           `${message.author.id}`
         } 
+         
+        
         **\nRoles:**
         ${roles}`
       );
@@ -38,15 +36,12 @@ module.exports = {
       Embed.setThumbnail(bot.users.cache.get(User.id).displayAvatarURL());
       Embed.setColor(`RANDOM`);
       Embed.setDescription(
-        `**Joined:**
-        ${formatDate(User.joinedAt)}
-
-         **Created Date**
-         ${User.user.createdAt}
-        **\nID:** ${
-          User.id
-        
-        }
+        `**Joined:** ${formatDate(User.joinedAt) **Created Date:**  ${User.user.createdAt}
+         **\nID:**
+           ${
+          `${User.id}`
+        } 
+         
         **\nRoles:** 
         ${roles}`
       );
