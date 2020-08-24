@@ -50,7 +50,7 @@ return message.channel.send(`You cannot report yourself!`)
         );
       Channel.send(Embed);
       
-      console.log(`${message.author.username} just reported ${User} with reason : ${Reason}`)
+   
       
       message.channel.send('Report recorded!')
     }
