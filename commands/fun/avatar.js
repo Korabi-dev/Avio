@@ -10,7 +10,7 @@ module.exports = {
     let roles = [];
     if (!message.mentions.users.first()) {
       message.member.roles.cache.forEach((role) => {
-        roles.push(role.name);
+        roles.push(role);
       });
       Embed.setTitle(`Your information!`);
       Embed.setThumbnail(message.author.displayAvatarURL());
@@ -26,7 +26,7 @@ module.exports = {
           `${message.author.id}`
         } 
         **\nRoles:**
-        @${roles}`
+        ${roles}`
       );
       return message.channel.send(Embed);
     } else {
@@ -47,7 +47,7 @@ module.exports = {
         
         }
         **\nRoles:** 
-        @${roles}`
+        ${roles}`
       );
       return message.channel.send(Embed);
     }
