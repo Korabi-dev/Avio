@@ -34,7 +34,18 @@ module.exports = {
       if(!target){
   let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
-      let Embed2 = new MessageEmbed()
+        if(response === undefined) {
+    let Embed3 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`**No pp detected/pp too small
+        `)
+        
+        .setColor(`RANDOM`);
+    return   message.channel.send(Embed3);
+}
+      
+        
+        let Embed2 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**${message.author.username}**'s pp
         ${response} 
@@ -51,6 +62,16 @@ module.exports = {
     
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
+            if(response === undefined) {
+    let Embed4 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`**No pp detected/pp too small
+        `)
+        
+        .setColor(`RANDOM`);
+    return   message.channel.send(Embed4);
+}
+   
       let Embed = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**${target.user.username}**'s pp
