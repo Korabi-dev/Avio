@@ -16,7 +16,7 @@ return message.channel.send(`Oops,You forgot to mention some text  for the embed
         
         
     let embed = new discord.MessageEmbed()
-    .setTitle(`text`)
+    .setTitle(`${text}`)
     .setColor("RANDOM")
    
     message.delete();
