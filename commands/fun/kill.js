@@ -20,7 +20,7 @@ let target = message.mentions.users.first();
         "damn you missed, it was close though but you died as ${target.user.username} shot you!",
          ];
 
-    if(target.user.id === message.author.id) {
+    if(target.id === message.author.id) {
         return message.channel.send(`suicide is never the answer ${message.author.username}`);
       }
 
