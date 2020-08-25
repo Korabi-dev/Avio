@@ -6,5 +6,5 @@ module.exports = {
   description: "Support Server invite Link",
   usage: "invite",
   run: (client, message, args) => {
-  message.channel.send('here is the link to the support server :smile: https://discord.gg/MtFK3V4') 
+  message.channel.send('here is the link to the support server :smile: https://discord.gg/wFkb9aV') 
 }}
