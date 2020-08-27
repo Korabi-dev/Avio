@@ -10,7 +10,7 @@ module.exports = async (oldMessage, newMessage) => {
       .addField(`Old Content`, oldMessage.content, true)
       .addField(`New Content`, newMessage.content, true);
     let channel = oldMessage.guild.channels.cache.find(
-      (ch) => ch.name === "bot-log"
+      (ch) => ch.name === "edit-log"
     );
     if (!channel) return;
     channel.send(embed);
