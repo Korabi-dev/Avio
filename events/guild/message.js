@@ -11,6 +11,12 @@ const custom = require("../../models/custom");
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
+  if(message.content === '<@638476135457357849>') {
+ message.channel.send(`Hello,My default prefix is a!`)
+}
+   if(message.content === '@Avio#1150'){
+     message.channel.send(`Hello,My default prefix is a!`)
+}
   let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
     : prefix;
