@@ -12,8 +12,7 @@ module.exports = async (oldMessage, newMessage) => {
     let channel = oldMessage.guild.channels.cache.find(
       (ch) => ch.name === "edit-log"
     );
-    if (!channel) {
-return;
+    if (!channel) return;
     channel.send(embed);
   } catch (e) {}
 };
