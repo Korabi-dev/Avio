@@ -30,6 +30,7 @@ module.exports = async (bot, message) => {
         )
         .setColor(`RED`)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
+        .setFooter(`Note: Make a channel called edit-log to see the old content of edited messages in this guild!`)
         .addFields(
           { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
           { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
