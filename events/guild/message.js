@@ -1,5 +1,6 @@
 const Timeout = new Set();
 const { MessageEmbed, Message, Client } = require("discord.js");
+const discord = require("discord.js");
 const { prefix } = require("../../config.json");
 const ms = require("ms");
 const db = require("../../db");
@@ -16,6 +17,28 @@ module.exports = async (bot, message) => {
 }
    if(message.content === '@Avio#1150'){
      message.channel.send(`Hello,My default prefix is a!`)
+}
+  
+  if(message.content === 'Avio Help') {
+
+     let Embed = new discord.MessageEmbed()
+        .setTitle(`Help`)
+        .setDescription(
+          `Hey **${message.author.username}** Here are the help commands `
+        )
+        .setColor(`RED`)
+        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
+        .setFooter(`Note: Make a channel called edit-log to see the old content of edited messages in this guild!`)
+        .addFields(
+          { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
+          { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
+          { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
+          { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
+          { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+       );
+      
+      message.channel.send(Embed);
+    
 }
   let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
