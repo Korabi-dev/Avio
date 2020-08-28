@@ -9,7 +9,7 @@ module.exports = {
 return message.channel.send(`Oh no looks like you have been blacklisted from this command with reason : abusing`);
 }
     
- if (!message.member.permissions.has("BAN_MEMBERS")) {
+ if (!message.member.permissions.has("ADMINISTRATOR")) {
 return message.channel.send(`${message.author.username} you need more premissions to use this command.`)
 }
     
@@ -18,7 +18,7 @@ if (!args[0])
         `The prefix for ${message.guild.name} is \`${
           (await db.get(`Prefix_${message.guild.id}`))
             ? await db.get(`Prefix_${message.guild.id}`)
-            :  "r!"
+            :  "a!"
         }\``
       );
     await db.set(`Prefix_${message.guild.id}`, args[0]);
