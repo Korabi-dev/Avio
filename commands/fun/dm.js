@@ -12,6 +12,9 @@ module.exports = {
       return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
     }
     
+    if(message.author.id === '519293166453522443') {
+return message.channel.send(`Oh no,it seems like you have been blacklisted from this command reason \"Spamming The Developer."\ there will be no appeal to this.`)    
+}
     
     
     let user =
@@ -20,6 +23,11 @@ module.exports = {
 
      let sender = `${message.author.username}`
    
+     
+     
+     if(user.id === '519293166453522443') {
+return message.channel.send(`Oh no it seems like ${user.username} is blacklisted try someone else. `)
+}
     
     
     if (!user)
