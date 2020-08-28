@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = async (oldMessage, newMessage) => {
+
+If(oldMessage.author.bot) return;
   try {
     let embed = new MessageEmbed()
       .setTitle(`New message edited`)
@@ -13,9 +15,6 @@ module.exports = async (oldMessage, newMessage) => {
       (ch) => ch.name === "edit-log"
     );
     if (!channel) return;
-    If(oldMessage.author.bot) {
-    return;
-}  
     channel.send(embed);
   } catch (e) {}
 };
