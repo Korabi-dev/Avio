@@ -45,7 +45,7 @@ bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
 bot.on("guildCreate", (bot, member) => {
-require("./events/guild/guildCreate")(bot, member);
+console.log(`AYY ANOTHER ONE`)
 });
 
 
