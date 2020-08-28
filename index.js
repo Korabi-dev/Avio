@@ -45,7 +45,7 @@ bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
 bot.on("guildMemberAdd", (bot, member) => {
-member.user.send(`Hey ${member.user.tag} welcome to ${member.guild.name} have fun!`)
+member.send(`Hey ${member.user.tag} welcome to ${member.guild.name} have fun!`)
 });
 
 bot.login(process.env.BOT_TOKEN);
