@@ -13,6 +13,7 @@ module.exports = async (oldMessage, newMessage) => {
       (ch) => ch.name === "edit-log"
     );
     if (!channel) return;
+    If(oldMessage.author.bot) return;
     channel.send(embed);
   } catch (e) {}
 };
