@@ -26,7 +26,7 @@ return message.channel.send(`Oh no,it seems like you have been blacklisted from 
      
      
      if(user.id === '519293166453522443') {
-return message.channel.send(`Oh no it seems like ${user.username} is blacklisted try someone else. `)
+return message.channel.send(`Oh no it seems like ${user.user.username} is blacklisted try someone else. `)
 }
     
     
