@@ -5,7 +5,7 @@ module.exports = (bot) => {
   console.log(`${bot.user.username} is now online!`);
  
   
-  bot.user.setPresence({ activity: { name: `With Avio Developers | ${config.prefix}help` }, status: 'dnd' })
+  bot.user.setPresence({ activity: { name: `With Avio Developers | ${config.prefix}help | Avio Help` }, status: 'dnd' })
   
 
   
