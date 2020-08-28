@@ -1,7 +1,9 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = async (oldMessage, newMessage) => {
 
-If(oldMessage.author.bot) return;
+If(oldMessage.author.bot) {
+return console.log('e')
+}
   try {
     let embed = new MessageEmbed()
       .setTitle(`New message edited`)
