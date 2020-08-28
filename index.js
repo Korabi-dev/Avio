@@ -44,5 +44,8 @@ bot.on("messageReactionAdd", (reaction, user) => {
 bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
+bot.on("guildCreate", () => {
+console.log(`I have just joined a server`)
+}
 
 bot.login(process.env.BOT_TOKEN);
