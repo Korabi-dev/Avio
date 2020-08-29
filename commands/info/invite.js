@@ -1,4 +1,5 @@
 const discord = require("discord.js");
+const client = new discord.Client();
 
 module.exports = {
   name: "invite",
@@ -11,6 +12,7 @@ let embed9 = new discord.MessageEmbed()
       .setTitle("Invite Me")
       .setDescription(` Joined Servers: **${client.guilds.cache.size}** 
       Online Users: **${client.users.cache.size}**
+      UpTime: **${client.uptime}**
 `)
       .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
       .setColor("RANDOM")
