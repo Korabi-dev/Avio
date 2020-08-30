@@ -1,32 +1,46 @@
-const { MessageEmbed, Discord } = require("discord.js");
-
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
-  name: "eval",
-  description: "Get a meme!",
-  category: "fun",
-  run: async (bot, message, args) => {
-  
-  
-  if(message.author.id !== '638476135457357849'){
-  let Embed = new MessageEmbed()
-        .setDescription(`This Command Is Developer Only!`)
-        .setColor(`RED`);
-   return message.channel.send(Embed);
+    name: 'eval',
+    run: async (client, message, args) => {
+        if (message.author.id !== '638476135457357849') {
+const __e__ = new MessageEmbed()
+.setTitle(`This command is dev only.`)
+.setColor("RED")
+
+return message.channel.send(__e__)
 }
-  
-  
-  if(!args[0]){
-return message.channel.send(`Hey dear owner you have forgotten to give me some code to execute!`)
-}
-  
-    let Embed = new MessageEmbed()
-        .setTitle(`EVAL`)
-        .setDescription(`Code:
-        ${args.join(" ")}
-`)
-        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setColor(`RED`);
-      message.channel.send(Embed);
-  }
+        const embed = new MessageEmbed()
+            .setTitle('Evaluating...')
+            .setColor("RANDOM")
+        const msg = await message.channel.send(embed);
+        try {
+            const data = eval(args.join(' ').replace(/```/g, ''));
+            const embed = new MessageEmbed()
+                .setTitle('Output: ')
+                .setDescription(await data)
+            await msg.edit(embed)
+            await msg.react('✅')
+            await msg.react('❌')
+            const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
+            msg.awaitReactions(filter, { max: 1 })
+                .then((collected) => {
+                    collected.map((emoji) => {
+                        switch (emoji._emoji.name) {
+                            case '✅':
+                                msg.reactions.removeAll();
+                                break;
+                            case '❌':
+                                msg.delete()
+                                break;
+                        }
+                    })
+                })
+        } catch (e) {
+            const embed = new MessageEmbed()
+                .setTitle('An Error has occured')
+            return await msg.edit(embed);
+
+        }
+    }
 }
