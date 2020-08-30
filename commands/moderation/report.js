@@ -6,6 +6,10 @@ module.exports = {
   usage: "<User mention>",
   run: async (bot, message, args) => {
     
+    if(message.author.id === '356324345783648257') {
+return message.channel.send('You have been blacklisted from this command!')
+}
+    
     let User = message.mentions.users.first() || null;
 
     if(User.id === message.author.id){
