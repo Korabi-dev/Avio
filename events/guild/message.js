@@ -155,9 +155,7 @@ module.exports = async (bot, message) => {
      return message.channel.send(Embed);
   }
   
-    if(cmd.author.id === '356324345783648257') {
-return message.channel.send(`You have been blacklisted from this bot reason : abusing it and rude to the dev!`)
-}
+
 
   let command = bot.commands.get(cmd);
   if (!command) command = bot.commands.get(bot.aliases.get(cmd));
