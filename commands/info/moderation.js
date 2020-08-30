@@ -9,7 +9,7 @@ module.exports = {
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Moderation")
-    .setDescription(` report,warn,mute,kick,warns,ban.`)
+    .setDescription(` report,warn,mute,kick,warns,ban,unban.`)
     .setColor("RED")
     .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
     
