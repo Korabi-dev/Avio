@@ -46,6 +46,7 @@ return message.channel.send(__e___)
                     })
                 })
         } catch (e) {
+            console.log(e)
             const embed = new MessageEmbed()
                 .setTitle('An Error has occured')
                 .setColor("RED")
