@@ -40,6 +40,7 @@ return message.channel.send(__e__)
         } catch (e) {
             const embed = new MessageEmbed()
                 .setTitle('An Error has occured')
+                .setColor("RED")
             return await msg.edit(embed);
 
         }
