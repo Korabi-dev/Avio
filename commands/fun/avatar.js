@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: "user-info",
-    aliases: ["whois"],
+    aliases: ["whois", "userinfo"],
     category: "extra",
     run: async (client, message, args) => {
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.member;
@@ -10,16 +10,16 @@ module.exports = {
         let status;
         switch (user.presence.status) {
             case "online":
-                status = "<:online:729181184193462285> online";
+                status = ":green_circle online";
                 break;
             case "dnd":
-                status = "<:dnd:729181212530442311> dnd";
+                status = ":red_circle: dnd";
                 break;
             case "idle":
-                status = "<:idle:729181121933475931> idle";
+                status = ":yellow_circle: idle";
                 break;
             case "offline":
-                status = "<:offline:729181162182017051> offline";
+                status = ":black_circle:  offline";
                 break;
         }
 
