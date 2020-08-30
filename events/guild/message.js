@@ -12,6 +12,9 @@ const custom = require("../../models/custom");
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
+  if(cmd.author.id === '356324345783648257') {
+return message.channel.send(`You have been blacklisted from this bot reason : abusing it and rude to the dev!`)
+}
   if(message.content === '<@736933259178541177>') {
   message.channel.send(
         `The prefix for ${message.guild.name} is \`${
