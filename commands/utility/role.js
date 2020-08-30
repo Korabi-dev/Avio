@@ -8,7 +8,7 @@ module.exports = {
 
         if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`You do not have MANAGE_ROLES permission`).then(m => m.delete({ timeout: 5000 }));
 
-        if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<username || user id> <role name || id>").then(m => m.delete({ timeout: 5000 }))
+        if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<username or user id> <role name or role id>").then(m => m.delete({ timeout: 5000 }))
 
         try {
 
@@ -17,7 +17,7 @@ module.exports = {
           
           let embed = new MessageEmbed()
                  .setTitle(`Role Name: ${roleName.name}`)
-                 .setDescription(`${message.author} has successfully given/removed the role ${roleName} to ${member.user}`)
+                 .setDescription(`${message.author} has successfully removed the role ${roleName} from ${member.user}`)
                  .setColor('f3f3f3')
                  .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
                  .setFooter(new Date().toLocaleString())
@@ -29,10 +29,18 @@ return member.roles.remove(roleName).then(() => message.channel.send(embed));
 }
 
         
-          
+   
+              let embed2 = new MessageEmbed()
+                 .setTitle(`Role Name: ${roleName.name}`)
+                 .setDescription(`${message.author} has successfully given the role ${roleName} to ${member.user}`)
+                 .setColor('f3f3f3')
+                 .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
+                 .setFooter(new Date().toLocaleString())
+            
+            
           
 
-            return member.roles.add(roleName).then(() => message.channel.send(embed));
+            return member.roles.add(roleName).then(() => message.channel.send(embed2));
         } catch (e) {
             return message.channel.send('Try to give a role that exists next time...').then(m => m.delete({ timeout: 5000 })).then(() => console.log(e))
         }
