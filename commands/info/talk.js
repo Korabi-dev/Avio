@@ -10,6 +10,9 @@ module.exports = {
           if(!args[0]){
 return message.channel.send(`Please provide some text!`)
 }
+        if(args[0] === 'korabi'){
+return message.channel .send(`my developer is korabi yay what about him?`)
+}
         
     
     
