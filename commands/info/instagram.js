@@ -15,9 +15,7 @@ module.exports = {
             response = await axios.get(url)
             account = response.data
             details = account.graphql.user
-        } catch (error) {
-            return message.channel.send(`Not A Account`)
-        }
+        } 
 
         const embed = new MessageEmbed()
             .setTitle(`${details.is_verified ? `${details.username} <a:verified:727820439497211994>` : ` ${details.username}`} ${details.is_private ? '🔒' : ''} `)
