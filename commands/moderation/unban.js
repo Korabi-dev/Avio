@@ -15,7 +15,7 @@ module.exports = {
             message.guild.fetchBans().then(bans => {
                 message.guild.members.unban(member)
             })
-            await message.channel.send(`${member} has been unbanned!`)
+            await message.channel.send(`${member.user.username} has been unbanned!`)
         } catch (e) {
             return message.channel.send(`An error occured!`)
         }
