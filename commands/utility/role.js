@@ -28,12 +28,7 @@ module.exports = {
 return member.roles.remove(roleName).then(() => message.channel.send(embed));
 }
 
-          let embed = new MessageEmbed()
-                 .setTitle(`Role Name: ${roleName.name}`)
-                 .setDescription(`${message.author} has successfully given/removed the role ${roleName} to ${member.user}`)
-                 .setColor('f3f3f3')
-                 .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
-                 .setFooter(new Date().toLocaleString()) 
+        
           
           
 
