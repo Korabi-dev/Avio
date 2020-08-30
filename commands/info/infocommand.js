@@ -9,7 +9,7 @@ module.exports = {
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Info")
-    .setDescription(` Prefix,snipe,oldest,ping,findalt,emoji,support,invite,membercount,serversjoined.`)
+    .setDescription(` prefix,snipe,oldest,ping,findalt,emoji,support,invite,membercount,servers,docs,fact.`)
     .setColor("#ff2050")
     .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
     
