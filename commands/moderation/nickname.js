@@ -30,7 +30,7 @@ return message.channel.send('please mention a new nickname for the user!')
 }
  
  target.setNickname(nickname)
-        message.channel.send(`Set ${target.username}\'s nickname to **${nickname}**`)
+        message.channel.send(`Set ${target.user.username}\'s nickname to **${nickname}**`)
 
     } 
 
