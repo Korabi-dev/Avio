@@ -10,6 +10,14 @@ const __e__ = new MessageEmbed()
 
 return message.channel.send(__e__)
 }
+      if(!args){
+const __e___ = new MessageEmbed()
+.setTitle(`No Code Found.`)
+.setColor("RED")
+
+return message.channel.send(__e___)
+}  
+        
         const embed = new MessageEmbed()
             .setTitle('Evaluating...')
             .setColor("GREEN")
