@@ -26,7 +26,7 @@ return message.channel.send(`Please provide a song name!`)
             .setTitle('Decode Binary')
             .setDescription(`Artist : ${data.author}
             Title : ${data.title}
-            lyrics: ${data.Lyrics}
+            lyrics: ${data.lyrics}
 
 `)
             .setColor("GREEN")
