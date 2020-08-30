@@ -34,7 +34,7 @@ return message.channel.send('please mention a new nickname for the user!')
 
     } 
 
-}.catch (e) {
+}.catch(e) {
             return message.channel.send(`The user you mentioned has a higher role then me therefor i cannot change their nickname! `)
         }
 
