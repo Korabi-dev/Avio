@@ -45,7 +45,7 @@ module.exports = {
                 },
                    {
                     name: '🔼 UpTime',
-                    value: `${ms.bot.uptime} minutes`,
+                    value: `${bot.uptime} minutes`,
                     inline: true
                 }
             )
