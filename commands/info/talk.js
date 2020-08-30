@@ -2,8 +2,8 @@ const { MessageEmbed } = require('discord.js');
 const axios = require('axios');
 
 module.exports = {
-    name: "talk",
-    aliases: ["t"],
+    name: "t",
+    aliases: ["talk", "speak", "s"],
     category: "extra",
     run: async (client, message, args) => {
     
