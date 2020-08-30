@@ -12,7 +12,7 @@ return message.channel.send(__e__)
 }
         const embed = new MessageEmbed()
             .setTitle('Evaluating...')
-            .setColor("RANDOM")
+            .setColor("GREEN")
         const msg = await message.channel.send(embed);
         try {
             const data = eval(args.join(' ').replace(/```/g, ''));
