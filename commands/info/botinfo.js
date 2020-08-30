@@ -22,7 +22,7 @@ module.exports = {
                 },
                 {
                     name: '👥 Server Users',
-                    value: `Serving ${client.users.cache.size}`,
+                    value: `Serving ${client.users.cache.size} people!`,
                     inline: true
                 },
                 {
@@ -31,17 +31,18 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: 'Join Date',
+                    name: 'Created Date',
                     value: client.user.createdAt,
                     inline: true
                 },
                 {
-                    name: 'Server Info',
+                    name: '💻 Server Info (hardware of the bot)',
                     value: `Cores: ${os.cpus().length}`,
                     inline: true
                 }
             )
             .setFooter(`Requested By: ${message.author.tag}`, message.author.displayAvatarURL())
+            .setColor("RANDOM")
 
         await message.channel.send(embed)
     }
