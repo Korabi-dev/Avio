@@ -1,4 +1,7 @@
 const { MessageEmbed } = require('discord.js')
+const discord = require('discord.js')
+const bot = new dicsord.Client();
+const uptime = require('ms')(bot.uptime)
 const os = require('os')
 module.exports = {
     name: "bot-info",
@@ -38,6 +41,11 @@ module.exports = {
                 {
                     name: '💻 Server Info (hardware of the bot)',
                     value: `Cores: ${os.cpus().length}`,
+                    inline: true
+                },
+                   {
+                    name: '🔼 UpTime',
+                    value: `${uptime} minutes`,
                     inline: true
                 }
             )
