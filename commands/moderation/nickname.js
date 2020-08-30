@@ -11,7 +11,7 @@ module.exports = {
     
     let target =   message.mentions.members.first(); 
     
-    let nickname = args.slice(0).join(" ")
+    let nickname = args.slice(1).join(" ")
     
         if(!message.member.hasPermission("MANAGE_NICKNAMES")) {
       return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
@@ -32,5 +32,9 @@ return message.channel.send('please mention a new nickname for the user!')
  target.setNickname(nickname)
         
 
-    }
-}
+    } 
+
+}catch (e) {
+            return message.channel.send(`The user you mentioned has a higher role then me therefor i cannot change their nickname! `)
+        }
+
