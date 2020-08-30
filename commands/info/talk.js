@@ -10,9 +10,10 @@ module.exports = {
           if(!args[0]){
 return message.channel.send(`Please provide some text!`)
 }
+        
     
     
-        const url = `https://some-random-api.ml/chatbot?message=${args.slice(0).join(" ")}`;
+        const url = `https://some-random-api.ml/chatbot?message=${args.slice(0).join("%20")}`;
 
         let response, data;
         try {
