@@ -1,7 +1,7 @@
 const { MessageEmbed } = require('discord.js')
 const discord = require('discord.js')
 const bot = new discord.Client();
-const uptime = require('ms')(bot.uptime)
+const uptime = require('ms')
 const os = require('os')
 module.exports = {
     name: "bot-info",
