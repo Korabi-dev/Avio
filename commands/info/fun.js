@@ -9,7 +9,7 @@ module.exports = {
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Fun")
-    .setDescription(` 8ball,meme,poll,reddit,say,kill,hug,kiss,pat,ship,av,dice,howgay.`)
+    .setDescription(` 8ball,meme,poll,reddit,say,kill,hug,kiss,pat,ship,av,dice,howgay,talk.`)
     .setColor("GREEN")
    
     
