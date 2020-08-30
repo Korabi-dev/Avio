@@ -10,7 +10,7 @@ const __e__ = new MessageEmbed()
 
 return message.channel.send(__e__)
 }
-      if(!args){
+      if(!args[0]){
 const __e___ = new MessageEmbed()
 .setTitle(`No Code Found.`)
 .setColor("RED")
