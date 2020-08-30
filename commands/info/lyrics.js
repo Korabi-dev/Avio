@@ -30,7 +30,7 @@ return message.channel.send(`Please provide a song name!`)
 
 `)
             .setColor("GREEN")
-            .setThumbnail(data.thumbnail)
+            
             
         await message.channel.send(embed)
     }
