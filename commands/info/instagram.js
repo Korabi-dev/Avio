@@ -13,7 +13,7 @@ module.exports = {
             url = `https://instagram.com/${args[0]}/?__a=1`;
             response = await axios.get(url)
             account = response.data
-            details = account.graphq.user
+            details = account.graph.user
         } catch (error) {
             console.log(error)
         }
