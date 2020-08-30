@@ -42,11 +42,6 @@ module.exports = {
                     name: '💻 Server Info (hardware of the bot)',
                     value: `Cores: ${os.cpus().length}`,
                     inline: true
-                },
-                   {
-                    name: '🔼 UpTime',
-                    value: `${bot.uptime} minutes`,
-                    inline: true
                 }
             )
             .setFooter(`Requested By: ${message.author.tag}`, message.author.displayAvatarURL())
