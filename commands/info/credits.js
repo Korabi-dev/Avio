@@ -2,7 +2,7 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "credits",
-  aliases: ["botinfo"],
+  aliases: ["botcredits"],
    category: "info",
    description: "get the commands",
   usage: "help",
