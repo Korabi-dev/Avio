@@ -7,6 +7,7 @@ module.exports = {
       return message.channel.send(
         `You do not have premissions to use this command, ${message.author.username} you are not a developer!`
       );
+        console.log(`Refreshing...`)
         await message.channel.send(`Restarting bot...`)
         process.exit();
     }
