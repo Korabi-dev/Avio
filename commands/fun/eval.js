@@ -18,6 +18,7 @@ return message.channel.send(__e__)
             const data = eval(args.join(' ').replace(/```/g, ''));
             const embed = new MessageEmbed()
                 .setTitle('Output: ')
+                .setColor("GREEN")
                 .setDescription(await data)
             await msg.edit(embed)
             await msg.react('✅')
