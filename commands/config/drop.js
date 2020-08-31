@@ -3,7 +3,7 @@ const { COLOR } = require("../../config.json");
 module.exports = {
   name: "drop",
   description: "Drop The Song From Queue",
-  execute(client, message, args) {
+   run: async(client, message, args) => {
     let embed = new MessageEmbed().setColor(COLOR);
     const { channel } = message.member.voice;
     if (!channel) {
