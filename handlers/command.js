@@ -15,7 +15,7 @@ module.exports = (bot) => {
     });
   });
   
-  let PREFIX = ("a!");
+  let PREFIX = ("a!")
   
   client.on("warn", info => console.log(info));
 
@@ -60,5 +60,5 @@ client.on("message", message => {
     
   }
   
-  
 });
+};
