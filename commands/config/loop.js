@@ -5,8 +5,8 @@ module.exports = {
   name: "loop",
   description: "Loop Your Queue and have fun",
   run: async(client, message, args) => {
-    client.queue = new Map();
-client.vote = new Map();
+      client.queue = require("./queue.js")
+     client.vote = require("./vote.js")
     
     let embed = new MessageEmbed()
 .setColor(COLOR);
