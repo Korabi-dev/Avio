@@ -4,7 +4,9 @@ const { COLOR } = require("../../config.json");
 module.exports = {
   name: "volume",
   description: "Manage the volume of the song",
-  execute(client, message, args) {
+    run: async(client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
     
  
     
