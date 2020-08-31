@@ -19,7 +19,7 @@ const url2 = `https://some-random-api.ml/canvas/triggered?avatar=${message.autho
         
     
     
-        const url = `https://some-random-api.ml/canvas/triggered?avatar=${target.user.displayAvatarURL}`;
+        const url = `https://some-random-api.ml/canvas/triggered?avatar=${target.user.displayAvatarURL({dynamic: true})}`;
 
 
             
