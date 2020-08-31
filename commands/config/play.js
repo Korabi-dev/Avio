@@ -44,7 +44,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const serverQueue = message.client.get(message.guild.id);
+    const serverQueue = message.client.queue.get(message.guild.id);
 
     const queueConstruct = {
       textChannel: message.channel,
