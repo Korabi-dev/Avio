@@ -15,12 +15,17 @@ client.prefix = PREFIX
 client.queue = new Map();
 client.vote = new Map();
 
-//LETS LOAD ALL FILES
-const cmdFiles = readdirSync(join(__dirname, "./commands/config")).filter(file => file.endsWith(".js"))
-for (const file of cmdFiles) {
-  const command = require(join(__dirname, "commands", file))
-  client.commands.set(command.name, command)
-} //LOADING DONE
+
+  readdirSync("./commands/").map((dir) => {
+    const commands = readdirSync(`./commands/${dir}/`).map((cmd) => {
+      let pull = require(`./commands/${dir}/${cmd}`);
+      console.log(`Loaded command ${pull.name} m!`);
+      bot.commands.set(pull.name, pull);
+      if (pull.aliases) {
+        if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
+      }
+    });
+  });
 
 
 //WHEN SOMEONE MESSAGE
