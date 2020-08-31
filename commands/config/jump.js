@@ -5,6 +5,8 @@ module.exports = {
   name: "jump",
   description: "Jump to any song you like",
   run: async(client, message, args) => {
+    client.queue = new Map();
+client.vote = new Map();
     
      let embed = new MessageEmbed()
 .setColor(COLOR);
