@@ -2,7 +2,7 @@ const discord = require("discord.js")
 const client = new discord.Client();
 const { readdirSync } = require("fs");
 const { join } = require("path");
-const PREFIX = ("a!");
+const PREFIX = ("m!");
 
 
 client.on("warn", info => console.log(info));
