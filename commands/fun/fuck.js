@@ -1,5 +1,5 @@
 const discord  = require("discord.js");
-const MessageEmbed = require("discord.js");
+
 
 module.exports = {
     name: "fuck",
@@ -22,7 +22,7 @@ return message.channel.send(`Hey ${message.author.username}  How would you do th
 }
 
         try {
-let embed9 = new MessageEmbed()
+let embed9 = new discord.MessageEmbed()
       .setTitle("FUCK")
       .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please react with  👍 or 👎`)
       .setColor('RANDOM')
@@ -49,7 +49,7 @@ let embed9 = new MessageEmbed()
                             
         
         } catch (e) {
-         const embed = new MessageEmbed()
+         const embed = new discord.MessageEmbed()
                 .setTitle(`An Error has occured: ${e}`)
             return message.channel.send(embed)
         }
