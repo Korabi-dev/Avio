@@ -4,6 +4,8 @@ module.exports = {
   name: "drop",
   description: "Drop The Song From Queue",
    run: async(client, message, args) => {
+     client.queue = new Map();
+     client.vote = new Map();
     let embed = new MessageEmbed().setColor(COLOR);
     const { channel } = message.member.voice;
     if (!channel) {
