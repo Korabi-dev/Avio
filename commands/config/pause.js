@@ -5,7 +5,9 @@ const { COLOR } = require("../../config.json");
 module.exports = {
   name: "pause",
   description: "Pause the cureent playing Song",
-  execute (client, message, args) {
+    run: async(client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
   const { channel } = message.member.voice;
    let embed = new MessageEmbed()
 .setColor(COLOR);
