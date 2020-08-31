@@ -15,13 +15,15 @@ module.exports = (bot) => {
     });
   });
   
+  let PREFIX = ("a!");
+  
   client.on("warn", info => console.log(info));
 
 client.on("error", console.error)
 
 //DEFINIING
 client.commands = new discord.Collection()
-client.prefix = a!
+client.prefix = PREFIX
 client.queue = new Map();
 client.vote = new Map();
 
