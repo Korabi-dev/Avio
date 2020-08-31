@@ -6,7 +6,9 @@ module.exports = {
   name: "np",
   aliases: ["nowplaying"],
   description: "Get the name of current playing song",
-  execute (client, message, args) {
+  run: async(client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
     let embed = new MessageEmbed()
 .setColor(COLOR)
       
