@@ -47,8 +47,6 @@ bot.on("messageReactionRemove", (reaction, user) => {
 bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
-bot.on("ready", () => {
-require("./server.js")
-});
+
 
 bot.login(process.env.BOT_TOKEN);
