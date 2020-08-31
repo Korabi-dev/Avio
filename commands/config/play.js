@@ -13,8 +13,8 @@ module.exports = {
   name: "play",
   description: "Play the song and feel the music",
     run: async(client, message, args) => {
-    client.queue = new Map();
-    client.vote = new Map();
+     client.queue = require("./queue.js")
+     client.vote = require("./vote.js")
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
