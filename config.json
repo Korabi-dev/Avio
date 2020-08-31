@@ -1,5 +1,8 @@
 {
   "prefix": "a!",
-  "OwnerID": "638476135457357849"
+  "OwnerID": "638476135457357849",
+  "YOUTUBE_API_KEY": "AIzaSyBQoFoHSThiADXuKtnSpKNRnxIboQI54UM",
+  "QUEUE_LIMIT": 0,
+  "COLOR": "BLUE"
 }
 
