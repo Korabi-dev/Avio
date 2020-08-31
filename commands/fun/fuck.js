@@ -1,4 +1,5 @@
 const discord  = require("discord.js");
+const MessageEmbed = require("discord.js");
 
 module.exports = {
     name: "fuck",
@@ -21,7 +22,7 @@ return message.channel.send(`Hey ${message.author.username}  How would you do th
 }
 
         try {
-let embed9 = new discord.MessageEmbed()
+let embed9 = new MessageEmbed()
       .setTitle("FUCK")
       .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please react with  👍 or 👎`)
       .setColor('RANDOM')
