@@ -8,7 +8,9 @@ const discord = require("discord.js");
 module.exports = {
   name: "stop",
   description: "Stop the music and take rest ;)",
-  execute(client, message, args) {
+   run: async(client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
     
     
 let embed = new MessageEmbed()
