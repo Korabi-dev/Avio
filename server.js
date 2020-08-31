@@ -3,7 +3,7 @@ const client = new discord.Client();
 const { readdirSync } = require("fs");
 const { join } = require("path");
 const PREFIX = ("m!");
-
+module.exports = (bot) => {
 
 client.on("warn", info => console.log(info));
 
@@ -20,9 +20,9 @@ client.vote = new Map();
     const commands = readdirSync(`./commands/${dir}/`).map((cmd) => {
       let pull = require(`./commands/config/${cmd}`);
       console.log(`Loaded command ${pull.name} m!`);
-      client.commands.set(pull.name, pull);
+      bot.commands.set(pull.name, pull);
       if (pull.aliases) {
-        if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => client.aliases.set(alias, pull.name));
+        if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
       }
     });
   });
@@ -55,3 +55,4 @@ client.on("message", message => {
   
   
 });
+}
