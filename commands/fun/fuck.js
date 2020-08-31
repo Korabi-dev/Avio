@@ -20,6 +20,7 @@ module.exports = {
 return message.channel.send(`Hey ${message.author.username}  How would you do that please elaborate!`)
 }
 
+        try {
 let embed9 = new discord.MessageEmbed()
       .setTitle("FUCK")
       .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please react with  👍 or 👎`)
@@ -28,8 +29,8 @@ let embed9 = new discord.MessageEmbed()
 
 
 
-  message.react('👍').then(r => {
-                            message.react('👎');
+  msg.react('👍').then(r => {
+                            msg.react('👎');
                     });
 
                 
@@ -46,7 +47,7 @@ let embed9 = new discord.MessageEmbed()
                             });
                             
         
-        
+        }
         
         
         
