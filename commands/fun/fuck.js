@@ -26,7 +26,7 @@ let embed9 = new discord.MessageEmbed()
       .setTitle("FUCK")
       .setDescription(`Hey ${target}, ${message.author} wants to take things to bed Please react with  👍 or 👎`)
       .setColor('RANDOM')
-      message.channel.send(embed9)
+      const msg = await message.channel.send(embed9)
 
 
 
