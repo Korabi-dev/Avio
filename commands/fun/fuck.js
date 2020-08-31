@@ -35,7 +35,7 @@ let embed9 = new discord.MessageEmbed()
                     });
 
                 
-                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
+                    message.awaitReactions((reaction, user) => user.id == target.user.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
                             { max: 1, time: 30000 }).then(collected => {
                                     if (collected.first().emoji.name == '👍') {
                                             message.channel.send(`${message.author.username} and ${target} had a wonderful night :smirk:`)
