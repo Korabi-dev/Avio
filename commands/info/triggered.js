@@ -12,7 +12,7 @@ module.exports = {
       if(!target) {
 const url2 = `https://some-random-api.ml/canvas/triggered?avatar=${message.author.displayAvatarURL({ dynamic: true, size: 256 })}`;
   
- urn message.channel.send(url2)
+ return message.channel.send(url2)
 
 }
   
