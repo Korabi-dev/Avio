@@ -17,7 +17,7 @@ client.vote = new Map();
 
 
   readdirSync("./commands/").map((dir) => {
-    const commands = readdirSync(`./commands/${dir}/`).map((cmd) => {
+    const cmdFiles = readdirSync(`./commands/${dir}/`).map((cmd) => {
       let pull = require(`./commands/config/${cmd}`);
       console.log(`Loaded command ${pull.name} m!`);
       bot.commands.set(pull.name, pull);
@@ -45,8 +45,7 @@ client.on("message", message => {
   try  { //TRY TO GET COMMAND AND EXECUTE
       client.commands.get(command).execute(client, message, args)
     //COMMAND LOGS
-    console.log(`${message.guild.name}: ${message.author.tag} Used ${client.commands.get(command).name} in #${message.channel.name}`)
-    } catch (err) { //IF IT CATCH ERROR
+   } catch (err) { //IF IT CATCH ERROR
       console.log(err)
       message.reply("I am getting error on using this command")
     }
