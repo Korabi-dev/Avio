@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "axios": "^0.20.0",
     "common-tags": "^1.8.0",
     "dblapi.js": "^2.4.1",
