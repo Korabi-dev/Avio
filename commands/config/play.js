@@ -12,7 +12,9 @@ const { play } = require("../utility/system.js");
 module.exports = {
   name: "play",
   description: "Play the song and feel the music",
-  async execute(client, message, args) {
+    run: async(client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
