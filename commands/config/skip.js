@@ -6,7 +6,9 @@ const { COLOR } = require("../../config.json");
 module.exports = {
   name: "skip",
   description: "Skip the song or shift yourself to next song",
-  async execute(client, message, args) {
+    run: async(client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
    
     
     
