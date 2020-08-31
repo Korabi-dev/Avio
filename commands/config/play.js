@@ -13,8 +13,8 @@ module.exports = {
   name: "play",
   description: "Play the song and feel the music",
     run: async(client, message, args) => {
-     let queue = require("./queue.js")
-     let vote = require("./vote.js")
+     client.queue = require("./queue.js")
+     client.vote = require("./vote.js")
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
@@ -46,7 +46,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const serverQueue = message.queue.get(message.guild.id);
+    const serverQueue = message.client.queue.get(message.guild.id);
 
     const queueConstruct = {
       textChannel: message.channel,
