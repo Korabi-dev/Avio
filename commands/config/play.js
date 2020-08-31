@@ -12,7 +12,7 @@ const { play } = require("../utility/system.js");
 module.exports = {
   name: "play",
   description: "Play the song and feel the music",
-  execute(client, message, args) {
+  async execute(client, message, args) {
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
