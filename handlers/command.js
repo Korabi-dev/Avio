@@ -1,6 +1,7 @@
   const discord = require("discord.js")
   const client = new discord.Client();
 const { readdirSync } = require("fs");
+const { join } = require("path");
 module.exports = (bot) => {
  
 
