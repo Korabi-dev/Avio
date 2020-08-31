@@ -1,3 +1,6 @@
+const discord = require("discord.js")
+const client = new discord.Client();
+const token = require("../../token.json")
 module.exports = {
     name: "refresh",
   aliases: ["restart", "reboot", "reload", "off/on", "devrefresh"],
@@ -9,6 +12,8 @@ module.exports = {
       );
         console.log(`Refreshing...`)
         await message.channel.send(`Refreshing!`)
-        process.exit();
+        client.destroy();
+        client.login(token.token);
+        
     }
 }
