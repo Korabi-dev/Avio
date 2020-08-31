@@ -13,7 +13,7 @@ module.exports = {
         console.log(`Refreshing...`)
         await message.channel.send(`Refreshing!`)
         client.destroy();
-        client.login(token.token);
+        client.login(token.Token);
         
     }
 }
