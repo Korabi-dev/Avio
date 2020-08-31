@@ -47,7 +47,13 @@ let embed9 = new discord.MessageEmbed()
                             });
                             
         
-        }
+        } catch (e) {
+         const embed = new MessageEmbed()
+                .setTitle(`An Error has occured: 
+${e}     
+`
+
+)
         
         
         
