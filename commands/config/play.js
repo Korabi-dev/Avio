@@ -12,9 +12,7 @@ const { play } = require("../utility/system.js");
 module.exports = {
   name: "play",
   description: "Play the song and feel the music",
-    run: async(bot, message, args) => {
-      try {
-          
+  run: async(bot, message, args) => {
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
@@ -30,7 +28,7 @@ module.exports = {
         
     if (!channel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
-      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL")
+      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL :/")
       return message.channel.send(embed);
     }
 
@@ -145,8 +143,5 @@ module.exports = {
           .catch(console.error);
       }
     }
-      } catch (error) {
-return message.channel.send(`oops! ${error}`)
-}
   }
 };
