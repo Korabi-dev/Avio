@@ -51,13 +51,13 @@ let embed = new MessageEmbed()
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
 embed.setAuthor("Started Playing Song", message.client.user.displayAvatarURL())
     .setDescription(`**[${song.title}](${song.url})**`)
-      .setImage(song.thumbnail)
+      .setImage(song.thumbnail({ dynamic: true, size: 2056 }))
     
     queue.textChannel
       .send(embed)
       .catch(err => message.channel.send("UNABLE TO PLAY SONG"));
     } catch (e) {
-message.channel.send(`Oops: ${e}`)
+      message.channel.send(`Oops: ${e}`)
 }
   }
 };
