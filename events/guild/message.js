@@ -12,7 +12,7 @@ const custom = require("../../models/custom");
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
-  if(message.content.toLowerCase.includes("grabify")) {
+  if(message.content.toLowerCase().includes("grabify")) {
     message.delete();
     message.channel.send(`${message.author} ip grabbers are against discord ToS and you are not allowed to use them!`)
   } 
