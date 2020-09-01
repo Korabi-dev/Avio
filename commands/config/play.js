@@ -123,7 +123,7 @@ module.exports = {
     }
 
     if (!serverQueue)
-      serverQueue.set(message.guild.id, queueConstruct);
+      bot.queue.set(message.guild.id, queueConstruct);
        bot.vote.set(message.guild.id, voteConstruct);
     if (!serverQueue) {
       try {
