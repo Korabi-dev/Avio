@@ -18,7 +18,7 @@ let embed = new MessageEmbed()
   setTimeout(function(){
     queue.channel.leave();
   }, 4000)
-message.channel.send)(`Left the channel due to there being no song playing for`)
+message.channel.send(`Left the channel due to there being no song playing for 4 seconds!`)
 }
 
     try {
