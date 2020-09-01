@@ -32,8 +32,8 @@ module.exports = {
      let left = new MessageEmbed()
      .setColor("BLUE")
      .setDescription("Sucessfully left the voice channel!")
-     message.channel.send(left)
      .setFooter(`This won't work if you are in a different channel this is just a step to prevent abuse/trolling.`)
+     message.channel.send(left)
      } catch (error) {
             return message.channel.send(`oops an error was detected: ${error}`)
         }
