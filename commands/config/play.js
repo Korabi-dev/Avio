@@ -13,6 +13,9 @@ module.exports = {
   name: "play",
   description: "Play the song and feel the music",
     run: async(client, message, args) => {
+      try {
+          client.queue = new Map();
+     client.vote = new Map();
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
@@ -143,5 +146,8 @@ module.exports = {
           .catch(console.error);
       }
     }
+      } catch (error) {
+return message.channel.send(`oops! ${error}`)
+}
   }
 };
