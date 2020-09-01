@@ -11,7 +11,7 @@ let embed = new MessageEmbed()
 
     if (!song) {
       queue.channel.leave();
-      queue.delete(message.guild.id);
+      bot.queue.delete(message.guild.id);
       embed.setAuthor("MUSIC QUEUE IS ENDED NOW ")
       return queue.textChannel
         .send(embed)
@@ -44,13 +44,13 @@ let embed = new MessageEmbed()
           module.exports.play(queue.songs[0], message);
         } else {
           queue.songs.shift();
-          module.exports.play(queue.song[0], message);
+          module.exports.play(queue.songs[0], message);
         }
       })
       .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
-embed.setAuthor("Started Playing Song", bot.user.displayAvatarURL())
+embed.setAuthor("Started Playing Song", message.bot.user.displayAvatarURL())
     .setDescription(`**[${song.title}](${song.url})**`)
     
     queue.textChannel
