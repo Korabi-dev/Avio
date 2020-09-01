@@ -20,8 +20,7 @@ module.exports = {
  
      if(message.channel.name == 'avio-bot-updates' && !message.author.bot){
    client.guilds.cache.forEach(guild=>{
-     if(guild == message.guild) return;
-     let channel = guild.channels.cache.find(ch=>ch.name === 'avio-bot-updates');
+  let channel = guild.channels.cache.find(ch=>ch.name === 'avio-bot-updates');
      if(!channel) return; 
      let embed = new discord.MessageEmbed()
      .setTitle(`${client.user.username} Updates ✉️`)
