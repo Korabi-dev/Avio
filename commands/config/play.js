@@ -123,8 +123,8 @@ module.exports = {
     }
 
     if (!serverQueue)
-      message.bot.queue.set(message.guild.id, queueConstruct);
-       message.bot.vote.set(message.guild.id, voteConstruct);
+      serverQueue.set(message.guild.id, queueConstruct);
+       bot.vote.set(message.guild.id, voteConstruct);
     if (!serverQueue) {
       try {
         queueConstruct.connection = await channel.join();
