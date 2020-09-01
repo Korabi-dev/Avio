@@ -7,7 +7,7 @@ const discord = require("discord.js");
 
 module.exports = {
   name: "stop",
-  aliases: ["leave"],
+  aliases: ["st"],
   description: "Stop the music and take rest ;)",
    run: async(client, message, args) => {
      try {
@@ -21,17 +21,14 @@ module.exports = {
       embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL")
       return message.channel.send(embed);
     }
-    
-
-     
-    
-     channel.leave();
-     
+        
+      channel.leave();
+     channel.join();
      
      
      let left = new MessageEmbed()
      .setColor("BLUE")
-     .setDescription("Sucessfully left the voice channel!")
+     .setDescription("Sucessfully stopped the song!")
      .setFooter(`This won't work if you are in a different channel this is just a step to prevent abuse/trolling.`)
      message.channel.send(left)
      } catch (error) {
