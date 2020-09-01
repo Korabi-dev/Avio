@@ -14,6 +14,9 @@ module.exports = {
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
+      if(!song){
+return;
+}
 
       
 
