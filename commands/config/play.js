@@ -12,10 +12,9 @@ const { play } = require("../utility/system.js");
 module.exports = {
   name: "play",
   description: "Play the song and feel the music",
-    run: async(client, message, args) => {
+    run: async(bot, message, args) => {
       try {
-          client.queue = new Map();
-     client.vote = new Map();
+          
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
@@ -47,7 +46,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const serverQueue = message.client.queue.get(message.guild.id);
+    const serverQueue = message.bot.queue.get(message.guild.id);
 
     const queueConstruct = {
       textChannel: message.channel,
