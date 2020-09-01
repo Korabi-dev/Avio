@@ -15,7 +15,7 @@ module.exports = {
   description: "Play the song and feel the music",
   run: async(bot, message, args) => {
 
-const { ychannel } = message.member.voice;
+const ychannel = message.member.voice.channel;
     if(!ychannel){
 return message.channel.send('You are not in a channel!')
 }
