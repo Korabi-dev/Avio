@@ -14,12 +14,8 @@ module.exports = {
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
-   if (!song) {
-  setTimeout(function(){
-    queue.channel.leave();
-  }, 4000)
-message.channel.send(`Left the channel due to there being no song playing for 4 seconds!`)
-}
+
+      
 
     try {
       var stream = await ytdlDiscord(song.url, {
