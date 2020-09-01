@@ -1,6 +1,6 @@
 const ytdlDiscord = require("ytdl-core-discord");
 const { MessageEmbed } = require("discord.js")
-const { QUEUE_LIMIT, COLOR } = require("../config.json");
+const { QUEUE_LIMIT, COLOR } = require("../../config.json");
 
 module.exports = {
   async play(song, message, bot) {
