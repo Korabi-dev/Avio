@@ -14,14 +14,12 @@ module.exports = {
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
-    if (!song) {
-      queue.channel.leave();
-      message.client.queue.delete(message.guild.id);
-      embed.setAuthor("MUSIC QUEUE IS ENDED NOW :/")
-      return queue.textChannel
-        .send(embed)
-        .catch(console.error);
-    }
+   if (!song) {
+  setTimeout(function(){
+    queue.channel.leave();
+  }, 4000)
+message.channel.send)(`Left the channel due to there being no song playing for`)
+}
 
     try {
       var stream = await ytdlDiscord(song.url, {
