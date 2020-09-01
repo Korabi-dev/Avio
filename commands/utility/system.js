@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js")
 const { QUEUE_LIMIT, COLOR } = require("../../config.json");
 
 module.exports = {
-  async play(song, message) {
+  async play(song, message, bot) {
     const queue = bot.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
