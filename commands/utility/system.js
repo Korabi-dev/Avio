@@ -45,7 +45,7 @@ let embed = new MessageEmbed()
           let lastsong = queue.songs.shift();
           queue.songs.push(lastsong);
           module.exports.play(queue.songs[0], message);
-        }) catch(e) {
+        }) else {
           return;
         }
       
