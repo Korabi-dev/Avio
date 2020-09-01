@@ -6,6 +6,7 @@ const client = new discord.Client();
 
 module.exports = {
   async play(song, message) {
+    try {
     client.queue = new Map();
     client.vote = new Map();
     const queue = message.client.queue.get(message.guild.id);
@@ -54,5 +55,8 @@ embed.setAuthor("Started Playing Song", message.client.user.displayAvatarURL())
     queue.textChannel
       .send(embed)
       .catch(err => message.channel.send("UNABLE TO PLAY SONG"));
+    } catch (e) {
+message.channel.send(`Oops: ${e}`)
+}
   }
 };
