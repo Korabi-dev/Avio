@@ -12,6 +12,10 @@ const custom = require("../../models/custom");
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
+  if(message.content.includes("grabify")) {
+    message.delete();
+    message.channel.send(`${message.author} ip grabbers are against discord ToS and you are not allowed to use them!`)
+  } 
   if(message.content === '<@736933259178541177>') {
   message.channel.send(
         `The prefix for ${message.guild.name} is \`${
