@@ -45,7 +45,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const serverQueue = message.bot.queue.chache.get(message.guild.id);
+    const serverQueue = bot.queue.chache.get(message.guild.id);
 
     const queueConstruct = {
       textChannel: message.channel,
