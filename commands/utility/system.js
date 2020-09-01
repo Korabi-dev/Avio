@@ -52,7 +52,7 @@ let embed = new MessageEmbed()
 embed.setAuthor(`Started Playing Song`)
     .setDescription(`**[${song.title}](${song.url})**`)
       .setImage(`${song.thumbnail}`)
-      .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 2056 }))
+      .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
     
     queue.textChannel
       .send(embed)
