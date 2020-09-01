@@ -22,11 +22,7 @@ module.exports = {
       return message.channel.send(embed);
     }
     
-     if(channel !== client.channel){
-let notsame = new MessageEmbed()
-.setColor("RED")
-.setDescription('We are not in the same channel.')
-}
+
      
     
      channel.leave();
@@ -37,8 +33,9 @@ let notsame = new MessageEmbed()
      .setColor("BLUE")
      .setDescription("Sucessfully left the voice channel!")
      message.channel.send(left)
+     .setFooter(`This won't work if you are in a different channel this is just a step to prevent abuse/trolling.`)
      } catch (error) {
-            return;
+            return message.channel.send(`oops an error was detected: ${error}`)
         }
   }
 };
