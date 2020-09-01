@@ -22,6 +22,7 @@ module.exports = {
           { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
           { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
           { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
        );
       
       message.channel.send(Embed);
