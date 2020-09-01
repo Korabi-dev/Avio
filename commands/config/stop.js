@@ -22,6 +22,11 @@ module.exports = {
       return message.channel.send(embed);
     }
     
+     if(channel !== client.me.channel){
+let notsame = new MessageEmbed()
+.setcolor("RED")
+.setDescription('We are not in the same channel.')
+}
      
      try {
      channel.leave();
