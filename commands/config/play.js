@@ -128,7 +128,7 @@ module.exports = {
     if (!serverQueue) {
       try {
         queueConstruct.connection = await channel.join();
-        play(serverQueue.song[0], message);
+        play(queueConstruct.songs[0], message);
       } catch (error) {
         console.error(`Could not join voice channel: ${error}`);
         bot.queue.delete(message.guild.id);
