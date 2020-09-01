@@ -1,9 +1,11 @@
 const ytdlDiscord = require("ytdl-core-discord");
 const { MessageEmbed } = require("discord.js")
 const { QUEUE_LIMIT, COLOR } = require("../../config.json");
+const discord = require("discord.js")
+const bot = new discord.Client();
 
 module.exports = {
-  async play(song, message, bot) {
+  async play(song, message) {
     const queue = bot.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
