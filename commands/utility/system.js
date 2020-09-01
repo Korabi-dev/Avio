@@ -25,7 +25,7 @@ let embed = new MessageEmbed()
     } catch (error) {
       if (queue) {
         queue.songs.shift();
-        module.exports.play(queue.songs[0], message);
+        module.exports.play(bot.queue.songs[0], message);
       }
 
       if (error.message.includes === "copyright") {
@@ -39,18 +39,18 @@ let embed = new MessageEmbed()
       .play(stream, { type: "opus" })
       .on("finish", () => {
         if (queue.loop) {
-          let lastsong = queue.songs.shift();
+          let lastsong = bot.queue.songs.shift();
           queue.songs.push(lastsong);
-          module.exports.play(queue.songs[0], message);
+          module.exports.play(bot.queue.songs[0], message);
         } else {
           queue.songs.shift();
-          module.exports.play(queue.songs[0], message);
+          module.exports.play(bot.queue.songs[0], message);
         }
       })
       .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
-embed.setAuthor("Started Playing Song", message.bot.user.displayAvatarURL())
+embed.setAuthor("Started Playing Song", bot.user.displayAvatarURL())
     .setDescription(`**[${song.title}](${song.url})**`)
     
     queue.textChannel
