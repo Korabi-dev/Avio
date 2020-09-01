@@ -4,8 +4,8 @@ const { QUEUE_LIMIT, COLOR } = require("../../config.json");
 
 
 module.exports = {
-  async play(bot, message, song) {
-    const queue = message.bot.queue.chache.get(message.guild.id);
+  run: async(bot, message, song) => {
+    const queue = bot.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
