@@ -21,10 +21,7 @@ module.exports = {
       embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL")
       return message.channel.send(embed);
     }
-     
-     if(channel !== client.me.channel){
-return message.channel.send(`We are not in the same channel!`) 
-     }
+    
      
      try {
      channel.leave();
