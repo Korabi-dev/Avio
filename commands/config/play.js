@@ -112,7 +112,7 @@ module.exports = {
       
     
       serverQueue.songs.push(song);
-      embed.setAuthor("Added New Song To Queue", client.user.displayAvatarURL())
+      embed.setAuthor("Added New Song To Queue", bot.user.displayAvatarURL())
       embed.setDescription(`**[${song.title}](${song.url})**`)
       embed.setThumbnail(song.thumbnail)
       .setFooter("Likes - " + songData.videoDetails.likes + ", Dislikes - " +  songData.videoDetails.dislikes)
@@ -125,15 +125,15 @@ module.exports = {
     }
 
     if (!serverQueue)
-      message.client.queue.set(message.guild.id, queueConstruct);
-       message.client.vote.set(message.guild.id, voteConstruct);
+      bot.queue.set(message.guild.id, queueConstruct);
+       bot.vote.set(message.guild.id, voteConstruct);
     if (!serverQueue) {
       try {
         queueConstruct.connection = await channel.join();
         play(queueConstruct.songs[0], message);
       } catch (error) {
         console.error(`Could not join voice channel: ${error}`);
-        message.client.queue.delete(message.guild.id);
+        bot.queue.delete(message.guild.id);
         await channel.leave();
         return message.channel
           .send({
