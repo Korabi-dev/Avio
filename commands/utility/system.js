@@ -42,7 +42,7 @@ let embed = new MessageEmbed()
     const dispatcher = queue.connection
       .play(stream, { type: "opus" })
         .on("finish", () => {
-        channel.leave();
+        queue.channel.leave();
           message.channel.send(`Song finished!`)
         }) 
      .on("error", console.error);
