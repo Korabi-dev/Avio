@@ -16,7 +16,10 @@ module.exports = {
   run: async(bot, message, args) => {
 
 const { ychannel } = message.member.voice;
-ychannel.join
+    if(!ychannel){
+return message.channel.send('You are not in a channel!')
+}
+ychannel.join();
 message.channel.send(`Joined :white_check_mark:`)
 
 
