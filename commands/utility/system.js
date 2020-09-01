@@ -4,8 +4,8 @@ const { QUEUE_LIMIT, COLOR } = require("../../config.json");
 
 
 module.exports = {
-  async play(bot, message, song) {
-    run: async(args) => {
+  run: async(bot, message, song) => {
+  async play() {
     const queue = bot.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
@@ -47,6 +47,7 @@ embed.setAuthor("Started Playing Song", message.bot.user.displayAvatarURL())
     queue.textChannel
       .send(embed)
       .catch(err => message.channel.send("UNABLE TO PLAY SONG"));
-    }
-  }
+   
+    
+  }} 
 };
