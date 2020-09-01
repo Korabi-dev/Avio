@@ -53,7 +53,7 @@ embed.setAuthor(`Started Playing Song`)
     .setDescription(`**[${song.title}](${song.url})**`)
       .setImage(`${song.thumbnail}`)
       .setThumbnail(message.author.displayAvatarURL({ dynamic: true }))
-      .setFooter(`Enjoy!`)
+      
     
     queue.textChannel
       .send(embed)
