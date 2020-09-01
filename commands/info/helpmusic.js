@@ -8,7 +8,7 @@ module.exports = {
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Music")
-    .setDescription(`Play,Stop,Join.`)
+    .setDescription(`Play,Stop,Join,Leave.`)
     .setFooter(`note: commands are still in development may be a little buggy`)
     .setColor("GREEN")
   
