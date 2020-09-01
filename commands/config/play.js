@@ -4,16 +4,17 @@ const ms = require("ms")
 
 
 const { Util } = require("discord.js");
-const { YOUTUBE_API_KEY, QUEUE_LIMIT, COLOR } = require("../../config.json");
+const { YOUTUBE_API_KEY, QUEUE_LIMIT, COLOR } = require("../config.json");
 const ytdl = require("ytdl-core");
 const YoutubeAPI = require("simple-youtube-api");
 const youtube = new YoutubeAPI(YOUTUBE_API_KEY);
-const { play } = require("../utility/system.js");
+const { play } = require("../system/music.js");
+const discord = require("discord.js");
+const client = new discord.Client();
 module.exports = {
   name: "play",
   description: "Play the song and feel the music",
-  run: async(bot, message, args) => {
-    try {
+  run: async (client, message, args) => {
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
@@ -45,7 +46,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const serverQueue = bot.queue.get(message.guild.id);
+    const serverQueue = message.client.queue.get(message.guild.id);
 
     const queueConstruct = {
       textChannel: message.channel,
@@ -111,7 +112,7 @@ module.exports = {
       
     
       serverQueue.songs.push(song);
-      embed.setAuthor("Added New Song To Queue", bot.user.displayAvatarURL())
+      embed.setAuthor("Added New Song To Queue", client.user.displayAvatarURL())
       embed.setDescription(`**[${song.title}](${song.url})**`)
       embed.setThumbnail(song.thumbnail)
       .setFooter("Likes - " + songData.videoDetails.likes + ", Dislikes - " +  songData.videoDetails.dislikes)
@@ -124,15 +125,15 @@ module.exports = {
     }
 
     if (!serverQueue)
-      bot.queue.set(message.guild.id, queueConstruct);
-       bot.vote.set(message.guild.id, voteConstruct);
+      message.client.queue.set(message.guild.id, queueConstruct);
+       message.client.vote.set(message.guild.id, voteConstruct);
     if (!serverQueue) {
       try {
         queueConstruct.connection = await channel.join();
-        play(queueConstruct.songs[1], message);
+        play(queueConstruct.songs[0], message);
       } catch (error) {
         console.error(`Could not join voice channel: ${error}`);
-        bot.queue.delete(message.guild.id);
+        message.client.queue.delete(message.guild.id);
         await channel.leave();
         return message.channel
           .send({
@@ -144,8 +145,5 @@ module.exports = {
           .catch(console.error);
       }
     }
-    } catch(e) {
-message.channel.send(`Oops: ${e}`)
-}
   }
 };
