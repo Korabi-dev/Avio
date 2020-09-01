@@ -9,6 +9,7 @@ module.exports = {
     client.queue = new Map();
     client.vote = new Map();
     const queue = message.client.queue.get(message.guild.id);
+    queue.loop = true;
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
@@ -40,6 +41,15 @@ let embed = new MessageEmbed()
 
     const dispatcher = queue.connection
       .play(stream, { type: "opus" })
+        .on("finish", () => {
+          try {
+          let lastsong = queue.songs.shift();
+          queue.songs.push(lastsong);
+          module.exports.play(queue.songs[0], message);
+        } else {
+          return;
+        }
+      })
       .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
