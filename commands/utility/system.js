@@ -2,18 +2,18 @@ const ytdlDiscord = require("ytdl-core-discord");
 const { MessageEmbed } = require("discord.js")
 const { QUEUE_LIMIT, COLOR } = require("../../config.json");
 
-
 module.exports = {
-  async play() {
-  run: async(bot, message, song) => {
-  const queue = bot.queue.get(message.guild.id);
+  async play(song, message, client) {
+    client.queue = new Map();
+    client.vote = new Map();
+    const queue = message.client.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
     if (!song) {
       queue.channel.leave();
-      bot.queue.delete(message.guild.id);
-      embed.setAuthor("MUSIC QUEUE IS ENDED NOW ")
+      message.client.queue.delete(message.guild.id);
+      embed.setAuthor("MUSIC QUEUE IS ENDED NOW :/")
       return queue.textChannel
         .send(embed)
         .catch(console.error);
@@ -38,16 +38,14 @@ let embed = new MessageEmbed()
 
     const dispatcher = queue.connection
       .play(stream, { type: "opus" })
-    .on("error", console.error);
+      .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
-embed.setAuthor("Started Playing Song", message.bot.user.displayAvatarURL())
+embed.setAuthor("Started Playing Song", message.client.user.displayAvatarURL())
     .setDescription(`**[${song.title}](${song.url})**`)
     
     queue.textChannel
       .send(embed)
       .catch(err => message.channel.send("UNABLE TO PLAY SONG"));
-   
-    
-  }} 
+  }
 };
