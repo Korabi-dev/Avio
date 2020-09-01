@@ -30,7 +30,7 @@ module.exports = {
         
     if (!channel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
-      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL :/")
+      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL")
       return message.channel.send(embed);
     }
 
@@ -46,7 +46,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const serverQueue = message.bot.queue.get(message.guild.id);
+    const serverQueue = bot.queue.get(message.guild.id);
 
     const queueConstruct = {
       textChannel: message.channel,
