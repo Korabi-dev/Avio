@@ -4,14 +4,14 @@ const { QUEUE_LIMIT, COLOR } = require("../../config.json");
 
 module.exports = {
   async play(song, message, bot) {
-    const queue = bot.queue.get(message.guild.id);
+    const queue = message.bot.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
 
     if (!song) {
       queue.channel.leave();
-      bot.queue.delete(message.guild.id);
-      embed.setAuthor("MUSIC QUEUE IS ENDED NOW :/")
+      message.bot.queue.delete(message.guild.id);
+      embed.setAuthor("MUSIC QUEUE IS ENDED NOW ")
       return queue.textChannel
         .send(embed)
         .catch(console.error);
@@ -49,7 +49,7 @@ let embed = new MessageEmbed()
       .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
-embed.setAuthor("Started Playing Song", bot.user.displayAvatarURL())
+embed.setAuthor("Started Playing Song", message.bot.user.displayAvatarURL())
     .setDescription(`**[${song.title}](${song.url})**`)
     
     queue.textChannel
