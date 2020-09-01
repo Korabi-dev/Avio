@@ -14,22 +14,22 @@ module.exports = {
      let embed = new MessageEmbed()
 .setColor("BLUE");
 
-    const { channel } = message.member.voice;
+    const { youtubechannel } = message.member.voice;
       
-    if (!channel) {
+    if (!youtubechannel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
       embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL")
       return message.channel.send(embed);
     }
     
-     if(channel !== client.me.channel){
+     if(youtubechannel !== client.me.youtubechannel){
 let notsame = new MessageEmbed()
 .setcolor("RED")
 .setDescription('We are not in the same channel.')
 }
      
      try {
-     channel.leave();
+     youtubechannel.leave();
      } catch (error) {
             return message.channel.send(`Something went wrong!`)
         }
