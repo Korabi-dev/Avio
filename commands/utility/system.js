@@ -22,10 +22,7 @@ let embed = new MessageEmbed()
         highWaterMark: 1 << 25
       });
     } catch (error) {
-      if (queue) {
-        queue.songs.shift();
-        module.exports.play(queue.songs[0], message);
-      }
+      
 
       if (error.message.includes === "copyright") {
         return message.channel.send("THIS VIDEO CONTAINS COPYRIGHT CONTENT");
@@ -36,16 +33,6 @@ let embed = new MessageEmbed()
 
     const dispatcher = queue.connection
       .play(stream, { type: "opus" })
-      .on("finish", () => {
-        if (queue.loop) {
-          let lastsong = queue.songs.shift();
-          queue.songs.push(lastsong);
-          module.exports.play(queue.songs[0], message);
-        } else {
-          queue.songs.shift();
-          module.exports.play(queue.songs[0], message);
-        }
-      })
       .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
