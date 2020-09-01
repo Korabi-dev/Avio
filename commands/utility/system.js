@@ -45,11 +45,8 @@ let embed = new MessageEmbed()
           let lastsong = queue.songs.shift();
           queue.songs.push(lastsong);
           module.exports.play(queue.songs[0], message);
-        }) else {
-          return;
-        }
-      
-      .on("error", console.error);
+        }) 
+     .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
 embed.setAuthor("Started Playing Song", message.client.user.displayAvatarURL())
