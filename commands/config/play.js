@@ -25,7 +25,7 @@ module.exports = {
       return message.channel.send(embed);
     }
 
-    const channel = message.member.voice.channel;
+    const channel = message.member.voice;
         
     if (!channel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
