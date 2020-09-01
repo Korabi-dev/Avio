@@ -23,7 +23,7 @@ return message.channel.send(`Please provide a song name!`)
         }
 
         const embed = new MessageEmbed()
-            .setTitle('Decode Binary')
+            .setTitle('Lyrics')
             .setDescription(`Artist : ${data.author}
             Title : ${data.title}
             lyrics: 
