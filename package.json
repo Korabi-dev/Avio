@@ -29,5 +29,7 @@
      "ytdl-core": "^3.1.2",
     "ytdl-core-discord": "https://github.com/CTK-WARRIOR/ytdl-core-discord"
   },
-  "devDependencies": {}
+  "devDependencies": {
+  "nodemon": "^2.0.4"
+  }
 }
