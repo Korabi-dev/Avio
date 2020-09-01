@@ -49,7 +49,7 @@ let embed = new MessageEmbed()
      .on("error", console.error);
   
     dispatcher.setVolumeLogarithmic(queue.volume / 100); //VOLUME
-embed.setAuthor("Started Playing Song", message.author.displayAvatarURL({ dynamic: true, size: 2056 })
+embed.setAuthor("Started Playing Song", message.author.displayAvatarURL({ dynamic: true, size: 256 })
     .setDescription(`**[${song.title}](${song.url})**`)
       .setImage(`${song.thumbnail}`))
     
