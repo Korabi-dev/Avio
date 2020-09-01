@@ -47,6 +47,7 @@ module.exports = async (bot, message) => {
           { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
           { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
           { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
        );
       
       message.channel.send(Embed);
@@ -70,6 +71,7 @@ module.exports = async (bot, message) => {
           { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
           { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
           { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
        );
       
       message.channel.send(Embed2);
@@ -92,6 +94,7 @@ module.exports = async (bot, message) => {
           { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
           { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
           { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
        );
       
       message.channel.send(Embed3);
@@ -116,6 +119,7 @@ module.exports = async (bot, message) => {
           { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
           { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
           { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
        );
       
       message.channel.send(Embed4);
@@ -150,6 +154,7 @@ module.exports = async (bot, message) => {
           { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
           { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
           { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
+          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
        );
       
      return message.channel.send(Embed);
