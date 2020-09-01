@@ -9,6 +9,8 @@ const bot = new Discord.Client({
 
 const Commands = new Discord.Collection()
 const mongoose = require("mongoose");
+bot.queue = new Map();
+bot.vote = new Map();
 bot.prefix = prefix;
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
