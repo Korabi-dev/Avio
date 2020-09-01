@@ -10,7 +10,7 @@ module.exports = {
   aliases: ["leave"],
   description: "Stop the music and take rest ;)",
    run: async(client, message, args) => {
-  
+     try {
      let embed = new MessageEmbed()
 .setColor("BLUE");
 
@@ -28,17 +28,17 @@ let notsame = new MessageEmbed()
 .setDescription('We are not in the same channel.')
 }
      
-     try {
+    
      channel.leave();
-     } catch (error) {
-            return message.channel.send(`Something went wrong!`)
-        }
+     
      
      
      let left = new MessageEmbed()
      .setColor("BLUE")
      .setDescription("Sucessfully left the voice channel!")
      message.channel.send(left)
-   
+     } catch (error) {
+            return;
+        }
   }
 };
