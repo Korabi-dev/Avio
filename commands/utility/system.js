@@ -44,7 +44,7 @@ let embed = new MessageEmbed()
           module.exports.play(queue.songs[0], message);
         } else {
           queue.songs.shift();
-          module.exports.play(queue.songs[0], message);
+          module.exports.play(queue.song[0], message);
         }
       })
       .on("error", console.error);
