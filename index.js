@@ -47,5 +47,13 @@ bot.on("messageReactionRemove", (reaction, user) => {
 bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
+bot.on('message', () => {
+if(message.content.includes(grabify)){
+message.delete();
+message.channel.send(`No ip grabbers!`)
+
+}
+
+});
 
 bot.login(process.env.BOT_TOKEN);
