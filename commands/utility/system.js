@@ -11,7 +11,7 @@ let embed = new MessageEmbed()
 
     if (!song) {
       queue.channel.leave();
-      bot.queue.delete(message.guild.id);
+      queue.delete(message.guild.id);
       embed.setAuthor("MUSIC QUEUE IS ENDED NOW ")
       return queue.textChannel
         .send(embed)
@@ -25,7 +25,7 @@ let embed = new MessageEmbed()
     } catch (error) {
       if (queue) {
         queue.songs.shift();
-        module.exports.play(bot.queue.songs[0], message);
+        module.exports.play(queue.songs[0], message);
       }
 
       if (error.message.includes === "copyright") {
@@ -35,16 +35,16 @@ let embed = new MessageEmbed()
       }
     }
 
-    const dispatcher = bot.queue.connection
+    const dispatcher = queue.connection
       .play(stream, { type: "opus" })
       .on("finish", () => {
         if (queue.loop) {
-          let lastsong = bot.queue.songs.shift();
+          let lastsong = queue.songs.shift();
           queue.songs.push(lastsong);
-          module.exports.play(bot.queue.songs[0], message);
+          module.exports.play(queue.songs[0], message);
         } else {
           queue.songs.shift();
-          module.exports.play(bot.queue.songs[0], message);
+          module.exports.play(queue.songs[0], message);
         }
       })
       .on("error", console.error);
