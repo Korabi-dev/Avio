@@ -22,7 +22,7 @@ module.exports = {
       return message.channel.send(embed);
     }
     
-     if(channel !== client.me.youtubechannel){
+     if(channel !== client.channel){
 let notsame = new MessageEmbed()
 .setColor("RED")
 .setDescription('We are not in the same channel.')
