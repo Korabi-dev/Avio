@@ -15,6 +15,8 @@ module.exports = {
   name: "play",
   description: "Play the song and feel the music",
   run: async (client, message, args) => {
+    client.queue = new Map();
+    client.vote = new Map();
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
