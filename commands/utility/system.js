@@ -1,11 +1,10 @@
 const ytdlDiscord = require("ytdl-core-discord");
 const { MessageEmbed } = require("discord.js")
 const { QUEUE_LIMIT, COLOR } = require("../../config.json");
-const discord = require("discord.js")
-const bot = new discord.Client();
+
 
 module.exports = {
-  async play(song, message) {
+  async play(song, message, bot) {
     const queue = bot.queue.get(message.guild.id);
 let embed = new MessageEmbed()
 .setColor(COLOR);
@@ -36,7 +35,7 @@ let embed = new MessageEmbed()
       }
     }
 
-    const dispatcher = queue.connection
+    const dispatcher = bot.queue.connection
       .play(stream, { type: "opus" })
       .on("finish", () => {
         if (queue.loop) {
