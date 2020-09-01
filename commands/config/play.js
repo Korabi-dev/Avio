@@ -110,7 +110,7 @@ module.exports = {
       
     
       serverQueue.songs.push(song);
-      embed.setAuthor("Added New Song To Queue", message.bot.user.displayAvatarURL())
+      embed.setAuthor("Added New Song To Queue", bot.user.displayAvatarURL())
       embed.setDescription(`**[${song.title}](${song.url})**`)
       embed.setThumbnail(song.thumbnail)
       .setFooter("Likes - " + songData.videoDetails.likes + ", Dislikes - " +  songData.videoDetails.dislikes)
@@ -123,8 +123,8 @@ module.exports = {
     }
 
     if (!serverQueue)
-      bot.queue.set(message.guild.id, queueConstruct);
-       bot.vote.set(message.guild.id, voteConstruct);
+      message.bot.queue.set(message.guild.id, queueConstruct);
+       message.bot.vote.set(message.guild.id, voteConstruct);
     if (!serverQueue) {
       try {
         queueConstruct.connection = await channel.join();
