@@ -9,8 +9,8 @@ const bot = new Discord.Client({
 
 const Commands = new Discord.Collection()
 const mongoose = require("mongoose");
-bot.queue.set new Map();
-bot.vote.set new Map();
+bot.queue = new Map();
+bot.vote = new Map();
 bot.prefix = prefix;
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
@@ -50,8 +50,8 @@ bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
 bot.on('ready', () => {
-bot.queue.set new Map();
-bot.vote.set new Map();
+bot.queue =  new Map();
+bot.vote = new Map();
 });
 
 bot.login(process.env.BOT_TOKEN);
