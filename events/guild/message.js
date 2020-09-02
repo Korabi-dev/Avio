@@ -55,7 +55,7 @@ module.exports = async (bot, message) => {
       );
 }
   
-  if(message.content.toLowerCase() === 'Avio Help') {
+  if(message.content.toLowerCase() === 'avio help') {
 
      let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
