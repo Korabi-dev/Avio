@@ -55,7 +55,7 @@ module.exports = async (bot, message) => {
       );
 }
   
-  if(message.content === 'Avio Help') {
+  if(message.content.toLowerCase() === 'Avio Help') {
 
      let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
@@ -77,82 +77,7 @@ module.exports = async (bot, message) => {
       message.channel.send(Embed);
     
 }
-  
-  
-    if(message.content === 'Avio help') {
-
-     let Embed2 = new discord.MessageEmbed()
-        .setTitle(`Help`)
-        .setDescription(
-          `Hey **${message.author.username}** Here are the help commands `
-        )
-        .setColor(`RED`)
-        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setFooter(`Note: Make a channel called edit-log to see the old content of edited messages in this guild!`)
-        .addFields(
-          { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
-          { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
-          { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
-          { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
-          { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
-          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
-       );
-      
-      message.channel.send(Embed2);
-    
-}
-  
-  if(message.content === 'avio Help') {
-
-     let Embed3 = new discord.MessageEmbed()
-        .setTitle(`Help`)
-        .setDescription(
-          `Hey **${message.author.username}** Here are the help commands `
-        )
-        .setColor(`RED`)
-        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setFooter(`Note: Make a channel called edit-log to see the old content of edited messages in this guild!`)
-        .addFields(
-          { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
-          { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
-          { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
-          { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
-          { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
-          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
-       );
-      
-      message.channel.send(Embed3);
-    
-}  
-  
-  
-  
-    if(message.content === 'avio help') {
-
-     let Embed4 = new discord.MessageEmbed()
-        .setTitle(`Help`)
-        .setDescription(
-          `Hey **${message.author.username}** Here are the help commands `
-        )
-        .setColor(`RED`)
-        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setFooter(`Note: Make a channel called edit-log to see the old content of edited messages in this guild!`)
-        .addFields(
-          { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
-          { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
-          { name: "a!help-fun", value: `Sends you the fun commands!`, inline: true },
-          { name: "a!help-utility", value: `Sends you the utility commands!`, inline: true },
-          { name: "a!help-nsfw", value: `Sends you the nsfw commands!`, inline: true },
-          { name: "a!help-music", value: `Sends you the music commands!`, inline: true },
-       );
-      
-      message.channel.send(Embed4);
-    
-}
-  
-  
-  
-  let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
+   let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
     : prefix;
   if (!message.content.toLowerCase().startsWith(newPrefix)) return;
