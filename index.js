@@ -48,7 +48,7 @@ bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
 bot.on("guildMemberAdd", (reaction, user) => {
-  require("./events/guild/welcome")(bot, member, message);
+  require("./events/guild/welcome")(bot, user, message);
 });
 
 bot.login(process.env.BOT_TOKEN);

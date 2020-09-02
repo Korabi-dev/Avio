@@ -3,9 +3,9 @@ const { MessageEmbed, Message, Client } = require("discord.js");
 const discord = require("discord.js");
 
 
-module.exports = async (bot, message, member) => {
+module.exports = async (bot, user, member) => {
         
-    const url = `https://api.no-api-key.com/api/v2/welcome?username=${user.user.username}&text_heading=Welcome%20to%20${message.guild.name}&user_image=${user.user.displayAvatarURL({ format: "png" })}`
+    const url = `https://api.no-api-key.com/api/v2/welcome?username=${user.username}&text_heading=Welcome%20to%20${message.guild.name}&user_image=${user.displayAvatarURL({ format: "png" })}`
         
     
         let response, data;
