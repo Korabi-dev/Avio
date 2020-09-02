@@ -21,7 +21,12 @@ module.exports = {
                 embeds: [embed],
                 });
         } catch (error) {
-            console.error('Error trying to send: ', error);
+            const embed = new discord.MessageEmbed()
+            .setTitle('ERROR')
+            .setDescription(`Could not find a webhook in this channel make sure you create a webhook before using this command!`)
+            .setImage('https://i.imgur.com/WAkeMYR.png')
+            .setColor('RED');
+         
         }
 
 
