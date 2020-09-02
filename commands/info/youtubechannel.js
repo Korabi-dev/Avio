@@ -22,7 +22,7 @@ module.exports = {
             channel = response.data
             info = channel.items[0]
         } catch (e) {
-            return message.channel.send(`Channel was not found`)
+            return message.channel.send(`OOPS! ${e}`)
         }
 
         const embed = new MessageEmbed()
