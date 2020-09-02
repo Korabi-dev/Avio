@@ -44,6 +44,14 @@ module.exports = {
 
       let reason = args.slice(1).join(" ")
 
+      target.ban(args[1]);
+
+    } catch (error) {
+      message.channel.send(`Could not ban this user error: "${e}" please check my premissions!`)
+    }
+
+
+
       let embed = new discord.MessageEmbed()
       .setTitle("Action: Ban")
       .setDescription(`Banned ${target} with reason of: ${reason}`)
@@ -52,14 +60,10 @@ module.exports = {
       .setFooter(`Banned by ${message.author.username}`);
       
       message.channel.send(embed)
-      
-      target.ban(args[1]);
 
-     target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
+      target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
     
     console.log(`${message.author.username} just banned ${target} with reason : ${reason}`)
-    } catch (error) {
-      message.channel.send(`Could not ban this user error: "${e}" please check my premissions!`)
-    }
+   
 }
  }
