@@ -20,7 +20,7 @@ module.exports = {
         try {
             response = await axios.get(url)
             channel = response.data
-            info = channel.items[1]
+            info = channel.items[]
         } catch (e) {
             return message.channel.send(`OOPS! ${e}`)
         }
