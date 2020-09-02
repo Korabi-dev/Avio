@@ -12,8 +12,7 @@ module.exports = {
     .setDescription(`Wow dear dev,you are using webhooks now huh thats sad.`)
 	.setColor('#0099ff');
         try {
-            const channel = client.channels.chache.get('723679963282276387');
-            const webhooks = await channel.fetchWebhooks();
+            const webhooks = await message.channel.fetchWebhooks();
             const webhook = webhooks.first();
     
             await webhook.send('Webhook test', {
