@@ -3,11 +3,18 @@ const discord = require('discord.js')
 const bot = new discord.Client();
 const ms = require('ms')
 const os = require('os')
+const { utc } = require('moment')
+
+
+
+
 module.exports = {
     name: "bot-info",
     aliases: ["bot info", "botinfo"],
     category: "bot",
     run: async (client, message, args) => {
+        let botcreated = utc(client.user.createdAt).format('D MMMM YYYY')
+
         const embed = new MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
             .setTitle('Bot Stats')
@@ -34,8 +41,8 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: 'Created Date',
-                    value: client.user.createdAt,
+                    name: 'Created Date', 
+                    value: botcreated,
                     inline: true
                 },
                 {
