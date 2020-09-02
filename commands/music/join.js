@@ -8,7 +8,7 @@ const { YOUTUBE_API_KEY, QUEUE_LIMIT, COLOR } = require("../../config.json");
 const ytdl = require("ytdl-core");
 const YoutubeAPI = require("simple-youtube-api");
 const youtube = new YoutubeAPI(YOUTUBE_API_KEY);
-const { play } = require("../utility/system.js");
+const { play } = require("../system.js");
 module.exports = {
   name: "join",
   aliases: ["j"],
