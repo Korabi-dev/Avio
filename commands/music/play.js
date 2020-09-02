@@ -20,6 +20,9 @@ module.exports = {
     let embed = new MessageEmbed()
 .setColor(COLOR);
 
+   
+
+  
 
     //FIRST OF ALL WE WILL ADD ERROR MESSAGE AND PERMISSION MESSSAGE
     if (!args.length) {
@@ -37,6 +40,10 @@ module.exports = {
     }
 
     //WE WILL ADD PERMS ERROR LATER :(
+
+      if(song){
+        return message.channel.send(`:x: There is already another song playing in this server in ${channel}`)
+  }
 
     const targetsong = args.join(" ");
     const videoPattern = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.?be)\/.+$/gi;
