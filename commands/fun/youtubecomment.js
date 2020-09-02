@@ -11,24 +11,24 @@ module.exports = {
 return message.channel.send(`Please provide the comment!`)
 }
  
-        const user = message.mentions.members.first();
+        let target = message.mentions.members.first();
 
         const memberurl = `https://some-random-api.ml/canvas/youtube-comment?avatar=${message.author.displayAvatarURL()}&comment=${args.slice(0).join("%20")}&username=${message.author.username}`;
 
 
-        const url = `https://some-random-api.ml/canvas/youtube-comment?avatar=${user.displayAvatarURL()}&comment=${args.slice(0).join("%20")}&username=${user.username}`;
+        const url = `https://some-random-api.ml/canvas/youtube-comment?avatar=${target.user.displayAvatarURL({ })}&comment=${args.slice(0).join("%20")}&username=${user.username}`;
 
       
+        if(!target) {
+            return  message.channel.send(memberurl)
 
-        if(user){    
+        }
+
+            
         await message.channel.send(url)
-        }
+        
 
-        if(!user) {
-            await message.channel.send(memberurl)
-
-        }
-
+      
 
     }
 }
