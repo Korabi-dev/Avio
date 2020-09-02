@@ -15,9 +15,10 @@ module.exports = {
             const webhooks = await message.channel.fetchWebhooks();
             const webhook = webhooks.first();
     
-            await webhook.send(`${embed}`, {
+            await webhook.send(' ', {
                 username: 'Avio/Discord.js test',
                 avatarURL: 'https://i.imgur.com/wSTFkRM.png',
+                embeds: [embed],
                 });
         } catch (error) {
             console.error('Error trying to send: ', error);
