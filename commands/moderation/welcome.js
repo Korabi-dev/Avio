@@ -16,7 +16,7 @@ module.exports = {
             return message.channel.send('Please provide a member')
         }
     
-        const url = 'https://api.no-api-key.com/api/v2/welcome?username=${user.username}&text_heading=Welcome to Korabi server&user_image=${user.displayAvatarURL({ format: "png" }`';
+        const url = `https://api.no-api-key.com/api/v2/welcome?username=${user.user.username}&text_heading=Welcome to ${message.guild.name}&user_image=${user.user.displayAvatarURL({ format: "png" })}`;
 
         try {
             const embed = new MessageEmbed()
