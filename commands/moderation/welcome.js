@@ -19,9 +19,7 @@ module.exports = {
         const url = `https://api.no-api-key.com/api/v2/welcome?username=${user.user.username}&text_heading=Welcome to ${message.guild.name}&user_image=${user.user.displayAvatarURL({ format: "png" })}`;
 
         try {
-            const embed = new MessageEmbed()
-              .setImage(url)
-            await message.channel.send(embed)
+            await message.channel.send(url)
         } catch (e) {
             return message.channel.send(`Error (${e}) please report this to the dev`)
         }
