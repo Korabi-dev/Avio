@@ -6,6 +6,7 @@ module.exports = {
   description: "ban anyone with one shot xD",
   usage: "ban <@user> <raeson>",
   run: (client, message, args) => {
+    try {
 
     if(!message.member.hasPermission("BAN_MEMBERS")) {
         return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
@@ -57,5 +58,8 @@ module.exports = {
      target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
     
     console.log(`${message.author.username} just banned ${target} with reason : ${reason}`)
+    } catch (error) {
+      message.channel.send(`Could not ban this user error: "${e}" please check my premissions!`)
+    }
 }
  }
