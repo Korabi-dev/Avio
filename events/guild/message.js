@@ -12,10 +12,30 @@ const custom = require("../../models/custom");
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
-  if(message.content.toLowerCase().includes("grabify")) {
+  if(message.content.toLowerCase().includes("grabify.link")) {
     message.delete();
-    message.channel.send(`${message.author} ip grabbers are against discord ToS and you are not allowed to use them!`)
-  } 
+   }
+   if(message.content.toLowerCase().includes("leancoding.co")) {
+    message.delete();
+   }
+   if(message.content.toLowerCase().includes("stopify.co")) {
+    message.delete();
+   }
+   if(message.content.toLowerCase().includes("freegiftcards.co")) {
+    message.delete();
+   }
+   if(message.content.toLowerCase().includes("joinmy.site")) {
+    message.delete();
+   }
+   if(message.content.toLowerCase().includes("curiouscat.club")) {
+    message.delete();
+   }
+   if(message.content.toLowerCase().includes("catsnthings.fun")) {
+    message.delete();
+   }
+   if(message.content.toLowerCase().includes("catsnthing.com")) {
+    message.delete();
+   }
   if(message.content === '<@736933259178541177>') {
   message.channel.send(
         `The prefix for ${message.guild.name} is \`${
