@@ -4,7 +4,7 @@ module.exports = {
   description: "Get the bot to say what ever you want in a specific channel.",
   usage: "<channel id> <msg>",
   run: async (bot, message, args) => {
-    let hello = 'hi';
+   
   
       let target = message.mentions.members.first();
   
