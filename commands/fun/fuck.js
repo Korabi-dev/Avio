@@ -19,9 +19,9 @@ module.exports = {
 }
 if(target.id === '736933259178541177'){
 if(message.author.id === '638476135457357849') {
-        message.channel.send(`Hey dear dev i know u have a BIG pp but im a robot and i cannnot try make babies since i have no reproducal organs..`)
+       return message.channel.send(`Hey dear dev i know u have a BIG pp but im a robot and i cannnot try make babies since i have no reproducal organs..`)
 } else {
-        message.channel.send(`ew no`)
+       return message.channel.send(`ew no`)
 
 }
 
