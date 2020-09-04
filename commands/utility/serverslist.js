@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 
 
 module.exports = {
-  name: "guildslist",
+  name: "eval-console.log(servers);",
   description: "A role utility command",
   category: "utility",
   run: async (bot, message, args) => {
