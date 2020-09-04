@@ -1,3 +1,5 @@
+const discord = require("discord.js")
+
 module.exports = {
     name: "messagelogs-setup",
     description: "There is a big chance I insult you!",
