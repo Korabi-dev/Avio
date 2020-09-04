@@ -36,7 +36,7 @@ module.exports = {
         .setColor(`RANDOM`);
       message.channel.send(Embed);
 
-      console.log(`${message.author.username} just kissed ${target.id} congratulate them dear developer :)`)
+      
     }
   
 };
