@@ -30,13 +30,13 @@ if(message.author.id === '325558938005143562'){
 }
 if(message.author.id === '707676620390924364'){
   if(target.id === '325558938005143562') {
-    let embed = new discord.MessageEmbed()
+    let embed1 = new discord.MessageEmbed()
     .setTitle('LOVE')
     .setDescription(`${message.author} is 100% in love with ${target}`)
     .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
     .setColor('RED')
 
-
+    return message.channel.send(embed1)
 
   }
 }
@@ -44,14 +44,14 @@ if(message.author.id === '707676620390924364'){
     
 let response = Math.floor(`${Math.random() * 100}`) + 1;
 
-  let embed = new discord.MessageEmbed()
+  let embed2 = new discord.MessageEmbed()
   .setTitle('LOVE')
   .setDescription(`${message.author} is ${response}% in love with ${target}`)
   .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
   .setColor('RED')
   
   
-  message.channel.send(embed)
+  return message.channel.send(embed)
   
 
 
