@@ -51,7 +51,7 @@ let response = Math.floor(`${Math.random() * 100}`) + 1;
   .setColor('RED')
   
   
-  return message.channel.send(embed)
+  return message.channel.send(embed2)
   
 
 
