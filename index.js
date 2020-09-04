@@ -53,7 +53,7 @@ bot.on("message", (message) =>{
   );
   if(!channel) return;
   let embed = new Discord.MessageEmbed()
-  .setTitle(`The user ${message.author} has sent a message in ${message.channel}`)
+  .setTitle(`The user ${message.author.username} has sent a message in ${message.channel.name}`)
   .setDescription(`Content : ${message.content}`)
   channel.send(embed)
 });
