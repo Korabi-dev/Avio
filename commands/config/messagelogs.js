@@ -22,6 +22,8 @@ module.exports = {
           topic: "Message Logs!"
         })
 
+        messagec.channel.send(`Setup!`)
+
     } catch (e) {
         messagec.channel.send(`Oops : ${e}`)
 
