@@ -1,7 +1,7 @@
 const discord = require("discord.js")
 
 module.exports = {
-    name: "messagelogs-setup",
+    name: "messagelogs-delete",
     description: "There is a big chance I insult you!",
     category: "fun",
     run: async (bot, message, args) => {
