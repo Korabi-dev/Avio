@@ -61,7 +61,7 @@ module.exports = {
 
       target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
     
-    console.log(`${message.author.username} just banned ${target} with reason : ${reason}`)
+    console.log(`${message.author.username} just banned ${target.username} with reason : ${reason}`)
    
 }
  }

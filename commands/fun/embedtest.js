@@ -6,7 +6,7 @@ var embed = new Discord.MessageEmbed()
 const userEmbed = new Discord.MessageEmbed()
 
 module.exports = {
-    name: 'sayc',
+    name: 'customembed',
     description: "Custom embed say command",
     execute(message, args){
         embed.setColor('#7289da')
