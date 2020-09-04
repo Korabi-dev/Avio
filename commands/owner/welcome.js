@@ -1,5 +1,6 @@
 const discord = require("discord.js")
 const client = new discord.Client();
+const axios = require("axios")
 
 module.exports = {
     name: "welcome",
