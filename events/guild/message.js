@@ -131,7 +131,7 @@ module.exports = async (bot, message) => {
         }, command.timeout);
       }
     } else {
-      command.run(bot, message, args);
+      console.log('e')
     }
   } else {
     custom.findOne(
