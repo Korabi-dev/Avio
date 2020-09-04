@@ -131,7 +131,11 @@ module.exports = async (bot, message) => {
         }, command.timeout);
       }
     } else {
+      try {
       command.run(bot, message, args);
+      } catch (e) {
+        message.channel.send(`Invalid command do "a!help" for commands!`)
+      }
     }
   } else {
     custom.findOne(
