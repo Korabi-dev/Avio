@@ -56,6 +56,7 @@ bot.on("message", (message) =>{
   let embed = new Discord.MessageEmbed()
   .setTitle(`The user ${message.author.username} has sent a message in ${message.channel.name}`)
   .setDescription(`Content : ${message.content}`)
+  .setColor("RANDOM")
   channel.send(embed)
 });
 
