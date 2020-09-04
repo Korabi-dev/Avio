@@ -8,7 +8,7 @@ const userEmbed = new Discord.MessageEmbed()
 module.exports = {
     name: 'customembed',
     description: "Custom embed say command",
-    execute(message, args){
+    run: async(message, args) =>{
         embed.setColor('#7289da')
         embed.setTitle("Lets setup your embed message!");
         embed.setFooter("Enter 'skip' for any question to leave that element out or 'quit' to stop creating your embed message")
