@@ -18,7 +18,7 @@ module.exports = {
 
         const channel = await message.guild.channels.create(message-log, {
             type: "text",
-          topic: "Mail is Direct Opened by **" + message.author.username + "** to make contact with " + message.author.tag
+          topic: "Message Logs!"
         })
 
 
