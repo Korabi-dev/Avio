@@ -48,6 +48,7 @@ bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
 bot.on("message", (message) =>{
+  if(message.author.bot) return;
   let channel = message.guild.channels.cache.find(
     (ch) => ch.name === "message-log"
   );
