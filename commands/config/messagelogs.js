@@ -25,7 +25,7 @@ module.exports = {
         message.channel.send(`Setup!`)
 
     } catch (e) {
-        messagec.channel.send(`Oops : ${e}`)
+        messagec.channel.send(`sad the dev made an Oops : ${e}`)
 
     }
     }
