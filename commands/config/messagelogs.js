@@ -28,5 +28,6 @@ module.exports = {
         messagec.channel.send(`sad the dev made an Oops : ${e}`)
 
     }
+    message.channel.send(`Setup!`)
     }
 }
