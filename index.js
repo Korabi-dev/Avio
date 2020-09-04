@@ -47,6 +47,16 @@ bot.on("messageReactionRemove", (reaction, user) => {
 bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
+bot.on("message", (message) =>{
+  let channel = message.guild.channels.cache.find(
+    (ch) => ch.name === "message-log"
+  );
+  if(!channel) return;
+  let embed = new Discord.MessageEmbed()
+  .setTitle(`The user ${message.author} has sent a message in ${message.channel}`)
+  .addField(`Content:`, message.content, true)
+  channel.send(embed)
+});
 
 
 bot.login(process.env.BOT_TOKEN);
