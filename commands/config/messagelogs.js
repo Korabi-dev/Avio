@@ -5,6 +5,7 @@ module.exports = {
     description: "There is a big chance I insult you!",
     category: "fun",
     run: async (bot, message, args) => {
+        try {
         if(!message.member.hasPermission("MANAGE_CHANNELS")) {
             return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
           }
@@ -21,7 +22,9 @@ module.exports = {
           topic: "Message Logs!"
         })
 
+    } catch (e) {
+        messagec.channel.send(`Oops : ${e}`)
 
-
+    }
     }
 }
