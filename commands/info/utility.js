@@ -9,7 +9,7 @@ module.exports = {
   run: (client, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Utility")
-    .setDescription(` Prefix,announce,whois,giveaway,poll,suggest,snipe,oldest,ping,findalt,report,emoji,timer,invite,slowmode,embedify,membercount,nuke,encode,decode.`)
+    .setDescription(` Prefix,whois,giveaway,poll,suggest,snipe,oldest,ping,findalt,report,emoji,timer,invite,slowmode,embedify,membercount,nuke,encode,decode.`)
     .setColor("ORANGE")
     
     
