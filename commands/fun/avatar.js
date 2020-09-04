@@ -60,7 +60,7 @@ module.exports = {
         let zname = data[i].state || "None"
         let type = data[i].type
 
-        array.push(`**${type}** : \`${name} : ${xname} : ${zname}\``)
+        array.push(`**${type}** : \***${name} : ${xname} : ${zname}\***`)
 
         if (data[i].name === "Spotify") {
           embed.setThumbnail(`https://i.scdn.co/image/${data[i].assets.largeImage.replace("spotify:", "")}`)
