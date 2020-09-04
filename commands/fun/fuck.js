@@ -48,11 +48,13 @@ let embed9 = new discord.MessageEmbed()
                     msg.awaitReactions((reaction, user) => user.id == target.user.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
                             { max: 1, time: 30000 }).then(collected => {
                                     if (collected.first().emoji.name == '👍') {
+                                         msg.delete();
                                             message.channel.send(`${message.author.username} and ${target} had a wonderful night :smirk:`)
-                                            client.destroy();
+                                            
                                     }
                                     else
                                             message.channel.send(`Oh no looks like there is no action tonight Because ${target} didn\'t wanna go to bed with ${message.author.username}`);
+                                            msg.delete();
                             }).catch(() => {
                                     message.channel.send(`No Reaction after 30 seconds, command canceled!`)
                             });
