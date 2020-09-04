@@ -12,9 +12,19 @@ module.exports = {
     
     let target =   message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
+
       
       if(!target) {
     return message.channel.send(`Please mention someone to well uh...... Fuck`)
+}
+if(target.id === '736933259178541177'){
+if(message.author.id === '638476135457357849') {
+        message.channel.send(`Hey dear dev i know u have a BIG pp but im a robot and i cannnot try make babies since i have no reproducal organs..`)
+} else {
+        message.channel.send(`ew no`)
+
+}
+
 }
 
         if(target.user.id == message.author.id){
@@ -35,7 +45,7 @@ let embed9 = new discord.MessageEmbed()
                     });
 
                 
-                    message.awaitReactions((reaction, user) => user.id == target.user.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
+                    msg.awaitReactions((reaction, user) => user.id == target.user.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
                             { max: 1, time: 30000 }).then(collected => {
                                     if (collected.first().emoji.name == '👍') {
                                             message.channel.send(`${message.author.username} and ${target} had a wonderful night :smirk:`)
