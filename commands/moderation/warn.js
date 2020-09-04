@@ -12,6 +12,9 @@ module.exports = {
     }
     
     let user = message.mentions.users.first();
+    if(user.id === '736933259178541177') {
+      return message.channel.send(`No,lol i won't warn myself, nice try though.`)
+}
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
       .setTitle("Command: r!warn")
