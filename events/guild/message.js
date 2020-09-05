@@ -47,11 +47,11 @@ module.exports = async (bot, message) => {
         }
         if(message.content.toLowerCase() === '<@736933259178541177>') {
           message.channel.send(
-                `The prefix for ${message.guild.name} is \`${
+                `The prefix for ${message.guild.name} is **${
                   (await db.get(`Prefix_${message.guild.id}`))
                     ? await db.get(`Prefix_${message.guild.id}`)
                     :  "a!"
-                }\``
+                }**`
               );
               }
   
