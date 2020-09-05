@@ -6,7 +6,7 @@ module.exports = {
   category: "fun",
   run: async (bot, message, args) => {
     
-    
+    try {
     let subreddit = args.slice(0).join(" ")
     if(!subreddit){
 return message.channel.send(`No subreddit found/invalid subreddit!`)
@@ -82,7 +82,9 @@ return message.channel.send('This reddit is nsfw please use it in a nsfw channel
       .setImage(img);
     message.channel.send(Embed)
   
-    
+} catch (e) {
+      message.channel.send(`Invalid Subreddit!`)
+}
     
        },
 };
