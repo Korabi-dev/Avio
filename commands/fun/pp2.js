@@ -50,6 +50,27 @@ module.exports = {
     }
   
 
+    if(message.author.id === '325558938005143562') {
+      let Embed5 = new MessageEmbed()
+      .setTitle(`PUSSY MACHINE`)
+      .setDescription(`**${message.author.username}**'s pussy
+        DANG THIS PUSSY IS SO TIGHT LIKE AN ANIME ONE
+      `)
+      
+      .setColor(`RANDOM`);
+      return message.channel.send(Embed5)
+    }
+    
+    if(target.id === '325558938005143562') {
+      let embed6 = new MessageEmbed()
+        .setTitle(`PUSSY MACHINE`)
+        .setDescription(`**${target.user.username}**'s pussy
+        DANG THIS PUSSY IS SO TIGHT LIKE AN ANIME ONE
+        `)
+        
+        .setColor(`RANDOM`);
+     return  message.channel.send(embed6);
+    }
   
     if(!target){
   let response =
