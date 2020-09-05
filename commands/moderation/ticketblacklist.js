@@ -3,7 +3,7 @@ const discord = require("discord.js")
 
 
 module.exports = {
-  name: "ticketblacklist",
+  name: "riokoblacklist",
   usage: "suggest <message>",
   description: "Send your Suggestion",
   category: "main",
@@ -16,6 +16,8 @@ module.exports = {
         let blacklist = message.guild.roles.cache.find(x => x.name === "Ticket Blacklist")
         let target =   message.mentions.members.first() ||
         message.guild.members.cache.get(args[0]);
+
+        if(!target) return message.channel.send(`Please mention someone or give an id!`);
 
         if(!blacklist) {
             return message.channel.send(`Could not find a role named "Ticket Blacklist" in this guild!`)
