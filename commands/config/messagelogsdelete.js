@@ -5,13 +5,15 @@ module.exports = {
     description: "There is a big chance I insult you!",
     category: "fun",
     run: async (bot, message, args) => {
-        if(!message.member.hasPermission("MANAGE_CHANNELS")) {
-            return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+      try {
+        if(!message.member.hasPermission("ADMINISTRATOR")) {
+            return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command (Premission needed : Administrator)`)
           }
           
         let channel1 = message.guild.channels.cache.find(
-            (ch) => ch.name === "message-log"
+            (ch) => ch.name === "message-logs"
           );
+          const category = message.guild.channels.cache.find((x) => x.name == "avio")
 
           if(!channel1) {
 
@@ -19,9 +21,13 @@ module.exports = {
           }
 
        channel1.delete();
+       category.delete();
 
-       message.channel.send(`Commands complete!`)
-
+       message.channel.send(`Command complete!`)
+        
+        } catch (e) {
+          return;
+        }
 
     }
 }
