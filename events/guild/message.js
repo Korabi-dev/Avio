@@ -134,7 +134,7 @@ module.exports = async (bot, message) => {
       try {
       command.run(bot, message, args);
       } catch (e) {
-        message.channel.send(`Invalid command do "a!help" for commands!`)
+       console.log('e')
       }
     }
   } else {
