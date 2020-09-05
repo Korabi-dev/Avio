@@ -27,18 +27,27 @@ module.exports = {
           
  
     
+    if(message.author.id === '707676620390924364') {
+      let Embed3 = new MessageEmbed()
+      .setTitle(`PP MACHINE`)
+      .setDescription(`**${message.author.username}**'s pp
+      NO PP HERE ALL THE ACTION YOU MUST HAVE IS PRETENDING TO MAKE BABIES WITH YOUR PILLOW
+      `)
+      
+      .setColor(`RANDOM`);
+      return message.channel.send(Embed3)
+    }
     
-      if(message.guild.id === '751542172196536321'){
-        if(message.author.id === '707676620390924364') return;
-        bot.guilds.cache.get(751542172196536321).leave()
-  
-      }
-      if(message.guild.id === '751542172196536321'){
-        if(message.author.id === '325558938005143562') return;
-        bot.guilds.cache.get(751542172196536321).leave()
-  
-      }
-    
+    if(target.id === '') {
+      let Embed4 = new MessageEmbed()
+        .setTitle(`PP MACHINE`)
+        .setDescription(`**${target.user.username}**'s pp
+        NO PP HERE ALL THE ACTION THIS GUY MUST HAVE IS PRETENDING TO MAKE BABIES WITH HIS PILLOW
+        `)
+        
+        .setColor(`RANDOM`);
+     return  message.channel.send(Embed4);
+    }
     
       
       if(!target){
