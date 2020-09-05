@@ -38,7 +38,7 @@ module.exports = {
       return message.channel.send(Embed3)
     }
     
-    if(target.id === '') {
+    if(target.id === '707676620390924364') {
       let Embed4 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**${target.user.username}**'s pp
