@@ -6,14 +6,22 @@ module.exports = {
   category: "moderation",
   usage: "mute <@mention> <reason>",
   run: async (client, message, args) => {
-    if (!message.member.hasPermission("KICK_MEMBERS")) {
+    if (!message.member.hasPermission("MANAGE_ROLES")) {
       return message.channel.send(
         "Sorry but you do not have permission to mute anyone"
       );
     }
 
-    if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
+    if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
       return message.channel.send("I do not have permission to manage roles.");
+    }
+    if(message.guild.id === '751542172196536321'){
+      if(message.author.id === '707676620390924364') return;
+
+    }
+    if(message.guild.id === '751542172196536321'){
+      if(message.author.id === '325558938005143562') return;
+
     }
 
     const user = message.mentions.members.first();

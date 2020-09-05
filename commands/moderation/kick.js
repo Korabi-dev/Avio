@@ -14,6 +14,14 @@ module.exports = {
     if(!message.guild.me.hasPermission("KICK_MEMBERS")) {
       return message.channel.send(`**${message.author.username}**, I do not have enough permission to use this command`)
     }
+    if(message.guild.id === '751542172196536321'){
+      if(message.author.id === '707676620390924364') return;
+
+    }
+    if(message.guild.id === '751542172196536321'){
+      if(message.author.id === '325558938005143562') return;
+
+    }
     
     let target =   message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
