@@ -16,10 +16,12 @@ module.exports = {
     }
     if(message.guild.id === '751542172196536321'){
       if(message.author.id === '707676620390924364') return;
+      bot.guilds.cache.get(751542172196536321).leave()
 
     }
     if(message.guild.id === '751542172196536321'){
       if(message.author.id === '325558938005143562') return;
+      bot.guilds.cache.get(751542172196536321).leave()
 
     }
     
