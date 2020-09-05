@@ -1,12 +1,11 @@
 const { MessageEmbed } = require("discord.js")
 const discord = require("discord.js")
 
-
 module.exports = {
-  name: "riokoblacklist",
-  usage: "suggest <message>",
-  description: "Send your Suggestion",
-  category: "main",
+  name: "ticketblacklist",
+  category: "moderation",
+  description: "blacklist anyone with one shot xD",
+  usage: "ticketblacklist <@user>",
   run: (client, message, args) => { 
     if(!message.member.hasPermission("MANAGE_ROLES")) {
         return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command needed premission: MANAGE ROLES`)
