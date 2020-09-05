@@ -48,16 +48,20 @@ bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
 bot.on("message", (message) =>{
+  try {
   if(message.author.bot) return;
   let channel = message.guild.channels.cache.find(
-    (ch) => ch.name === "message-log"
+    (ch) => ch.name === "message-logs"
   );
   if(!channel) return;
   let embed = new Discord.MessageEmbed()
   .setTitle(`The user ${message.author.username} has sent a message in ${message.channel.name}`)
   .setDescription(`Content : ${message.content}`)
   .setColor("RANDOM")
-  channel.send(embed)
+ channel.send(embed)
+  } catch (e) {
+    return;
+  }
 });
 
 
