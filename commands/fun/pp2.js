@@ -48,9 +48,10 @@ module.exports = {
         .setColor(`RANDOM`);
      return  message.channel.send(Embed4);
     }
-    
-      
-      if(!target){
+  
+
+  
+    if(!target){
   let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
         if(response === undefined) {
