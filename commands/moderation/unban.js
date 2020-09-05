@@ -4,6 +4,9 @@ module.exports = {
     name: "unban",
     category: "moderation",
     run: async (client, message, args) => {
+        if(!message.member.hasPermission("BAN_MEMBERS")) {
+            return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+          }
 
         const member = args[0];
 
