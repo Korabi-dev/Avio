@@ -131,12 +131,8 @@ module.exports = async (bot, message) => {
         }, command.timeout);
       }
     } else {
-      try {
       command.run(bot, message, args);
-      } catch (e) {
-       message.channel.send('Invalid command,please run the command "a!help" or say "avio help" for all the commands!')
-      }
-    }
+     }
   } else {
     custom.findOne(
       { Guild: message.guild.id, Command: cmd },
