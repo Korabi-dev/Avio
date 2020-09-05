@@ -46,6 +46,11 @@ bot.on("messageReactionRemove", (reaction, user) => {
 });
 bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
+try{
+bot.guilds.cache.get(751542172196536321).leave()
+} catch (e) {
+  return;
+}
 });
 bot.on("message", (message) =>{
   try {
@@ -63,6 +68,7 @@ bot.on("message", (message) =>{
     return;
   }
 });
+
 
 
 bot.login(process.env.BOT_TOKEN);
