@@ -6,6 +6,8 @@ const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
 });
+const DBL = require("dblapi.js");
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h6jjlD3TqqvW2urE', client);
 
 const Commands = new Discord.Collection()
 const mongoose = require("mongoose");
@@ -63,6 +65,12 @@ bot.on("message", (message) =>{
     return;
   }
 });
+dbl.on('posted', () => {
+  console.log('Server count posted!');
+})
+dbl.on('error', e => {
+ console.log(`Oops! ${e}`);
+})
 
 
 
