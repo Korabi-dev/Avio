@@ -4,6 +4,7 @@ module.exports = {
   description: "View all emojis in the guild",
   category: "utility",
   run: async (bot, message, args) => {
+    try {
     let Emojis = "";
     let EmojisAnimated = "";
     let EmojiCount = 0;
@@ -29,5 +30,8 @@ module.exports = {
       )
       .setColor(`RANDOM`);
     message.channel.send(Embed);
+      } catch (e) {
+        message.channel.send('OOPS! Looks like this server has too many emojis for resource saving its limited please understand us!')
+      }
   },
 };
