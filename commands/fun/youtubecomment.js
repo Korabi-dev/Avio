@@ -21,8 +21,7 @@ return message.channel.send(`Please provide the comment!`)
       
         if(!target) {
             return  message.channel.send(memberurl)
-
-        }
+}
 
             
         await message.channel.send(url)
