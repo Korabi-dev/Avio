@@ -56,6 +56,13 @@ bot.on("ready", () => {
   .setColor("RANDOM")
   bot.channels.cache.get('741229874307530752').send(avioup)
 });
+dbl.on('vote', async vote => {
+  let votedEmbed = new Discord.MessageEmbed()
+  .setTitle('Vote Here!')
+  .setURL('https://top.gg/bot/736933259178541177/vote')
+  .setDescription(`The user with the id of ${vote.user} (<@${vote.user}>) has just voted thank you!`)
+  client.channels.cache.get('752280106017358006').send(votedEmbed)
+});
 bot.on("message", (message) =>{
   try {
   if(message.author.bot) return;
