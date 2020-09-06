@@ -88,7 +88,12 @@ dbl.on('error', e => {
 dbl.isWeekend().then(weekend => {
   if (weekend) console.log("Woo! Multiplier time BITCH!")
 });
-
+bot.on('message', message => {
+	if (message.content === 'a!vote') {
+    if(message.author.id !== '638476135457357849') return;
+		dbl.emit('vote', message.member);
+	}
+});
 
 
 bot.login(process.env.BOT_TOKEN);
