@@ -53,6 +53,7 @@ bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
   .setTitle('Avio just strted')
   .setFooter('Started by Korabi20')
+  .setColor("RANDOM")
   bot.channels.cache.get('741229874307530752').send(avioup)
 });
 bot.on("message", (message) =>{
