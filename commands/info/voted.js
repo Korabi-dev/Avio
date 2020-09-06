@@ -10,9 +10,10 @@ module.exports = {
     usage: "help",
     run: (client, message, args) => {
 try {
- dbl.hasVoted(args[0]).then(voted => {
+    let user = args[0];
+ dbl.hasVoted(user).then(voted => {
     if (voted) {
-        message.channel.send('User has voted!')
+        message.channel.send(`${user.username} has voted!`)
     }
     else {
         message.channel.send('This user has not voted!')
