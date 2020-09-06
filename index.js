@@ -61,7 +61,7 @@ dbl.on('vote', async vote => {
   .setTitle('Vote Here!')
   .setURL('https://top.gg/bot/736933259178541177/vote')
   .setDescription(`The user with the id of ${vote.user} (<@${vote.user}>) has just voted thank you!`)
-  client.channels.cache.get('752280106017358006').send(votedEmbed)
+  bot.channels.cache.get('752280106017358006').send(votedEmbed)
 });
 bot.on("message", (message) =>{
   try {
