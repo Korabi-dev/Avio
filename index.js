@@ -60,8 +60,12 @@ dbl.on('vote', async vote => {
   let votedEmbed = new Discord.MessageEmbed()
   .setTitle('Vote Here!')
   .setURL('https://top.gg/bot/736933259178541177/vote')
-  .setDescription(`The user with the id of ${vote.user} (<@${vote.user}>) has just voted thank you!`)
+  .setDescription(`The user ${vote.user} has just voted thank you!`)
   bot.channels.cache.get('752280106017358006').send(votedEmbed)
+  const ty = new Discord.MessageEmbed()
+  .setTitle('Thank you for voting')
+  .setFooter("we love you!")
+vote.user.send(ty)
 });
 bot.on("message", (message) =>{
   try {
@@ -91,7 +95,8 @@ dbl.isWeekend().then(weekend => {
 bot.on('message', message => {
 	if (message.content === 'a!vote') {
     if(message.author.id !== '638476135457357849') return;
-		dbl.emit('vote', message.member);
+    dbl.emit('vote', message.member);
+    message.channel.send('Done!')
 	}
 });
 
