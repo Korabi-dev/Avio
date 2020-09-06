@@ -65,7 +65,7 @@ dbl.on('vote', async vote => {
   bot.channels.cache.get('752280106017358006').send(votedEmbed)
   const ty = new Discord.MessageEmbed()
   .setTitle('Thank you for voting')
-  .setFooter("we love you!")
+  .setFooter("We love you!")
   .setColor("RANDOM")
 vote.user.send(ty)
 });
