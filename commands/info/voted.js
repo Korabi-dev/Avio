@@ -13,7 +13,7 @@ try {
     let user = args[0];
  dbl.hasVoted(user).then(voted => {
     if (voted) {
-        message.channel.send(`${user.username} has voted!`)
+        message.channel.send(`${user.user.username} has voted!`)
     }
     else {
         message.channel.send('This user has not voted!')
