@@ -61,10 +61,12 @@ dbl.on('vote', async vote => {
   .setTitle('Vote Here!')
   .setURL('https://top.gg/bot/736933259178541177/vote')
   .setDescription(`The user ${vote.user} has just voted thank you!`)
+  .setFooter(`vote user id : ${vote.user.id}`)
   bot.channels.cache.get('752280106017358006').send(votedEmbed)
   const ty = new Discord.MessageEmbed()
   .setTitle('Thank you for voting')
   .setFooter("we love you!")
+  .setColor("RANDOM")
 vote.user.send(ty)
 });
 bot.on("message", (message) =>{
