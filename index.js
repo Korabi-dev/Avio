@@ -71,6 +71,9 @@ dbl.on('posted', () => {
 dbl.on('error', e => {
  console.log(`Oops! ${e}`);
 })
+dbl.isWeekend().then(weekend => {
+  if (weekend) console.log("Woo! Multiplier time BITCH!")
+});
 
 
 
