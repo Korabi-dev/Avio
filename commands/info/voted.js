@@ -10,10 +10,7 @@ module.exports = {
     usage: "help",
     run: (client, message, args) => {
 try {
-    if(args[0]) {
-        return message.channel.send(`Please provide an id!`)
-    }
-dbl.hasVoted(args[0]).then(voted => {
+ dbl.hasVoted(args[0]).then(voted => {
     if (voted) {
         message.channel.send('User has voted!')
     }
