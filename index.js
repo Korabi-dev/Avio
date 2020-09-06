@@ -49,6 +49,12 @@ bot.on("messageReactionRemove", (reaction, user) => {
 bot.on("guildCreate", (bot, member) => {
 console.log(`AYY ANOTHER ONE`)
 });
+bot.on("ready", () => {
+  let avioup = new Discord.MessageEmbed()
+  .setTitle('Avio just strted')
+  .setFooter('Started by Korabi20')
+  client.channels.cache.get('741229874307530752').send(avioup)
+});
 bot.on("message", (message) =>{
   try {
   if(message.author.bot) return;
