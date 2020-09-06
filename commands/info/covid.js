@@ -18,7 +18,8 @@ module.exports = {
         }
 
         const embed = new MessageEmbed()
-            .setTitle(args[0] ? `${args[0].toUpperCase()} Stats` : 'Total Corona Cases World Wide (click to donate)')
+            .setTitle(`Click Here to donate`)
+            .setDescription(args[0] ? `${args[0].toUpperCase()} Stats` : 'Total Corona Cases World Wide')
             .setURL('https://covid19responsefund.org/en/')
             .setColor('#fb644c')
             .setThumbnail(args[0] ? corona.countryInfo.flag : 'https://i.giphy.com/YPbrUhP9Ryhgi2psz3.gif')
