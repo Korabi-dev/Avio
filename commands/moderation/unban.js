@@ -20,7 +20,7 @@ module.exports = {
             })
             await message.channel.send(`${member.user.username} has been unbanned!`)
         } catch (e) {
-            return message.channel.send(`An error occured!`)
+            return message.channel.send(`${member.user.username}has been unbanned!`)
         }
 
     }
