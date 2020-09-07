@@ -9,14 +9,14 @@ module.exports = {
      description: "get the commands",
     usage: "help",
     run: (client, message, args) => {
-try {
+        if(message.author.id !== '638476135457357849') return;
     let user = args[0];
  dbl.hasVoted(user).then(voted => {
     if (voted) {
-        message.channel.send(`${user.user.username} has voted!`)
+        message.channel.send(`user with id: ${user} has voted!`)
     }
     else {
-        message.channel.send('This user has not voted!')
+        message.channel.send(`User with id: ${user} has not voted!`)
     }
 });
 
