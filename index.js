@@ -97,7 +97,7 @@ dbl.isWeekend().then(weekend => {
 bot.on('message', message => {
 	if (message.content === 'avio_fake_vote') {
     if(message.author.id !== '638476135457357849') return;
-    dbl.emit('vote', message.member);
+    dbl.webhook.emit('vote', message.member);
     message.channel.send('Done!')
 	}
 });
