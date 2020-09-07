@@ -35,7 +35,7 @@ bot.on("message", (message) => {
       let aviobye = new Discord.MessageEmbed()
       .setTitle('I just left a fake/alt server')
       .setDescription(`Server name : "**${message.guild}**"`)
-      .setFooter(`People stop inviting me to fake servers i will just leave..`)
+      .setFooter(`Owner: ${message.guild.owner.tag} ID: ${message.owner.id}`)
       .setColor("RANDOM")
       bot.channels.cache.get('752610879966675006').send(aviobye)
     }
