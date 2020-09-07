@@ -27,6 +27,7 @@ module.exports = async (message) => {
       (ch) => ch.name === "message-logs"
     );
     if (!channel) return;
+    if(channel.id === message.channel.id) return;
     channel.send(embed);
   } catch (e) {}
 };

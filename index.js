@@ -94,6 +94,7 @@ bot.on("message", (message) =>{
     (ch) => ch.name === "message-logs"
   );
   if(!channel) return;
+  if(channel.id === message.channel.id ) return;
   let embed = new Discord.MessageEmbed()
   .setTitle(`The user ${message.author.username} has sent a message.`)
   .setDescription(`Content : "${message.content}" Channel: <#${message.channel.id}>`)
