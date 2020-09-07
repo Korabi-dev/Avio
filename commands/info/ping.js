@@ -10,9 +10,9 @@ module.exports = {
       const _ = new Discord.MessageEmbed()
         .setTitle("Pong!")
         .setDescription(
-          `🏓 Pong!\nLatency is ${Math.floor(
+          `🏓 Pong!\nDiscord Latency is ${Math.floor(
             msg.createdTimestamp - message.createdTimestamp
-          )}ms\nAPI Latency is ${Math.round(bot.ws.ping)}ms`
+          )}ms\nBot Latency is ${Math.round(bot.ws.ping)}ms`
         )
         .setColor("RANDOM");
       msg.edit(_);
