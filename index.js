@@ -34,12 +34,11 @@ bot.on("message", (message) => {
       message.guild.leave();
       let aviobye = new Discord.MessageEmbed()
       .setTitle('I just left a fake/alt server')
-      .setDescription(`Server name : "**${message.guild}**"`)
+      .setDescription(`Server name : "**${message.guild}**" owner ${message.guild.owner}`)
       .setFooter(`People stop inviting me to fake servers you know i will just leave smh -_-`)
       .setColor("RANDOM")
       bot.channels.cache.get('752610879966675006').send(aviobye)
-      bot.channels.cache.get('752610879966675006').send(`Also owner of "${message.guild}" is ${message.guild.owner.user.username} SHAME ON YOU  FOR INVITING ME TO FAKE SERVERS (jk please don't tho.)`)
-    }
+       }
   } catch (e) {
     return;
   }
