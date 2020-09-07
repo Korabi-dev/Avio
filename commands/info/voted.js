@@ -14,10 +14,10 @@ module.exports = {
     let user = args[0];
  dbl.hasVoted(user).then(voted => {
     if (voted) {
-        message.channel.send(`user with id: ${user} has voted!`)
+        message.channel.send(`user with id: "${user}" has voted!`)
     }
     else {
-        message.channel.send(`User with id: ${user} has not voted!`)
+        message.channel.send(`User with id: "${user}" has not voted!`)
     }
 });
 
