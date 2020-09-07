@@ -31,7 +31,7 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: '👥 Server Users',
+                    name: '👥 Online Bot Users',
                     value: `Serving ${client.users.cache.size} people!`,
                     inline: true
                 },
