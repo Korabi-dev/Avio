@@ -7,7 +7,7 @@ const bot = new Discord.Client({
   partials: ["REACTION"],
 });
 const DBL = require("dblapi.js");
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h6jjlD3TqqvW2urE', bot);
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h6jjlD3TqqvW2urE',{ webhookPort: 5000, webhookAuth: 'Avio' }, bot);
 
 const Commands = new Discord.Collection()
 const mongoose = require("mongoose");
@@ -56,7 +56,7 @@ bot.on("ready", () => {
   .setColor("RANDOM")
   bot.channels.cache.get('741229874307530752').send(avioup)
 });
-dbl.on('vote', async vote => {
+dbl.webhook.on('vote', async vote => {
   let votedEmbed = new Discord.MessageEmbed()
   .setTitle('Vote Here!')
   .setURL('https://top.gg/bot/736933259178541177/vote')
