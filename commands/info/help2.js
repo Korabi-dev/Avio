@@ -15,7 +15,7 @@ module.exports = {
         )
         .setColor(`RED`)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setFooter(`Note: run the command "a!messagelogs-setup" to see the content of messages in this guild, if you want to undo it run the command "a!modlogs-delete"`)
+        .setFooter(`Note: run the command "a!messagelogs-setup" to see the content of messages in this guild, if you want to undo it run the command "a!messagelogs-delete"`)
         .addFields(
           { name: "a!help-moderation", value: `Sends you the moderation commands!`, inline: true },
           { name: "a!help-info", value: `Sends you the information commands!`, inline: true },
