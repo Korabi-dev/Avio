@@ -26,10 +26,10 @@ mongoose.connect(token.Mongo, {
 ["command", "server"].forEach((handler) => {
   require(`./handlers/${handler}`)(bot);
 });
-bot.on("message", (async, message) => {
+bot.on("message", (message) => {
   if (message.guild.memberCount <= 5) {
     message.reply('This Server Has 5- Members And Therefore Is Recognized As An Alt/Fake server,I Will Now Leave')
-     await message.guild.leave();
+      message.guild.leave();
     }
 });
 bot.on("ready", () => {
