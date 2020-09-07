@@ -27,6 +27,7 @@ mongoose.connect(token.Mongo, {
   require(`./handlers/${handler}`)(bot);
 });
 bot.on("message", (message) => {
+  try{
   if (message.guild.memberCount <= 5) {
     message.channel.send('This Server Has 5- Members And Therefore Is Recognized As An Alt/Fake server,I Will Now Leave')
     message.guild.owner.send(`Hey i have left your server "**${message.guild}**" beacuse it was flagged for being under 5 members and not legit sorry!`)
@@ -38,6 +39,9 @@ bot.on("message", (message) => {
       .setColor("RANDOM")
       bot.channels.cache.get('752610879966675006').send(aviobye)
     }
+  } catch (e) {
+    return;
+  }
 });
 bot.on("ready", () => {
   require("./events/client/ready")(bot);
