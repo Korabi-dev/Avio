@@ -58,7 +58,7 @@ console.log(`AYY ANOTHER ONE`)
 });
 bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
-  .setTitle('Avio just strted')
+  .setTitle('Avio just started')
   .setFooter('Started by Korabi20')
   .setColor("RANDOM")
   bot.channels.cache.get('741229874307530752').send(avioup)
