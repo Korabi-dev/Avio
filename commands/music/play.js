@@ -1,6 +1,8 @@
 const { MessageEmbed } = require("discord.js")
 
 const ms = require("ms")
+const DBL = require("dblapi.js");
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h6jjlD3TqqvW2urE', bot);
 
 
 const { Util } = require("discord.js");
@@ -15,6 +17,12 @@ module.exports = {
   name: "play",
   description: "Play the song and feel the music",
   run: async (client, message, args) => {
+    dbl.hasVoted(user).then(voted => {
+      if (!voted) {
+         return message.channel.send(`To use music commands you need to vote here: https://top.gg/bot/736933259178541177/vote`)
+      }
+    });
+    
     client.queue = new Map();
     client.vote = new Map();
     let embed = new MessageEmbed()
