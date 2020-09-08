@@ -9,7 +9,7 @@ module.exports = {
 
         const embed = new discord.MessageEmbed()
     .setTitle('Avio')
-    .setDescription(`Wow dear dev,you are using webhooks now huh thats sad.`)
+    .setDescription(`Wow my dear dev is using webhooks now huh thats sad.`)
 	.setColor('#0099ff');
         try {
             const webhooks = await message.channel.fetchWebhooks();
