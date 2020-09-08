@@ -16,14 +16,14 @@ module.exports = {
    
       let user = message.mentions.members.first(); 
     let roles = [];
-   user.roles.cache.forEach((role) => {
-        roles.push(role);
-      });
+   
 
     if (!user) {
-      return message.channel.send(":x: Unable to find this person!")
+      return message.channel.send(":x: Please mention someone!")
     }
-
+    user.roles.cache.forEach((role) => {
+      roles.push(role);
+    });
 
     //OPTIONS FOR STATUS
 
