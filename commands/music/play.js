@@ -18,7 +18,9 @@ module.exports = {
   name: "play",
   description: "Play the song and feel the music",
   run: async (client, message, args) => {
+    let user = message.author;
     dbl.hasVoted(user).then(voted => {
+     
       if (!voted) {
          return message.channel.send(`To use music commands you need to vote here: https://top.gg/bot/736933259178541177/vote`)
       }
