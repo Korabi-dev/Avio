@@ -20,7 +20,7 @@ module.exports = {
     }
     if (!message.mentions.users.first()) {
       message.member.roles.cache.forEach((role) => {
-        roles.push(role.name);
+        roles.push(role);
       });
       user.roles.cache.forEach((role) => {
         roles.push(role);
