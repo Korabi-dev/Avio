@@ -27,22 +27,22 @@ module.exports = {
           
  
     
-    if(message.author.id === '707676620390924364') {
+    if(message.author.id === '638476135457357849') {
       let Embed3 = new MessageEmbed()
       .setTitle(`PP MACHINE`)
       .setDescription(`**${message.author.username}**'s pp
-      NO PP HERE ALL THE ACTION YOU MUST HAVE IS PRETENDING TO MAKE BABIES WITH YOUR PILLOW
+      Machine broke this pp is too big!
       `)
       
       .setColor(`RANDOM`);
       return message.channel.send(Embed3)
     }
     
-    if(target.id === '707676620390924364') {
+    if(target.id === '638476135457357849') {
       let Embed4 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
         .setDescription(`**${target.user.username}**'s pp
-        NO PP HERE ALL THE ACTION THIS GUY MUST HAVE IS PRETENDING TO MAKE BABIES WITH HIS PILLOW
+        Machine broke this pp is too big!
         `)
         
         .setColor(`RANDOM`);
