@@ -10,7 +10,7 @@ module.exports = {
 
 
     let user;
-    let roles = [];
+    
  
 
     if (!args[0]) {
@@ -18,6 +18,7 @@ module.exports = {
     } else {
       user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Unable to find this Person") })
     }
+    let roles = [];
     if (!message.mentions.users.first()) {
       message.member.roles.cache.forEach((role) => {
         roles.push(role);
@@ -85,7 +86,7 @@ module.exports = {
       if (user.nickname !== null) embed.addField("Nickname", user.nickname)
       embed.addField("Joined At", moment(user.user.joinedAt).format("LLLL"))
         .addField("Account Created At", moment(user.user.createdAt).format("LLLL"))
-        .addField(`roles: ${roles}`)
+        .addField("roles:", roles )
         .addField("Common Information", `ID: \`${user.user.id}\`\nDiscriminator: ${user.user.discriminator}\nBot: ${user.user.bot}\nDeleted User: ${user.deleted}`)
         .addField("Badges", newbadges.join(", ").toLowerCase() || "None")
         .setFooter(user.user.presence.status, stat[user.user.presence.status])
