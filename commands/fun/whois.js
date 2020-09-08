@@ -9,12 +9,12 @@ module.exports = {
   run: async (client, message, args) => {
 
 
-    let user;
+    
     
  
 
    
-      user = message.mentions.members.first(); 
+      let user = message.mentions.members.first(); 
     let roles = [];
    user.roles.cache.forEach((role) => {
         roles.push(role);
