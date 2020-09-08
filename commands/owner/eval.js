@@ -1,5 +1,5 @@
 const { MessageEmbed } = require('discord.js');
-const dscord = require("discord.js")
+const discord = require("discord.js")
 const bot = new discord.Client();
 
 module.exports = {
