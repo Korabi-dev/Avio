@@ -11,6 +11,13 @@ module.exports = {
 
     let user;
     let roles = [];
+ 
+
+    if (!args[0]) {
+      user = message.member;
+    } else {
+      user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Unable to find this Person") })
+    }
     if (!message.mentions.users.first()) {
       message.member.roles.cache.forEach((role) => {
         roles.push(role.name);
@@ -18,17 +25,6 @@ module.exports = {
       user.roles.cache.forEach((role) => {
         roles.push(role);
       });
-
-    if (!args[0]) {
-      user = message.member;
-    } else {
-
-
-      
-
-
-      user = message.mentions.members.first() || await message.guild.members.fetch(args[0]).catch(err => { return message.channel.send(":x: Unable to find this Person") })
-    }
 
     if (!user) {
       return message.channel.send(":x: Unable to find this person!")
