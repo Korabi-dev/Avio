@@ -1,8 +1,6 @@
 const { MessageEmbed } = require("discord.js")
 
 const ms = require("ms")
-const DBL = require("dblapi.js");
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h6jjlD3TqqvW2urE', bot);
 
 
 const { Util } = require("discord.js");
@@ -13,6 +11,9 @@ const youtube = new YoutubeAPI(YOUTUBE_API_KEY);
 const { play } = require("./system.js");
 const discord = require("discord.js");
 const client = new discord.Client();
+const DBL = require("dblapi.js");
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h6jjlD3TqqvW2urE', client);
+
 module.exports = {
   name: "play",
   description: "Play the song and feel the music",
@@ -22,7 +23,7 @@ module.exports = {
          return message.channel.send(`To use music commands you need to vote here: https://top.gg/bot/736933259178541177/vote`)
       }
     });
-    
+
     client.queue = new Map();
     client.vote = new Map();
     let embed = new MessageEmbed()
