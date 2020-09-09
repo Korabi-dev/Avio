@@ -1,3 +1,4 @@
+run: async => {
 if(!args[0]){
     const __e___ = new MessageEmbed()
     .setTitle(`No Code Found.`)
@@ -44,3 +45,4 @@ if(!args[0]){
                     .setColor("RED")
                 return await msg.edit(embed);
             }
+}
