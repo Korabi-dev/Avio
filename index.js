@@ -63,8 +63,30 @@ bot.on("messageReactionAdd", (reaction, user) => {
 bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
-bot.on("guildCreate", (bot, member) => {
-console.log(`AYY ANOTHER ONE`)
+bot.on("guildCreate", (bot, member, guild) => {
+  const botaddedembed = new Discord.MessageEmbed()
+.setDescription(`
+Hey there, ${guild.owner} thank you for adding me to your server! 
+
+We hope you enjoy the features I offer! 
+
+Quick tips & tricks:
+You can vote for the bot at
+ \`https://top.gg/bot/736933259178541177\` 
+This helps us grow avio even further!
+
+You can join our support server at: https://discord.gg/3PKep24.
+
+Constant Access to our support team.
+
+We provide bot updates & more here.
+
+If you are unhappy in any way - with any feature make sure to speak with the Developers. Feedback is the best way to improve!
+
+Sincerely,glitch!#3950 Owner & Developer
+and Korabi20#0001 Co Owner & Developer
+`)
+.setColor("GREEN")
 });
 bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
