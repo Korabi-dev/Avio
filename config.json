@@ -1,5 +1,5 @@
 {
-  "prefix": "a!",
+  "prefix": ["a!", "avio"],
   "OwnerID": "638476135457357849",
   "YOUTUBE_API_KEY": "AIzaSyCNJTRUt6wq5YldRzZReU2eL94SrxpzjPA",
   "QUEUE_LIMIT": 0,
