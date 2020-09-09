@@ -4,7 +4,7 @@ const bot = new discord.Client();
 const realtoken = ('GET STICK BUGGED NOOOOOOOB')
 const config = require("../../config.json")
 
-run: async => {
+
 if(!args[0]){
     const __e___ = new MessageEmbed()
     .setTitle(`No Code Found.`)
@@ -16,16 +16,16 @@ if(!args[0]){
             const embed = new MessageEmbed()
                 .setTitle('Evaluating...')
                 .setColor("GREEN")
-            const msg = await message.channel.send(embed);
+            const msg = message.channel.send(embed);
             try {
                 const data = eval(args.slice(0).join(" ").replace(/```/g, ''));
                 const embed = new MessageEmbed()
                     .setTitle('Output: ')
                     .setColor("GREEN")
-                    .setDescription(await data)
-                await msg.edit(embed)
-                await msg.react('✅')
-                await msg.react('❌')
+                    .setDescription(data)
+                 msg.edit(embed)
+                 msg.react('✅')
+                 msg.react('❌')
                 const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
                 msg.awaitReactions(filter, { max: 1 })
                     .then((collected) => {
@@ -49,6 +49,5 @@ if(!args[0]){
     
     )
                     .setColor("RED")
-                return await msg.edit(embed);
+                return msg.edit(embed);
             }
-}
