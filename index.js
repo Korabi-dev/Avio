@@ -28,7 +28,7 @@ mongoose.connect(token.Mongo, {
 });
 bot.on("guildCreate", (guild) => {
   try{
-  if (guild.memberCount <= 3) {
+  if (guild.memberCount <= 4) {
     let messageembednooob = new Discord.MessageEmbed()
     .setDescription(`
     Hey there, in our Security Script we've detected this server to be a Fake Server.
@@ -47,7 +47,7 @@ If you believe there was an issue/error, please contact our Developers in our su
       .setDescription(`Server Name: "**${message.guild}**" Owner: ${message.guild.owner}`)
       .setFooter(`People stop inviting me to fake servers you know i will just leave smh -_-`)
       .setColor("RANDOM")
-      bot.channels.cache.get('752610879966675006').send(aviobye)
+      return bot.channels.cache.get('752610879966675006').send(aviobye)
        }
   } catch (e) {
     return;
