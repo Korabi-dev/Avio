@@ -21,8 +21,10 @@ module.exports = {
     let user = message.author;
     dbl.hasVoted(user).then(voted => {
      
-      if (!voted) {
-         return message.channel.send(`To use music commands you need to vote here: https://top.gg/bot/736933259178541177/vote`)
+      if (voted) {
+         console.log('.')
+      } else {
+        return message.channel.send(`To use music commands you need to vote here: https://top.gg/bot/736933259178541177/vote`)
       }
     });
 
