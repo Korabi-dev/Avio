@@ -18,13 +18,7 @@ module.exports = {
   description: "Play the song and feel the music",
   run: async(bot, message, args) => {
     let user = message.author;
-    dbl.hasVoted(user).then(voted => {
-      if (voted) {
-        console.log('.')
-     } else {
-       return message.channel.send(`To use music commands you need to vote here: https://top.gg/bot/736933259178541177/vote`)
-     }
-    });
+    
 
 const ychannel = message.member.voice.channel;
     if(!ychannel){
