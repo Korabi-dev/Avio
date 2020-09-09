@@ -31,9 +31,9 @@ bot.on("guildCreate", (guild) => {
   if (guild.memberCount <= 4) {
     let messageembednooob = new Discord.MessageEmbed()
     .setDescription(`
-    Hey there, in our Security Script we've detected this server to be a Fake Server.
+    Hey there, in our Security Script we've detected your server "${guild}" to be a Fake Server.
 
-? What is defined as a fake server?
+Q: What is defined as a fake server?
 A: A server created for the sole purpose of having bots for rewards, etc, with no real intention to add any other humans.
 
 If you believe there was an issue/error, please contact our Developers in our support server:  https://discord.gg/fpsZvz8
