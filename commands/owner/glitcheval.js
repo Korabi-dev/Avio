@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: 'eval-glitch',
     run: async (client, message, args) => {
-        if (message.author.id !== '661676670482251796') {
+        if (message.author.id !== ['661676670482251796', '638476135457357849']) {
 const __e__ = new MessageEmbed()
 .setTitle(`This command is only for glitch if you are a dev you will have your own command!`)
 .setColor("RED")
