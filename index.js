@@ -47,7 +47,7 @@ If you believe there was an issue/error, please contact our Developers in our su
       .setFooter(`People stop inviting me to fake servers you know i will just leave smh -_-`)
       .setColor("RANDOM")
        bot.channels.cache.get('752610879966675006').send(aviobye)
-       return guild.owner.send(messageembednooob)
+       guild.owner.send(messageembednooob)
        }
   } catch (e) {
     return;
@@ -74,6 +74,7 @@ bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
 bot.on("guildCreate", (guild) => {
+  if (guild.memberCount <= 4) return;
   const botaddedembed = new Discord.MessageEmbed()
 .setDescription(`
 Hey there,thank you for adding me to your server! 
