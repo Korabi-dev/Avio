@@ -21,16 +21,16 @@ module.exports = {
                             const embed = new MessageEmbed()
                                 .setTitle('Evaluating...')
                                 .setColor("GREEN")
-                            const msg = message.channel.send(embed);
+                            const msg = await message.channel.send(embed);
                             try {
                                 const data = eval(args.slice(0).join(" ").replace(/```/g, ''));
                                 const embed = new MessageEmbed()
                                     .setTitle('Output: ')
                                     .setColor("GREEN")
-                                    .setDescription(data)
-                                 msg.edit(embed)
-                                 msg.react('✅')
-                                 msg.react('❌')
+                                    .setDescription(await data)
+                                 await msg.edit(embed)
+                                 await msg.react('✅')
+                                 await msg.react('❌')
                                 const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
                                 msg.awaitReactions(filter, { max: 1 })
                                     .then((collected) => {
@@ -54,7 +54,7 @@ module.exports = {
                     
                     )
                                     .setColor("RED")
-                                return msg.edit(embed);
+                                return await msg.edit(embed);
                             }
                 return;
             } 
