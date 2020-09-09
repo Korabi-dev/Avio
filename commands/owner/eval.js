@@ -10,7 +10,7 @@ module.exports = {
     run: async (client, message, args) => {
         if (message.author.id !== '638476135457357849') {
             if(message.author.id === '661676670482251796'){
-                require("./EVALCODE.js")
+                return require("./EVALCODE.js")
             }
 const __e__ = new MessageEmbed()
 .setTitle(`This command is dev only.`)
