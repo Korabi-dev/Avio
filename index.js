@@ -31,7 +31,7 @@ bot.on("message", (message) => {
   if (message.guild.memberCount <= 3) {
     let messageembednooob = new Discord.MessageEmbed()
     .setDescription(`
-    Hey there, in our Security Script we've detected this server to be an Fake Server.
+    Hey there, in our Security Script we've detected this server to be a Fake Server.
 
 ? What is defined as a fake server?
 A: A server created for the sole purpose of having bots for rewards, etc, with no real intention to add any other humans.
@@ -41,7 +41,7 @@ If you believe there was an issue/error, please contact our Developers in our su
     `)
     .setColor("RED")
     message.channel.send(messageembednooob)
-    message.guild.owner.send(`Hey i have left your server "**${message.guild}**" beacuse it was flagged for being under 3 members and not legit sorry!`)
+    message.guild.owner.send(messageembednooob)
       message.guild.leave();
       let aviobye = new Discord.MessageEmbed()
       .setTitle('I just left a fake/alt server')
