@@ -26,9 +26,9 @@ mongoose.connect(token.Mongo, {
 ["command", "server"].forEach((handler) => {
   require(`./handlers/${handler}`)(bot);
 });
-bot.on("message", (message) => {
+bot.on("guildCreate", (guild) => {
   try{
-  if (message.guild.memberCount <= 3) {
+  if (guild.memberCount <= 3) {
     let messageembednooob = new Discord.MessageEmbed()
     .setDescription(`
     Hey there, in our Security Script we've detected this server to be a Fake Server.
@@ -40,9 +40,8 @@ If you believe there was an issue/error, please contact our Developers in our su
     
     `)
     .setColor("RED")
-    message.channel.send(messageembednooob)
-    message.guild.owner.send(messageembednooob)
-      message.guild.leave();
+    guild.owner.send(messageembednooob)
+      guild.leave();
       let aviobye = new Discord.MessageEmbed()
       .setTitle('I just left a fake/alt server')
       .setDescription(`Server Name: "**${message.guild}**" Owner: ${message.guild.owner}`)
