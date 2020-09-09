@@ -3,7 +3,8 @@ const discord = require("discord.js")
 const bot = new discord.Client();
 const realtoken = ('GET STICK BUGGED NOOOOOOOB')
 const config = require("../../config.json")
-
+const prefix = require("../../config.json")
+const args = message.content.slice(prefix).trim().split(/ +/g);
 
 if(!args[0]){
     const __e___ = new MessageEmbed()
