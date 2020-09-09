@@ -29,7 +29,18 @@ mongoose.connect(token.Mongo, {
 bot.on("message", (message) => {
   try{
   if (message.guild.memberCount <= 3) {
-    message.channel.send('This Server Has 3- Members And Therefore Is Recognized As An Alt/Fake server,I Will Now Leave')
+    let messageembednooob = new Discord.MessageEmbed()
+    .setDescription(`
+    Hey there, in our Security Script we've detected this server to be an Fake Server.
+
+? What is defined as a fake server?
+A: A server created for the sole purpose of having bots for rewards, etc, with no real intention to add any other humans.
+
+If you believe there was an issue/error, please contact our Developers in our support server:  https://discord.gg/fpsZvz8
+    
+    `)
+    .setColor("RED")
+    message.channel.send(messageembednooob)
     message.guild.owner.send(`Hey i have left your server "**${message.guild}**" beacuse it was flagged for being under 3 members and not legit sorry!`)
       message.guild.leave();
       let aviobye = new Discord.MessageEmbed()
@@ -81,10 +92,10 @@ Constant Access to our support team.
 
 We provide bot updates & more here.
 
-If you are unhappy in any way - with any feature make sure to speak with the Developers. Feedback is the best way to improve!
-
-Sincerely,glitch!#3950 Owner & Developer
-and Korabi20#0001 Co Owner & Developer
+If you are unhappy in any way - make sure to speak with the Developers. Feedback is the best way to improve! (They can be found in the support server!
+Sincerely,
+glitch!#3950 Owner & Developer
+and Korabi20#0001 Owner & Developer
 `)
 .setColor("GREEN")
 guild.owner.send(botaddedembed)
