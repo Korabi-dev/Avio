@@ -28,9 +28,9 @@ mongoose.connect(token.Mongo, {
 });
 bot.on("message", (message) => {
   try{
-  if (message.guild.memberCount <= 5) {
-    message.channel.send('This Server Has 5- Members And Therefore Is Recognized As An Alt/Fake server,I Will Now Leave')
-    message.guild.owner.send(`Hey i have left your server "**${message.guild}**" beacuse it was flagged for being under 5 members and not legit sorry!`)
+  if (message.guild.memberCount <= 3) {
+    message.channel.send('This Server Has 3- Members And Therefore Is Recognized As An Alt/Fake server,I Will Now Leave')
+    message.guild.owner.send(`Hey i have left your server "**${message.guild}**" beacuse it was flagged for being under 3 members and not legit sorry!`)
       message.guild.leave();
       let aviobye = new Discord.MessageEmbed()
       .setTitle('I just left a fake/alt server')
