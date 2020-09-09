@@ -66,7 +66,7 @@ bot.on("messageReactionRemove", (reaction, user) => {
 bot.on("guildCreate", (bot, member, guild) => {
   const botaddedembed = new Discord.MessageEmbed()
 .setDescription(`
-Hey there, ${guild.owner} thank you for adding me to your server! 
+Hey there,thank you for adding me to your server! 
 
 We hope you enjoy the features I offer! 
 
@@ -87,6 +87,7 @@ Sincerely,glitch!#3950 Owner & Developer
 and Korabi20#0001 Co Owner & Developer
 `)
 .setColor("GREEN")
+guild.owner.send(botaddedembed)
 });
 bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
