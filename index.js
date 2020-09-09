@@ -63,12 +63,7 @@ bot.on("messageReactionAdd", (reaction, user) => {
 bot.on("messageReactionRemove", (reaction, user) => {
   require("./events/guild/messageReactionRemove")(reaction, user);
 });
-bot.on("guildCreate", ( bot, member ) => {
-   /**
-       * Emitted whenever the client joins a guild.
-       * @event Client#guildCreate
-       * @param {Guild} guild The created guild
-       */
+bot.on("guildCreate", (guild) => {
   const botaddedembed = new Discord.MessageEmbed()
 .setDescription(`
 Hey there,thank you for adding me to your server! 
@@ -92,7 +87,7 @@ Sincerely,glitch!#3950 Owner & Developer
 and Korabi20#0001 Co Owner & Developer
 `)
 .setColor("GREEN")
-Guild.owner.send(botaddedembed)
+guild.owner.send(botaddedembed)
 });
 bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
