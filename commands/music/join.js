@@ -17,8 +17,12 @@ module.exports = {
   aliases: ["j"],
   description: "Play the song and feel the music",
   run: async(bot, message, args) => {
-    let user = message.author;
-    
+    let user = message.author.id;
+    dbl.hasVoted(user).then(voted => {
+      if (!voted) {
+          return message.channel.send("You need to vote to use this command run the command : a!vote")
+      }
+      });
 
 const ychannel = message.member.voice.channel;
     if(!ychannel){
