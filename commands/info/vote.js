@@ -9,5 +9,6 @@ module.exports = {
     .setTitle("Click Here To vote!")
     .setURL("https://top.gg/bot/736933259178541177")
     .setFooter("Thank you for voting!")
+    message.channel.send(embed)
     }
 }
