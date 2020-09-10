@@ -55,7 +55,7 @@ module.exports = {
                 },
                 {
                     name: '🆙Uptime',
-                    value: `${min} Minutes`,
+                    value: `${min} Minute(s)`,
                     inline: true
                 }
             )
