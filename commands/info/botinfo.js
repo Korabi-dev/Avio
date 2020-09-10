@@ -13,6 +13,7 @@ module.exports = {
     aliases: ["bot info", "botinfo"],
     category: "bot",
     run: async (client, message, args) => {
+        let users = client.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
         let botcreated = utc(client.user.createdAt).format('D MMMM YYYY')
 
         const embed = new MessageEmbed()
@@ -32,7 +33,7 @@ module.exports = {
                 },
                 {
                     name: '👥 Online Bot Users',
-                    value: `Serving ${client.users.cache.size} people!`,
+                    value: `Serving ${users} people!`,
                     inline: true
                 },
                 {
