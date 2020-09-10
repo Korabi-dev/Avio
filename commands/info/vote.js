@@ -1,6 +1,6 @@
 const discord = require("discord.js")
 module.exports = {
-    name: "hasvoted",
+    name: "vote",
      category: "info",
      description: "get the commands",
     usage: "help",
