@@ -50,7 +50,7 @@ module.exports = {
                 },
                 {
                     name: '💻 Server Info (hardware of the bot)',
-                    value: `Cores: ${os.cpus().length}`,
+                    value: `CPU Cores: ${os.cpus().length}`,
                     inline: true
                 }
             )
