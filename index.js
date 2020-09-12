@@ -54,6 +54,9 @@ If you believe there was an issue/error, please contact our Developers in our su
   }
 });
 bot.on("ready", () => {
+  require("./webserver")
+  });
+bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });
 bot.on("message", async (message) => {
