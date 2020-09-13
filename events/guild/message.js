@@ -131,16 +131,18 @@ module.exports = async (bot, message) => {
         }, command.timeout);
       }
     } else {
-      command.run(bot, message, args);
+      try {
+        command.run(bot, message, args);
+      } catch (e) {
+        custom.findOne(
+          { Guild: message.guild.id, Command: cmd },
+          async (err, data) => {
+            if (err) throw err;
+            if (data) return message.channel.send(data.Content);
+            else return;
+          }
+        );
+      } 
      }
-  } else {
-    custom.findOne(
-      { Guild: message.guild.id, Command: cmd },
-      async (err, data) => {
-        if (err) throw err;
-        if (data) return message.channel.send(data.Content);
-        else return;
-      }
-    );
-  }
+  } 
 };
