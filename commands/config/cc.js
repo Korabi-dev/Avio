@@ -23,7 +23,7 @@ module.exports = {
           data.save();
 
           message.channel.send(
-            `Successfully updated the command \`${args[0]}\``
+            `Command **${args[0]}** Has Successfully been updated :white_check_mark:`
           );
         } else if (!data) {
           let newData = new custom({
@@ -33,7 +33,7 @@ module.exports = {
           });
           newData.save();
           message.channel.send(
-            `Successfully created the command \`${args[0]}\``
+            ` Command **${args[0]}** Has Successfully been created :white_check_mark: `
           );
         }
       }
