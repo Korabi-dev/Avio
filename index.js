@@ -161,6 +161,7 @@ bot.on('guildMemberAdd', member => {
   .setTitle('New Member!')
   .setDescription(`Hey ${member} Welcome To ${member.guild} Have Fun!`)
   .setFooter(`You are member number "${member.guild.memberCount}"`)
+  .setColor("RANDOM")
   channel.send(welcomembed);
 });
 bot.on('message', message => {
