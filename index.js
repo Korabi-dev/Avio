@@ -160,8 +160,15 @@ bot.on('guildMemberAdd', member => {
   let welcomembed = new Discord.MessageEmbed()
   .setTitle('New Member!')
   .setDescription(`Hey ${member} Welcome To ${member.guild} Have Fun!`)
+  .setFooter(`You are member number "${member.guild.memberCount}"`)
   channel.send(welcomembed);
 });
-
+bot.on('message', message => {
+	if (message.content === 'avio_fake_member') {
+    if(message.author.id !== '638476135457357849') return;
+    bot.emit('guildMemberAdd', message.member);
+    message.channel.send('Done :white_check_mark:')
+	}
+});
 
 bot.login(process.env.BOT_TOKEN);
