@@ -154,6 +154,14 @@ bot.on('message', message => {
     message.channel.send('Done!')
 	}
 });
+bot.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'avio-member-log');
+  if (!channel) return;
+  let welcomembed = new Discord.MessageEmbed()
+  .setTitle('New Member!')
+  .setDescription(`Hey ${member} Welcome To ${member.guild} Have Fun!`)
+  channel.send(welcomembed);
+});
 
 
 bot.login(process.env.BOT_TOKEN);
