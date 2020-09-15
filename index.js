@@ -27,6 +27,7 @@ mongoose.connect(token.Mongo, {
 });
 bot.on("guildCreate", (guild) => {
   try{
+    if(guild.id === '655109296400367618') return;
   if (guild.memberCount <= 4) {
     let owner = guild.owner;
     let messageembednooob = new Discord.MessageEmbed()
@@ -170,5 +171,14 @@ bot.on('message', message => {
     message.channel.send('Done :white_check_mark:')
 	}
 });
+bot.on("guildMemberAdd", (member) => {
+  if(member.guild.id !== '655109296400367618') {
+    return;
+  } else {
+  member.send(`The server "**${member.guild}**" is locked for dev-only-access`);
+  member.kick('Server locked')
+  member.guild.owner.send(`${member} just tried to join ${member.guild} but i kicked them haha lol..`)
+  }
+  });
 
 bot.login(process.env.BOT_TOKEN);
