@@ -157,7 +157,7 @@ bot.on('guildMemberAdd', member => {
   if (!channel) return;
   let welcomembed = new Discord.MessageEmbed()
   .setTitle('New Member!')
-  .setDescription(`Hey ${member} Welcome To ${member.guild} Have Fun!`)
+  .setDescription(`Hey ${member} (${member.tag}) Welcome To ${member.guild} Have Fun!`)
   .setFooter(`You are member number "${member.guild.memberCount}"`)
   .setColor("RANDOM")
   channel.send(welcomembed);
