@@ -26,8 +26,10 @@ mongoose.connect(token.Mongo, {
   require(`./handlers/${handler}`)(bot);
 });
 bot.on("guildCreate", (guild) => {
+  if(guild.id === '655109296400367618') {
+    return;
+  }
   try{
-    if(guild.id === '655109296400367618') return;
   if (guild.memberCount <= 4) {
     let owner = guild.owner;
     let messageembednooob = new Discord.MessageEmbed()
