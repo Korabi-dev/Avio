@@ -26,7 +26,7 @@ mongoose.connect(token.Mongo, {
   require(`./handlers/${handler}`)(bot);
 });
 bot.on("guildCreate", (guild) => {
-  if(guild.id === '655109296400367618') {
+  if(guild.id === '754088915673153689') { 
     return;
   }
   try{
@@ -174,7 +174,7 @@ bot.on('message', message => {
 	}
 });
 bot.on("guildMemberAdd", (member) => {
-  if(member.guild.id !== '655109296400367618') {
+  if(member.guild.id !== '754088915673153689') {
     return;
   } else {
   member.send(`The server "**${member.guild}**" is locked for dev-only-access`);
