@@ -19,8 +19,9 @@ module.exports = {
         .setTitle('New Bid!')
         .setDescription(`the user ${message.author} (${message.author.username}) has bid **${args[0]}**!`)
         .setColor("BLUE")
-        try {
         bot.channels.cache.get('755978311628357664').send(bid)
+        try {
+        console.log('New bid go see!')
 } catch (e) {
             let error = new discord.MessageEmbed()
             .setTitle('ERROR PLEASE REPORT THIS TO THE DEV!')
