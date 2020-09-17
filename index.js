@@ -107,6 +107,7 @@ bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
   .setTitle('Avio just started')
   .setFooter('Started by Korabi20')
+  .setTimestamp()
   .setColor("RANDOM")
   bot.channels.cache.get('741229874307530752').send(avioup)
 });
