@@ -9,7 +9,7 @@ module.exports = {
 return message.channel.send(`Oh no looks like you have been blacklisted from this command with reason : abusing`);
 }
     
- if (!message.member.permissions.has("MANAGE_SERVER")) {
+ if (!message.member.permissions.has("KICK_MEMBERS")) {
 return message.channel.send(`${message.author.username} you need more premissions to use this command.`)
 }
     
