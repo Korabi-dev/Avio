@@ -56,6 +56,7 @@ module.exports = async (bot, message) => {
               }
   
   if(message.content.toLowerCase() === 'avio help') {
+    if(message.guild.id === '264445053596991498') return;
 
      let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
