@@ -19,7 +19,8 @@ module.exports = {
         .setTitle('New Bid!')
         .setDescription(`the user ${message.author} (${message.author.username}) has bid **${args[0]}**!`)
         .setColor("BLUE")
-        bot.channels.cache.get('755978311628357664').send(bid)
+        const channel = await bot.channels.cache.get('755978311628357664')
+        channel.send(bid)
         try {
         console.log('New bid go see!')
 } catch (e) {
