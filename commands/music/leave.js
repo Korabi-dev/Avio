@@ -16,11 +16,7 @@ module.exports = {
   description: "Stop the music and take rest ;)",
    run: async(client, message, args) => {
     let user = message.author.id;
-    dbl.hasVoted(user).then(voted => {
-      if (!voted) {
-          return message.channel.send("You need to vote to use this command run the command : a!vote")
-      }
-      });
+  
     try {
      let embed = new MessageEmbed()
 .setColor("BLUE");
