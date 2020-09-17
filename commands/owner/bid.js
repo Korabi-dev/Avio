@@ -7,7 +7,8 @@ module.exports = {
     usage: "help",
     run: async (client, message, args) => {
         if(message.guild.id !== '723679963282276384') return;
-        if(message.channel.id !== '744490276206411848') return message.channel.send(`this is not the bidding channel please go to: <#744490276206411848>`)
+        if(message.author.id === '597115059872727073') return message.channel.send(`You have been blacklisted from this command reason: trolling`);
+        if(message.channel.id !== '744490276206411848') return message.channel.send(`this is not the bidding channel please go to: <#744490276206411848>`);
         if(!args[0]) return message.channel.send(`Please provide the amount you want to bid!`);
         if (isNaN(args[0][0])) return message.channel.send(`Please provide a number (no letters)!`);
         if(args[0] < 100) return message.channel.send(`The minimum you can bid is 100 robux!`);
