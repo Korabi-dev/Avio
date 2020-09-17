@@ -17,7 +17,7 @@ module.exports = {
         const sent = await message.channel.send(success);
         let bid = new discord.MessageEmbed()
         .setTitle('New Bid!')
-        .setDescription(`the user ${message.author} (${message.author.username}) has bid **${args[0]}**!`)
+        .setDescription(`the user ${message.author} (${message.author.username}) has bid **${args[0]}** robux!`)
         .setColor("BLUE")
         let channel = message.guild.channels.cache.find(
             (ch) => ch.name === "bids"
