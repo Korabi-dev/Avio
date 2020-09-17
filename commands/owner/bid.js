@@ -19,8 +19,10 @@ module.exports = {
         .setTitle('New Bid!')
         .setDescription(`the user ${message.author} (${message.author.username}) has bid **${args[0]}**!`)
         .setColor("BLUE")
-        const channel = await bot.channels.cache.get('755978311628357664')
-        channel.send(bid)
+        let channel = message.guild.channels.cache.find(
+            (ch) => ch.name === "bids"
+          );
+          if(!channel) return message.channel.send('i can\'t see a channel named "bids" please get an admin!');
         try {
         console.log('New bid go see!')
 } catch (e) {
