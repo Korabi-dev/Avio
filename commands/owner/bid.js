@@ -6,8 +6,9 @@ module.exports = {
     usage: "help",
     run: async (client, message, args) => {
         if(message.guild.id !== '723679963282276384') return;
+        if(message.channel.id !== '755978311628357664') return message.channel.send(`this is not the bidding channel please go to: <#755978311628357664>`)
         if(!args[0]) return message.channel.send(`Please provide the amount you want to bid!`);
-        if(!args[0].isNaN) return message.channel.send(`Please provide a number (no letters)!`);
+        if (isNaN(args[0][0])) return message.channel.send(`Please provide a number (no letters)!`);
         let success = new discord.MessageEmbed()
         .setTitle('You Placed A Bid!')
         .setDescription(`Amount in robux: **${args[0]}**`)
