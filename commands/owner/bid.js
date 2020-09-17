@@ -10,6 +10,7 @@ module.exports = {
         if(message.channel.id !== '744490276206411848') return message.channel.send(`this is not the bidding channel please go to: <#744490276206411848>`)
         if(!args[0]) return message.channel.send(`Please provide the amount you want to bid!`);
         if (isNaN(args[0][0])) return message.channel.send(`Please provide a number (no letters)!`);
+        if(args[0] < 100) return message.channel.send(`The minimum you can bid is 100 robux!`);
         let success = new discord.MessageEmbed()
         .setTitle('You Placed A Bid!')
         .setDescription(`Amount in robux: **${args[0]}**`)
