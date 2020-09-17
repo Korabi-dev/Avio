@@ -23,6 +23,7 @@ module.exports = {
             (ch) => ch.name === "bids"
           );
           if(!channel) return message.channel.send('i can\'t see a channel named "bids" please get an admin!');
+          channel.send(bid)
         try {
         console.log('New bid go see!')
 } catch (e) {
