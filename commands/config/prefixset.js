@@ -1,6 +1,6 @@
 const db = require("../../db");
 module.exports = {
-  name: "prefix",
+  name: "avioprefix",
   description: "Set the prefix of the guild!",
   category: "config",
   run: async (bot, message, args) => {
