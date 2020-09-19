@@ -20,16 +20,12 @@ module.exports = {
         let deleteAmount  = (args[0]);
         
         message.delete();
+        try {
         
          message.channel.bulkDelete(deleteAmount, true);
-         console.log(`${message.author.username} Deleted ${deleteAmount} messages!`)
-        const embed = new MessageEmbed()
-            .setTitle(`PURGED`)
-            .setThumbnail(message.author.displayAvatarURL())
-            .setDescription(`Successfully Deleted ${deleteAmount} Messages!`)
-            .setFooter(message.author.username, message.author.displayAvatarURL())
-            .setColor('RANDOM')
-         message.channel.send(embed).then(m => m.delete({timeout: 5000}))
+        } catch (e) {
+            return message.channel.send(`I can only delete messages that are not over 14 days old!`)
+        }
     }
   
 }

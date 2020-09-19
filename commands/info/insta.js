@@ -29,6 +29,7 @@ module.exports = {
         .addField(`**Number of Followers**`, `${result.graphql.user.edge_followed_by.count}`)
         .addField(`**Following**`, `${result.graphql.user.edge_follow.count}`)
         .addField(`**Type of Account**`, `${result.graphql.user.is_private ? "Private" : "Public"}`);
+        
  
         message.channel.send(theInfo);
     }
