@@ -158,7 +158,7 @@ bot.on('message', message => {
 	}
 });
 bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'welcome');
+  const channel = member.guild.channels.cache.find(ch => ch.name.toLowerCase().includes('welcome'));
   if (!channel) return;
   let welcomembed = new Discord.MessageEmbed()
   .setTitle('New Member!')
