@@ -158,14 +158,14 @@ bot.on('message', message => {
 	}
 });
 bot.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.cache.find(ch => ch.name.toLowerCase().includes('welcome'));
-  if (!channel) return;
+  
   let welcomembed = new Discord.MessageEmbed()
   .setTitle('New Member!')
   .setDescription(`Hey ${member} (${member.user.username}) Welcome To ${member.guild} Have Fun!`)
   .setFooter(`You are member number "${member.guild.memberCount}"`)
   .setColor("RANDOM")
-  channel.send(welcomembed);
+  member.guild.channels.cache.find(ch => ch.name.toLowerCase().includes('welcome')).send(welcomembed);
+  
 });
 bot.on('message', message => {
 	if (message.content === 'avio_fake_member') {
