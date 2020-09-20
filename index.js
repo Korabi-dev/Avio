@@ -97,8 +97,8 @@ We provide bot updates & more here.
 
 If you are unhappy in any way - make sure to speak with the Developers. Feedback is the best way to improve! (They can be found in the support server!
 Sincerely,
-glitch!#3950 Owner & Developer
-and Korabi20#0001 Owner & Developer
+glitch!#3950 Owner,
+Korabi20#0001 Owner & Developer.
 `)
 .setColor("GREEN")
 guild.owner.send(botaddedembed)
