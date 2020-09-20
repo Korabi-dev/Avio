@@ -158,14 +158,16 @@ bot.on('message', message => {
 	}
 });
 bot.on('guildMemberAdd', member => {
-  
+  try {
   let welcomembed = new Discord.MessageEmbed()
   .setTitle('New Member!')
   .setDescription(`Hey ${member} (${member.user.username}) Welcome To ${member.guild} Have Fun!`)
   .setFooter(`You are member number "${member.guild.memberCount}"`)
   .setColor("RANDOM")
   member.guild.channels.cache.find(ch => ch.name.toLowerCase().includes('welcome')).send(welcomembed);
-  
+  } catch (e) {
+return;
+  }
 });
 bot.on('message', message => {
 	if (message.content === 'avio_fake_member') {
