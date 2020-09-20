@@ -159,6 +159,7 @@ bot.on('message', message => {
 });
 bot.on('guildMemberAdd', member => {
   try {
+    if(member.guild.id === '723679963282276384') return;
   let welcomembed = new Discord.MessageEmbed()
   .setTitle('New Member!')
   .setDescription(`Hey ${member} (${member.user.username}) Welcome To ${member.guild} Have Fun!`)
