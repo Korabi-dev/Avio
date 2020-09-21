@@ -21,7 +21,7 @@ warns.findOneAndDelete({Guild: message.guild.id, User: user.id },
     () => {
         let embed = new discord.MessageEmbed()
         .setDescription(`:Tick: Sucessfully cleared the warns for ${user}`)
-        .setFooter(`${message.author.username} Cleared all warnings for ${user.username}`)
+        .setFooter(`${message.author.username} Cleared all warnings for ${user.user.username}`)
         .setTimestamp()
         .setColor("GREEN")
         message.channel.send(embed)
