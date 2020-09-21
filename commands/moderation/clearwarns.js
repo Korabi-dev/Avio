@@ -8,6 +8,7 @@ module.exports = {
   description: "pp",
   usage: "clearwarns <@user>",
   run: (client, message, args) => {
+    try {
 
  if(!message.member.hasPermission("KICK_MEMBERS")) {
          return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
@@ -21,9 +22,14 @@ warns.findOneAndDelete({Guild: message.guild.id, User: user.id },
         let embed = new discord.MessageEmbed()
         .setDescription(`:Tick: Sucessfully cleared the warns for ${user}`)
         .setFooter(`${message.author.username} Cleared all warnings for ${user.username}`)
+        .setTimestamp()
         .setColor("GREEN")
+        message.channel.send(embed)
     
      }
     )
+    } catch (e) {
+        message.channel.send(`:x: Oops an error occured: ${e}`)
+    }
   }
 }
