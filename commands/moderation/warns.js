@@ -14,10 +14,10 @@ module.exports = {
         if (err) console.log(err);
         if (!data.length)
           return message.channel.send(
-            `${user.user.tag} has not got any warns in this guild!`
+            `${user.user.tag} has not got any warns in this server!`
           );
         let Embed = new MessageEmbed()
-          .setTitle(`${user.user.tag}'s warns in ${message.guild.name}.. `)
+          .setTitle(`${user.user.tag}'s warnings in ${message.guild.name}..`)
           .setDescription(
             data.map((d) => {
               return d.Warns.map(

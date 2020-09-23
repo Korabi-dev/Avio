@@ -17,7 +17,7 @@ module.exports = {
 }
     if(!user) {
       let embed8 = new Discord.MessageEmbed()
-      .setTitle("Command: r!warn")
+      .setTitle("Command: a!warn")
       .setDescription(
       `Description: Warn a member
       Usage: a!warn [user] [reason]
