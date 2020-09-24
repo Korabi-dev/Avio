@@ -85,7 +85,7 @@ module.exports = async (bot, message) => {
   if (!message.member)
     message.member = await message.guild.fetchMember(message);
 
-  if (!message.guild) return;
+  if (!message.guild) return message.author.send(`Hey There! This bot is not intdended for use in DMs please use me in a server run ${prefix}help for commands!`);
   const args = message.content.slice(newPrefix.length).trim().split(/ +/g);
   const cmd = args.shift().toLowerCase();
 
