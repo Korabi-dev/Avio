@@ -7,7 +7,7 @@ module.exports = {
     run: async (client, message, args) => {
         
         if (args[0].toLowerCase() == "status") {
-            const status = args[1]
+            const status = args.slice(1).join(" ");
             client.user.setPresence({ status: (status) });
             message.channel.send(`Status is now set to: ${status}`);
         }
