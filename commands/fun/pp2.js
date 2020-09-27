@@ -27,17 +27,7 @@ module.exports = {
           
  
     
-    if(message.author.id === '638476135457357849') {
-      let Embed3 = new MessageEmbed()
-      .setTitle(`PP MACHINE`)
-      .setDescription(`**${message.author.username}**'s pp
-      Machine broke this pp is too big!
-      `)
-      
-      .setColor(`RANDOM`);
-      return message.channel.send(Embed3)
-    }
-    
+ 
     if(target.id === '638476135457357849') {
       let Embed4 = new MessageEmbed()
         .setTitle(`PP MACHINE`)
