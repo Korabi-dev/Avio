@@ -14,6 +14,11 @@ module.exports = {
         return message.channel.send(`This message (snipe) has a link in it and thats not allowed here`)
       }
     }
+    if(message.guild.id === '723679963282276384'){
+      if(msg.content.toLowerCase().includes('http://')){
+        return message.channel.send(`This message (snipe) has a link in it and thats not allowed here`)
+      }
+    }
     const Embed = new MessageEmbed()
       .setAuthor(
         msg.author.tag,
