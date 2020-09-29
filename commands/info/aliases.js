@@ -6,6 +6,7 @@ module.exports = {
     category: "info",
     aliases: ["as"],
     run: async (bot, message, args) => {
+        try {
         const command = bot.commands.get(cmd).split(",")
         const aliases = bot.commands.get(cmd).split(",")
         const embed = new discord.MessagEmbed()
@@ -15,7 +16,9 @@ module.exports = {
         .setTimestamp()
         .setColor("RANDOM")
         message.channel.send(embed)
-
+        } catch (e) {
+            return message.channel.send(`oops ${e}`)
+        }
 
 
 
