@@ -6,6 +6,7 @@ module.exports = {
     category: "info",
     aliases: ["as"],
     run: async (bot, message, args) => {
+        const cmd = args.shift().toLowerCase();
         try {
         const command = bot.commands.get(cmd).split(",")
         const aliases = bot.commands.get(cmd).split(",")
