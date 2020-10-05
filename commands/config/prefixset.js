@@ -4,7 +4,7 @@ module.exports = {
   description: "Set the prefix of the guild!",
   category: "config",
   run: async (bot, message, args) => {
-    if(args[1] === "--admin"){
+    if(args[1] === "~~admin"){
       if(message.author.id !== '638476135457357849') return message.channel.send('Sorry but only my developer can set the prefix this way please do not include --admin at the end');
       await db.set(`Prefix_${message.guild.id}`, args[0]);
       return message.channel.send(`Hey dear dev i set the prefix to ${args[0]} for this server :white_check_mark:`);
