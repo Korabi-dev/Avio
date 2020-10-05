@@ -11,9 +11,8 @@ module.exports = {
     .setFooter(`Cool people selected by: Korabi20 - Owner & Developer`)
     .setColor("RANDOM")
     const msg = await message.channel.send(embed)
-    msg.react(":regional_indicator_c:")
-    msg.react(":regional_indicator_o:")
-    msg.react(":regional_indicator_o:")
-    msg.react(":regional_indicator_l:")
+    msg.react("😎")
+    msg.react("😂")
+    msg.react("🙂")
   }
 }
