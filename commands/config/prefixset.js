@@ -7,7 +7,7 @@ module.exports = {
     if(args[1] === "--admin"){
       if(message.author.id !== '638476135457357849') return message.channel.send('Sorry but only my developer can set the prefix this way please do not include --admin at the end');
       await db.set(`Prefix_${message.guild.id}`, args[0]);
-      message.channel.send(`Hey dear dev i set the prefix to ${args[0]} for this server :white_check_mark:`);
+      return message.channel.send(`Hey dear dev i set the prefix to ${args[0]} for this server :white_check_mark:`);
     }
     
     if(message.author.id === '719890577306419221') {
