@@ -22,7 +22,7 @@ module.exports = {
 
 const ychannel = message.member.voice.channel;
     if(!ychannel){
-return message.channel.send('You are not in a channel!')
+return message.channel.send('You are not in a voice channel!')
 }
 ychannel.join();
 message.channel.send(`Joined :white_check_mark:`)

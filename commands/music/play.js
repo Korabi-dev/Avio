@@ -32,7 +32,7 @@ module.exports = {
     //FIRST OF ALL WE WILL ADD ERROR MESSAGE AND PERMISSION MESSSAGE
     if (!args.length) {
       //IF AUTHOR DIDENT GIVE URL OR NAME
-      embed.setAuthor("WRONG SYNTAX : Type `play <URL> or text`")
+      embed.setAuthor("Wrong Usage: its: `play <URL> or text`")
       return message.channel.send(embed);
     }
 
@@ -40,7 +40,7 @@ module.exports = {
         
     if (!channel) {
       //IF AUTHOR IS NOT IN VOICE CHANNEL
-      embed.setAuthor("YOU NEED TO BE IN VOICE CHANNEL :/")
+      embed.setAuthor("You need to be in a voice channel before you can play music")
       return message.channel.send(embed);
     }
 
