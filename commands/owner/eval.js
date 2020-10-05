@@ -77,7 +77,8 @@ return message.channel.send(__e___)
             .setColor("GREEN")
         const msg = await message.channel.send(embed);
         try {
-            const data = eval(args.slice(0).join(" ").replace(/```/g, ''));
+            const code = args.join(' ');
+            const data = eval(code);
             const embed = new MessageEmbed()
                 .setTitle('Output: ')
                 .setColor("GREEN")
