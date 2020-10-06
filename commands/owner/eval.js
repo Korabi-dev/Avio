@@ -3,7 +3,20 @@ const discord = require("discord.js")
 const bot = new discord.Client();
 const realtoken = ('GET STICK BUGGED NOOOOOOOB')
 const config = require("../../config.json")
-
+const ms = require("ms")
+const moment = require("moment")
+const axios = require("axios")
+const commontags = require("common-tags")
+const dblapi = require("dblapi.js")
+const express = require("express")
+const factful = require("factful.js")
+const fs = require("fs")
+const imageapi = require("imageapi.js")
+const mongoose = require("mongoose")
+const nodefetch = require("node-fetch")
+const os = require("os")
+const db = require("../../db")
+const model = require("../../models")
 
 module.exports = {
     name: 'eval',
