@@ -53,7 +53,7 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: '🆙 Uptime', 
+                    name: '🆙 Server Uptime', 
                     value: `${ms(uptimee)}`,
                     inline: true
                 }
