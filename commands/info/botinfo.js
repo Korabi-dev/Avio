@@ -15,8 +15,7 @@ module.exports = {
     run: async (client, message, args) => {
         let users = client.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
         let botcreated = utc(client.user.createdAt).format('D MMMM YYYY')
-        var ms = bot.uptime,
-         min = Math.floor((ms/1000/60) << 0) 
+        const uptimee = os.uptime();
 
         const embed = new MessageEmbed()
             .setThumbnail(client.user.displayAvatarURL())
@@ -51,6 +50,11 @@ module.exports = {
                 {
                     name: '💻 Server Info (hardware of the bot)',
                     value: `CPU Cores: ${os.cpus().length}`,
+                    inline: true
+                },
+                {
+                    name: '🆙 Uptime', 
+                    value: `${ms(uptimee)}`,
                     inline: true
                 }
             )
