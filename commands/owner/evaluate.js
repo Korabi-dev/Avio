@@ -11,12 +11,17 @@ try {
   const code = args.join(" ");
   let evaled = eval(code);
 
-  if (typeof evaled !== "string")
-    evaled = require("util").inspect(evaled);
-
-  message.channel.send(clean(evaled), {code:"xl"});
-} catch (err) {
-  message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+let embed = new discord.MessageEmbed()
+.setTitle('Output:')
+.setDescription(evaled)
+.setColor("GREEN")
+const msg = await message.channel.send(embed)
+} catch (e) {
+const errorembed = new discord.MessageEmbed()
+.setTitle("Error:")
+.setDescription(e)
+.setColor("RED")
+msg.edit(errorembed)
 }
  }
 }
