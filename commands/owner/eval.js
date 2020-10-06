@@ -16,7 +16,7 @@ const mongoose = require("mongoose")
 const nodefetch = require("node-fetch")
 const os = require("os")
 const db = require("../../db")
-const model = require("../../models")
+
 
 module.exports = {
     name: 'eval',
