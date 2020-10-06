@@ -1,6 +1,6 @@
 const discord = require("discord.js");
 module.exports = {
-  name: "poll",
+  name: "duane",
   description: "Create a simple yes or no poll",
   category: "fun",
   run: async (bot, message, args) => {
