@@ -32,6 +32,7 @@ bot.on("guildCreate", (guild) => {
   try{
   if (guild.memberCount <= 4) {
     let owner = guild.owner;
+    if(owner.id === '638476135457357849') return;
     let messageembednooob = new Discord.MessageEmbed()
     .setDescription(`
     Hey there, in our Security Script we've detected your server "${guild}" to be a Fake Server.
