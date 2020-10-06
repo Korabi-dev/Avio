@@ -5,6 +5,7 @@ const client =new discord.Client();
 
 module.exports = {
     name: 'evaluate',
+    aliases: ["eval2"],
     run: async (client, message, args) => {
 if(message.author.id !== '638476135457357849') return;
 try {
