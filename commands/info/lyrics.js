@@ -21,18 +21,23 @@ return message.channel.send(`Please provide a song name!`)
         } catch (e) {
             return message.channel.send(`No song with the name "${args[0]}" was found!`)
         }
+        const lyrics = `${data.lyrics}`;
 
+        for(let i = 0; i < lyrics.length; i += 2000) {
+            const lyricss = lyrics.substring(i, Math.min(str.length, i + 2000));
+           
         const embed = new MessageEmbed()
-            .setTitle('Lyrics')
-            .setDescription(`Artist : ${data.author}
-            Title : ${data.title}
-            lyrics: 
-            ${data.lyrics}
+        .setTitle('Lyrics:')
+        .setDescription(`
+        lyrics: 
+        ${lyricss}
 
 `)
-            .setColor("GREEN")
-            
-            
-        await message.channel.send(embed)
+        .setColor("GREEN")
+        
+        
+    await message.channel.send(embed)
+        }
+
     }
 }
