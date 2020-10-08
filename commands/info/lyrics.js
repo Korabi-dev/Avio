@@ -36,8 +36,21 @@ return message.channel.send(`Please provide a song name!`)
         .setColor("GREEN")
         
         
-    await message.channel.send(embed)
+    return await message.channel.send(embed)
         }
+        const embed = new MessageEmbed()
+        .setTitle('Lyrics:')
+        .setDescription(`
+        lyrics: 
+        ${lyrics}
+
+`)
+        .setColor("GREEN")
+        
+        
+    return await message.channel.send(embed)
+
+
 
     }
 }
