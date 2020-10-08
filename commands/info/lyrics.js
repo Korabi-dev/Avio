@@ -24,7 +24,7 @@ return message.channel.send(`Please provide a song name!`)
         const lyrics = `${data.lyrics}`;
 
         for(let i = 0; i < lyrics.length; i += 2000) {
-            const lyricss = lyrics.substring(i, Math.min(str.length, i + 2000));
+            const lyricss = lyrics.substring(i, Math.min(lyrics.length, i + 2000));
            
         const embed = new MessageEmbed()
         .setTitle('Lyrics:')
