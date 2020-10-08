@@ -28,11 +28,7 @@ return message.channel.send(`Please provide a song name!`)
            
         const embed = new MessageEmbed()
         .setTitle('Lyrics:')
-        .setDescription(`
-        lyrics: 
-        ${lyricss}
-
-`)
+        .setDescription(`${lyricss}`)
         .setColor("GREEN")
         
         
@@ -40,11 +36,7 @@ return message.channel.send(`Please provide a song name!`)
         }
         const embed = new MessageEmbed()
         .setTitle('Lyrics:')
-        .setDescription(`
-        lyrics: 
-        ${lyrics}
-
-`)
+        .setDescription(`${lyrics}`)
         .setColor("GREEN")
         
         
