@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
     name: "lyrics",
     aliases: ["l"],
-    category: "extra",
+    category: "info",
     run: async (client, message, args) => {
     
           if(!args[0]){
