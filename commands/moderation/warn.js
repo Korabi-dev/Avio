@@ -23,7 +23,7 @@ module.exports = {
       )
       .setColor("RANDOM")
       .setFooter(`Made by Korabi20`);
-      message.channel.send(embed8)
+      return message.channel.send(embed8)
        }
        const moderator = message.author.id;
        const reason = args.slice(1).join(" ");
