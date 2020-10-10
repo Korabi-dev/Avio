@@ -25,7 +25,7 @@ module.exports = {
       .setFooter(`Made by Korabi20`);
       return message.channel.send(embed8)
        }
-      let moderator = message.author.id;
+      let moderator = message.author.tag;
        const reason = args.slice(1).join(" ").replace("/hidemod", ' ')
        if(!reason){
          return message.channel.send("No Reason provided!")
