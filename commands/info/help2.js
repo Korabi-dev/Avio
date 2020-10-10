@@ -1,5 +1,6 @@
 const discord = require("discord.js");
 const db = require("../../db")
+const config = require("../../config.json")
 module.exports = {
   name: "help",
   aliases: ["commands", "Info", "information", "cmds", "cmd", "categories"],
@@ -8,9 +9,9 @@ module.exports = {
   usage: "help",
   run: async(client, message, args) => {
     
-    await db.get(`Prefix_${message.guild.id}`)
-              ? await db.get(`Prefix_${message.guild.id}`)
-              :  "a!"
+    let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
+    ? await db.get(`Prefix_${message.guild.id}`)
+    : config.prefix;
  let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
         .setDescription(
