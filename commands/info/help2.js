@@ -7,7 +7,8 @@ module.exports = {
    description: "get the commands",
   usage: "help",
   run: (client, message, args) => {
-    (await db.get(`Prefix_${message.guild.id}`))
+    
+    await db.get(`Prefix_${message.guild.id}`)
               ? await db.get(`Prefix_${message.guild.id}`)
               :  "a!"
  let Embed = new discord.MessageEmbed()
