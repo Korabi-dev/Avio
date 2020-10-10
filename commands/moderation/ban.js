@@ -15,14 +15,7 @@ module.exports = {
       if(!message.guild.me.hasPermission("BAN_MEMBERS")) {
         return message.channel.send(`**${message.author.username}**, I do not have enough permission to use this command`)
       }
-      if(message.guild.id === '751542172196536321'){
-        if(message.author.id === '707676620390924364') return;
-
-      }
-      if(message.guild.id === '751542172196536321'){
-        if(message.author.id === '325558938005143562') return;
-
-      }
+      
 
         let target =   message.mentions.members.first() ||
       message.guild.members.cache.get(args[0]);
@@ -52,8 +45,16 @@ module.exports = {
 
       let reason = args.slice(1).join(" ")
 
+      try {
+        target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
+      } catch (e) {
+        message.channel.send("Could Not Dm This User!")
+      }
+      try {
       target.ban(args[1]);
-
+      } catch (e) {
+        return message.channel.send("Could not ban this user this is most likely because they have a higher role then me heres the error anyway" + e)
+      }
     
 
 
@@ -67,9 +68,9 @@ module.exports = {
       
       message.channel.send(embed)
 
-      target.send(`You were banned in **${message.guild.name}** with reason: ${reason}`)
+      
     
-    console.log(`${message.author.username} just banned ${target.username} with reason : ${reason}`)
+   
    
 }
  }
