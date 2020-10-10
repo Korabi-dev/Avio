@@ -45,7 +45,7 @@ module.exports = {
             Guild: message.guild.id,
             Warns: [
               {
-                Moderator: message.author.id,
+                Moderator: moderator,
                 Reason: reason,
               },
             ],
@@ -58,7 +58,7 @@ module.exports = {
           );
         } else {
           data.Warns.unshift({
-            Moderator: message.author.id,
+            Moderator: moderator,
             Reason: reason,
           });
           data.save();
