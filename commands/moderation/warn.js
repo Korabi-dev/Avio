@@ -25,7 +25,7 @@ module.exports = {
       .setFooter(`Made by Korabi20`);
       return message.channel.send(embed8)
        }
-       const moderator = message.author.id;
+      let moderator = message.author.id;
        const reason = args.slice(1).join(" ");
        if(!reason){
          return message.channel.send("No Reason provided!")
