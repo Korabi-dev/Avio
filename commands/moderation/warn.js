@@ -27,6 +27,14 @@ module.exports = {
       .setFooter(`Made by Korabi20`);
       message.channel.send(embed8)
        }
+       const moderator = message.author.id;
+       const reason = args.slice(1).join(" ");
+       if(!reason){
+         return message.channel.send("No Reason provided!")
+       }
+       if(reason.toLowerCase().includes("~~hidemod")) {
+        moderator = "hidden";
+       }
       warns.findOne(
       { Guild: message.guild.id, User: user.id },
       async (err, data) => {
@@ -38,7 +46,7 @@ module.exports = {
             Warns: [
               {
                 Moderator: message.author.id,
-                Reason: args.slice(1).join(" "),
+                Reason: reason,
               },
             ],
           });
@@ -51,7 +59,7 @@ module.exports = {
         } else {
           data.Warns.unshift({
             Moderator: message.author.id,
-            Reason: args.slice(1).join(" "),
+            Reason: reason,
           });
           data.save();
           message.channel.send(
