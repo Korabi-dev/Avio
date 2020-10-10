@@ -26,13 +26,15 @@ module.exports = {
       return message.channel.send(embed8)
        }
       let moderator = message.author.id;
-       const reason = args.slice(1).join(" ");
+       const reason = args.slice(1).join(" ").replace("/hidemod", ' ')
        if(!reason){
          return message.channel.send("No Reason provided!")
        }
-       if(reason.toLowerCase().includes("~~hidemod")) {
-        moderator = "hidden";
+       if(reason.toLowerCase().includes("/hidemod")) {
+        moderator = "hidden"
        }
+
+
       warns.findOne(
       { Guild: message.guild.id, User: user.id },
       async (err, data) => {
