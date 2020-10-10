@@ -30,7 +30,7 @@ module.exports = {
        if(!reason){
          return message.channel.send("No Reason provided!")
        }
-       if(reason.toLowerCase().includes("/hidemod")) {
+       if(message.content.toLowerCase().includes("/hidemod")) {
         moderator = "hidden"
        }
 
