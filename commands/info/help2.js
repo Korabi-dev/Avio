@@ -6,7 +6,7 @@ module.exports = {
    category: "info",
    description: "get the commands",
   usage: "help",
-  run: (client, message, args) => {
+  run: async(client, message, args) => {
     
     await db.get(`Prefix_${message.guild.id}`)
               ? await db.get(`Prefix_${message.guild.id}`)
