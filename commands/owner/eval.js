@@ -1,4 +1,7 @@
-const { MessageEmbed } = require('discord.js');
+module.exports = {
+    name: 'eval',
+    run: async(client, message, args) => {
+        const { MessageEmbed } = require('discord.js');
 const discord = require("discord.js")
 const bot = new discord.Client();
 const realtoken = ('GET STICK BUGGED NOOOOOOOB')
@@ -17,11 +20,6 @@ const nodefetch = require("node-fetch")
 const os = require("os")
 const db = require("../../db")
 const canvacord = require("canvacord");
-
-
-module.exports = {
-    name: 'eval',
-    run: async (client, message, args) => {
         if (message.author.id !== '638476135457357849') {
             if(message.author.id === '661676670482251796'){
                 if(!args[0]){
