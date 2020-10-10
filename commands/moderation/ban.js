@@ -51,7 +51,7 @@ module.exports = {
         message.channel.send("Could Not Dm This User!")
       }
       try {
-      target.ban(args[1]);
+      target.ban(reason);
       } catch (e) {
         return message.channel.send("Could not ban this user this is most likely because they have a higher role then me heres the error anyway" + e)
       }
