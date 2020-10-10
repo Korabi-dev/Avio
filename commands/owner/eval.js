@@ -19,7 +19,7 @@ const db = require("../../db")
 const canvacord = require("canvacord");
 module.exports = {
     name: 'eval',
-    run: async(client, message, args) => {
+    run: async(bot, message, args) => {
       
         if (message.author.id !== '638476135457357849') {
             if(message.author.id === '661676670482251796'){
