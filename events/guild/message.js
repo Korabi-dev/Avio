@@ -124,7 +124,7 @@ module.exports = async (bot, message) => {
           { Guild: message.guild.id, Command: cmd },
           async (err, data) => {
             if (err) throw err;
-            if (data) return message.channel.send(data.Content.replace(/{user}/g, message.author));
+            if (data) return message.channel.send(data.Content.replace(/{user}/g, message.author).replace(/{server_name}/g, message.guild.name));
             else return;
           }
         );
