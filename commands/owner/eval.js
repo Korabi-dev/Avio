@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js');
 const discord = require("discord.js")
-const bot = new discord.Client();
+
 const realtoken = ('GET STICK BUGGED NOOOOOOOB')
 const config = require("../../config.json")
 const ms = require("ms")
