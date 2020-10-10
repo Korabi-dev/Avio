@@ -4,7 +4,7 @@ module.exports = {
     name: "serverinfo",
     aliases: ["server-info"],
     category: "extra",
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
         let region;
         switch (message.guild.region) {
             case "europe":

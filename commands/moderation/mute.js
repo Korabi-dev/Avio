@@ -5,7 +5,7 @@ module.exports = {
   description: "Mute anyone who break rules",
   category: "moderation",
   usage: "mute <@mention> <reason>",
-  run: async (client, message, args) => {
+  run: async(bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_ROLES")) {
       return message.channel.send(
         "Sorry but you do not have permission to mute anyone"

@@ -6,7 +6,7 @@ module.exports = {
    category: "info",
    description: "get the commands",
   usage: "help",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Moderation")
     .setDescription(` report,warn,mute,kick,warns,ban,unban,clearwarnings(clearwarns).`)

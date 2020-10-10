@@ -5,7 +5,7 @@ module.exports = {
     name: "lyrics",
     aliases: ["l"],
     category: "info",
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
     
           if(!args[0]){
 return message.channel.send(`Please provide a song name!`)

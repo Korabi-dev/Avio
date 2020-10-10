@@ -6,7 +6,7 @@ module.exports = {
    category: "info",
    description: "get the commands",
   usage: "help",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Credits!")
     .setDescription(`Hey ${message.author.username} this bot is brought to you by

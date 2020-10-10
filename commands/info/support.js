@@ -5,6 +5,6 @@ module.exports = {
   category: "info",
   description: "Support Server invite Link",
   usage: "invite",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
   message.channel.send('here is the link to the support server :smile: https://discord.gg/wFkb9aV') 
 }}

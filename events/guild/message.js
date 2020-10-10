@@ -72,7 +72,7 @@ module.exports = async (bot, message) => {
           { name: `${newPrefix}help-fun`, value: `Sends you the fun commands!`, inline: true },
           { name: `${newPrefix}help-utility`, value: `Sends you the utility commands!`, inline: true },
           { name: `${newPrefix}help-nsfw`, value: `Sends you the nsfw commands!`, inline: true },
-          { name: `${newPrefix}help-music`, value: `Sends you the music commands!`, inline: true },
+          
        );
       
       message.channel.send(Embed);

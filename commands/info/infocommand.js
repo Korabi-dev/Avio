@@ -6,7 +6,7 @@ module.exports = {
  category: "info",
    description: "get the commands",
   usage: "help",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: Info")
     .setDescription(` prefix,snipe,oldest,ping,findalt,emoji,support,invite,membercount,servers,docs,fact,covid.`)

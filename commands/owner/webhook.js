@@ -1,10 +1,10 @@
 const discord = require("discord.js")
-const client = new discord.Client();
+
 
 module.exports = {
     name: "hooktest",
     category: "owner",
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
         
 
         const embed = new discord.MessageEmbed()

@@ -5,7 +5,7 @@ module.exports = {
   category: "info",
    description: "get the commands",
   usage: "help",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Commands: NSFW")
     .setDescription(`Fuck,pp.`)

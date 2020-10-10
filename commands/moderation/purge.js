@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js')
 module.exports = {
     name: "purge",
     category: "moderation",
-    run: async (client, message, args) => {
+    run: async(bot, message, args) => {
 
         if(!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`).then(m => m.delete({timeout: 5000}))

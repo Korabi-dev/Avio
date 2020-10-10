@@ -5,7 +5,7 @@ module.exports = {
     name: "nickname",
     aliases: ["nick"],
     category: "extra",
-    run: async (client, message, args) => {
+    run: async(bot, message, args)=> {
     
     
     

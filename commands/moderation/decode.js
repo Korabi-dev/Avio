@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
     name: "decode",
     category: "extra",
-    run: async (client, message, args) => {
+    run: async(bot, message, args) => {
         const url = `http://some-random-api.ml/binary?decode=${args}`;
 
         let response, data;

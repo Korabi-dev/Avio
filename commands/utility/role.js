@@ -2,7 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'role',
-    run: async (client, message, args) => {
+    run: async(bot, message, args) => {
 
         message.delete();
 

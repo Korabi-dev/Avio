@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const bot = new discord.Client();
+
 module.exports = {
     name: "aliases",
     description: "Get the bot commands along with the aliases (made by korabi20)!",

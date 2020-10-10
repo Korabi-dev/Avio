@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 const discord = require('discord.js')
-const bot = new discord.Client();
+
 const ms = require('ms')
 const os = require('os')
 const { utc } = require('moment')
@@ -12,7 +12,7 @@ module.exports = {
     name: "bot-info",
     aliases: ["bot info", "botinfo"],
     category: "bot",
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
         let users = client.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
         let botcreated = utc(client.user.createdAt).format('D MMMM YYYY')
         const uptimee = os.uptime();

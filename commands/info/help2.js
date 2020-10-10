@@ -7,7 +7,7 @@ module.exports = {
    category: "info",
    description: "get the commands",
   usage: "help",
-  run: async(client, message, args) => {
+  run: async(bot, message, args) => {
     
     let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
@@ -26,8 +26,7 @@ module.exports = {
           { name: `${newPrefix}help-fun`, value: `Sends you the fun commands!`, inline: true },
           { name: `${newPrefix}help-utility`, value: `Sends you the utility commands!`, inline: true },
           { name: `${newPrefix}help-nsfw`, value: `Sends you the nsfw commands!`, inline: true },
-          { name: `${newPrefix}help-music`, value: `Sends you the music commands!`, inline: true },
-       );
+            );
       
       message.channel.send(Embed);
 }}

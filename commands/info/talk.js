@@ -5,7 +5,7 @@ module.exports = {
     name: "t",
     aliases: ["talk", "speak", "s"],
     category: "extra",
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
     
           if(!args[0]){
 return message.channel.send(`Please provide some text!`)

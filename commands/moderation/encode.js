@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
     name: "encode",
     category: "extra",
-    run: async (client, message, args) => {
+    run: async(bot, message, args) => {
         const url = `https://some-random-api.ml/binary?text=${args.slice(0).join("%20")}`;
 
         let response, data;

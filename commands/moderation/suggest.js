@@ -6,7 +6,7 @@ module.exports = {
   usage: "suggest <message>",
   description: "Send your Suggestion",
   category: "main",
-  run: (client, message, args) => {
+  run: async(bot, message, args) => {
     
     if(!args.length) {
       return message.channel.send("Please Give the Suggestion")

@@ -7,7 +7,7 @@ module.exports = {
   category: "moderation",
   description: "pp",
   usage: "clearwarns <@user>",
-  run: (client, message, args) => {
+  run: async(bot, message, args) => {
     try {
 
  if(!message.member.hasPermission("KICK_MEMBERS")) {

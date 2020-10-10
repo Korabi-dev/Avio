@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js');
 module.exports = {
     name: "unban",
     category: "moderation",
-    run: async (client, message, args) => {
+    run: async(bot, message, args) => {
         if(!message.member.hasPermission("BAN_MEMBERS")) {
             return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
           }

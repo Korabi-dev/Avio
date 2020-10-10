@@ -2,7 +2,7 @@ const { MessageEmbed, Permissions } = require('discord.js');
 
 module.exports = {
     name: 'roleinfo',
-    run: async (client, message, args) => {
+    run: async(bot, message, args) => {
 
         try {
             const roleName = message.guild.roles.cache.find(r => (r.name === args.toString()) || (r.id === args.toString()))

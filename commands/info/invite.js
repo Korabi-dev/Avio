@@ -1,5 +1,5 @@
 const discord = require("discord.js");
-const client = new discord.Client();
+
 
 module.exports = {
   name: "invite",
@@ -7,8 +7,8 @@ module.exports = {
   category: "info",
   description: "invite link",
   usage: "invite",
-  run: (client, message, args) => {
-    let users = client.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
+  run: (bot, message, args) => {
+    let users = bot.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
 let embed9 = new discord.MessageEmbed()
       .setTitle("Invite Me")
       .setDescription(` Joined Servers: **${client.guilds.cache.size}** 

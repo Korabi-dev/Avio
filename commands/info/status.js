@@ -6,6 +6,6 @@ module.exports = {
   category: "info",
   description: "get the status",
   usage: "status",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
  message.channel.send('Bot status: Online :white_check_mark:!')
 }}

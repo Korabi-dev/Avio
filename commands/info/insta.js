@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 module.exports = {
     name: 'instagram',
     aliases: ['insta'],
-    run: async(message, args) => {
+    run: async(bot, message, args) => {
         const Name = args.join(' ');
         if(!Name){
             return message.channel.send('It would Help Me if You would mention a User Name...')
