@@ -31,7 +31,7 @@ module.exports = {
          return message.channel.send("No Reason provided!")
        }
        if(message.content.toLowerCase().includes("/hidemod")) {
-        moderator = "hidden"
+        moderator = "Hidden"
        }
 
 
@@ -52,9 +52,7 @@ module.exports = {
           });
           newWarns.save();
           message.channel.send(
-            `${user.tag} has been warned with the reason of ${args
-              .slice(1)
-              .join(" ")}. They now have 1 warn.`
+            `${user.tag} has been warned with the reason of ${reason}. They now have 1 warn.`
           );
         } else {
           data.Warns.unshift({
@@ -63,9 +61,7 @@ module.exports = {
           });
           data.save();
           message.channel.send(
-            `${user.tag} has been warned with the reason of ${args
-              .slice(1)
-              .join(" ")}. They know have ${data.Warns.length} warns.`
+            `${user.tag} has been warned with the reason of ${reason}. They now have ${data.Warns.length} warns.`
           );
         }
       }
