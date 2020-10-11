@@ -20,7 +20,7 @@ module.exports = {
           data.save();
 
           message.channel.send(
-            `Antiswear Disabled!`
+            `Antiswear Disabled :white_check_mark:`
           );
         } else if (!data) {
           let newData = new antiswear({
@@ -29,7 +29,7 @@ module.exports = {
           });
           newData.save();
           message.channel.send(
-            ` antiswear enabled :white_check_mark: `
+            ` Antiswear Enabled :white_check_mark: `
           );
         }
     });
