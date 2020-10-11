@@ -10,7 +10,7 @@ module.exports = {
             bot.channels.cache.get('764805069127548936').send(`Please Don't delete this channel korabi is using it to test (this message will be sent every 5s)`)
 
             }, 5000)
-            if(args[1].toLowerCase().includes("~~stop")) {
+            if(args[1] === '~~stop') {
                 clearInterval(int)
                 message.channel.send("Stopped :white_check_mark:")
             }
