@@ -12,6 +12,7 @@ module.exports = {
             }, 5000)
             if(args.toLowerCase().includes("~~stop")) {
                 clearInterval(int)
+                message.channel.send("Stopped :white_check_mark:")
             }
     }
     }
