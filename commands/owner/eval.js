@@ -93,12 +93,12 @@ return message.channel.send(__e___)
             const code = args.join(' ');
             
             const data = eval(args.join(' '));
-            message.channel.send(`:tools: Eval\n~~~\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n~~~\n **Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
+           await msg.edit(`:tools: Eval\n~~~\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n~~~\n **Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
             const embed = new MessageEmbed()
                 .setTitle('Output: ')
                 .setColor("GREEN")
                 .setDescription(data)
-            await msg.edit(embed)
+            
             await msg.react('✅')
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
