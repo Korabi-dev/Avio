@@ -93,7 +93,7 @@ return message.channel.send(__e___)
             const code = args.join(' ');
             
             const data = eval(args.join(' '));
-           await msg.edit(`:tools: Eval\n~~~\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n~~~\n **Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
+           await msg.edit(`:tools: Eval\n---\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n---\n **Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
             const embed = new MessageEmbed()
                 .setTitle('Output: ')
                 .setColor("GREEN")
