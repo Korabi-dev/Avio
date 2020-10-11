@@ -97,7 +97,7 @@ return message.channel.send(__e___)
                 .setTitle('Output: ')
                 .setColor("GREEN")
                 .setDescription(data)
-                await msg.edit(`:tools: Eval Sucess!\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
+                await msg.edit(`:tools: Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
             await msg.react('✅')
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
