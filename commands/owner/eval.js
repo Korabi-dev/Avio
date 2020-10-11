@@ -88,7 +88,7 @@ return message.channel.send(__e___)
         const embed = new MessageEmbed()
             .setTitle('Evaluating...')
             .setColor("GREEN")
-        const msg = await message.channel.send(embed);
+        const msg = await message.channel.send("Evaluating..");
         try {
             const code = args.join(' ');
             
