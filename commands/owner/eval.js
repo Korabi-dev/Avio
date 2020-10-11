@@ -115,16 +115,7 @@ return message.channel.send(__e___)
                     })
                 })
         } catch (e) {
-         const embed = new MessageEmbed()
-                .setTitle(`An Error has occured: 
-${e}     
-
-`
-
-)
-                .setColor("RED")
-            return await msg.edit(embed);
-
-        }
+        return await msg.edit(`:x: **Error:**\n---\n\`\`\`js\n${e}\n\`\`\``);
+}
     }
 }
