@@ -116,7 +116,7 @@ return message.channel.send(__e___)
                 })
         } catch (e) {
             const Input = args.join(' ')
-        return await msg.edit(`:x: **Error:** **Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n---\nError:\n\`\`\`js\n${e}\n\`\`\``);
+        return await msg.edit(`:x: **Error:**\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n---\nError:\n\`\`\`js\n${e}\n\`\`\``);
 }
     }
 }
