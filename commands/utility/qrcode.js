@@ -1,4 +1,5 @@
-const { MessageEmbed } = require('discord.js');
+const discord = require('discord.js');
+const request = require("request")
 
 module.exports = {
     name: "qrcode",
@@ -6,8 +7,14 @@ module.exports = {
     category: "utility",
     aliases: ["genqr", "qrgen"],
     run: async (bot, message, args) => { 
-        const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${args[0]}`
-    message.channel.send("Here Is Your QR Code:")
-    message.channel.send(url)
+        request({url: `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${args}`, encoding: null}, function(err, res, buffer) {
+
+ let wembed = new Discord.MessageEmbed()
+ .attachFiles([{ name: Image.png, attachment: buffer}])
+ .setImage('attachment://Image.png')
+ message.channel.send(wembed);
+});
     }
 }
+
+

@@ -25,6 +25,7 @@
     "ms": "^2.1.2",
     "node-fetch": "^2.6.1",
     "os": "^0.1.1",
+    "request": "^2.88.2",
     "salvage.db": "^1.2.4",
     "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^3.2.2",
