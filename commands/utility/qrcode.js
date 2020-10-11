@@ -1,4 +1,4 @@
-const discord = require('discord.js');
+const Discord = require('discord.js');
 const request = require("request")
 
 module.exports = {
