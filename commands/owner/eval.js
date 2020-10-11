@@ -105,10 +105,7 @@ return message.channel.send(__e___)
                 .then((collected) => {
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
-                            case '✅':
-                                msg.reactions.removeAll();
-                                break;
-                            case '❌':
+                             case '❌':
                                 msg.delete()
                                 break;
                         }
