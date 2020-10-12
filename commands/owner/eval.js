@@ -31,9 +31,7 @@ module.exports = {
             
             const code = args.join(' ');
             
-            (async () => {
-                const data = eval(code);
-            })();
+            const data = eval((async () => code)());
             
             await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
             await msg.react('❌')
