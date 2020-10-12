@@ -97,7 +97,7 @@ return message.channel.send(__e___)
                 .setTitle('Output: ')
                 .setColor("GREEN")
                 .setDescription(data)
-                await msg.edit(`:tools: Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
+                await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
@@ -112,7 +112,7 @@ return message.channel.send(__e___)
                 })
         } catch (e) {
             const Input = args.join(' ')
-        return await msg.edit(`:x: Eval Failed!\n\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n**Error:**\n\`\`\`js\n${e}\n\`\`\``);
+        return await msg.edit(`:x: | Eval Failed!\n\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n**Error:**\n\`\`\`js\n${e}\n\`\`\``);
 }
     }
 }
