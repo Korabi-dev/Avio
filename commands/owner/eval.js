@@ -45,7 +45,7 @@ return message.channel.send(__e___)
             await msg.react('❌')
             await msg.react('🔃')
             const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '🔃') && (user.id === message.author.id);
-            msg.awaitReactions(filter, { max: 9 })
+            msg.awaitReactions(filter)
                 .then((collected) => {
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
