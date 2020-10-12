@@ -72,10 +72,10 @@ bot.on("messageDelete", async (message) => {
   require("./events/guild/messageDelete")(message);
 });
 bot.on("messageReactionAdd", (reaction, user) => {
-  require("./events/guild/messageReactionAdd")(reaction, user);
+ return;
 });
 bot.on("messageReactionRemove", (reaction, user) => {
-  require("./events/guild/messageReactionRemove")(reaction, user);
+  return;
 });
 bot.on("guildCreate", (guild) => {
   if (guild.memberCount <= 4) return;
