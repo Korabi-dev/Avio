@@ -41,7 +41,7 @@ return message.channel.send(__e___)
             const code = args.join(' ');
            
             const data = eval(code);
-           await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
+           await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``)
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
