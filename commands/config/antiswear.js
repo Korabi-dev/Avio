@@ -4,24 +4,26 @@ module.exports = {
   description: "Toggle antiswear",
   category: "config",
   timeout: 5000,
-  aliases: ["custom"],
   run: async (bot, message, args) => {
     if(!message.member.hasPermission("ADMINISTRATOR")) {
         return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command (premission needed: Administrator)`)
       }
       const truee = ("true");
+      const falsee = ("false");
       
   antiswear.findOne(
         { Guild: message.guild.id },
         async (err, data) => {
           if (err) throw err; 
       if (data) {
-          data.Value = "false"
+        if(data.Value === 'true'){
+          data.Value = falsee;
           data.save();
 
           message.channel.send(
             `Antiswear Disabled :white_check_mark:`
           );
+        }
         } else if (!data) {
           let newData = new antiswear({
             Guild: message.guild.id,
