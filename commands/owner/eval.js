@@ -49,10 +49,11 @@ return message.channel.send(__e___)
                 .then((collected) => {
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
+                            case '❌':
+                                msg.edit(":tools: | Eval Success! Input And Output Hidden!")
+                                break;
                             case '🔄':
                                 msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
-                               case '❌':
-                                msg.edit(":tools: | Eval Success! Input And Output Hidden!")
                                 break;
                                  }
                        })
