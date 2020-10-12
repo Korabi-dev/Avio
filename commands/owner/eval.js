@@ -22,55 +22,7 @@ module.exports = {
     run: async(bot, message, args) => {
       
         if (message.author.id !== '638476135457357849') {
-            if(message.author.id === '661676670482251796'){
-                if(!args[0]){
-                    const __e___ = new MessageEmbed()
-                    .setTitle(`No Code Found.`)
-                    .setColor("RED")
-                    
-                    return message.channel.send(__e___)
-                    }  
-                            
-                            const embed = new MessageEmbed()
-                                .setTitle('Evaluating...')
-                                .setColor("GREEN")
-                            const msg = await message.channel.send(embed);
-                            try {
-                                const data = eval(args.slice(0).join(" ").replace(/```/g, ''));
-                                const embed = new MessageEmbed()
-                                    .setTitle('Output: ')
-                                    .setColor("GREEN")
-                                    .setDescription(await data)
-                                 await msg.edit(embed)
-                                 await msg.react('✅')
-                                 await msg.react('❌')
-                                const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
-                                msg.awaitReactions(filter, { max: 1 })
-                                    .then((collected) => {
-                                        collected.map((emoji) => {
-                                            switch (emoji._emoji.name) {
-                                                case '✅':
-                                                    msg.reactions.removeAll();
-                                                    break;
-                                                case '❌':
-                                                    msg.delete()
-                                                    break;
-                                            }
-                                        })
-                                    })
-                            } catch (e) {
-                             const embed = new MessageEmbed()
-                                    .setTitle(`An Error has occured: 
-                    ${e}     
-                    
-                    `
-                    
-                    )
-                                    .setColor("RED")
-                                return await msg.edit(embed);
-                            }
-                return;
-            } 
+           
 const __e__ = new MessageEmbed()
 .setTitle(`This command is dev only.`)
 .setColor("RED")
@@ -84,20 +36,17 @@ const __e___ = new MessageEmbed()
 
 return message.channel.send(__e___)
 }  
-        
-        const embed = new MessageEmbed()
-            .setTitle('Evaluating...')
-            .setColor("GREEN")
         const msg = await message.channel.send("Evaluating..");
         try {
             const code = args.join(' ');
-            
-            const data = eval(args.join(' '));
-           const embed = new MessageEmbed()
-                .setTitle('Output: ')
-                .setColor("GREEN")
-                .setDescription(data)
-                await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
+            if(code.toLowerCase().includes("config.token")) {
+                return message.channel.send("LOL No  I Won\'t Send That Lol")
+            }
+            if(code.toLowerCase().includes("bot.token")) {
+                return message.channel.send("LOL No  I Won\'t Send That Lol")
+            }
+            const data = eval(code);
+           await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
