@@ -44,8 +44,12 @@ return message.channel.send(__e___)
            await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``)
             await msg.react('❌')
             await msg.react('🔃')
-            msg.awaitReactions({ max: 100, errors: ['time'] })
+            const filter = (reaction, user) => {
+                return ['❌', '🔃'].includes(reaction.emoji.name) && user.id === message.author.id;
+            };
+            msg.awaitReactions(filter, { max: 100, errors: ['time'] })
             .then(collected => {
+              
                 const reaction = collected.first();
         
                 if (reaction.emoji.name === '❌') {
