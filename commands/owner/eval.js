@@ -50,7 +50,7 @@ return message.channel.send(__e___)
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
                             case '🔃':
-                                msg.edit(edit)
+                                msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
                                 break;
                             case '❌':
                                 msg.edit(":tools: | Eval Success! Code Hidden!")
