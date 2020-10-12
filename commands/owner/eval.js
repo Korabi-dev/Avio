@@ -41,26 +41,23 @@ return message.channel.send(__e___)
             const code = args.join(' ');
            
             const data = eval(code);
-           await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``)
+            let edit = await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
             await msg.react('❌')
             await msg.react('🔃')
-            const filter = (reaction, user) => {
-                return ['❌', '🔃'].includes(reaction.emoji.name) && user.id === message.author.id;
-            };
-            msg.awaitReactions(filter, { max: 100, errors: ['time'] })
-            .then(collected => {
-              
-                const reaction = collected.first();
-        
-                if (reaction.emoji.name === '❌') {
-                    msg.edit(":tools: | Eval Sucess! Code Hidden!")
-                } else if(reaction.emoji.name === '🔁') {
-                    msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``)
-                }
-            })
-            .catch(collected => {
-                return;
-            });
+            const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '✅') && (user.id === message.author.id);
+            msg.awaitReactions(filter, { max: 99 })
+                .then((collected) => {
+                    collected.map((emoji) => {
+                        switch (emoji._emoji.name) {
+                            case '🔃':
+                                msg.edit(edit)
+                                break;
+                            case '❌':
+                                msg.edit(":tools: | Eval Success! Code Hidden!")
+                                break;
+                        }
+                    })
+                })
         } catch (e) {
             const Input = args.join(' ')
         return await msg.edit(`:x: | Eval Failed!\n\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n**Error:**\n\`\`\`js\n${e}\n\`\`\``);
