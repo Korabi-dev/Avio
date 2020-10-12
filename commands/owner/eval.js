@@ -45,16 +45,17 @@ return message.channel.send(__e___)
             await msg.react('❌')
             await msg.react('🔄')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
-            msg.awaitReactions(filter, { max: 1 })
+            msg.awaitReactions(filter, { max: 99 })
                 .then((collected) => {
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
-                             case '❌':
-                                msg.edit(":tools: | Eval Success! Input And Output Hidden!")
-                                case '🔄':
+                            case '🔄':
                                 msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
                                break;
-                        }
+                             case '❌':
+                                msg.edit(":tools: | Eval Success! Input And Output Hidden!")
+                                break;
+                                 }
                        })
                 })
         } catch (e) {
