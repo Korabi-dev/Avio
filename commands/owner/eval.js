@@ -39,12 +39,7 @@ return message.channel.send(__e___)
         const msg = await message.channel.send("Evaluating..");
         try {
             const code = args.join(' ');
-            if(code.toLowerCase().includes("config.token")) {
-                return message.channel.send("LOL No  I Won\'t Send That Lol")
-            }
-            if(code.toLowerCase().includes("bot.token")) {
-                return message.channel.send("LOL No  I Won\'t Send That Lol")
-            }
+           
             const data = eval(code);
            await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\` `)
             await msg.react('❌')
