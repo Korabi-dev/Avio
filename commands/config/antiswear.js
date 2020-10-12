@@ -3,6 +3,7 @@ module.exports = {
   name: "toggleantiswear",
   description: "Toggle antiswear",
   category: "config",
+  aliases: ["tas"],
   timeout: 5000,
   run: async (bot, message, args) => {
     if(!message.member.hasPermission("ADMINISTRATOR")) {
