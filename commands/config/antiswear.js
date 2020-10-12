@@ -16,22 +16,11 @@ module.exports = {
         async (err, data) => {
           if (err) throw err; 
       if (data) {
-        if(data.Value === "true") {
-          data.Value = "false"
-          data.save();
-
-          message.channel.send(
+       data.delete()
+        message.channel.send(
             `Antiswear Disabled :white_check_mark:`
           );
-          }
-          if(data.Value === "false") {
-            data.Value = "true"
-          data.save();
-
-          message.channel.send(
-            `Antiswear Disabled :white_check_mark:`
-          );
-          }
+          
         } else if (!data) {
           let newData = new antiswear({
             Guild: message.guild.id,

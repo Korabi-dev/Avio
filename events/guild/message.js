@@ -21,14 +21,10 @@ module.exports = async (bot, message) => {
       async (err, data) => {
         if (err) throw err; 
     if (data) {
-      if(data.Value === 'true') {
-        message.delete()
+       message.delete()
         message.channel.send(`${message.author},swearing is not allowed in "${message.guild.name}"`)
-      }
-        if(data.Value === 'false') {
-          return;
-        }
-      } else if (!data) {
+      
+       } else if (!data) {
         return;
       }
   });
