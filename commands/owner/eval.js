@@ -31,7 +31,7 @@ module.exports = {
             
             const code = args.join(' ');
             
-            const data = await eval(`(async () => {
+            const data = eval(`(async () => {
                 ${code}
                 })();`);
             
