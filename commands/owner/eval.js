@@ -39,25 +39,16 @@ return message.channel.send(__e___)
         const msg = await message.channel.send("Evaluating..");
         try {
             const code = args.join(' ');
-            if(code.toLowerCase().includes("config.token")) {
-                return message.channel.send("LOL No  I Won\'t Send That Lol")
-            }
-            if(code.toLowerCase().includes("bot.token")) {
-                return message.channel.send("LOL No  I Won\'t Send That Lol")
-            }
+            
             const data = eval(code);
-            let edit = await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
+            await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
             await msg.react('❌')
-           
-            const filter = (reaction, user) => (reaction.emoji.name === '❌' || reaction.emoji.name === '🔃') && (user.id === message.author.id);
-            msg.awaitReactions(filter)
+            const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
+            msg.awaitReactions(filter, { max: 1 })
                 .then((collected) => {
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
-                            case '🔃':
-                                msg.delete()
-                                break;
-                            case '❌':
+                             case '❌':
                                 msg.delete()
                                 break;
                         }
