@@ -17,7 +17,7 @@ module.exports = {
           if (err) throw err; 
       if (data) {
         if(data.Value === 'true'){
-          data.Value = falsee;
+          data.Value = "false"
           data.save();
 
           message.channel.send(
