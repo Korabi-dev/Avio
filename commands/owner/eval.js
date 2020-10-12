@@ -92,7 +92,7 @@ return message.channel.send(__e___)
         try {
             const code = args.join(' ');
             
-            const data = eval(args.join(' '));
+            const data = await eval(args.join(' '));
            const embed = new MessageEmbed()
                 .setTitle('Output: ')
                 .setColor("GREEN")
