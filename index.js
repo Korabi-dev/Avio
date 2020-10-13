@@ -65,7 +65,7 @@ bot.on("message", async (message) => {
   message.member; //-- GuildMember based
   message.author; //-- User based
   blacklist.findOne(
-    { blacklistID: id },
+    { blacklistID: message.author.id },
     async (err, data) => {
       if (err) throw err; 
   if (data) {
