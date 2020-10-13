@@ -9,7 +9,7 @@ module.exports = {
     name: 'evaluate',
     aliases: ["eval2"],
     run: async (bot, message, args) => {
-if(message.author.id !== '638476135457357849') return;
+if(message.author.id !== '638476135457357849' || message.author.id !== '661676670482251796') return;
 try {
   const code = args.join(" ");
   let evaled = eval(code);
