@@ -18,6 +18,7 @@ bot.snipes = new Discord.Collection();
 bot.events = new Discord.Collection();
 bot.categories = fs.readdirSync("./commands/");
 const token = require(`./token.json`);
+const db = require(`./db.js`);
 const message = require("./events/guild/message");
 mongoose.connect(token.Mongo, {
   useUnifiedTopology: true,
@@ -64,6 +65,11 @@ bot.on("ready", () => {
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
   message.author; //-- User based
+
+   let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
+    ? await db.get(`Prefix_${message.guild.id}`)
+    : prefix;
+
   blacklist.findOne(
     { blacklistID: message.author.id },
     async (err, data) => {
