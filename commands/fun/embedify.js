@@ -2,6 +2,7 @@ const discord = require('discord.js')
 module.exports = {
     name: "embedify",
     description: "Get the bot to say what ever you want! embeded",
+    aliases: ["embed"],
     usage: "<msg>",
     run: async (bot, message, args) => {
       
