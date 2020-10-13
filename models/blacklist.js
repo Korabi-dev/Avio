@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 module.exports = model(
-  "antiswear",
+  "blacklist",
   new Schema({
     blacklistID: String,
     reason: String,
