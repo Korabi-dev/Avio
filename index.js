@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const config = require("./config.json");
 const prefix = config.prefix;
+const blacklist = require("./models/blacklist")
 const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
@@ -63,7 +64,20 @@ bot.on("ready", () => {
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
   message.author; //-- User based
-  require("./events/guild/message")(bot, message);
+  blacklist.findOne(
+    { blacklistID: id },
+    async (err, data) => {
+      if (err) throw err; 
+  if (data) {
+   const embed = new Discord.MessageEmbed()
+   .setTitle("Blacklisted!")
+   .setDescription(`Oops looks like you've been blacklisted from using avio for reason: ${data.reason}`)
+   .setColor("RED")
+   return message.channel.send(embed)
+      } else if (!data) {
+        require("./events/guild/message")(bot, message);
+    }
+});
 });
 bot.on("messageUpdate", async (oldMessage, newMessage) => {
   return;
