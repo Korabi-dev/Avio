@@ -8,7 +8,7 @@ module.exports = {
             return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`).then(m => m.delete({timeout: 5000}))
         }
         if(args[0]){
-            return message.channel.send("pleasegive me an amount.")
+            return message.channel.send("please give me an amount.")
         }
 
         if (isNaN(args[0][0])) {
