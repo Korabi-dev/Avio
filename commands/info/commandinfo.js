@@ -8,9 +8,9 @@ module.exports = {
         const command = bot.commands.get(args[0]);
         if(!args[0]) return message.channel.send(":x: | Please Provide a command name!")
         if(!command) return message.channel.send(`:x: | Could not find the command \"${args[0]}\"`)
-        const name = command.name;
-        const description = command.description;
-        const usage = command.usage;
+        let name = command.name;
+        let description = command.description;
+        let usage = command.usage;
        if(!description) {
            description = "No Destiption Found";
        }
@@ -20,5 +20,8 @@ module.exports = {
        const embed = new discord.MessageEmbed()
        .setTitle("Command Info!")
        .setDescription(`Command Name: ${name}\nCommand Description: ${description}\nCommand Usage: ${usage}`)
+       .setColor("BLUE")
+       .setTimestamp()
+       return message.channel.send(embed)
      }
     }
