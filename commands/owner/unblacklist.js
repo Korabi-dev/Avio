@@ -8,6 +8,7 @@ module.exports = {
    if(message.author.id !== '638476135457357849') return message.channel.send(":x: || This Command Is For My developer Only!")
    let target =   message.mentions.members.first() ||
    message.guild.members.cache.get(args[0]);
+   const id = target.user.id || args[0]
   
    if(!target) return message.channel.send(`:x: || Lol give me someone to unblacklist`);
       
