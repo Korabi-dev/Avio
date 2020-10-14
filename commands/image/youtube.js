@@ -4,7 +4,7 @@ module.exports = {
     name: 'youtubecomment',
     aliases: ["youtube", 'yt', "ytcomment"],
     run: async (bot, message, args) => {
-        let target =   message.mentions.members.first() || message.author;
+        let target =   message.mentions.members.first()
         let avatar = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
         if(target) {
             avatar = target.user.displayAvatarURL({ dynamic: false, format: 'png' });
