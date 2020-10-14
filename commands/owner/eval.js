@@ -34,7 +34,7 @@ module.exports = {
                 const evaled = eval(code)
                 return message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
             }
-            const data = eval(code)
+            const data = eval(code.replace('```', ' ').replace('js', ' '))
             
             await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
             await msg.react('❌')
