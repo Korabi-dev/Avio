@@ -22,12 +22,14 @@ module.exports = {
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .setFooter(`Note: run the command "${newPrefix}messagelogs-setup" to see the content of messages in this guild, if you want to undo it run the command "${newPrefix}messagelogs-delete"`)
         .addFields(
-          { name: `${newPrefix}help-moderation`, value: `Sends you the moderation commands!`, inline: true },
-          { name: `${newPrefix}help-info`, value: `Sends you the information commands!`, inline: true },
-          { name: `${newPrefix}help-fun`, value: `Sends you the fun commands!`, inline: true },
-          { name: `${newPrefix}help-utility`, value: `Sends you the utility commands!`, inline: true },
-          { name: `${newPrefix}help-nsfw`, value: `Sends you the nsfw commands!`, inline: true },
-            );
+          { name: `${newPrefix}help moderation`, value: `Sends you the moderation commands!`, inline: true },
+          { name: `${newPrefix}help info`, value: `Sends you the information commands!`, inline: true },
+          { name: `${newPrefix}help fun`, value: `Sends you the fun commands!`, inline: true },
+          { name: `${newPrefix}help utility`, value: `Sends you the utility commands!`, inline: true },
+          { name: `${newPrefix}help nsfw`, value: `Sends you the nsfw commands!`, inline: true },
+          { name: `${newPrefix}help image`, value: `Sends you the nsfw commands!`, inline: true },
+          
+       );
       
       message.channel.send(Embed);
         }
@@ -85,6 +87,17 @@ module.exports = {
           
          
           message.channel.send(`NSFW Commands Sent! :white_check_mark:`)
+          message.author.send(embednsfw)
+        }
+        if(args[0].toLowerCase().includes('image')) {
+          let embednsfw = new discord.MessageEmbed()
+          .setTitle("Commands: Images ")
+          .setDescription(`wasted,wanted,facepalm,jail,slap,shit,triggered,trash,beautiful`)
+          .setColor("GREEN")
+        
+          
+         
+          message.channel.send(`Image Commands Sent! :white_check_mark:`)
           message.author.send(embednsfw)
         }
 }

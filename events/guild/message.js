@@ -84,11 +84,12 @@ module.exports = async (bot, message) => {
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
         .setFooter(`Note: run the command "a!messagelogs-setup" to see the content of messages in this guild, if you want to undo it run the command "a!messagelogs-delete"`)
         .addFields(
-          { name: `${newPrefix}help-moderation`, value: `Sends you the moderation commands!`, inline: true },
-          { name: `${newPrefix}help-info`, value: `Sends you the information commands!`, inline: true },
-          { name: `${newPrefix}help-fun`, value: `Sends you the fun commands!`, inline: true },
-          { name: `${newPrefix}help-utility`, value: `Sends you the utility commands!`, inline: true },
-          { name: `${newPrefix}help-nsfw`, value: `Sends you the nsfw commands!`, inline: true },
+          { name: `${newPrefix}help moderation`, value: `Sends you the moderation commands!`, inline: true },
+          { name: `${newPrefix}help info`, value: `Sends you the information commands!`, inline: true },
+          { name: `${newPrefix}help fun`, value: `Sends you the fun commands!`, inline: true },
+          { name: `${newPrefix}help utility`, value: `Sends you the utility commands!`, inline: true },
+          { name: `${newPrefix}help nsfw`, value: `Sends you the nsfw commands!`, inline: true },
+          { name: `${newPrefix}help image`, value: `Sends you the nsfw commands!`, inline: true },
           
        );
       
