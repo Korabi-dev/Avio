@@ -92,7 +92,7 @@ module.exports = {
         if(args[0].toLowerCase().includes('image')) {
           let embednsfw = new discord.MessageEmbed()
           .setTitle("Commands: Images ")
-          .setDescription(`wasted,wanted,facepalm,jail,slap,shit,triggered,trash,beautiful`)
+          .setDescription(`wasted,wanted,facepalm,jail,slap,shit,triggered,trash,beautiful,blur,invert`)
           .setColor("GREEN")
         
           
