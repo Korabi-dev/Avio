@@ -36,7 +36,7 @@ module.exports = {
           .setTitle("Blacklisted!")
           .setDescription(`${target} (${target.user.tag}) has been blacklisted\nReason: ${reason2}\nID: ${id}`)
           .setTimestamp()
-          .setColor("GREEN")
+          .setColor("RED")
           return message.channel.send(newembed)
         }
     });
