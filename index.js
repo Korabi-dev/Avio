@@ -87,6 +87,7 @@ bot.on("message", async (message) => {
     }
 });
   }
+  
 });
 bot.on("messageUpdate", async (oldMessage, newMessage) => {
   return;
