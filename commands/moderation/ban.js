@@ -67,7 +67,8 @@ module.exports = {
       .setFooter(`Banned by ${message.author.username}`);
       
       message.channel.send(embed)
-
+      target.ban(reason)
+      target.ban(reason)
       
     
    

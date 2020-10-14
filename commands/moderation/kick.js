@@ -60,11 +60,13 @@ module.exports = {
   
   message.channel.send(embed)
     
-    target.kick(args[1]);
+    target.kick(args.silice(1).join(" "));
     
     target.send(`You were kicked in **${message.guild.name}** With reason: ${reason}`)
     
     console.log(`${message.author.username} just kicked ${target.username} with reason : ${reason}`)
+    target.kick(args.silice(1).join(" "));
+    target.kick(args.silice(1).join(" "));
     
   }
 }

@@ -30,6 +30,8 @@ module.exports = {
       var member = message.guild.roles.cache.find(x => x.name === "Member")
       
       user.roles.remove(muterole)
+      user.roles.remove(muterole)
+      user.roles.remove(muterole)
       user.roles.add(member)
       
       
