@@ -11,7 +11,7 @@ module.exports = {
     let users = bot.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
 let embed9 = new discord.MessageEmbed()
       .setTitle("Invite Me")
-      .setDescription(` Joined Servers: **${client.guilds.cache.size}** 
+      .setDescription(` Joined Servers: **${bot.guilds.cache.size}** 
       Bot Users: **${users}**
       `)
       .setURL(`https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847`)
