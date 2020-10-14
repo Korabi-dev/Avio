@@ -9,7 +9,7 @@ module.exports = {
         if(target) {
             avatar = target.user.displayAvatarURL({ dynamic: false, format: 'png' });
         }
-        let username = target.user.username;
+        let username = target.username;
         let comment = args.slice(1).join(" ")
         let dark = false;
         if(message.content.toLowerCase().includes("//dark")) {
