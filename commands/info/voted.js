@@ -4,7 +4,7 @@ const discord = require("discord.js");
 module.exports = {
     name: "hasvoted",
      category: "info",
-     description: "get the commands",
+     description: "this command is only for my owner sry.",
     usage: "help",
     run: (bot, message, args) => {
         const DBL = require("dblapi.js");

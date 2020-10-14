@@ -3,7 +3,7 @@ const { MessageEmbed, message } = require("discord.js");
 module.exports = {
   name: "ppmeter",
   aliases: ["pp"],
-  description: "There is a big chance I insult you!",
+  description: "This command is nsfw so i won\'t show any content of it.",
   category: "fun",
   run: async (bot, message, args) => {
       let responses = [

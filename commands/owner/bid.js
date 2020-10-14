@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports = {
     name: "bid",
      category: "info",
-     description: "get the commands",
+     description: null,
     usage: "help",
     run: async (client, message, args) => {
         if(message.guild.id !== '723679963282276384') return;

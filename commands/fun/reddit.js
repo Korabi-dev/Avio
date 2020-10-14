@@ -2,7 +2,7 @@ const { MessageEmbed } = require("discord.js");
 const api = require("imageapi.js");
 module.exports = {
   name: "reddit",
-  description: "Get a meme!",
+  description: "Get a random reddit post from the mentioned reddit!",
   category: "fun",
   run: async (bot, message, args) => {
     

@@ -19,6 +19,7 @@ const db = require("../../db")
 const canvacord = require("canvacord");
 module.exports = {
     name: 'eval',
+    description: "this command is dev only so i wont show any desription!",
     run: async(bot, message, args) => {
     if (message.author.id !== '638476135457357849') {
     return message.channel.send(":x: | This Command Is Restricted To My Developers Only.")

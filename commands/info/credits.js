@@ -4,7 +4,7 @@ module.exports = {
   name: "credits",
   aliases: ["botcredits"],
    category: "info",
-   description: "get the commands",
+   description: "get the credits",
   usage: "help",
   run: (bot, message, args) => {
    let embed = new discord.MessageEmbed()

@@ -5,7 +5,7 @@ module.exports = {
     name: "fact",
     aliases: ["randomfact"],
     description: "Get a random fact",
-    usage:"fact",
+    usage:"<fact>",
     category:"fun",
     aliases: null,
     run: async (client,message,args) =>{

@@ -4,7 +4,7 @@ const discord = require("discord.js")
 module.exports = {
     name: "vote",
      category: "info",
-     description: "get the commands",
+     description: "vot for the bot aka me :p on https://top.gg/",
     usage: "help",
     run: (bot, message, args) => {
      

@@ -2,7 +2,7 @@ const blacklist = require("../../models/blacklist");
 const discord = require("discord.js")
 module.exports = {
   name: "unblacklist",
-  description: "unBlacklist a user",
+  description: "unBlacklist a user (dev only)",
   category: "config",
   aliases: ["unbl"],
   run: async (bot, message, args) => {

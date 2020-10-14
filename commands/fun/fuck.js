@@ -4,6 +4,7 @@ const discord  = require("discord.js");
 module.exports = {
     name: "fuck",
     aliases: ["sex"],
+    description: "this command is nsfw and therefor i cant show content of it.",
     category: "moderation",
     run: async (client, message, args) => {
     

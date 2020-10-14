@@ -11,6 +11,7 @@ const { utc } = require('moment')
 module.exports = {
     name: "bot-info",
     aliases: ["bot info", "botinfo"],
+    description: "get some info about the bot aka me :p",
     category: "bot",
     run: async (bot, message, args) => {
         let users = client.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 

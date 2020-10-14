@@ -4,9 +4,9 @@ module.exports = {
   name: "ship",
   aliases: ["lovemeter", "howmuchdoilove"],
   category: "fun",
-  description: "measure your love!",
+  description: "measure your love with someone!",
   usage: "ship <@user>",
-  run: (client, message, args) => {
+  run: (bot, message, args) => {
 
 let target = message.mentions.members.first();
 

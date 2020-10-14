@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "leaveguild",
-  description: "A role utility command",
+  description: "leave a server with a guild id (dev only)",
   category: "utility",
   run: async (bot, message, args) => {
 

@@ -5,6 +5,7 @@ module.exports = {
     name: "t",
     aliases: ["talk", "speak", "s"],
     category: "extra",
+    desription: "Talk to me :p",
     run: async (bot, message, args) => {
     
           if(!args[0]){

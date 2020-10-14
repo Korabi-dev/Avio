@@ -5,7 +5,7 @@ module.exports = {
   name: "invite",
   aliases: ["servers", "servernumber", "guildsjoined", "guilds"],
   category: "info",
-  description: "invite link",
+  description: "get an invite link for the bot aka me :p",
   usage: "invite",
   run: (bot, message, args) => {
     let users = bot.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 

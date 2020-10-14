@@ -3,7 +3,7 @@ const request = require("request")
 
 module.exports = {
     name: "qrcode",
-    description: "A role utility command",
+    description: "generate a qr code!",
     category: "utility",
     aliases: ["genqr", "qrgen"],
     run: async (bot, message, args) => { 

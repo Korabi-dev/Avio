@@ -1,8 +1,9 @@
 const { MessageEmbed, Discord } = require("discord.js");
 module.exports = {
   name: "avatar",
-  description: "Get the bot to say what ever you want in a specific channel.",
-  usage: "<channel id> <msg>",
+  aliases: ["av"],
+  description: "Get the avatar of a user",
+  usage: "avatar [mention]",
   run: async (bot, message, args) => {
    
   

@@ -4,7 +4,7 @@ module.exports = {
   name: "howgay",
   aliases: ["gaymeter", "gayscore", "gay"],
   category: "fun",
-  description: "measure your love!",
+  description: "check the gay % of someone or you!",
   usage: "ship <@user>",
   run: (client, message, args) => {
     let target = message.mentions.members.first();

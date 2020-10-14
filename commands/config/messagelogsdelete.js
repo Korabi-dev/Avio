@@ -2,8 +2,8 @@ const discord = require("discord.js")
 
 module.exports = {
     name: "messagelogs-delete",
-    description: "There is a big chance I insult you!",
-    category: "fun",
+    description: "delete the messagelogs in this guild.",
+    category: "config",
     run: async (bot, message, args) => {
       try {
         if(!message.member.hasPermission("ADMINISTRATOR")) {

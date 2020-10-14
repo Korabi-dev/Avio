@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "pat",
-  description: "GIMME THAT SMUSHED HEAD OF YOURS",
+  description: "Pat Someone!",
   category: "fun",
   run: async (bot, message, args) => {
     let target = message.mentions.members.first();

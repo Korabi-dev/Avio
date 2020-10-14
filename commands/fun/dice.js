@@ -1,7 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "dice",
-  description: "There is a big chance I insult you!",
+  description: "Replies with a random number between 1-6.",
   category: "fun",
   run: async (bot, message, args) => {
    

@@ -4,8 +4,8 @@ const message = require("../../events/guild/message");
 
 module.exports = {
     name: "messagelogs-setup",
-    description: "There is a big chance I insult you!",
-    category: "fun",
+    description: "Setup the message-logs in this guild.",
+    category: "config",
     run: async (bot, message, args) => {
         try {
         if(!message.member.hasPermission("ADMINISTRATOR")) {
