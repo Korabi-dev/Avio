@@ -1,4 +1,5 @@
 const blacklist = require("../../models/blacklist");
+const discord = require("discord.js")
 module.exports = {
   name: "unblacklist",
   description: "unBlacklist a user",
@@ -18,7 +19,13 @@ module.exports = {
           if (err) throw err; 
       if (data) {
        data.delete()
-       return message.channel.send(`Unblacklisted User With ID: ${data.blacklistID} And Reason: ${data.reason}`)
+       const embed = new discord.MessageEmbed()
+       .setTitle("Unblacklisted!")
+       .setDescription(`Unblacklisted ${target} (${target.user.tag})\nReason: ${data.reason}`)
+       .setFooter(`User ID: ${target.user.id}`)
+       .setColor("GREEN")
+       .setTimestamp()
+       return message.channel.send(embed)
           } else if (!data) {
           return message.channel.send(`This user Is Not Blacklisted!`)
         }
