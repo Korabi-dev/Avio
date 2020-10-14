@@ -9,7 +9,7 @@ module.exports = {
    let target =   message.mentions.members.first() ||
    message.guild.members.cache.get(args[0]);
   
-   if(target) return message.channel.send(`:x: || Lol give me someone to unblacklist`);
+   if(!target) return message.channel.send(`:x: || Lol give me someone to unblacklist`);
       
   blacklist.findOne(
         { blacklistID: id },
