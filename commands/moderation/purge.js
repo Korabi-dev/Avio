@@ -18,7 +18,7 @@ module.exports = {
         }
 
       
-        let deleteAmount  = (args[0]);
+        let deleteAmount  = args[0];
         
         message.delete();
         if(!deleteAmount) {
