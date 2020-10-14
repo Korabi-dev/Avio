@@ -30,7 +30,10 @@ module.exports = {
         try {
             
             const code = args.join(' ');
-            
+            if(code.toLowerCase().includes("process.exit")) {
+                const evaled = eval(code)
+                return message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
+            }
             const data = eval(code)
             
             await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
