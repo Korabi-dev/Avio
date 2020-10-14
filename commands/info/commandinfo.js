@@ -6,7 +6,7 @@ module.exports = {
      description: "get the info for a command!",
      run: async (bot, message, args) => {
         const command = bot.commands.get(args[0]);
-        let aliases = bot.commands.get(bot.aliases.get(args[0]));
+        let aliases = command.aliases;
         if(!args[0]) return message.channel.send(":x: | Please Provide a command name!")
         if(!command) return message.channel.send(`:x: | Could not find the command \"${args[0]}\"`)
         let name = command.name;
