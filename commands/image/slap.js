@@ -5,7 +5,7 @@ module.exports = {
     run: async (bot, message, args) => {
         let target =   message.mentions.members.first();
         let avatar1 = message.author.displayAvatarURL({ dynamic: false, format: 'png' });
-        if(target) {
+        if(!target) {
            return message.channel.send(":x: || Please mention someone to slap")
         }
         let avatar2 = target.user.displayAvatarURL({ dynamic: false, format: 'png' });
