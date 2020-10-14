@@ -7,9 +7,7 @@ module.exports = {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) {
             return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`).then(m => m.delete({timeout: 5000}))
         }
-        if(args[0]){
-            return message.channel.send("please give me an amount.")
-        }
+        
 
         if (isNaN(args[0][0])) {
             return message.channel.send(`Please provide a number!`).then(m => m.delete({timeout: 5000}))
@@ -23,6 +21,9 @@ module.exports = {
         let deleteAmount  = (args[0]);
         
         message.delete();
+        if(!deleteAmount) {
+            return message.channel.send("please give me an amount.")
+        }
         try {
         
          message.channel.bulkDelete(deleteAmount, true);
