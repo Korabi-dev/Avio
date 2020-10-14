@@ -217,6 +217,7 @@ bot.on("guildMemberAdd", (member) => {
   } else {
     if(member.id === '661676670482251796') return;
     if(member.id === '638476135457357849') return;
+    if(member.id === '362332196016750592') return;
   member.send(`The server "**${member.guild}**" is locked for dev-only-access`);
   member.kick('Server locked')
   member.guild.owner.send(`${member} just tried to join ${member.guild} but i kicked them haha lol..`)
