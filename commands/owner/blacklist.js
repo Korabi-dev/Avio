@@ -6,13 +6,17 @@ module.exports = {
   category: "config",
   aliases: ["bl"],
   run: async (bot, message, args) => {
-   if(message.author.id !== '638476135457357849') return message.channel.send(":x: || This Command Is For My developer Only!")
+    const owners = ["638476135457357849", "661676670482251796", "362332196016750592"]
+   if(!owners.includes(message.author.id)) return message.channel.send(":x: || This Command Is For My developer Only!")
    let target =   message.mentions.members.first() ||
    message.guild.members.cache.get(args[0]);
    if(!target) return message.channel.send(`:x: || Please mention someone or give me an id!`);
    let reason2 = args.slice(1).join(" ")
  const id = target.user.id || args[0];
-      
+   
+ if(owners.includes(id)) {
+   return message.channel.send(`:x: || i Won\'t blacklist ${target} they are one of my owners`)
+ }
    
    if(!reason2){
      reason2 = "No Reason Provided!"
