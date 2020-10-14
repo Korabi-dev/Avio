@@ -65,7 +65,7 @@ bot.on("ready", () => {
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
   message.author; //-- User based
-
+  try {
    let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
     : prefix;
@@ -93,7 +93,11 @@ bot.on("message", async (message) => {
     }
 });
     }
+  } catch (e) {
+    return;
+  }
   });
+
 bot.on("messageUpdate", async (oldMessage, newMessage) => {
   return;
 });
