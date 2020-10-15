@@ -5,6 +5,7 @@ module.exports = {
      category: "info",
      description: "get the info for a command!",
      run: async (bot, message, args) => {
+         try {
         const command = bot.commands.get(args[0]);
         let aliases = command.aliases;
         if(!args[0]) return message.channel.send(":x: | Please Provide a command name!")
@@ -27,5 +28,8 @@ module.exports = {
        .setColor("BLUE")
        .setTimestamp()
        return message.channel.send(embed)
+    } catch (e) {
+        message.channel.send(`Oops an error occured please report this to the dev if it isn't already fixed! ${e}`)
+    }
      }
     }
