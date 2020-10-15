@@ -22,7 +22,9 @@ module.exports = {
        return message.channel.send(":x: Please mention someone!")
      }
 
-    blacklist.findOne(
+
+     try {
+     blacklist.findOne(
       { blacklistID: user.id },
       async (err, data) => {
         if (err) throw err; 
@@ -32,8 +34,17 @@ module.exports = {
        return;
       }
   });
- 
-
+} catch (e) {
+  blacklist.findOne(
+    { blacklistID: user.user.id },
+    async (err, data) => {
+      if (err) throw err; 
+  if (data) {
+    blacklistedd = "true";
+      } else if (!data) {
+     return;
+    }
+}
    
       
     let roles = [];
