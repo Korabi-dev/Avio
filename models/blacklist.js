@@ -4,5 +4,6 @@ module.exports = model(
   new Schema({
     blacklistID: String,
     reason: String,
+    moderator: String,
     })
 );

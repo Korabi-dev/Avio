@@ -37,6 +37,7 @@ module.exports = {
           let newData = new blacklist({
             blacklistID: id,
             reason: reason2,
+            moderator: message.author.tag,
           });
           newData.save();
           const newembed = new discord.MessageEmbed()
