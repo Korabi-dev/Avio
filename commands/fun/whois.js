@@ -11,9 +11,12 @@ module.exports = {
   run: async (client, message, args) => {
 
     let blacklistedd = "false";
-    
+    const id = message.guild.members.cache.find(args[0]);
+
+    let user = message.mentions.members.first() || id; 
+
     blacklist.findOne(
-      { blacklistID: id },
+      { blacklistID: user.id },
       async (err, data) => {
         if (err) throw err; 
     if (data) {
@@ -25,7 +28,7 @@ module.exports = {
  
 
    
-      let user = message.mentions.members.first(); 
+      
     let roles = [];
    
 
