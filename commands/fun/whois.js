@@ -14,16 +14,13 @@ module.exports = {
     
 
     let user = message.mentions.members.first();
-    if(!user){
-      user =  message.guild.members.cache.find(args[0]);
-    }
- 
+  
      if (!user) {
        return message.channel.send(":x: Please mention someone!")
      }
 
 
-     try {
+     
      blacklist.findOne(
       { blacklistID: user.id },
       async (err, data) => {
@@ -34,18 +31,7 @@ module.exports = {
        return;
       }
   });
-} catch (e) {
-  blacklist.findOne(
-    { blacklistID: user.user.id },
-    async (err, data) => {
-      if (err) throw err; 
-  if (data) {
-    blacklistedd = "true";
-      } else if (!data) {
-     return;
-    }
-})
-}
+
    
       
     let roles = [];
