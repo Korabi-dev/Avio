@@ -1,7 +1,7 @@
 const { black } = require("chalk");
 const { MessageEmbed } = require("discord.js")
 const moment = require("moment")
-const blacklist = require("../../models/blacklist")
+
 
 module.exports = {
   name: "userinfo",
@@ -20,18 +20,7 @@ module.exports = {
      }
 
 
-     
-     blacklist.findOne(
-      { blacklistID: user.id },
-      async (err, data) => {
-        if (err) throw err; 
-    if (data) {
-      blacklistedd = "true";
-        } else if (!data) {
-       return;
-      }
-  });
-
+    
    
       
     let roles = [];
@@ -97,7 +86,7 @@ module.exports = {
         .addField("roles:", roles )
         .addField("Common Information", `ID: \`${user.user.id}\`\nDiscriminator: ${user.user.discriminator}\nBot: ${user.user.bot}\nDeleted User: ${user.deleted}`)
         .addField("Badges", newbadges.join(", ").toLowerCase() || "None")
-        .addField("Blacklisted From Using Avio:", blacklistedd)
+        
         .setFooter(user.user.presence.status, stat[user.user.presence.status])
 
 
