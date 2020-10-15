@@ -25,7 +25,7 @@ module.exports = {
        data.delete()
        const embed = new discord.MessageEmbed()
        .setTitle("Unblacklisted!")
-       .setDescription(`Unblacklisted ${target} (${target.user.tag})\nReason: ${data.reason}`)
+       .setDescription(`Unblacklisted ${target} (${target.user.tag})\nPrevious Blacklist Reason: ${data.reason}`)
        .setFooter(`User ID: ${target.user.id}`)
        .setColor("GREEN")
        .setTimestamp()
