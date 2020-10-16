@@ -19,5 +19,9 @@ module.exports = (bot) => {
       }if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
     });
   });
-  console.log(table.toString());
+  const channel = bot.channels.cache.get('766600021784920115'); 
+  channel.messages.fetch('766600353151451168')
+  .then(message => message.edit(table.toString()))
+  .catch(console.error);
+ 
 };
