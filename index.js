@@ -60,6 +60,22 @@ If you believe there was an issue/error, please contact our Developers in our su
     return;
   }
 });
+bot.on("message", async message => {
+  let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
+    ? await db.get(`Prefix_${message.guild.id}`)
+    : prefix;
+    const args = message.content.slice(newPrefix.length).trim().split(/ +/g);
+    const cmd = args.shift().toLowerCase();
+  
+    if (cmd.length === 0) {
+      return;
+    }
+    let command = bot.commands.get(cmd);
+    if (!command) command = bot.commands.get(bot.aliases.get(cmd));
+    if(command) {
+ require("./globalfunctions")
+    }
+});
 bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });

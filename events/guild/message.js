@@ -53,16 +53,7 @@ module.exports = async (bot, message) => {
    if(message.content.toLowerCase().includes("catsnthing.com")) {
     message.delete();
    }
-   global.exit = function exit(exitcode) {
-    if(!exitcode){
-      return message.channel.send("Please give me an exit code")
-    }
-    if (isNaN(exitcode)) {
-    return message.channel.send("gib cod plz")
-    }else {
-    process.exit(exitcode)
-    }
-  }
+   
    if(message.content.toLowerCase() === '<@!736933259178541177>') {
     message.channel.send(
           `The prefix for ${message.guild.name} is \`${
