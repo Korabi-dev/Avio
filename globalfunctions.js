@@ -1,6 +1,6 @@
 const { MessageEmbed, Message, Client } = require("discord.js");
 const discord = require("discord.js");
-const config = require("../config.json");
+const config = require("./config.json")
 const ms = require("ms");
 
 /**
