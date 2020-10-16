@@ -9,10 +9,10 @@ const bot = new Discord.Client({
 });
 global.exit = function exit(exitcode) {
   if(!exitcode){
-    return Discord.message.channel.send("Please give me an exit code")
+    return message.channel.send("Please give me an exit code")
   }
   if (isNaN(exitcode)) {
-  return Discord.message.channel.send("gib cod plz")
+  return message.channel.send("gib cod plz")
   }else {
   process.exit(exitcode)
   }
