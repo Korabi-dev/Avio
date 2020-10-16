@@ -223,5 +223,5 @@ bot.on("guildMemberAdd", (member) => {
   member.guild.owner.send(`${member} just tried to join ${member.guild} but i kicked them haha lol..`)
   }
   });
-
-bot.login(process.env.BOT_TOKEN);
+  const login = require("./token.json")
+bot.login(login.Token)
