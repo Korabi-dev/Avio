@@ -4,6 +4,7 @@
   table.setHeading('Command', ' Load status');
 const { readdirSync } = require("fs");
 const { join } = require("path");
+
 module.exports = (bot) => {
  
 
@@ -19,8 +20,9 @@ module.exports = (bot) => {
       }if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
     });
   });
-  const channel = bot.channels.cache.get('766600021784920115'); 
-  console.log(channel)
+  
+  console.log(table.toString())
+  
   //channel.messages.cache.fetch('766600353151451168')
   //.then(message => message.edit(table.toString()))
   //.catch(console.error);
