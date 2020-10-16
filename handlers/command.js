@@ -10,9 +10,9 @@ module.exports = (bot) => {
   readdirSync("./commands/").map((dir) => {
     const commands = readdirSync(`./commands/${dir}/`).map((cmd) => {
       let pull = require(`../commands/${dir}/${cmd}`);
-      table.addRow(pull.name,'✅')
+       if (pull.name) {
+        table.addRow(pull.name,'✅')
       bot.commands.set(pull.name, pull);
-      if (pull.name) {
          }else {
         table.addRow(pull.name, `❌ -> Missing a Command.name or Command.name is not a string!`)
         
