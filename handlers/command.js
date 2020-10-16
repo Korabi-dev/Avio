@@ -20,9 +20,9 @@ module.exports = (bot) => {
     });
   });
   const channel = bot.channels.cache.get('766600021784920115'); 
-  const channel2 = bot.channels.cache.get('766600021784920115'); 
-  channel2.messages.fetch('766600353151451168')
-  .then(message => message.edit(table.toString()))
-  .catch(console.error);
+  channel.send(table.toString())
+  // channel2.messages.fetch('766600353151451168')
+  // .then(message => message.edit(table.toString()))
+  // .catch(console.error);
  
 };
