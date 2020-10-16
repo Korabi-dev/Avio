@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
+    "ascii-table": "0.0.9",
     "axios": "^0.20.0",
     "bad-words": "^3.0.3",
     "canvacord": "^5.0.7",
