@@ -7,7 +7,10 @@ const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
 });
-global.exit = function(exitcode) {
+global.exit = function exit(exitcode) {
+  if(!exitcode){
+    return message.channel.send("Please give me an exit code")
+  }
   if (isNaN(exitcode)) {
   return message.channel.send("gib cod plz")
   }else {
