@@ -7,16 +7,7 @@ const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
 });
-global.exit = function exit(exitcode) {
-  if(!exitcode){
-    return message.channel.send("Please give me an exit code")
-  }
-  if (isNaN(exitcode)) {
-  return message.channel.send("gib cod plz")
-  }else {
-  process.exit(exitcode)
-  }
-}
+
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h', { webhookPort: 8000, webhookAuth: 'Avio' }, bot);
 const Commands = new Discord.Collection()
