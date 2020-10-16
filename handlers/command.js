@@ -13,8 +13,10 @@ module.exports = (bot) => {
       table.addRow(pull.name,'✅')
       bot.commands.set(pull.name, pull);
       if (pull.aliases) {
-        if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
-      }
+         }else {
+        table.addRow(pull.name, `❌ -> Missing a Command.name or Command.name is not a string!`)
+        continue;
+      }if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
     });
   });
   console.log(table.toString());
