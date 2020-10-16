@@ -12,7 +12,7 @@ module.exports = (bot) => {
       let pull = require(`../commands/${dir}/${cmd}`);
       table.addRow(pull.name,'✅')
       bot.commands.set(pull.name, pull);
-      if (pull.aliases) {
+      if (pull.name) {
          }else {
         table.addRow(pull.name, `❌ -> Missing a Command.name or Command.name is not a string!`)
         
