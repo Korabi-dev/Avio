@@ -35,8 +35,18 @@ module.exports = {
                 return message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
             }
             const data = eval(code)
-            
-            await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${typeof(data)}\n\`\`\``);
+            let type = typeof data;
+            if(type === 'boolean'){
+                type = '[Boolean]'
+            }else if(type === 'bigint'){
+                type = "[Bigint]"
+            }else if(type === 'function') {type = '[Function]'} 
+            else if(type === 'number'){type = `[Number] => ${data.length} characters`}
+            else if(type === 'object'){type = '[Object]'}
+            else if(type === 'string'){type = `[String] => ${data.length} characters`}
+            else if(type === 'symbol'){type = '[Symbol]'}
+            else if(type === 'undefined'){type = '[Undefined]'}
+            await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
