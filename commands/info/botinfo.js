@@ -14,23 +14,23 @@ module.exports = {
     description: "get some info about the bot aka me :p",
     category: "bot",
     run: async (bot, message, args) => {
-        let users = client.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
-        let botcreated = utc(client.user.createdAt).format('D MMMM YYYY')
+        let users = bot.guilds.cache.reduce((q, b) => q + b.memberCount, 0); 
+        let botcreated = utc(bot.user.createdAt).format('D MMMM YYYY')
         const uptimee = os.uptime();
 
         const embed = new MessageEmbed()
-            .setThumbnail(client.user.displayAvatarURL())
+            .setThumbnail(bot.user.displayAvatarURL())
             .setTitle('Bot Stats')
             .setColor('#000000')
             .addFields(
                 {
                     name: '🌐 Servers',
-                    value: `Serving ${client.guilds.cache.size} servers.`,
+                    value: `Serving ${bot.guilds.cache.size} servers.`,
                     inline: true
                 },
                 {
                     name: '📺 Channels',
-                    value: `Serving ${client.channels.cache.size} channels.`,
+                    value: `Serving ${bot.channels.cache.size} channels.`,
                     inline: true
                 },
                 {
@@ -40,7 +40,7 @@ module.exports = {
                 },
                 {
                     name: '⏳ Ping',
-                    value: `${Math.round(client.ws.ping)}ms`,
+                    value: `${Math.round(bot.ws.ping)}ms`,
                     inline: true
                 },
                 {
