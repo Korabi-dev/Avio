@@ -31,7 +31,7 @@ module.exports = async (bot, message) => {
         
     }
     global.mc = message.channel;
-    global.botActivity = function botActivity(type, content, url){
+    global.setActivity = function setActivity(type, content, url){
       if(url){
         if(type.toLowerCase().includes("Streaming")){
           if(!content) throw new Error("No content specified in the fuction syntax: botActivity(type, content, url[optional])")
