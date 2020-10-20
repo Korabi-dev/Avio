@@ -6,7 +6,7 @@ module.exports = {
      description: "Owner Only",
     usage: "Onwer only",
     run: async (bot, message, args) => {
-
+        if(message.author.id !== '638476135457357849')return ctx("No thanks!")
         let type = args[0]
         let content = args[1]
         let url = args[2]
