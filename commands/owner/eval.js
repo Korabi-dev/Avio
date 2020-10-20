@@ -17,6 +17,10 @@ const nodefetch = require("node-fetch")
 const os = require("os")
 const db = require("../../db")
 const canvacord = require("canvacord");
+const hastebin = require("hastebin-gen");
+ 
+
+
 module.exports = {
     name: 'eval',
     description: "this command is dev only so i wont show any desription!",
@@ -34,7 +38,7 @@ module.exports = {
                 const evaled = eval(code)
                 return message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
             }
-            const data = eval(code)
+            let data = eval(code)
             let type = typeof data;
             if(type === 'boolean'){
                 type = '[Boolean]'
@@ -46,6 +50,7 @@ module.exports = {
             else if(type === 'string'){type = `[String] => ${data.length} characters`}
             else if(type === 'symbol'){type = '[Symbol]'}
             else if(type === 'undefined'){type = '[Undefined]'}
+            
             await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
@@ -61,6 +66,15 @@ module.exports = {
                        })
                 })
         } catch (e) {
+            if(e == "content: Must be 2000 or fewer in length") {
+                hastebin(data, { extension: "txt" }).then(haste => {
+                   (async() => {await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n Output was over 2000 characters heres a bin:${haste}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``)})
+                }).catch(error => {
+                   
+                    console.error(error);
+                });
+
+            }
             const Input = args.join(' ')
          await msg.edit(`:x: | Eval Failed!\n\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n**Error:**\n\`\`\`js\n${e}\n\`\`\``);
          return msg.reactions.removeAll()
