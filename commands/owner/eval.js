@@ -50,6 +50,9 @@ module.exports = {
             else if(type === 'string'){type = `[String] => ${data.length} characters`}
             else if(type === 'symbol'){type = '[Symbol]'}
             else if(type === 'undefined'){type = '[Undefined]'}
+            hastebin(data, { extension: "txt" }).then(haste => {
+                code = `Hey Looks like the outpu it over 2000 charachters heres a hastebin link to it:\n${haste}`
+             });
             
             await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
             await msg.react('❌')
@@ -66,15 +69,6 @@ module.exports = {
                        })
                 })
         } catch (e) {
-            if(e == "content: Must be 2000 or fewer in length") {
-                hastebin(data, { extension: "txt" }).then(haste => {
-                   (async() => {await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n Output was over 2000 characters heres a bin:${haste}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``)})
-                }).catch(error => {
-                   
-                    console.error(error);
-                });
-
-            }
             const Input = args.join(' ')
          await msg.edit(`:x: | Eval Failed!\n\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n**Error:**\n\`\`\`js\n${e}\n\`\`\``);
          return msg.reactions.removeAll()
