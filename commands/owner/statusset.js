@@ -5,11 +5,11 @@ module.exports = {
      category: "owner",
      description: "Owner Only",
     usage: "Onwer only",
-    run: async (client, message, args) => {
+    run: async (bot, message, args) => {
 
         let type = args[0]
-        let content = args[2]
-        let url = args[3]
+        let content = args[1]
+        let url = args[2]
         if(!type){
             return ctx(":x: || Please Provide The Type Of Status to set!")
         }
