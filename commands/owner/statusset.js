@@ -57,6 +57,7 @@ module.exports = {
                             
                         })
                 }).catch(() => {
+                    console.error(err)
                     ctx(':x: || Command timed out!')
             });
        
