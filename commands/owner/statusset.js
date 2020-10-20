@@ -53,14 +53,12 @@ module.exports = {
                                        .setColor("GREEN")
                                        .setTimestamp()
                                        return msg.edit(emb4)
-                            }
+                                      }
                             
                         })
                 }).catch(() => {
                     ctx(':x: || Command timed out!')
             });
-        bot.user.setActivity(content, {
-            type: type,
-            });
+       
     }
 }
