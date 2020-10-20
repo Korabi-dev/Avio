@@ -31,5 +31,24 @@ module.exports = async (bot, message) => {
         
     }
     global.mc = message.channel;
+    global.botActivity = function botActivity(type, content, url){
+      if(url){
+        if(type.toLowerCase().includes("Streaming")){
+          if(!content) throw new Error("No content specified in the fuction syntax: botActivity(type, content, url[optional])")
+         bot.user.setActivity(content, {
+          type: "STREAMING",
+          url: url
+         });
+         return 'Bot Activity set!'
+        } else if(!url){
+          if(!content) throw new Error("No content specified in the fuction syntax: botActivity(type, content, url[optional])")
+          if(!type) throw new Error("No type specified in the fuction syntax: botActivity(type, content, url[optional])")
+          bot.user.setActivity(content, {
+            type: type,
+            });
+            return 'Bot Activity set!'
+        }
+      }
+    }
 
 }
