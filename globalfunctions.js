@@ -22,7 +22,7 @@ module.exports = async (bot, message) => {
 
     global.ctx = function ctx(msg) {
         if(!msg){
-          return message.channel.send(":x: | No Message Found in the ctx function.")
+           throw new Error(":x: | No Message Found in the ctx function.")
         }else {
             message.channel.send(msg)
         }
