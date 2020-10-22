@@ -9,12 +9,9 @@ module.exports = {
   run: (bot, message, args) => {
    let embed = new discord.MessageEmbed()
     .setTitle("Credits!")
-    .setDescription(`Hey ${message.author.username} this bot is brought to you by
-  **Korabi20- Owner & Developer**
-  **glitch!- Owner**
-`)
+    .setDescription(`Hey ${message.author.username} this bot is brought to you by\n**Korabi20- Owner & Developer**`)
     .setColor("RANDOM")
-    .setFooter(`If you need any help dm them!`)
+    .setFooter(`If you need any help just use a!support`)
     
    
     
