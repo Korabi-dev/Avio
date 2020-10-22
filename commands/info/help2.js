@@ -20,7 +20,7 @@ module.exports = {
         )
         .setColor(`RED`)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setFooter(`Note: run the command "${newPrefix}messagelogs-setup" to see the content of messages in this guild, if you want to undo it run the command "${newPrefix}messagelogs-delete"`)
+        .setFooter(`To get info about a specific command use ${newPrefix}help <commandname>`)
         .addFields(
           { name: `${newPrefix}help moderation`, value: `Sends you the moderation commands!`, inline: true },
           { name: `${newPrefix}help info`, value: `Sends you the information commands!`, inline: true },
@@ -100,5 +100,28 @@ module.exports = {
           message.channel.send(`Image Commands Sent! :white_check_mark:`)
           message.author.send(embednsfw)
         }
+        
+        
+        const command = bot.commands.get(args[0]);
+        if(!command) return message.channel.send(`:x: | Could not find the command/category \"${args[0]}\"`)
+        let name = command.name;
+        let description = command.description;
+        let aliases = command.aliases;
+        let usage = command.usage;
+        if(!aliases){
+            aliases = "No Aliases Found!";
+        }
+       if(!description) {
+           description = "No Destiption Found";
+       }
+       if(!usage) {
+           usage = "No usage Found!";
+       }
+       const embed = new discord.MessageEmbed()
+       .setTitle("Command Info!")
+       .setDescription(`Command Name: ${name}\nCommand Aliases: ${aliases}\nCommand Description: ${description}\nCommand Usage: ${usage}`)
+       .setColor("BLUE")
+       .setTimestamp()
+       return message.channel.send(embed)
 }
 }

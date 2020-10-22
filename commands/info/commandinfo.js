@@ -1,7 +1,5 @@
 const discord = require("discord.js")
 module.exports = {
-    name: "commandinfo",
-    aliases: ["cmdinfo"],
      category: "info",
      description: "get the info for a command!",
      run: async (bot, message, args) => {
