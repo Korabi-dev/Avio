@@ -142,10 +142,11 @@ guild.owner.send(botaddedembed)
 bot.on("ready", () => {
   let avioup = new Discord.MessageEmbed()
   .setTitle('Avio just started')
-  .setFooter('Started by Korabi20')
   .setTimestamp()
   .setColor("RANDOM")
-  bot.channels.cache.get('741229874307530752').send(avioup)
+  let guild = bot.guilds.cache.get("754088915673153689")
+  let me = guild.members.cache.get("638476135457357849")
+  me.send(avioup)
 });
 dbl.webhook.on('vote', async vote => {
   let votedEmbed = new Discord.MessageEmbed()
