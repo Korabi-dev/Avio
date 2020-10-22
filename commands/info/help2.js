@@ -103,7 +103,7 @@ module.exports = {
         
         
         const command = bot.commands.get(args[0]);
-        if(!command) return message.channel.send(`:x: | Could not find the command/category \"${args[0]}\"`)
+        if(!command && !args[0].toLowerCase().includes('nsfw') && !args[0].toLowerCase().includes('image') && !args[0].toLowerCase().includes('utility') && !args[0].toLowerCase().includes('fun') && !args[0].toLowerCase().includes('info') && !args[0].toLowerCase().includes('moderation')) return message.channel.send(`:x: | Could not find the command/category \"${args[0]}\"`)
         let name = command.name;
         let description = command.description;
         let aliases = command.aliases;
