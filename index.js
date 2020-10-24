@@ -174,7 +174,7 @@ bot.on("message", (message) =>{
   .setDescription(`Content : "${message.content}" Channel: <#${message.channel.id}>`)
   .setColor("RANDOM")
  channel.send(embed)
-  } catch (e) {
+  } catch (er) {
     return;
   }
 });
