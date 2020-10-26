@@ -47,7 +47,7 @@ If you believe there was an issue/error, please contact our Developers in our su
     
     `)
     .setColor("RED")
-    guild.owner.send(messageembednooob)
+    guild.owner.send(messageembednooob) 
       let aviobye = new Discord.MessageEmbed()
       .setTitle('I just left a fake/alt server')
       .setDescription(`Server Name: "**${guild}**" Owner: ${owner} (id: ${owner.id})`)
