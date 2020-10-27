@@ -45,7 +45,7 @@ module.exports = {
             }else if(type === 'bigint'){
                 type = "[Bigint]"
             }else if(type === 'function') {type = '[Function]'} 
-            else if(type === 'number'){type = `[Number] => ${data.length} characters`}
+            else if(type === 'number'){type = `[Number]`}
             else if(type === 'object'){type = '[Object]'}
             else if(type === 'string'){type = `[String] => ${data.length} characters`}
             else if(type === 'symbol'){type = '[Symbol]'}

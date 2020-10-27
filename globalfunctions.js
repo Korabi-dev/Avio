@@ -31,4 +31,5 @@ module.exports = async (bot, message) => {
         
     }
     global.mc = message.channel;
+    global.author = message.author;
     }
