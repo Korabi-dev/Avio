@@ -26,8 +26,7 @@ module.exports = {
           { name: `${newPrefix}help info`, value: `Sends you the information commands!`, inline: true },
           { name: `${newPrefix}help fun`, value: `Sends you the fun commands!`, inline: true },
           { name: `${newPrefix}help utility`, value: `Sends you the utility commands!`, inline: true },
-          { name: `${newPrefix}help nsfw`, value: `Sends you the nsfw commands!`, inline: true },
-          { name: `${newPrefix}help image`, value: `Sends you the nsfw commands!`, inline: true },
+          { name: `${newPrefix}help image`, value: `Sends you the image commands!`, inline: true },
           
        );
       
@@ -78,17 +77,7 @@ module.exports = {
     message.channel.send(`Utility Commands Sent! :white_check_mark:`)
     message.author.send(embedut)
         }
-        if(args[0].toLowerCase().includes('nsfw')) {
-          let embednsfw = new discord.MessageEmbed()
-          .setTitle("Commands: NSFW")
-          .setDescription(`Fuck,pp.`)
-          .setColor("GREEN")
         
-          
-         
-          message.channel.send(`NSFW Commands Sent! :white_check_mark:`)
-          message.author.send(embednsfw)
-        }
         if(args[0].toLowerCase().includes('image')) {
           let embednsfw = new discord.MessageEmbed()
           .setTitle("Commands: Images ")
@@ -103,7 +92,7 @@ module.exports = {
         
         
         const command = bot.commands.get(args[0]);
-        if(!command && !args[0].toLowerCase().includes('nsfw') && !args[0].toLowerCase().includes('image') && !args[0].toLowerCase().includes('utility') && !args[0].toLowerCase().includes('fun') && !args[0].toLowerCase().includes('info') && !args[0].toLowerCase().includes('moderation')) return message.channel.send(`:x: | Could not find the command/category \"${args[0]}\"`)
+        if(!command && !args[0].toLowerCase().includes('image') && !args[0].toLowerCase().includes('utility') && !args[0].toLowerCase().includes('fun') && !args[0].toLowerCase().includes('info') && !args[0].toLowerCase().includes('moderation')) return message.channel.send(`:x: | Could not find the command/category \"${args[0]}\"`)
         let name = command.name;
         let description = command.description;
         let aliases = command.aliases;

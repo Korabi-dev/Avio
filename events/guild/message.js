@@ -89,8 +89,7 @@ module.exports = async (bot, message) => {
           { name: `${newPrefix}help info`, value: `Sends you the information commands!`, inline: true },
           { name: `${newPrefix}help fun`, value: `Sends you the fun commands!`, inline: true },
           { name: `${newPrefix}help utility`, value: `Sends you the utility commands!`, inline: true },
-          { name: `${newPrefix}help nsfw`, value: `Sends you the nsfw commands!`, inline: true },
-          { name: `${newPrefix}help image`, value: `Sends you the nsfw commands!`, inline: true },
+          { name: `${newPrefix}help image`, value: `Sends you the image commands!`, inline: true },
           
        );
       
