@@ -28,38 +28,6 @@ mongoose.connect(token.Mongo, {
 ["command", "server"].forEach((handler) => {
   require(`./handlers/${handler}`)(bot);
 });
-bot.on("guildCreate", (guild) => {
-  if(guild.id === '754088915673153689') { 
-    return;
-  }
-  try{
-  if (guild.memberCount <= 4) {
-    let owner = guild.owner;
-    if(owner.id === '638476135457357849') return;
-    let messageembednooob = new Discord.MessageEmbed()
-    .setDescription(`
-    Hey there, in our Security Script we've detected your server "${guild}" to be a Fake Server.
-
-Q: What is defined as a fake server?
-A: A server created for the sole purpose of having bots for rewards, etc, with no real intention to add any other humans.
-
-If you believe there was an issue/error, please contact our Developers in our support server:  https://discord.gg/fpsZvz8
-    
-    `)
-    .setColor("RED")
-    guild.owner.send(messageembednooob) 
-      let aviobye = new Discord.MessageEmbed()
-      .setTitle('I just left a fake/alt server')
-      .setDescription(`Server Name: "**${guild}**" Owner: ${owner} (id: ${owner.id})`)
-      .setFooter(`People stop inviting me to fake servers you know i will just leave DUH`)
-      .setColor("RANDOM")
-       bot.channels.cache.get('752610879966675006').send(aviobye)
-       return guild.leave();
-       }
-  } catch (e) {
-    return;
-  }
-});
 bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });
