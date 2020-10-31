@@ -15,7 +15,7 @@ module.exports = (bot) => {
         table.addRow(pull.name,'✅')
       bot.commands.set(pull.name, pull);
          }else {
-        table.addRow(pull.name, `❌ -> Missing a Command.name or Command.name is not a string!`)
+        table.addRow(pull, `❌ -> Missing a Command.name or Command.name is not a string!`)
         
       }if (pull.aliases && Array.isArray(pull.aliases)) pull.aliases.forEach(alias => bot.aliases.set(alias, pull.name));
     });

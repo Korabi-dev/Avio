@@ -107,7 +107,9 @@ Korabi20#0001 Owner & Developer.
 .setColor("GREEN")
 guild.owner.send(botaddedembed)
 });
-
+dbl.on("error", () => {
+  return;
+})
 dbl.webhook.on('vote', async vote => {
   let votedEmbed = new Discord.MessageEmbed()
   .setTitle('Vote Here!')
