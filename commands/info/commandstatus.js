@@ -10,9 +10,14 @@ module.exports = {
     description: "Get the stats of my commands",
     usage: "<cmdstatus>",
     run: async (bot, message, args) => {
-        const embed = new DiscordAPIError.MessageEmbed()
+        
         var command = bot.commands.map(c => table.addRow(c.name,'Working! ✅'))
         const haste = new hastebin({})
-        const link = haste.post(table.toString()).then(async(link) => {ctx("Here Is The Command Status"+ " " + link)});
+        const link = haste.post(table.toString()).then(async(link) => {
+            const embed = new discord.MessageEmbed().setTitle("Commands status!")
+            .setDescription(`See The commands Status [Here](${link})`)
+            .setColor("RANDOM")
+            ctx(embed)
+        });
     }
 }
