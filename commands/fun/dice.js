@@ -15,6 +15,7 @@ module.exports = {
       ];
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
+        if(typeof response === 'undefined'){response = 1;}
       let Embed = new MessageEmbed()
         .setTitle(`Dice`)
         .setDescription(`You rolled the number : ${response}`)
