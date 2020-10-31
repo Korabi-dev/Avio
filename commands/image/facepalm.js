@@ -11,5 +11,7 @@ module.exports = {
         let image = await canvacord.Canvas.facepalm(avatar);
         let attachment = new discord.MessageAttachment(image, "triggered.gif");
         return message.channel.send(attachment);
+    
+        message.delete()
     }
 }

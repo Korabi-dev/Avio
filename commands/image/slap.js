@@ -12,5 +12,6 @@ module.exports = {
         let image = await canvacord.Canvas.slap(avatar1, avatar2);
         let attachment = new discord.MessageAttachment(image, "slap.gif");
         return message.channel.send(attachment);
+        message.delete()
     }
 }
