@@ -6,8 +6,7 @@ const ms = require("ms");
 const db = require("../../db");
 const custom = require("../../models/custom");
 const antiswear = require("../../models/antiswear")
-const Filter = require('bad-words');
-const filter = new Filter({ placeHolder: '#'});
+
 /**
  * @param {Client} bot
  * @param {Message} message
@@ -15,20 +14,7 @@ const filter = new Filter({ placeHolder: '#'});
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
-  if(filter.isProfane(message.content)) {
-    antiswear.findOne(
-      { Guild: message.guild.id },
-      async (err, data) => {
-        if (err) throw err; 
-    if (data) {
-       message.delete()
-        message.channel.send(`${message.author},swearing is not allowed in "${message.guild.name}"`)
-      
-       } else if (!data) {
-        return;
-      }
-  });
-  }
+ 
   if(message.content.toLowerCase().includes("grabify.link")) {
     message.delete();
    }

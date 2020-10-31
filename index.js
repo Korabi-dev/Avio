@@ -7,7 +7,9 @@ const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
 });
-
+const antiswear = require("./models/antiswear")
+const Filter = require("bad-words")
+const filter = new Filter();
 const DBL = require("dblapi.js");
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjczNjkzMzI1OTE3ODU0MTE3NyIsImJvdCI6dHJ1ZSwiaWF0IjoxNTk5NDIzNzM3fQ.5jgKuau0whq5mY93LsijpQO8eu2h', { webhookPort: 8000, webhookAuth: 'Avio' }, bot);
 const Commands = new Discord.Collection()
@@ -34,6 +36,20 @@ bot.on("ready", () => {
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
   message.author; //-- User based
+  if(filter.isProfane(message.content)) {
+    antiswear.findOne(
+      { Guild: message.guild.id },
+      async (err, data) => {
+        if (err) throw err; 
+    if (data) {
+       message.delete()
+        message.channel.send(`${message.author},swearing is not allowed in "${message.guild.name}"`)
+      
+       } else if (!data) {
+        return;
+      }
+  });
+  }
   try {
    let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
