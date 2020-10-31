@@ -84,8 +84,22 @@ bot.on("message", async (message) => {
   }
   });
 
-bot.on("messageUpdate", async (oldMessage, newMessage) => {
-  return;
+bot.on("messageUpdate", async (message2, message) => {
+  if(message.author.id === message2.guild.ownerID) return;
+  if(filter.isProfane(message.content) || filter.isProfane(message2.content) ) {
+    antiswear.findOne(
+      { Guild: message.guild.id },
+      async (err, data) => {
+        if (err) throw err; 
+    if (data) {
+       message.delete()
+        message.channel.send(`${message.author},swearing is not allowed in "${message.guild.name}"`)
+      
+       } else if (!data) {
+        return;
+      }
+  });
+  }
 });
 bot.on("messageDelete", async (message) => {
   require("./events/guild/messageDelete")(message);
