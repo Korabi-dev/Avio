@@ -32,29 +32,29 @@ module.exports = {
       
       message.channel.send(Embed);
         }
-        if(args[0].toLowerCase().includes('moderation'))  {
+        if(args[0].toLowerCase() === 'moderation')  {
           let embedmod = new discord.MessageEmbed()
     .setTitle("Commands: Moderation")
     .setDescription(` report,warn,mute,kick,warns,ban,unban,clearwarnings(clearwarns).`)
     .setColor("RED")
-    .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
+   
     
    
     message.channel.send(`Moderation Commands Sent! :white_check_mark:`)
     message.author.send(embedmod)
         }
-        if(args[0].toLowerCase().includes('info')) {
+        if(args[0].toLowerCase() ==='info') {
           let embedinf = new discord.MessageEmbed()
     .setTitle("Commands: Info")
     .setDescription(` prefix,snipe,oldest,ping,findalt,emoji,support,invite,membercount,servers,docs,fact,covid.`)
     .setColor("#ff2050")
-    .setFooter(`Made by Korabi20#8725 and owned by glitch!#3950`);
+    
     
    
     message.channel.send(`Info Commands Sent! :white_check_mark:`)
     message.author.send(embedinf)
         }
-        if(args[0].toLowerCase().includes('fun')) {
+        if(args[0].toLowerCase() === 'fun') {
           let embedfn = new discord.MessageEmbed()
           .setTitle("Commands: Fun")
           .setDescription(` 8ball,meme,poll,reddit,say,kill,hug,kiss,pat,ship,av,dice,howgay,talk,triggered.`)
@@ -66,7 +66,7 @@ module.exports = {
           message.author.send(embedfn)
 
         }
-        if(args[0].toLowerCase().includes('utility')) {
+        if(args[0].toLowerCase() === 'utility') {
           let embedut = new discord.MessageEmbed()
     .setTitle("Commands: Utility")
     .setDescription(` Prefix,whois,giveaway,poll,suggest,snipe,oldest,ping,findalt,report,emoji,timer,invite,slowmode,embedify,membercount,nuke,encode,decode,roles(create/delete).`)
@@ -78,7 +78,7 @@ module.exports = {
     message.author.send(embedut)
         }
         
-        if(args[0].toLowerCase().includes('image')) {
+        if(args[0].toLowerCase() === 'image') {
           let embednsfw = new discord.MessageEmbed()
           .setTitle("Commands: Images ")
           .setDescription(`wasted,wanted,facepalm,jail,slap,shit,triggered,trash,beautiful,blur,invert`)
