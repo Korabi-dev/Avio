@@ -8,7 +8,7 @@ module.exports = {
    description: "get the commands",
   usage: "help",
   run: async(bot, message, args) => {
-    
+    try {
     let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
     : config.prefix;
@@ -112,5 +112,8 @@ module.exports = {
        .setColor("BLUE")
        .setTimestamp()
        return message.channel.send(embed)
+      } catch (e){
+        return;
+      }
 }
 }
