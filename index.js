@@ -107,15 +107,7 @@ Korabi20#0001 Owner & Developer.
 .setColor("GREEN")
 guild.owner.send(botaddedembed)
 });
-bot.on("ready", () => {
-  let avioup = new Discord.MessageEmbed()
-  .setTitle('Avio just started')
-  .setTimestamp()
-  .setColor("RANDOM")
-  let guild = bot.guilds.cache.get("754088915673153689")
-  let me = guild.members.cache.get("638476135457357849")
-  me.send(avioup)
-});
+
 dbl.webhook.on('vote', async vote => {
   let votedEmbed = new Discord.MessageEmbed()
   .setTitle('Vote Here!')
@@ -145,15 +137,6 @@ bot.on("message", (message) =>{
   } catch (er) {
     return;
   }
-});
-dbl.on('posted', () => {
-  console.log('Server count posted!');
-})
-dbl.on('error', e => {
- console.log(`Oops! ${e}`);
-})
-dbl.isWeekend().then(weekend => {
-  if (weekend) console.log("Woo! Multiplier time BITCH!")
 });
 bot.on('message', message => {
 	if (message.content === 'avio_fake_vote') {
