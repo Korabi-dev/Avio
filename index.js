@@ -19,6 +19,7 @@ bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 bot.snipes = new Discord.Collection();
 bot.events = new Discord.Collection();
+bot.owners = ["638476135457357849", "661676670482251796"]
 bot.categories = fs.readdirSync("./commands/");
 const token = require(`./token.json`);
 const db = require(`./db.js`);
@@ -85,7 +86,7 @@ bot.on("message", async (message) => {
   });
 
 bot.on("messageUpdate", async (message2, message) => {
-  if(message.author.id === message2.guild.ownerID) return;
+  if(message.author.id === message2.guild.ownerID)  return;
   if(filter.isProfane(message.content) || filter.isProfane(message2.content) ) {
     antiswear.findOne(
       { Guild: message.guild.id },
