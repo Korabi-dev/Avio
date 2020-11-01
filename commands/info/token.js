@@ -23,8 +23,8 @@ module.exports = {
         }
         const embed = new MessageEmbed()
         .setTitle("Token Recived!")
-        .setDescription(`${data.token}`)
-        .setFooter("this token was randomly generated and is not valid. check out the api used [here](https://some-random-api.ml/bottoken)")
+        .setDescription(`${data.token}\ncheck out the api used [here](https://some-random-api.ml/bottoken)`)
+        .setFooter("this token was randomly generated and is not valid.")
         .setTimestamp()
         .setColor("RED")
         return await ctx(embed)
