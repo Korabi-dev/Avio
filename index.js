@@ -36,6 +36,8 @@ bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });
 bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.content.toLowerCase().includes("https://discord.gg/") || message.content.toLowerCase().includes("http://discord.gg/") ) {
   antilink.findOne(
     { Guild: message.guild.id },
     async (err, data) => {
@@ -48,6 +50,7 @@ bot.on("message", async message => {
       return;
     }
 });
+  }
 })
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
