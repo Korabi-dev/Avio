@@ -69,7 +69,7 @@ module.exports = {
         if(args[0].toLowerCase() === 'utility') {
           let embedut = new discord.MessageEmbed()
     .setTitle("Commands: Utility")
-    .setDescription(` Prefix,whois,giveaway,poll,suggest,snipe,oldest,ping,findalt,report,emoji,timer,invite,slowmode,embedify,membercount,nuke,encode,decode,roles(create/delete).`)
+    .setDescription(` Prefix,whois,giveaway,poll,suggest,snipe,oldest,ping,findalt,report,emoji,timer,invite,slowmode,embedify,membercount,nuke,encode,decode,roles(create/delete),toggleantiswear,toggleantilink.`)
     .setColor("ORANGE")
     
     
