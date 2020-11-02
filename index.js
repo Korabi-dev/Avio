@@ -37,7 +37,7 @@ bot.on("ready", () => {
 });
 bot.on("message", async message => {
   if(message.author.bot) return;
-  if(message.content.toLowerCase().includes("https://discord.gg/") || message.content.toLowerCase().includes("http://discord.gg/") ) {
+  if(message.content.toLowerCase().includes("https://discord.gg/") || message.content.toLowerCase().includes("http://discord.gg/") || message.content.toLowerCase().includes("discord.gg/")) {
   antilink.findOne(
     { Guild: message.guild.id },
     async (err, data) => {
