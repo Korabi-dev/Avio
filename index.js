@@ -44,9 +44,8 @@ bot.on("message", async message => {
       if (err) throw err; 
   if (data) {
      message.delete()
-      message.channel.send(`${message.author},links are not allowed here!`)
-    
-     } else if (!data) {
+      message.channel.send(`${message.author},Invite links are not allowed here!`)
+    } else if (!data) {
       return;
     }
 });
