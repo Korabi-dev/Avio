@@ -7,6 +7,7 @@ const bot = new Discord.Client({
   disableMentions: "everyone",
   partials: ["REACTION"],
 });
+const antilink = require("./models/antilink")
 const antiswear = require("./models/antiswear")
 const Filter = require("bad-words")
 const filter = new Filter();
@@ -34,6 +35,20 @@ mongoose.connect(token.Mongo, {
 bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });
+bot.on("message", async message => {
+  antilink.findOne(
+    { Guild: message.guild.id },
+    async (err, data) => {
+      if (err) throw err; 
+  if (data) {
+     message.delete()
+      message.channel.send(`${message.author},links are not allowed here!`)
+    
+     } else if (!data) {
+      return;
+    }
+});
+})
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
   message.author; //-- User based

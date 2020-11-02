@@ -1,10 +1,10 @@
-const antiswear = require("../../models/antiswear");
+const antiswear = require("../../models/antilink");
 module.exports = {
-  name: "toggleantiswear",
-  description: "Toggle antiswear",
+  name: "toggleantiinvite",
+  description: "Toggle antiinvite",
   usage: "<command>",
   category: "config",
-  aliases: ["tas"],
+  aliases: ["tai"],
   timeout: 5000,
   run: async (bot, message, args) => {
     if(!message.member.hasPermission("ADMINISTRATOR")) {
@@ -19,17 +19,16 @@ module.exports = {
       if (data) {
        data.delete()
         message.channel.send(
-            `Antiswear Disabled :white_check_mark:`
+            `AntiInvite Disabled :white_check_mark:`
           );
           
         } else if (!data) {
           let newData = new antiswear({
             Guild: message.guild.id,
-            Value: "true",
-          });
+            });
           newData.save();
           message.channel.send(
-            ` Antiswear Enabled :white_check_mark: `
+            ` AntiInvite Enabled :white_check_mark: `
           );
         }
     });
