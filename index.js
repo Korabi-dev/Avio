@@ -36,6 +36,9 @@ bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });
 bot.on("message", async message => {
+  if (message.member.hasPermission("ADMINISTRATOR") || message.member.hasPermission("BAN_MEMBERS")) {
+    return;
+  }
   if(message.author.bot) return;
   if(message.content.toLowerCase().includes("https://discord.gg/") || message.content.toLowerCase().includes("http://discord.gg/") || message.content.toLowerCase().includes("discord.gg/")) {
   antilink.findOne(
