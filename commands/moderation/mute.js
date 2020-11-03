@@ -65,7 +65,7 @@ module.exports = {
       return message.channel.send("Given User is already muted")
     }
     
-    console.log('r')
+    
     user.roles.add(muterole);
     user.roles.cache.map(r => user.roles.remove(r));
     user.roles.add(muterole);
