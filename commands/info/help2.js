@@ -12,11 +12,25 @@ module.exports = {
     let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
     : config.prefix;
-    if(!args[0]) {
+    if(!args[0]){
+      let emb = new discord.MessageEmbed()
+      .setTitle("Help!")
+      .setDescription(`\`${newPrefix}help categories\` - sends info about the command categories.\n\`${newPrefix}help commands\` - sends all the commands.\n\`${newPrefix}help <command>\` - get info about a specific command.`)
+      .setColor("RANDOM")
+      return ctx(emb)
+    }
+    if(args[0].toLowerCase() === 'commands'){
+      let emb2 = new discord.MessageEmbed()
+      .setTitle("Commands!")
+      .setDescription("**Moderation**\n`warn`, `mute`, `kick`, `warns`, `ban`, `unban`, `clearwarnings`\n**Info**\n`prefix`, `findalt`, `support`, `invite`, `membercount`, `servers`, `docs`, `fact`, `covid`\n**Fun**\n`8ball`, `meme`, `reddit`, `say`, `kill`, `hug`, `kiss`, `pat`, ship`, `av`, `dice`, `howgay`, `talk`, `triggered`\n**Utility**\n`whois`, `giveaway`, `poll`, `suggest`, `snipe`, `oldest`, `findalt`, `report`, `emoji`, `timer`, `invite`, `slowmode`, `embedify`, `membercount`, `nuke`, `encode`, `decode`, `roles(create/delete)`, `toggleantiswear`, `toggleantilink`\n**Image**\n`wasted`, `wanted`, `facepalm`, `jail`, `slap`, `shit`, `triggered`, `trash`, `beautiful`, `blur`, `invert`\n\nThanks for using me you can invite me [here](https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847)")
+      .setColor("RANDOM")
+      return ctx(emb2)
+    }
+    if(args[0].toLowerCase() === 'categories') {
  let Embed = new discord.MessageEmbed()
         .setTitle(`Help`)
         .setDescription(
-          `Hey **${message.author.username}** Here are the help commands `
+          `Hey **${message.author.username}** Here are the help categories `
         )
         .setColor(`RED`)
         .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
@@ -30,7 +44,7 @@ module.exports = {
           
        );
       
-      message.channel.send(Embed);
+     return message.channel.send(Embed);
         }
         if(args[0].toLowerCase() === 'moderation')  {
           let embedmod = new discord.MessageEmbed()
