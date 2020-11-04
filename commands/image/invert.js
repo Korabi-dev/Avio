@@ -9,7 +9,7 @@ module.exports = {
             avatar = target.user.displayAvatarURL({ dynamic: false, format: 'png' });
         }
         let image = await canvacord.Canvas.invert(avatar);
-        let attachment = new discord.MessageAttachment(image, "triggered.gif");
+        let attachment = new discord.MessageAttachment(image, "triggered.png");
         return message.channel.send(attachment);
         message.delete()
     }
