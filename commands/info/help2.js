@@ -22,16 +22,13 @@ module.exports = {
     if(args[0].toLowerCase() === 'commands'){
       let emb2 = new discord.MessageEmbed()
       .setTitle("Commands!")
-      .setDescription("**Moderation**\n`warn`, `mute`, `kick`, `warns`, `ban`, `unban`, `clearwarnings`\n\n**Info**\n`prefix`, `findalt`, `support`, `invite`, `membercount`, `servers`, `docs`, `fact`, `covid`\n\n**Fun**\n`8ball`, `meme`, `reddit`, `say`, `kill`, `hug`, `kiss`, `pat`, `ship`, `av`, `dice`, `howgay`, `talk`, `triggered`\n\n**Utility**\n`whois`, `giveaway`, `poll`, `suggest`, `snipe`, `oldest`, `findalt`, `report`, `emoji`, `timer`, `invite`, `slowmode`, `embedify`, `membercount`, `nuke`, `encode`, `decode`, `roles(create/delete)`, `toggleantiswear`, `toggleantilink`\n\n**Image**\n`wasted`, `wanted`, `facepalm`, `jail`, `slap`, `shit`, `triggered`, `trash`, `beautiful`, `blur`, `invert`\n\nThanks for using me you can invite me [here](https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847)")
+      .setDescription("**Moderation**\n`warn`, `mute`, `kick`, `warns`, `ban`, `unban`, `clearwarnings`\n\n**Info**\n`prefix`, `findalt`, `support`, `invite`, `membercount`, `servers`, `docs`, `fact`, `covid`\n\n**Fun**\n`8ball`, `meme`, `reddit`, `say`, `kill`, `hug`, `kiss`, `pat`, `ship`, `av`, `token`, `dice`, `howgay`, `talk`, `triggered`\n\n**Utility**\n`whois`, `giveaway`, `poll`, `suggest`, `snipe`, `oldest`, `findalt`, `report`, `emoji`, `timer`, `invite`, `slowmode`, `embedify`, `membercount`, `nuke`, `encode`, `decode`, `roles(create/delete)`, `toggleantiswear`, `toggleantilink`\n\n**Image**\n`wasted`, `wanted`, `facepalm`, `jail`, `slap`, `shit`, `triggered`, `trash`, `beautiful`, `blur`, `invert`\n\nThanks for using me you can invite me [here](https://discord.com/oauth2/authorize?client_id=736933259178541177&scope=bot&permissions=2146958847)")
       .setColor("RANDOM")
       return ctx(emb2)
     }
     
         
         let command = bot.commands.get(args[0]);
-        if(!command){
-          command = bot.aliases.get(args[0])
-        }
         if(!command) return message.channel.send(`:x: | Could not find the command \"${args[0]}\".`)
         let name = command.name;
         let description = command.description;
