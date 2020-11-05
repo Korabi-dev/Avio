@@ -2,7 +2,7 @@ const discord = require('discord.js')
 
 module.exports = {
   name: "nuke",
-  description: "Get a meme!",
+  description: "Delete all the messages in a channel (deletes the channel and makes a new one)",
   category: "fun",
   run: async (bot, message, args) => {
     

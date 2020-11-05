@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 module.exports = {
   name: "mute",
-  description: "Mute anyone who break rules",
+  description: "Mute anyone who breaks rules",
   category: "moderation",
   usage: "mute <@mention> <reason>",
   run: async(bot, message, args) => {
