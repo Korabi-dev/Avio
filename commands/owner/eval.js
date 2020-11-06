@@ -30,13 +30,14 @@ module.exports = {
     if(!args[0]){
     return message.channel.send(":x: | No Code Found.")
     }  
-        const msg = await message.channel.send("Eval initiating....");
+        const msg = await message.channel.send("** **");
         try {
             
             const code = args.join(' ');
             if(code.toLowerCase().includes("process.exit")) {
+                 message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
                 const evaled = eval(code)
-                return message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
+               return;
             }
             let data = eval(code)
             let type = typeof data;
@@ -56,6 +57,7 @@ module.exports = {
             .setColor("BLUE")
            .setDescription(`📥 **Input:**\n \`\`\`js\n ${code}\n\`\`\`\n📤 **Output:**\n \`\`\`js\n ${data}\n\`\`\`\n📃 **Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
             await msg.edit(embbedd)
+            
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
@@ -100,6 +102,7 @@ module.exports = {
                        })
                 })
         } catch(e) {
+            
         const Input = args.join(' ')
         const haste = new hastebin({})
         let embbedddd = new discord.MessageEmbed()
