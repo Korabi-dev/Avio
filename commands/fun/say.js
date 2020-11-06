@@ -4,7 +4,7 @@ module.exports = {
   usage: "<message>",
   run: async (bot, message, args) => {
     if (!message.member.permissions.has("MANAGE_MESSAGES")) return ctx("You do not have enough permissions to use this command.");
-    let MSG = args.slice(1).join(" ");
+    let MSG = args.slice(0).join(" ");
     if (!MSG) return message.channel.send(`You did not specify the message to send!`);
     if(bot.owners.includes(message.author.id)){
       message.channel.send(MSG);
