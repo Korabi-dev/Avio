@@ -30,7 +30,7 @@ module.exports = {
     if(!args[0]){
     return message.channel.send(":x: | No Code Found.")
     }  
-        const msg = await message.channel.send("Evaluating..");
+        const msg = await message.channel.send("** **");
         try {
             
             const code = args.join(' ');
@@ -103,7 +103,7 @@ module.exports = {
         const Input = args.join(' ')
         const haste = new hastebin({})
         let embbedddd = new discord.MessageEmbed()
-        .setTitle(":tools: | Eval Sucess!")
+        .setTitle(":x: | Eval Failed!")
         .setColor("BLUE")
       .setDescription(`📥 **Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n❌ **Error:**\n\`\`\`js\n${e}\n\`\`\``);
      await msg.edit(embbedddd)
