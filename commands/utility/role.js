@@ -14,8 +14,11 @@ module.exports = {
         try {
 
              const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-             const roleName = message.guild.roles.cache.find(r => (r.name === args[1].toString()) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
-          
+             const roleName = message.guild.roles.cache.find(r => (r.name.includes(args[1].toLowerCase())) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
+             
+if(roleName.size > 1){
+    return ctx(`Looks like there are ${roleName.size} roles that countain "${args[1]} in their name please either specify the full name of the role or use an id.`)
+}
           let embed = new MessageEmbed()
                  .setTitle(`Role Name: ${roleName.name}`)
                  .setDescription(`${message.author} has successfully removed the role ${roleName} from ${member.user}`)
