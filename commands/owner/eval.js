@@ -30,7 +30,8 @@ module.exports = {
     if(!args[0]){
     return message.channel.send(":x: | No Code Found.")
     }  
-        const msg = await message.channel.send("** **");
+    const emb = new discord.MessageEmbed().setTitle("Initializing Evaluation.").setColor("BLUE")
+        const msg = await message.channel.send(emb);
         try {
             
             const code = args.join(' ');
