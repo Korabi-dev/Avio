@@ -51,8 +51,11 @@ module.exports = {
             else if(type === 'symbol'){type = '[Symbol]'}
             else if(type === 'undefined'){type = '[Undefined]'}
             
-            
-            await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n ${code}\n\`\`\`\n**Output:**\n \`\`\`js\n ${data}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
+            let embbedd = new discord.MessageEmbed()
+            .setTitle(":tools: | Eval Sucess!")
+            .setColor("BLUE")
+           .setDescription(`📥 **Input:**\n \`\`\`js\n ${code}\n\`\`\`\n📤 **Output:**\n \`\`\`js\n ${data}\n\`\`\`\n📃 **Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
+            await msg.edit(embbedd)
             await msg.react('❌')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
@@ -60,7 +63,8 @@ module.exports = {
                     collected.map((emoji) => {
                         switch (emoji._emoji.name) {
                             case '❌':
-                                msg.edit(":tools: | Eval Success! Input And Output Hidden!")
+                                const embe = new discord.MessageEmbed().setDescription(":tools: | Eval Success! Input And Output Hidden!").setColor("BLUE")
+                                msg.edit(embe)
                                 msg.reactions.removeAll()
                                 break;
                                  }
@@ -98,9 +102,12 @@ module.exports = {
         } catch(e) {
         const Input = args.join(' ')
         const haste = new hastebin({})
-            
-     await msg.edit(`:x: | Eval Failed!\n\n**Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n**Error:**\n\`\`\`js\n${e}\n\`\`\``);
-     return msg.reactions.removeAll()
+        let embbedddd = new discord.MessageEmbed()
+        .setTitle(":tools: | Eval Sucess!")
+        .setColor("BLUE")
+      .setDescription(`📥 **Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n❌ **Error:**\n\`\`\`js\n${e}\n\`\`\``);
+     await msg.edit(embbedddd)
+      return msg.reactions.removeAll()
         
         }
             }
