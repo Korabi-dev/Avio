@@ -30,7 +30,7 @@ module.exports = {
     if(!args[0]){
     return message.channel.send(":x: | No Code Found.")
     }  
-        const msg = await message.channel.send("** **");
+        const msg = await message.channel.send("Eval initiating....");
         try {
             
             const code = args.join(' ');
