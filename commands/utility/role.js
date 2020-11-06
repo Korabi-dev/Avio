@@ -14,7 +14,7 @@ module.exports = {
         try {
 
              const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-             const roleName = message.guild.roles.cache.find(r => (r.name.includes(args[1].toLowerCase())) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
+             const roleName = message.guild.roles.cache.find(r => (r.name.toLowerCase().includes(args[1].toLowerCase())) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
              
 if(roleName.size > 1){
     return ctx(`Looks like there are ${roleName.size} roles that countain "${args[1]} in their name please either specify the full name of the role or use an id.`)
