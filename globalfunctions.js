@@ -40,17 +40,19 @@ module.exports = async (bot, message) => {
                 if(typeof content !== 'string'){
                     throw new TypeError("content must be a string.")
                 }
-                if(typeof url !== 'string'){
-                    throw new TypeError("url must be a string.")
-                }
+                
                 if(type.toLowerCase() === 'streaming'){
                      if(!url){
                         throw new TypeError("please provide a url as the type is streaming.")
                     }else if(url){
+                        if(typeof url !== 'string'){
+                            throw new TypeError("url must be a string.")
+                        }else {
                         bot.user.setActivity(content, {
                             type: "STREAMING",
                             url: url
                         })
+                    }
                     }
                     
                 }else{
