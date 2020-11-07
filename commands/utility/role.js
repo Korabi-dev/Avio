@@ -9,13 +9,12 @@ module.exports = {
 
        
 
-        if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<username or user id> <role name or role id>").then(m => m.delete({ timeout: 5000 }))
+        if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<mention id or user tag> <role name or role id>").then(m => m.delete({ timeout: 5000 }))
 
         try {
 
-             const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-             const roleName = message.guild.roles.cache.find(r => r.name.toLowerCase().startsWith(args[1].toLowerCase()) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
-             
+             const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(m => (m.tag === args[0]));
+             const roleName = message.guild.roles.cache.find(r => (r.name.toLowerCase().startsWith(args[1].toLowerCase())) || (r.id === args[1].toString().replace(/[^\w\s]/gi, ''))) || message.mentions.roles.first();
 if(roleName.size > 1){
     return ctx(`Looks like there are ${roleName.size} roles that countain "${args[1]} in their name please either specify the full name of the role or use an id.`)
 }
