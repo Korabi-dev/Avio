@@ -74,38 +74,7 @@ module.exports = {
                        })
                 })
         } catch (e) {
-            try {
-            let data = eval(args.join(' '))
-            let type = typeof data;
-            if(type === 'boolean'){
-                type = '[Boolean]'
-            }else if(type === 'bigint'){
-                type = "[Bigint]"
-            }else if(type === 'function') {type = '[Function]'} 
-            else if(type === 'number'){type = `[Number] => ${data.length} characters`}
-            else if(type === 'object'){type = '[Object]'}
-            else if(type === 'string'){type = `[String] => ${data.length} characters`}
-            else if(type === 'symbol'){type = '[Symbol]'}
-            else if(type === 'undefined'){type = '[Undefined]'}
-                const haste = new hastebin({})
-            const link = haste.post(data).then(async(link) => {await msg.edit(`:tools: | Eval Sucess!\n\n**Input:**\n \`\`\`js\n${args.join(' ')}\n\`\`\`\n**Output:**\n \`\`\`js\nHey Looks Like Output was over discordApi Limit heres a hastebin link instead: ${link}\n\`\`\`\n**Output Type:**\n\`\`\`js\n${type}\n\`\`\``);});
-            await msg.react('❌')
-            const filter2 = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
-            msg.awaitReactions(filter2, { max: 1 })
-                .then((collected) => {
-                    collected.map((emoji) => {
-                        switch (emoji._emoji.name) {
-                            case '❌':
-                                msg.edit(":tools: | Eval Success! Input And Output Hidden!")
-                                msg.reactions.removeAll()
-                                break;
-                                 }
-                       })
-                })
-        } catch(e) {
-            
-        const Input = args.join(' ')
-        const haste = new hastebin({})
+            const Input = args.join(' ')
         let embbedddd = new discord.MessageEmbed()
         .setTitle(":x: | Eval Failed!")
         .setColor("BLUE")
@@ -113,7 +82,7 @@ module.exports = {
      await msg.edit(embbedddd)
       return msg.reactions.removeAll()
         
-        }
+        
             }
     }
 }

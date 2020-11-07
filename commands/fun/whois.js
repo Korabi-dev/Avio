@@ -8,7 +8,7 @@ module.exports = {
   aliases: ["whois", "user"],
   usage: "userinfo <MENTION>",
   description: "Get advance stats of given person or yourself",
-  run: async (client, message, args) => {
+  run: async (bot, message, args) => {
 
     let blacklistedd = "false";
     

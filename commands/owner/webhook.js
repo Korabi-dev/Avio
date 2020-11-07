@@ -3,6 +3,7 @@ const discord = require("discord.js")
 
 module.exports = {
     name: "hooktest",
+    owneronly: true,
     category: "owner",
     run: async (bot, message, args) => {
         

@@ -14,6 +14,9 @@ const antiswear = require("../../models/antiswear")
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
+  if(!message.guild && !bot.owners.includes(message.author.id)) {
+   return;
+  }
  
   if(message.content.toLowerCase().includes("grabify.link")) {
     message.delete();
@@ -59,29 +62,6 @@ module.exports = async (bot, message) => {
               );
               }
   
-  if(message.content.toLowerCase() === 'avio help') {
-    if(message.guild.id === '264445053596991498') return;
-
-     let Embed = new discord.MessageEmbed()
-        .setTitle(`Help`)
-        .setDescription(
-          `Hey **${message.author.username}** Here are the help commands `
-        )
-        .setColor(`RED`)
-        .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-        .setFooter(`Note: run the command "a!messagelogs-setup" to see the content of messages in this guild, if you want to undo it run the command "a!messagelogs-delete"`)
-        .addFields(
-          { name: `${newPrefix}help moderation`, value: `Sends you the moderation commands!`, inline: true },
-          { name: `${newPrefix}help info`, value: `Sends you the information commands!`, inline: true },
-          { name: `${newPrefix}help fun`, value: `Sends you the fun commands!`, inline: true },
-          { name: `${newPrefix}help utility`, value: `Sends you the utility commands!`, inline: true },
-          { name: `${newPrefix}help image`, value: `Sends you the image commands!`, inline: true },
-          
-       );
-      
-      message.channel.send(Embed);
-    
-}
    let newPrefix = (await db.get(`Prefix_${message.guild.id}`))
     ? await db.get(`Prefix_${message.guild.id}`)
     : prefix;
@@ -108,6 +88,13 @@ module.exports = async (bot, message) => {
     
 
   if (command) {
+    if(command.owneronly){
+      if(bot.owners.includes(message.author.id)){
+        command.run(bot, message, args)
+      } else if(!bot.owners.includes(message.author.id)){
+        return ctx(`:x: || The Command ${command.name} is Developer only therefor you may not use it.`)
+      }
+    }
     if (command.timeout) {
       if (Timeout.has(`${message.author.id}${command.name}`)) {
         return message.reply(
