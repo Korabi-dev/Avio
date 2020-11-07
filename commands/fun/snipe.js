@@ -11,7 +11,7 @@ module.exports = {
     if (!msg) return message.channel.send(`There is nothing to snipe here!`);
     
     const Embed = new MessageEmbed()
-      .setAuthor( 
+      .setAuthor(
         msg.author.tag,
         msg.author.displayAvatarURL({ dynamic: true, size: 256 })
       )
