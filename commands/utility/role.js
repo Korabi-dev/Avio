@@ -4,10 +4,10 @@ module.exports = {
     name: 'role',
     description: "give someone a role in the guild!",
     run: async(bot, message, args) => {
-
+        if (message.member.hasPermission('MANAGE_ROLES') || bot.owners.includes(message.author.id)){
         message.delete();
 
-        if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`You do not have MANAGE_ROLES permission`).then(m => m.delete({ timeout: 5000 }));
+       
 
         if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<username or user id> <role name or role id>").then(m => m.delete({ timeout: 5000 }))
 
@@ -48,5 +48,8 @@ return member.roles.remove(roleName).then(() => message.channel.send(embed));
         } catch (e) {
             return message.channel.send('Try to give a role that exists next time...').then(m => m.delete({ timeout: 5000 })).then(() => console.log(e))
         }
+    } else {
+        return ctx(":x: | You don't have permission to use this command.")
+    }
     }
 }
