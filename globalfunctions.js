@@ -61,4 +61,11 @@ module.exports = async (bot, message) => {
             
 
     }
+    global.isDev = function isDev(id){
+        if(bot.owners.includes(id)){
+            return true;
+        }else if(!bot.owners.includes(id)){
+            return false;
+        }
+    }
     }

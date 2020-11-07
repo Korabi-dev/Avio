@@ -3,17 +3,16 @@ const discord = require("discord.js")
 const token = require("../../token.json")
 module.exports = {
     name: "refresh",
+    owneronly: true,
   aliases: ["restart", "reboot", "reload", "off/on", "devrefresh"],
     category: "owner",
     run: async (bot, message, args) => {
-         if (message.author.id !== '638476135457357849')
-      return message.channel.send(
-        `You do not have premissions to use this command, ${message.author.username} you are not a developer!`
-      );
-        console.log(`Refreshing...`)
-        await message.channel.send(`Refreshing!`)
+         await message.channel.send(`Refreshing!`)
         bot.destroy();
-        bot.login(token.Token);
+        setTimeout(() => {
+          bot.login(token.Token);
+        }, 30000);
+        
         
     }
 }
