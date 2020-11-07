@@ -19,7 +19,7 @@ module.exports = {
 			message.channel.send(`:tools: | The Command \`${commandName}\` Was Reloaded `);
 		} catch (error) {
 			console.error(error);
-			message.channel.send(`:x: | There was an error while reloading the command \`${command.name}\`:\n\`${error.message}\``);
+			message.channel.send(`:x: | There was an error while reloading the command \`${command.name}\`:\n\`${error}\``);
 		}
 	},
 };
