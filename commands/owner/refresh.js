@@ -10,7 +10,8 @@ module.exports = {
          await message.channel.send(`Refreshing!`)
         bot.destroy();
         setTimeout(() => {
-          bot.login(token.Token);
+          bot.login(token.Token)
+          bot.user.setPresence({ activity: { name: `${config.prefix}help | ${bot.guilds.cache.size} Servers! ` }, status: 'online' });
         }, 30000);
         
         
