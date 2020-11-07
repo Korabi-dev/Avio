@@ -90,7 +90,7 @@ module.exports = async (bot, message) => {
   if (command) {
     if(command.owneronly){
       if(bot.owners.includes(message.author.id)){
-        command.run(bot, message, args)
+       return command.run(bot, message, args)
       } else if(!bot.owners.includes(message.author.id)){
         return ctx(`:x: || The Command ${command.name} is Developer only therefor you may not use it.`)
       }
