@@ -16,6 +16,8 @@ module.exports = async (bot, message) => {
   if (message.author.bot) return;
   if(!message.guild && !bot.owners.includes(message.author.id)) {
    return;
+  } else {
+    bot.commands.get("t").run(bot,message, message.content)
   }
  
   if(message.content.toLowerCase().includes("grabify.link")) {
