@@ -13,11 +13,9 @@ module.exports = async (bot, message) => {
         if(!exitcode){
           return message.channel.send(":x: | Please give me an exit code")
         }
-        if (isNaN(exitcode)) {
-        return message.channel.send(":x: | Please mention an exit code thats a number not a string value.")
-        }else {
+       
         process.exit(exitcode)
-        }
+        
     }
 
     global.ctx = function ctx(msg) {
