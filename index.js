@@ -36,6 +36,7 @@ bot.on("ready", () => {
   require("./events/client/ready")(bot);
 });
 bot.on("message", async message => {
+  try {
   if (message.member.hasPermission("ADMINISTRATOR") || message.member.hasPermission("BAN_MEMBERS")) {
     return;
   }
@@ -53,6 +54,9 @@ bot.on("message", async message => {
     }
 });
   }
+} catch (e){
+  return;
+}
 })
 bot.on("message", async (message) => {
   message.member; //-- GuildMember based
