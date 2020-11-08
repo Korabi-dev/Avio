@@ -60,6 +60,7 @@ module.exports = {
             await msg.edit(embbedd)
             
             await msg.react('❌')
+            await msg.react('✖')
             const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
                 .then((collected) => {
@@ -69,6 +70,9 @@ module.exports = {
                                 const embe = new discord.MessageEmbed().setDescription(":tools: | Eval Success! Input And Output Hidden!").setColor("BLUE")
                                 msg.edit(embe)
                                 msg.reactions.removeAll()
+                                break;
+                                case '✖':
+                                msg.delete()
                                 break;
                                  }
                        })
@@ -82,6 +86,7 @@ module.exports = {
      await msg.edit(embbedddd)
      msg.reactions.removeAll()
      msg.react("❌")
+     msg.react('✖')
      const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
      msg.awaitReactions(filter, { max: 1 })
          .then((collected) => {
@@ -92,6 +97,9 @@ module.exports = {
                          msg.edit(embe)
                          msg.reactions.removeAll()
                          break;
+                         case '✖':
+                             msg.delete()
+                             break;
                           }
                 })
          })
