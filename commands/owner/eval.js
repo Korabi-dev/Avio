@@ -61,7 +61,7 @@ module.exports = {
             
             await msg.react('❌')
             await msg.react('✖')
-            const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
+            const filter = (reaction, user) => (reaction.emoji.name === '❌' && reaction.emoji.name === '✖') && (user.id === message.author.id);
             msg.awaitReactions(filter, { max: 1 })
                 .then((collected) => {
                     collected.map((emoji) => {
@@ -72,6 +72,9 @@ module.exports = {
                                 msg.reactions.removeAll()
                                 break;
                                 case '✖':
+                                msg.delete()
+                                break;
+                                default:
                                 msg.delete()
                                 break;
                                  }
@@ -87,7 +90,7 @@ module.exports = {
      msg.reactions.removeAll()
      msg.react("❌")
      msg.react('✖')
-     const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
+     const filter = (reaction, user) => (reaction.emoji.name === '❌' && reaction.emoji.name === '✖') && (user.id === message.author.id);
      msg.awaitReactions(filter, { max: 1 })
          .then((collected) => {
              collected.map((emoji) => {
@@ -100,6 +103,9 @@ module.exports = {
                          case '✖':
                              msg.delete()
                              break;
+                             default:
+                                msg.delete()
+                                break;
                           }
                 })
          })
