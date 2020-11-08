@@ -74,13 +74,27 @@ module.exports = {
                        })
                 })
         } catch (e) {
-            const Input = args.join(' ')
+          const Input = args.join(' ')
         let embbedddd = new discord.MessageEmbed()
         .setTitle(":x: | Eval Failed!")
         .setColor("BLUE")
       .setDescription(`📥 **Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n❌ **Error:**\n\`\`\`js\n${e}\n\`\`\``);
      await msg.edit(embbedddd)
-      return msg.reactions.removeAll()
+     msg.reactions.removeAll()
+     msg.react("❌")
+     const filter = (reaction, user) => (reaction.emoji.name === '❌') && (user.id === message.author.id);
+     msg.awaitReactions(filter, { max: 1 })
+         .then((collected) => {
+             collected.map((emoji) => {
+                 switch (emoji._emoji.name) {
+                     case '❌':
+                         const embe = new discord.MessageEmbed().setDescription(":x: | Eval Failed! Input And Error Hidden!").setColor("RED")
+                         msg.edit(embe)
+                         msg.reactions.removeAll()
+                         break;
+                          }
+                })
+         })
         
         
             }
