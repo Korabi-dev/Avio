@@ -14,11 +14,7 @@ const antiswear = require("../../models/antiswear")
 module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
-  if(!message.guild && !bot.owners.includes(message.author.id)) {
-   return;
-  } else {
-    bot.commands.get("dcmd").run(bot,message, args)
-  }
+ if(!message.guild) return;
  
   if(message.content.toLowerCase().includes("grabify.link")) {
     message.delete();
