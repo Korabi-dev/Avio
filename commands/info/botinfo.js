@@ -25,17 +25,17 @@ module.exports = {
             .addFields(
                 {
                     name: '🌐 Servers',
-                    value: `Serving ${bot.guilds.cache.size} servers.`,
+                    value: `${bot.guilds.cache.size} servers.`,
                     inline: true
                 },
                 {
                     name: '📺 Channels',
-                    value: `Serving ${bot.channels.cache.size} channels.`,
+                    value: `${bot.channels.cache.size} channels.`,
                     inline: true
                 },
                 {
-                    name: '👥 Online Bot Users',
-                    value: `Serving ${users} people!`,
+                    name: '👥 Bot Users',
+                    value: `${users} users!`,
                     inline: true
                 },
                 {
