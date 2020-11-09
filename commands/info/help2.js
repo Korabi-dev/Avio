@@ -46,7 +46,7 @@ module.exports = {
        const embed = new discord.MessageEmbed()
        .setTitle("Command Info!")
        .setDescription(`Command Name: ${name}\nCommand Aliases: ${aliases}\nCommand Description: ${description}\nCommand Usage: ${usage}`)
-       .setColor("BLUE")
+       .setColor("RANDOM")
        .setTimestamp()
        return message.channel.send(embed)
       } catch (e){
