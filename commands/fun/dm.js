@@ -35,7 +35,7 @@ module.exports = {
         async (err, data) => {
           if (err) throw err; 
       if (data) {
-      const emb = new discord.MessageEmbed().setTitle("Error!").setDescription("This user isn\'t accepting DMs sorry..")
+      const emb = new discord.MessageEmbed().setTitle("Error!").setDescription("This user isn\'t accepting DMs sorry..").setColor("RED")
           return ctx(emb)
         } else if (!data) {
           if (!args.slice(1).join(" "))
