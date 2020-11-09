@@ -90,14 +90,14 @@ module.exports = async (bot, message) => {
       if(bot.owners.includes(message.author.id)){
        return command.run(bot, message, args)
       } else if(!bot.owners.includes(message.author.id)){
-        return ctx(`:x: || The Command ${command.name} is Developer only therefor you may not use it.`)
+        const embed = new MessageEmbed().setTitle("Developer Only!").setDescription(`:x: Only my developers can use this command.`).setColor("RED")
+        return ctx(embed);
       }
     }
     if (command.timeout) {
       if (Timeout.has(`${message.author.id}${command.name}`)) {
-        return message.reply(
-          `You can only use this command every ${ms(command.timeout)}!`
-        );
+        const embed = new MessageEmbed().setTitle("CoolDown!").setDescription(`You can only use this command every **${ms(command.timeout)}**`).setColor("RED")
+        return ctx(embed);
       } else {
         command.run(bot, message, args);
         Timeout.add(`${message.author.id}${command.name}`);
