@@ -1,4 +1,5 @@
 const discord = require('discord.js')
+const antiswear = require("../../models/opt")
 module.exports = {
   name: "dm",
   description: "DM a user in the guild",
@@ -29,13 +30,24 @@ module.exports = {
       return message.channel.send(
         `You did not mention a user, or you gave an invalid id`
       );
-    if (!args.slice(1).join(" "))
-      return message.channel.send("You did not specify your message");
-      
-     user.user
-      .send(`From ${message.author.username}: ` + args.slice(1).join(" "))
-      .catch(() => message.channel.send("That user could not be DMed!"))
-      .then(() => message.channel.send(`Sent a message to ${user.user.tag}`));
-      },
-  
-};
+      antiswear.findOne(
+        { userID: user.id || user.user.id },
+        async (err, data) => {
+          if (err) throw err; 
+      if (data) {
+      const emb = new discord.MessageEmbed().setTitle("Error!").setDescription("This user isn\'t accepting DMs sorry..")
+          return ctx(emb)
+        } else if (!data) {
+          if (!args.slice(1).join(" "))
+          return message.channel.send("You did not specify your message");
+          
+         user.user
+          .send(`From ${message.author.username}: ` + args.slice(1).join(" "))
+          .catch(() => message.channel.send("That user could not be DMed!"))
+          .then(() => message.channel.send(`Sent a message to ${user.user.tag}`));
+        
+        }
+    });
+    
+  }
+}
