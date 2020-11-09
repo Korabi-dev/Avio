@@ -1,10 +1,10 @@
 const antiswear = require("../../models/opt");
 module.exports = {
-  name: "nodms",
+  name: "toggledms",
   description: "Toggle dms",
   usage: "<command>",
   category: "config",
-  aliases: ["optout"],
+  aliases: ["optout", "nodms"],
   timeout: 5000,
   run: async (bot, message, args) => {
     
@@ -17,7 +17,7 @@ module.exports = {
       if (data) {
        data.delete()
         message.channel.send(
-            `Opted out of the dm command :white_check_mark:`
+            `Opted in the dm command :white_check_mark:`
           );
           
         } else if (!data) {
@@ -26,7 +26,7 @@ module.exports = {
             });
           newData.save();
           message.channel.send(
-            ` Opted in the dm command :white_check_mark:`
+            ` Opted out of the dm command :white_check_mark:`
           );
         }
     });
