@@ -73,6 +73,7 @@ module.exports = {
                                 break;
                                 case '✖':
                                 msg.delete()
+                                message.delete()
                                 break;
                                 default:
                                 msg.delete()
@@ -102,6 +103,7 @@ module.exports = {
                          break;
                          case '✖':
                              msg.delete()
+                             message.delete()
                              break;
                              default:
                                 msg.delete()
