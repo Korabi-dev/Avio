@@ -12,7 +12,7 @@ module.exports = {
         setTimeout(() => {
           bot.login(token.Token)
           bot.user.setPresence({ activity: { name: `${config.prefix}help | ${bot.guilds.cache.size} Servers! ` }, status: 'online' });
-        }, 30000);
+        }, 15000);
         
         
     }
