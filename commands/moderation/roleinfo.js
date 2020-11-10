@@ -5,7 +5,7 @@ module.exports = {
     run: async(bot, message, args) => {
 
         try {
-            const roleName = message.guild.roles.cache.find(r => (r.name === args.toString()) || (r.id === args.toString()))
+            const roleName = message.guild.roles.cache.find(r => (r.name === args.toString()) || (r.id === args.toString())) || message.mentions.roles.first();
             const perms = new Permissions(roleName.permissions.bitfield).toArray()
 
             const embed = new MessageEmbed()
