@@ -40,7 +40,7 @@ module.exports = {
                 const evaled = eval(code)
                return;
             }
-            let data = eval(code)
+            let data = await eval(code)
             let type = typeof data;
             if(type === 'boolean'){
                 type = '[Boolean]'
