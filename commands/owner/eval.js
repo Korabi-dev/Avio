@@ -53,7 +53,9 @@ module.exports = {
             else if(type === 'symbol'){type = '[Symbol]'}
             else if(type === 'undefined'){type = '[Undefined]'}
             
-            
+            if(typeof data === 'object'){
+                data = JSON.stringify(data)
+            }
             let embbedd = new discord.MessageEmbed()
             .setTitle(":tools: | Eval Sucess!")
             .setColor("BLUE")
