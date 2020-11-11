@@ -54,7 +54,8 @@ module.exports = {
             else if(type === 'undefined'){type = '[Undefined]'}
             
             if(typeof data === 'object'){
-                data = object.map(o => o)
+                console.log(data)
+                data = data.map(o => o)
             }
             let embbedd = new discord.MessageEmbed()
             .setTitle(":tools: | Eval Sucess!")
