@@ -40,6 +40,7 @@ module.exports = {
                                                                                       
                                               
                                              const newchannel = await message.channel.clone()
+                                             newchannel.edit({position: mc.position})
                                              message.channel.delete()
                                              newchannel.send(embed9)
                                                   
