@@ -24,6 +24,7 @@ const hastebin = require("hastebin.js");
 module.exports = {
     name: 'eval',
     owneronly: true,
+    aliases: ["e", "dev", "d"],
     description: "this command is dev only so i wont show any desription!",
     run: async(bot, message, args) => {
         
