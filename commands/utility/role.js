@@ -36,7 +36,13 @@ module.exports = {
                 embed.setColor("RED");
                 return message.channel.send(embed)
             }
-
+            if(roleName.position > message.guild.me.roles.highest.position ){
+                const embed = new MessageEmbed();
+                embed.setTitle("Error");
+                embed.setDescription("The role you provided is higher then my highest role therefor i cannot add/remove it from/to anyone.");
+                embed.setColor("RED");
+                return message.channel.send(embed)
+            }
 if(roleName.size > 1){
     return ctx(`Looks like there are ${roleName.size} roles that countain "${args[1]} in their name please either specify the full name of the role or use an id.`)
 }
