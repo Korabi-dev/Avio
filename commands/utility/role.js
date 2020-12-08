@@ -15,8 +15,23 @@ module.exports = {
 
 
              const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(m => (m.tag === args[0]));
-             const roleName = message.guild.roles.cache.find(r => (r.name.toLowerCase().startsWith(args[1].toLowerCase())) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
+             const roleName = message.guild.roles.cache.find(r => (r.name.toLowerCase() === args[1].toLowerCase()) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
 
+             if(member.roles.highest.position > message.member.roles.highest.position && message.author.id !== message.guild.owner.id){
+                const embed = new MessageEmbed();
+                embed.setTitle("Error");
+                embed.setDescription("This user has a higher role then you therefor i cannot add/remove fromes to/from them.");
+                embed.setColor("RED");
+                return message.channel.send(embed)
+            }
+
+            if(member.roles.highest.position > message.guild.me.roles.highest.position && message.author.id !== message.guild.owner.id){
+                const embed = new MessageEmbed();
+                embed.setTitle("Error");
+                embed.setDescription("This user has a higher role then me therefor i cannot add/remove fromes to/from themk.");
+                embed.setColor("RED");
+                return message.channel.send(embed)
+            }
 
 if(roleName.size > 1){
     return ctx(`Looks like there are ${roleName.size} roles that countain "${args[1]} in their name please either specify the full name of the role or use an id.`)
