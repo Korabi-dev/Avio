@@ -11,14 +11,16 @@ module.exports = {
        
 
         if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<mention id or user tag> <role name or role id>").then(m => m.delete({ timeout: 5000 }))
-            if(member.user.id === message.author.id){
-                return message.channel.send("You can not add roles to yourself.")
-            }
+            
         try {
 
 
              const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]) || message.guild.members.cache.find(m => (m.tag === args[0]));
              const roleName = message.guild.roles.cache.find(r => (r.name.toLowerCase() === args[1].toLowerCase()) || (r.id === args[1].toString().replace(/[^\w\s]/gi, '')));
+
+             if(member.user.id === message.author.id){
+                return message.channel.send("You can not add/remove roles to/from yourself.")
+            }
 
              if(member.roles.highest.position > message.member.roles.highest.position && message.author.id !== message.guild.owner.id){
                 const embed = new MessageEmbed();
