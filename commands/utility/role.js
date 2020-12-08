@@ -2,15 +2,18 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'role',
-    description: "give someone a role in the guild!",
+    usage: "<mention id or user tag> <role name or role id>",
+    description: "Manage a users role(s).",
     run: async(bot, message, args) => {
-        if (message.member.hasPermission('MANAGE_ROLES') || bot.owners.includes(message.author.id)){
-        message.delete();
+        if (message.member.hasPermission('MANAGE_ROLES')){
+        
 
        
 
         if (!args[0] || !args[1]) return message.channel.send("Incorrect usage, It's `<mention id or user tag> <role name or role id>").then(m => m.delete({ timeout: 5000 }))
-
+            if(member.user.id === message.author.id){
+                return message.channel.send("You can not add roles to yourself.")
+            }
         try {
 
 
@@ -21,6 +24,7 @@ module.exports = {
                 const embed = new MessageEmbed();
                 embed.setTitle("Error");
                 embed.setDescription("This user has a higher role then you therefor i cannot add/remove fromes to/from them.");
+                embed.setFooter(`Triggered by ${message.author} | ${message.author.id}`)
                 embed.setColor("RED");
                 return message.channel.send(embed)
             }
@@ -39,7 +43,7 @@ if(roleName.size > 1){
           let embed = new MessageEmbed()
                  .setTitle(`Role Name: ${roleName.name}`)
                  .setDescription(`${message.author} has successfully removed the role ${roleName} from ${member.user}`)
-                 .setColor('f3f3f3')
+                 .setColor('RANDOM')
                  .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
                  .setFooter(new Date().toLocaleString())
 
@@ -54,7 +58,7 @@ return member.roles.remove(roleName).then(() => message.channel.send(embed));
               let embed2 = new MessageEmbed()
                  .setTitle(`Role Name: ${roleName.name}`)
                  .setDescription(`${message.author} has successfully given the role ${roleName} to ${member.user}`)
-                 .setColor('f3f3f3')
+                 .setColor('RANDOM')
                  .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
                  .setFooter(new Date().toLocaleString())
             
@@ -63,7 +67,7 @@ return member.roles.remove(roleName).then(() => message.channel.send(embed));
 
             return member.roles.add(roleName).then(() => message.channel.send(embed2));
         } catch (e) {
-            return message.channel.send('Try to give a role that exists next time...').then(m => m.delete({ timeout: 5000 })).then(() => console.log(e))
+            return message.channel.send('The role you provided was invalid.').then(m => m.delete({ timeout: 5000 }))
         }
     } else {
         return ctx(":x: | You don't have permission to use this command.")
