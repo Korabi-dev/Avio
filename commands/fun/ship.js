@@ -16,11 +16,11 @@ return message.channel.send(`**${message.author.username}**, I know you love you
 
 }
 
-if(message.author.id === '325558938005143562'){
-  if(target.id === '707676620390924364') {
+if(message.author.id === '638476135457357849'){
+  if(target.id === '764901658303922247') {
     let embed2 = new discord.MessageEmbed()
     .setTitle('LOVE')
-    .setDescription(`${message.author} is 100% in love with ${target} GET MARRIED CMON`)
+    .setDescription(`${message.author} is inf% in love with ${target}, how adorable <3`)
     .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
     .setColor('RED')
 
@@ -28,11 +28,11 @@ if(message.author.id === '325558938005143562'){
     return message.channel.send(embed2)
   }
 }
-if(message.author.id === '707676620390924364'){
-  if(target.id === '325558938005143562') {
+if(message.author.id === '764901658303922247'){
+  if(target.id === '638476135457357849') {
     let embed1 = new discord.MessageEmbed()
     .setTitle('LOVE')
-    .setDescription(`${message.author} is Simp% in love with ${target}`)
+    .setDescription(`${message.author} is inf% in love with ${target}, how adorable <3`)
     .setImage('https://media1.tenor.com/images/53531b7811058448306f67e0934a6aa2/tenor.gif?itemid=3555133')
     .setColor('RED')
 
