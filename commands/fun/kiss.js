@@ -68,14 +68,8 @@ module.exports = {
 
       let response =
         responses[Math.floor(Math.random() * responses.length - 1)];
-      let Embed = new MessageEmbed()
-        .setTitle(`KISSED`)
-        .setDescription(`Awwww how cute **${message.author}** kisses **${target} looks like we have a new couple ;)**`)
-        .setImage(`${response}`)
-        .setColor(`RANDOM`);
-      message.channel.send(Embed);
-
-      
-    }
+      message.channel.send(`Awwww how cute ${message.author.username} kisses ${target.username} looks like we have a couple;)`)
+        message.channel.send(response)
+        }
   
 };
