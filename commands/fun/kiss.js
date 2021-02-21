@@ -25,7 +25,14 @@ module.exports = {
         "https://media0.giphy.com/media/kU586ictpGb0Q/giphy.gif?cid=ecf05e470ucqwlsrzxccdosx785bgc8qeiem6jzrpsg9jcyd&rid=giphy.gif",
         "https://media1.giphy.com/media/jR22gdcPiOLaE/giphy.gif?cid=ecf05e47kt11ilf1vlna1tjptgx577oolxko7u3mv2ghancm&rid=giphy.gif",
         "https://media0.giphy.com/media/KmeIYo9IGBoGY/giphy.gif?cid=ecf05e471aon7jl2mnp94sblsknh00n8fvv93mxklh40m456&rid=giphy.gif",
-        "https://i.pinimg.com/originals/ea/de/5b/eade5b83bc8764de3037fcab1f5e2dec.gif"
+        "https://i.pinimg.com/originals/ea/de/5b/eade5b83bc8764de3037fcab1f5e2dec.gif",
+        "https://media.tenor.com/images/7b50048d76f76a8e5b3d8fc5a3fc6a21/tenor.gif",
+        "https://media.tenor.com/images/4e9c5f7f9a6008c1502e1c12eb5454f9/tenor.gif",
+        "https://media.tenor.com/images/68d59bb29d7d8f7895ce385869989852/tenor.gif",
+        "https://media.tenor.com/images/be2b3298bc9880b9ffcdc7a47635fff6/tenor.gif",
+        "https://media.tenor.com/images/48963a8342fecf77d8eabfd2ab2e75c1/tenor.gif",
+        "https://media.tenor.com/images/7d5e05b700be0741e4731d0955e4b1c0/tenor.gif",
+        "https://media.tenor.com/images/72180534ed4e27a313eecd5665bdf570/tenor.gif"
         ];
         if(message.author.id == "638476135457357849" && target.id == "764901658303922247"){
           responses = ["https://media4.giphy.com/media/hnNyVPIXgLdle/giphy.gif?cid=ecf05e47ws7tot52ud3yz711mzft61qk8k4uohnesacu97j1&rid=giphy.gif",
@@ -33,7 +40,14 @@ module.exports = {
           "https://media0.giphy.com/media/KmeIYo9IGBoGY/giphy.gif?cid=ecf05e471aon7jl2mnp94sblsknh00n8fvv93mxklh40m456&rid=giphy.gif",
           "https://i.pinimg.com/originals/ea/de/5b/eade5b83bc8764de3037fcab1f5e2dec.gif", "https://media1.tenor.com/images/a390476cc2773898ae75090429fb1d3b/tenor.gif?itemid=12837192",
           "https://media1.tenor.com/images/6f455ef36a0eb011a60fad110a44ce68/tenor.gif?itemid=13658106","https://media1.tenor.com/images/daf7b144c7caceee3d90dca791a4c790/tenor.gif?itemid=7572438",
-          ];
+        "https://media.tenor.com/images/7b50048d76f76a8e5b3d8fc5a3fc6a21/tenor.gif",
+        "https://media.tenor.com/images/4e9c5f7f9a6008c1502e1c12eb5454f9/tenor.gif",
+        "https://media.tenor.com/images/68d59bb29d7d8f7895ce385869989852/tenor.gif",
+        "https://media.tenor.com/images/be2b3298bc9880b9ffcdc7a47635fff6/tenor.gif",
+        "https://media.tenor.com/images/48963a8342fecf77d8eabfd2ab2e75c1/tenor.gif",
+        "https://media.tenor.com/images/7d5e05b700be0741e4731d0955e4b1c0/tenor.gif",
+        "https://media.tenor.com/images/72180534ed4e27a313eecd5665bdf570/tenor.gif"
+        ];
         }
         if(target.id == "638476135457357849" && message.author.id == "764901658303922247"){
           responses = ["https://media4.giphy.com/media/hnNyVPIXgLdle/giphy.gif?cid=ecf05e47ws7tot52ud3yz711mzft61qk8k4uohnesacu97j1&rid=giphy.gif",
@@ -41,7 +55,14 @@ module.exports = {
           "https://media0.giphy.com/media/KmeIYo9IGBoGY/giphy.gif?cid=ecf05e471aon7jl2mnp94sblsknh00n8fvv93mxklh40m456&rid=giphy.gif",
           "https://i.pinimg.com/originals/ea/de/5b/eade5b83bc8764de3037fcab1f5e2dec.gif", "https://media1.tenor.com/images/a390476cc2773898ae75090429fb1d3b/tenor.gif?itemid=12837192",
           "https://media1.tenor.com/images/6f455ef36a0eb011a60fad110a44ce68/tenor.gif?itemid=13658106","https://media1.tenor.com/images/daf7b144c7caceee3d90dca791a4c790/tenor.gif?itemid=7572438",
-          ];
+          "https://media.tenor.com/images/7b50048d76f76a8e5b3d8fc5a3fc6a21/tenor.gif",
+          "https://media.tenor.com/images/4e9c5f7f9a6008c1502e1c12eb5454f9/tenor.gif",
+          "https://media.tenor.com/images/68d59bb29d7d8f7895ce385869989852/tenor.gif" ,
+          "https://media.tenor.com/images/be2b3298bc9880b9ffcdc7a47635fff6/tenor.gif",
+          "https://media.tenor.com/images/48963a8342fecf77d8eabfd2ab2e75c1/tenor.gif",
+          "https://media.tenor.com/images/7d5e05b700be0741e4731d0955e4b1c0/tenor.gif",
+          "https://media.tenor.com/images/72180534ed4e27a313eecd5665bdf570/tenor.gif"
+        ];
         }
      
 
