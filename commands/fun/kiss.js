@@ -35,7 +35,7 @@ module.exports = {
           "https://media1.tenor.com/images/6f455ef36a0eb011a60fad110a44ce68/tenor.gif?itemid=13658106","https://media1.tenor.com/images/daf7b144c7caceee3d90dca791a4c790/tenor.gif?itemid=7572438",
           ];
         }
-        if(user.id == "638476135457357849" && message.author.id == "764901658303922247"){
+        if(target.id == "638476135457357849" && message.author.id == "764901658303922247"){
           responses = ["https://media4.giphy.com/media/hnNyVPIXgLdle/giphy.gif?cid=ecf05e47ws7tot52ud3yz711mzft61qk8k4uohnesacu97j1&rid=giphy.gif",
           "https://media1.giphy.com/media/jR22gdcPiOLaE/giphy.gif?cid=ecf05e47kt11ilf1vlna1tjptgx577oolxko7u3mv2ghancm&rid=giphy.gif",
           "https://media0.giphy.com/media/KmeIYo9IGBoGY/giphy.gif?cid=ecf05e471aon7jl2mnp94sblsknh00n8fvv93mxklh40m456&rid=giphy.gif",
