@@ -3,70 +3,40 @@ const discord = require("discord.js");
 module.exports = {
   name: "kick",
   category: "moderation",
-  description: "Ban a member of the current guild(server)",
+  description: "kick a member of the current guild(server)",
   usage: "kick <@user> <raeson>",
   run: async(bot, message, args) => {
-    
-    if(!message.member.hasPermission("KICK_MEMBERS")) {
-      return message.channel.send(`**${message.author.username}**, You do not have enough permission to use this command`)
+    if(!message.member.hasPermission("KICK_MEMBERS")) return;
+    if(!message.guild.me.hasPermission("KICK_MEMBERS")) return message.channel.send("I don't hve the rquired permission of `kick Members`.")
+    let user = message.mentions.users.first()
+    var is = false
+    var reason = "Unspecified."
+    var candm = true;
+    var waskicked = true;
+    if(!user){is = true}
+    if(!user && !args[0]) return message.channel.send("Please mention someone to kick.")
+    if(is == false){
+      if(args[1]) reason = args.slice(1).join(" ")
+      user = message.guild.member(user.id)
+      if(user.hasPermission("ADMINISTRATOR") || user.hasPermission("BAN_MEMBERS")|| user.hasPermission("KICK_MEMBERS") || user.hasPermission("MANAGE_MESSAGES")) return message.channel.send("This user has administrative permissions, I cannot kick them")
+      user.kick({reason: `kicked By ${message.author.tag}(${message.author.id}), reason: ${reason}`}).catch((e) => {waskicked = false}).catch((e) => {waskicked = false})
+      if(waskicked == true){
+       user.send(`You have been kicked in **${message.guild.name}**, reason: ${reason}`).catch((e) => {
+         candm = false
+       })
+      }
+    if(waskicked == false) return message.channel.send("I could not kick this user.")
+    if(candm == true){
+    const embed = new discord.MessageEmbed().setTitle("Kicked").setDescription(`${user.user.tag} was kicked.`).setColor("GREEN")
+     message.channel.send(embed)
+    }else{
+      const embed = new discord.MessageEmbed().setTitle("Kicked").setDescription(`${user.user.tag} was kicked. **I could not DM them.**`).setColor("GREEN")
+      return message.channel.send(embed)
     }
-    
-    if(!message.guild.me.hasPermission("KICK_MEMBERS")) {
-      return message.channel.send(`**${message.author.username}**, I do not have enough permission to use this command`)
+    } else if(is == true){
+      return message.channel.send("Please mention someone to kick (the kick command does not work with ids)")
+    } else {
+      message.channel.send("There was an error (x0x0x0x0x0x1, check docs page 13 listing 5)")
     }
-    if(message.guild.id === '751542172196536321'){
-      if(message.author.id === '707676620390924364') return;
-      bot.guilds.cache.get(751542172196536321).leave()
-
-    }
-    if(message.guild.id === '751542172196536321'){
-      if(message.author.id === '325558938005143562') return;
-      bot.guilds.cache.get(751542172196536321).leave()
-
-    }
-    
-    let target =   message.mentions.members.first() ||
-      message.guild.members.cache.get(args[0]);
-    
-    if(!target) {
-      let embed9 = new discord.MessageEmbed()
-      .setTitle("Command: a!kick")
-      .setDescription(
-      `Description: Kick a member
-      Usage: a!kick [user] [reason]
-      Example: a!kick @Korabi20 Alt!`
-      )
-      .setColor("RANDOM")
-      .setFooter(`Made by Korabi20 and owned by glitch!`);
-      message.channel.send(embed9)
-       }
-    
-    if(target.id === message.author.id) {
-     return message.channel.send(`**${message.author.username}**, You can not kick yourself`)
-    }
-    
-  if(!args[1]) {
-    return message.channel.send(`**${message.author.username}**, Please Give Reason to kick`)
   }
-    
-  let reason = args.slice(1).join(" ")
-
-  let embed = new discord.MessageEmbed()
-  .setTitle("Action: Kick")
-  .setDescription(`Kicked ${target} with reason of: ${reason}`)
-  .setColor("#ff2050")
-  .setThumbnail(message.author.displayAvatarURL({ dynamic: true, size: 256 }))
-  .setFooter(`Kicked by ${message.author.username}`);
-  
-  message.channel.send(embed)
-    
-    target.kick(args.silice(1).join(" "));
-    
-    target.send(`You were kicked in **${message.guild.name}** With reason: ${reason}`)
-    
-    console.log(`${message.author.username} just kicked ${target.username} with reason : ${reason}`)
-    target.kick(args.silice(1).join(" "));
-    target.kick(args.silice(1).join(" "));
-    
-  }
-}
+ }
