@@ -9,11 +9,11 @@ module.exports = {
   run: async (bot, message, args) => {
    
    let target = message.mentions.members.first()
-   if(!target) target = message.guild.members.get(args[0])
+   if(!target) target = message.guild.members.cache.get(args[0])
    if(!target) return message.channel.send(`:x: || Please mention someone or give me an id!`);
    let reason2 = args.slice(1).join(" ")
  const id = target.id || target
-   
+   const owners = bot.owners
  if(owners.includes(id)) {
    return message.channel.send(`:x: || i Won\'t blacklist <@!${id}> they are one of my owners`)
  }

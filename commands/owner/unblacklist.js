@@ -11,7 +11,7 @@ module.exports = {
    message.guild.members.cache.get(args[0]);
    if(!target) return message.channel.send(`:x: || Please mention who to unblacklist <mention/id>`);
    const id = target.user.id || args[0]
-  
+  const owners = bot.owners
    if(owners.includes(id)) {
     return message.channel.send(`${message.author} what made you think i would blacklist one of my lovely owners???`)
   }
