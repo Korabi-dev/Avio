@@ -67,9 +67,14 @@ module.exports = {
      
 
       let response = responses[Math.floor(Math.random() * responses.length - 1)];
+      try{
       message.channel.send(`Awwww how cute ${message.author.username} kisses ${target.user.username} looks like we have a couple ;)`).then(m => {
         message.channel.send(response)
       })
+      } catch(e){
+        let response2 = responses[Math.floor(Math.random() * responses.length - 1)];
+        message.channel.send(response2)
+      }
         }
   
 };
