@@ -8,14 +8,14 @@ module.exports = {
   aliases: ["bl"],
   run: async (bot, message, args) => {
    
-   let target = message.mentions.members.first() ||
-   message.guild.members.cache.get(args[0]);
+   let target = message.mentions.members.first()
+   if(!target) target = message.guild.members.get(args[0])
    if(!target) return message.channel.send(`:x: || Please mention someone or give me an id!`);
    let reason2 = args.slice(1).join(" ")
- const id = target.user.id || args[0];
+ const id = target.id || target
    
  if(owners.includes(id)) {
-   return message.channel.send(`:x: || i Won\'t blacklist ${target} they are one of my owners`)
+   return message.channel.send(`:x: || i Won\'t blacklist <@!${id}> they are one of my owners`)
  }
    
    if(!reason2){
