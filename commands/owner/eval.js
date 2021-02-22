@@ -1,6 +1,4 @@
-const { MessageEmbed } = require('discord.js');
-const discord = require("discord.js")
-
+const { MessageAttachment, discord, MessageEmbed  } = require('discord.js');
 const realtoken = ('GET STICK BUGGED NOOOOOOOB')
 const config = require("../../config.json")
 const ms = require("ms")
@@ -18,7 +16,8 @@ const os = require("os")
 const db = require("../../db")
 const canvacord = require("canvacord");
 const hastebin = require("hastebin.js");
- 
+const { inspect } = require('util');
+const { Type } = require('@extreme_hero/deeptype');
 
 
 module.exports = {
@@ -28,96 +27,45 @@ module.exports = {
     description: "this command is dev only so i wont show any desription!",
     run: async(bot, message, args) => {
         
-    if(!args[0]){
-    return message.channel.send(":x: | No Code Found.")
-    }  
-    const emb = new discord.MessageEmbed().setTitle("Initializing Evaluation.").setColor("BLUE")
-        const msg = await message.channel.send(emb);
+        this.clean = function(text) {
+            if (typeof text === 'string') {
+              text = text.replace(/`/g, `\`${String.fromCharCode(8203)}`).replace(/@/g, `@${String.fromCharCode(8203)}`).replace(new RegExp(bot.token, 'gi'), '****');
+            }
+        return text;
+        }
+
+        if (!args.length) return message.channel.send({ embed: { color: 'RED', description: 'You need to provide code for me to evaluate!' }});
+        let code = args.join(' ');
+        code = code.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
+        let evaled;
         try {
-            
-            const code = args.join(' ');
-            if(code.toLowerCase().includes("process.exit")) {
-                 message.channel.send(`\`\`\`js\nExiting the NODE.js process\n\`\`\` `)
-                const evaled = eval(code)
-               return;
-            }
-            let data = await eval(code)
-            let type = typeof data;
-            if(type === 'boolean'){
-                type = '[Boolean]'
-            }else if(type === 'bigint'){
-                type = "[Bigint]"
-            }else if(type === 'function') {type = '[Function]'} 
-            else if(type === 'number'){type = `[Number]`}
-            else if(type === 'object'){type = '[Object]'}
-            else if(type === 'string'){type = `[String] => ${data.length} characters`}
-            else if(type === 'symbol'){type = '[Symbol]'}
-            else if(type === 'undefined'){type = '[Undefined]'}
-            
-            if(typeof data === 'object'){
-             data = `${JSON.stringify(data)}`
-              data = data.replace("{", "[Object] {\n").replace("}", "\n}").replace(",", ",\n")
-            }
-            let embbedd = new discord.MessageEmbed()
-            .setTitle(":tools: | Eval Sucess!")
-            .setColor("BLUE")
-           .setDescription(`📥 **Input:**\n \`\`\`js\n ${code}\n\`\`\`\n📤 **Output:**\n \`\`\`js\n ${data}\n\`\`\`\n📃 **Output Type:**\n\`\`\`js\n${type}\n\`\`\``);
-            await msg.edit(embbedd)
-            
-            await msg.react('❌')
-            await msg.react('✖')
-            const filter = (reaction, user) => (user.id === message.author.id);
-            msg.awaitReactions(filter, { max: 1 })
-                .then((collected) => {
-                    collected.map((emoji) => {
-                        switch (emoji._emoji.name) {
-                            case '❌':
-                                const embe = new discord.MessageEmbed().setDescription(":tools: | Eval Success! Input And Output Hidden!").setColor("BLUE")
-                                msg.edit(embe)
-                                msg.reactions.removeAll()
-                                break;
-                                case '✖':
-                                msg.delete()
-                                message.delete()
-                                break;
-                                default:
-                                msg.delete()
-                                break;
-                                 }
-                       })
-                })
-        } catch (e) {
-          const Input = args.join(' ')
-        let embbedddd = new discord.MessageEmbed()
-        .setTitle(":x: | Eval Failed!")
-        .setColor("BLUE")
-      .setDescription(`📥 **Input:**\n \`\`\`js\n ${Input}\n\`\`\`\n❌ **Error:**\n\`\`\`js\n${e}\n\`\`\``);
-     await msg.edit(embbedddd)
-     msg.reactions.removeAll()
-     msg.react("❌")
-     msg.react('✖')
-     const filter = (reaction, user) => (user.id === message.author.id);
-     msg.awaitReactions(filter, { max: 1 })
-         .then((collected) => {
-             collected.map((emoji) => {
-                 switch (emoji._emoji.name) {
-                     case '❌':
-                         const embe = new discord.MessageEmbed().setDescription(":x: | Eval Failed! Input And Error Hidden!").setColor("RED")
-                         msg.edit(embe)
-                         msg.reactions.removeAll()
-                         break;
-                         case '✖':
-                             msg.delete()
-                             message.delete()
-                             break;
-                             default:
-                                msg.delete()
-                                break;
-                          }
-                })
-         })
-        
-        
-            }
-    }
+          const start = process.hrtime();
+          evaled = eval(code);
+          if (evaled instanceof Promise) {
+            evaled = await evaled;
+          }
+    
+          const stop = process.hrtime(start);
+          const response = [
+            `**Output:** \`\`\`js\n${this.clean(inspect(evaled, { depth: 0 }))}\n\`\`\``,
+            `**Type:** \`\`\`ts\n${new Type(evaled).is}\n\`\`\``,
+            `**Time Taken:** \`\`\`${(((stop[0] * 1e9) + stop[1])) / 1e6}ms \`\`\``,
+          ]
+          const res = response.join('\n');
+          if (res.length < 2000) {
+            await message.channel.send({embed: { color: 'GREEN', description: res }});
+          } else {
+            const output = new MessageAttachment(Buffer.from(res), 'output.txt');
+            await message.channel.send(output);
+          }
+        } catch(err) {
+          console.log(err);
+          return message.channel.send({ embed: { color: 'RED', description: `An error occured: \`\`\`x1\n${this.clean(err)}\n\`\`\``}})
+        }
+    
+    
+    
+    
 }
+}
+
