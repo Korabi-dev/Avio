@@ -33,8 +33,8 @@ module.exports = {
             }
         return text;
         }
-
-        if (!args.length) return message.channel.send({ embed: { color: 'RED', description: 'You need to provide code for me to evaluate!' }});
+        var msg = "Hi"
+        if (!args.length) return msg = await message.channel.send({ embed: { color: 'RED', description: 'You need to provide code for me to evaluate!' }});
         let code = args.join(' ');
         code = code.replace(/[“”]/g, '"').replace(/[‘’]/g, "'");
         let evaled;
@@ -53,16 +53,37 @@ module.exports = {
           ]
           const res = response.join('\n');
           if (res.length < 2000) {
-            await message.channel.send({embed: { color: 'GREEN', description: res }});
+           msg = await message.channel.send({embed: { color: 'GREEN', description: res }});
           } else {
             const output = new MessageAttachment(Buffer.from(res), 'output.txt');
-            await message.channel.send(output);
-          }
+           msg = await message.channel.send(output)
+}
         } catch(err) {
           console.log(err);
-          return message.channel.send({ embed: { color: 'RED', description: `An error occured: \`\`\`x1\n${this.clean(err)}\n\`\`\``}})
+          return msg = await message.channel.send({ embed: { color: 'RED', description: `An error occured: \`\`\`x1\n${this.clean(err)}\n\`\`\``}})
         }
-    
+        await msg.react("❌")
+        await msg.react("➖")
+
+        const filter = (reaction, user) => {
+            return ['➖', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
+        };
+        
+        msg.awaitReactions(filter, { max: 1, errors: ['time'] })
+            .then(collected => {
+                const reaction = collected.first();
+        
+                if (reaction.emoji.name === '➖') {
+                    const embed = new MessageEmbed().setDescription("Eval output hidden!").setColor("RANDOM")
+                    msg.edit(embed)
+                } else if(reaction.emoji.name === '❌'){
+                    message.delete()
+                    msg.delete()
+                }
+            })
+            .catch(collected => {
+                return;
+            });
     
     
     
