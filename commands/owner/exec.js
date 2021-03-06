@@ -18,8 +18,9 @@ module.exports = {
             let args2 = message.content.slice(user.id.length + 3 + 6 + args[1].length).trim().split(/ +/g)
             args2.splice(args2.indexOf(args[0]), user.id + 3)
             args2.splice(args2.indexOf(`a!${command.name}`), command.name.length + 2)
-            command.run(bot, message, args2.splice(args2.indexOf(args[0]), user.id + 3))
-        }
+
+            console.log("Someone used the execute command ")
+            }
     }
 }
 
