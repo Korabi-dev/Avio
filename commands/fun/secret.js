@@ -2,7 +2,7 @@ const discord = require("discord.js")
 module.exports = {
     name: "screw",
     category: "\"fun\"",
-    desription: "Get nasty with someone ;)",
+    description: "Get nasty with someone ;)",
     run: async (bot, message, args) => {
         
         if(message.author.id !== "638476135457357849" && message.author.id !== "764901658303922247") return;
