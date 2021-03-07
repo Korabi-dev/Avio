@@ -11,6 +11,7 @@ module.exports = {
         let name = command.name;
         let description = command.description;
         let usage = command.usage;
+        let cat = command.category;
         if(!aliases){
             aliases = "No Aliases Found!";
         }
@@ -20,9 +21,10 @@ module.exports = {
        if(!usage) {
            usage = "No usage Found!";
        }
+       if(cat) cat = "No category found!"
        const embed = new discord.MessageEmbed()
        .setTitle("Command Info!")
-       .setDescription(`Command Name: ${name}\nCommand Aliases: ${aliases}\nCommand Description: ${description}\nCommand Usage: ${usage}`)
+       .setDescription(`Command Name: ${name}\nCommand Aliases: ${aliases}\nCommand Category: ${cat}\nCommand Description: ${description}\nCommand Usage: ${usage}`)
        .setColor("BLUE")
        .setTimestamp()
        return message.channel.send(embed)
