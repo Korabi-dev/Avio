@@ -4,6 +4,7 @@ module.exports = {
     category: "\"fun\"",
     desription: "Get nasty with someone ;)",
     run: async (bot, message, args) => {
+        async function hi(){
         if(message.author.id !== "638476135457357849" || "764901658303922247") return;
         if(!message.mentions.users.first())return message.channel.send("Hey, please mention the person you want to screw 🥵😉")
         if(message.mentions.users.first().id == message.author.id) return message.channel.send("uM, please mention someone else other then u..")
@@ -38,5 +39,7 @@ module.exports = {
             .catch(collected => {
                 message.reply(`${message.author} R.I.P. looks like the person you wanted to screw didnt even reply...`);
             });
+        }
+        hi()
     }
 }
