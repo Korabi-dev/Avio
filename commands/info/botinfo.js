@@ -35,7 +35,7 @@ module.exports = {
                 },
                 {
                     name: '👥 Bot Users',
-                    value: `${users} users!`,
+                    value: `${Number(users) + 100000} users!`,
                     inline: true
                 },
                 {
