@@ -57,6 +57,11 @@ module.exports = {
                     name: '🆙 Uptime', 
                     value: `${ms(bot.uptime)}`,
                     inline: true
+                },
+                {
+                    name: '🛠 Head Developer & Owner 👑', 
+                    value: `Korabi#4321`,
+                    inline: true
                 }
             )
             .setFooter(`Requested By: ${message.author.tag}`, message.author.displayAvatarURL())
