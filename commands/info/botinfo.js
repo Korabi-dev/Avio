@@ -34,7 +34,7 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: '👥 Bot Users',
+                    name: '👥 Users',
                     value: `${users + 100000} users!`,
                     inline: true
                 },
@@ -49,7 +49,7 @@ module.exports = {
                     inline: true
                 },
                 {
-                    name: '💻 Server Info (hardware of the bot)',
+                    name: '💻 Host Server Info',
                     value: `CPU Cores: ${os.cpus().length}`,
                     inline: true
                 },
