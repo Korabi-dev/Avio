@@ -1,12 +1,10 @@
 const Discord = require("discord.js");
+require("discord-inline-replys")
+const bot = new Discord.Client()
 const fs = require("fs");
 const config = require("./config.json");
 const prefix = config.prefix;
 const blacklist = require("./models/blacklist")
-const bot = new Discord.Client({
-  disableMentions: "everyone",
-  partials: ["REACTION"],
-});
 const fetch = require("node-fetch")
 const antilink = require("./models/antilink")
 const antiswear = require("./models/antiswear")
@@ -136,33 +134,7 @@ bot.on("messageReactionAdd", (reaction, user) => {
 bot.on("messageReactionRemove", (reaction, user) => {
   return;
 });
-bot.on("guildCreate", (guild) => {
-  if (guild.memberCount <= 4) return;
-  const botaddedembed = new Discord.MessageEmbed()
-.setDescription(`
-Hey there,thank you for adding me to your server! 
 
-We hope you enjoy the features I offer! 
-
-Quick tips & tricks:
-You can vote for the bot at
- \`https://top.gg/bot/736933259178541177\` 
-This helps us grow avio even further!
-
-You can join our support server at: https://discord.gg/3PKep24.
-
-Constant Access to our support team.
-
-We provide bot updates & more here.
-
-If you are unhappy in any way - make sure to speak with the Developers. Feedback is the best way to improve! (They can be found in the support server!
-Sincerely,
-glitch!#3950 Owner,
-Korabi20#0001 Owner & Developer.
-`)
-.setColor("GREEN")
-guild.owner.send(botaddedembed)
-});
 dbl.on("error", () => {
   return;
 })

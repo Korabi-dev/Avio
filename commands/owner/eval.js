@@ -14,7 +14,6 @@ const mongoose = require("mongoose")
 const nodefetch = require("node-fetch")
 const os = require("os")
 const db = require("../../db")
-const canvacord = require("canvacord");
 const hastebin = require("hastebin.js");
 const { inspect } = require('util');
 const { Type } = require('@extreme_hero/deeptype');

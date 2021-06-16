@@ -1,5 +1,6 @@
 const Timeout = new Set();
 const { MessageEmbed, Message, Client } = require("discord.js");
+require("discord-reply")
 const discord = require("discord.js");
 const { prefix } = require("../../config.json");
 const ms = require("ms");
@@ -15,32 +16,9 @@ module.exports = async (bot, message) => {
   message.channel.messages.fetch();
   if (message.author.bot) return;
  if(!message.guild) return;
- 
-  if(message.content.toLowerCase().includes("grabify.link")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("leancoding.co")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("stopify.co")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("freegiftcards.co")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("joinmy.site")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("curiouscat.club")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("catsnthings.fun")) {
-    message.delete();
-   }
-   if(message.content.toLowerCase().includes("catsnthing.com")) {
-    message.delete();
-   }
-   
+message.reply = function(reply){
+
+}
    if(message.content.toLowerCase() === '<@!736933259178541177>') {
     message.channel.send(
           `The prefix for ${message.guild.name} is \`${
