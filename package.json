@@ -10,7 +10,7 @@
   "author": "Korabi20",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/opus": "^0.3.2",
+    "@discordjs/opus": "^0.8.0",
     "@extreme_hero/deeptype": "^1.0.1",
     "ascii-table": "0.0.9",
     "axios": "^0.21.1",
